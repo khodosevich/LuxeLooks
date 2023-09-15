@@ -1,0 +1,18 @@
+﻿using System.ComponentModel.DataAnnotations;
+using LuxeLooks.Domain.Enum;
+
+namespace LuxeLooks.Domain.Entity;
+
+public class Order
+{
+    public Guid Id { get; set; }
+    public string? Name { get; set; }
+    [Required]
+    [EmailAddress]
+    public string? Email { get; set; }
+    public string? Address { get; set; }
+    public string? DevicesId { get; set; }
+    public decimal Price { get; set; }
+    public OrderStatus Status { get; set; }
+    public string UserId { get; set; }
+}
