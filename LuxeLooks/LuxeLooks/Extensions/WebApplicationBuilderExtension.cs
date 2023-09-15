@@ -7,6 +7,7 @@ namespace LuxeLooks.Extensions;
 
 public static class WebApplicationBuilderExtension
 {
+    
     public static void AddIdentity(this WebApplicationBuilder builder)
     {
         builder.Services.AddIdentity<IdentityUser,IdentityRole>(options =>
