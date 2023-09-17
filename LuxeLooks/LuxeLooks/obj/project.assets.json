@@ -1104,6 +1104,19 @@
         "runtime": {
           "bin/placeholder/LuxeLooks.Domain.dll": {}
         }
+      },
+      "LuxeLooks.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "LuxeLooks.DataManagment": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LuxeLooks.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LuxeLooks.Service.dll": {}
+        }
       }
     }
   },
@@ -2720,11 +2733,17 @@
       "type": "project",
       "path": "../LuxeLooks.Domain/LuxeLooks.Domain.csproj",
       "msbuildProject": "../LuxeLooks.Domain/LuxeLooks.Domain.csproj"
+    },
+    "LuxeLooks.Service/1.0.0": {
+      "type": "project",
+      "path": "../LuxeLooks.Service/LuxeLooks.Service.csproj",
+      "msbuildProject": "../LuxeLooks.Service/LuxeLooks.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "LuxeLooks.DataManagment >= 1.0.0",
+      "LuxeLooks.Service >= 1.0.0",
       "Microsoft.AspNetCore.Identity >= 2.2.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.11",
       "Microsoft.AspNetCore.OpenApi >= 7.0.2",
@@ -2770,6 +2789,9 @@
           "projectReferences": {
             "C:\\5Sem\\LuxeLooks\\LuxeLooks\\LuxeLooks\\LuxeLooks.DataManagment\\LuxeLooks.DataManagment.csproj": {
               "projectPath": "C:\\5Sem\\LuxeLooks\\LuxeLooks\\LuxeLooks\\LuxeLooks.DataManagment\\LuxeLooks.DataManagment.csproj"
+            },
+            "C:\\5Sem\\LuxeLooks\\LuxeLooks\\LuxeLooks\\LuxeLooks.Service\\LuxeLooks.Service.csproj": {
+              "projectPath": "C:\\5Sem\\LuxeLooks\\LuxeLooks\\LuxeLooks\\LuxeLooks.Service\\LuxeLooks.Service.csproj"
             }
           }
         }

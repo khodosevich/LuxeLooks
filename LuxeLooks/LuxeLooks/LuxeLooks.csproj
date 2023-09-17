@@ -24,11 +24,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\LuxeLooks.DataManagment\LuxeLooks.DataManagment.csproj" />
+      <ProjectReference Include="..\LuxeLooks.Service\LuxeLooks.Service.csproj" />
     </ItemGroup>
 
 </Project>
