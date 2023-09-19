@@ -33,6 +33,7 @@ Backend:
 
 Язык программирования: C#
 Система управления базами данных: PostgreSQL
+
 Frontend:
 
 JavaScript библиотека: React
