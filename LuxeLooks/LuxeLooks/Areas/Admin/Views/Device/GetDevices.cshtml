@@ -1,0 +1,43 @@
+﻿@using AppleStore.Extensions
+@model IEnumerable<AppleStore.Domain.Entity.Device>?
+@{
+    Layout = "_AdminLayout";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Device List</title>
+</head>
+<body>
+    <h2>Список устройств</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Изображение</th>
+                <th>Название</th>
+                <th>Цена</th>
+                <th>Описание</th>
+                <th>Тип</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var device in Model)
+            {
+                <tr>
+                    <td><img src="@device.ImageUrl" alt="@device.Name" width="50" height="50"></td>
+                    <td>@device.Name</td>
+                    <td>@device.Price руб</td>
+                    <td>@device.Description</td>
+                    <td>@device.Type.DisplayName()</td>
+                    <td><a class="edit-button" href="@Url.Action("Edit", "Device", new { id = device.Id, area="Admin" })">Редактировать</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        <a class="edit-button" href="@Url.Action("Create", "Device",new {area="Admin"})">Добавить девайс</a>
+    </div>
+</body>
+</html>
