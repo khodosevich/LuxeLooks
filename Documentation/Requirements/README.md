@@ -24,7 +24,9 @@
 <a name="user_requirements"/>
 
 # 2 Требования пользователя
+
 <a name="software_interfaces"/>
+
 ## 2.1 Программные интерфейсы
 
 Backend:
