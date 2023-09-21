@@ -1,0 +1,24 @@
+.App {
+
+  background: #4f4f4f;
+
+  height: 100vh;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  color: bisque;
+
+}
+
+
+
+
+
