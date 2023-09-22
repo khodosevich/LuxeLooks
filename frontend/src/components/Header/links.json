@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Man",
+    "class": "menu__item",
+    "to": "/man"
+  },
+  {
+    "name": "Women",
+    "class": "menu__item",
+    "to": "/women"
+  },
+  {
+    "name": "Boys",
+    "class": "menu__item",
+    "to": "/boys"
+  },
+  {
+    "name": "Girls",
+    "class": "menu__item",
+    "to": "/girls"
+  },
+  {
+    "name": "Sale",
+    "class": "menu__item sale",
+    "to": "/sale"
+  }
+]
