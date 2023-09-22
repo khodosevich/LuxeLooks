@@ -10,3 +10,8 @@ C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks.Service\obj\Debug\net7.0\LuxeLoo
 C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks.Service\obj\Debug\net7.0\refint\LuxeLooks.Service.dll
 C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks.Service\obj\Debug\net7.0\LuxeLooks.Service.pdb
 C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks.Service\obj\Debug\net7.0\ref\LuxeLooks.Service.dll
+C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks.Service\bin\Debug\net7.0\LuxeLooks.DataManagment.dll
+C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks.Service\bin\Debug\net7.0\LuxeLooks.Domain.dll
+C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks.Service\bin\Debug\net7.0\LuxeLooks.DataManagment.pdb
+C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks.Service\bin\Debug\net7.0\LuxeLooks.Domain.pdb
+C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks.Service\obj\Debug\net7.0\LuxeLooks.Service.csproj.CopyComplete
