@@ -59,7 +59,7 @@ public class AccountController : ControllerBase
         var user = userResponse.Data;
         var accessToken =await _tokenService.CreateToken(user);
         user.RefreshToken = _configuration.GenerateRefreshToken();
-        user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(_configuration.GetSection("Jwt:RefreshTokenValidityInDays").Get<int>());
+        user.RefreshTokenExpiryTime = DateTime.UtcNow.AddHours(_configuration.GetSection("Jwt:RefreshTokenValidityInHours").Get<int>());
         await _userService.UpdateAsync(user);
         
         return Ok(new AuthResponse
@@ -153,8 +153,7 @@ public class AccountController : ControllerBase
     }
     
     [Authorize]
-    [HttpPost]
-    [Route("Revoke-all")]
+    [HttpPost("Revoke-all")]
     public async Task<IActionResult> RevokeAll()
     {
         var response =await _userService.GetAllAsync();

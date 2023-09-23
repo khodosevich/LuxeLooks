@@ -1264,3 +1264,19 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving 
 2023-09-22 09:06:19.3117|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
 2023-09-22 09:06:19.3117|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
 2023-09-22 09:11:07.9943|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6eab |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-22 10:23:23.4456|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-22 10:23:23.5447|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-22 10:23:23.5447|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-22 10:23:23.5447|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-22 10:24:11.2790|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6eab |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-22 11:21:37.1224|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-22 11:21:37.1987|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-22 11:21:37.1987|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-22 11:21:37.1987|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-22 11:22:43.7832|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-22 13:52:50.1989|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-22 13:52:50.2890|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-22 13:52:50.3014|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-22 13:52:50.3014|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-22 13:53:32.0240|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6eab |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-22 13:54:10.3819|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 

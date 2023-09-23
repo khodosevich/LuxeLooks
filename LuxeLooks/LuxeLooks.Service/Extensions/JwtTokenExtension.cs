@@ -72,6 +72,7 @@ public static class JwtTokenExtension
         rng.GetBytes(randomNumber);
         return Convert.ToBase64String(randomNumber);
     }
+    
 
     public static ClaimsPrincipal? GetPrincipalFromExpiredToken(this IConfiguration configuration, string? token)
     {
