@@ -13,7 +13,17 @@ builder.AddServices();
 builder.AddLogging();
 builder.AddCache();
 
+
 var app = builder.Build();
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseCors(builder =>
+{
+    builder.WithOrigins("https://localhost:44315") // Укажите ваш источник
+        .AllowAnyMethod()
+        .AllowAnyHeader();
+}); 
+app.UseRouting();
 app.UseAuthorization();
 app.UseAuthorization();
 app.MapControllers();

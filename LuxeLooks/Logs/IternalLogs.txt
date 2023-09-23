@@ -676,3 +676,19 @@
 2023-09-23 19:07:43.1958 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\nlog.config
 2023-09-23 19:07:43.1958 Info Configuration initialized.
 2023-09-23 19:08:47.7461 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+2023-09-24 00:20:44.7852 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-09-24 00:20:44.8846 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-09-24 00:20:44.8867 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2023-09-24 00:20:44.9756 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2023-09-24 00:20:45.0464 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-09-24 00:20:45.0785 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
+2023-09-24 00:20:45.1299 Info Configuration initialized.
+2023-09-24 00:20:45.1299 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
+2023-09-24 00:20:46.5822 Info Loading NLog config from XML file: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\nlog.config
+2023-09-24 00:20:46.5822 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-09-24 00:20:46.5822 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-09-24 00:20:46.5822 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2023-09-24 00:20:46.5822 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2023-09-24 00:20:46.5822 Info Closing old configuration.
+2023-09-24 00:20:46.6310 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\nlog.config
+2023-09-24 00:20:46.6340 Info Configuration initialized.
