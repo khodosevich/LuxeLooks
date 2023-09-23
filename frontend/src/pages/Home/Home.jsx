@@ -1,16 +1,11 @@
 import React from 'react';
-import {Box} from "@mui/material";
-
+import Landing from "../../components/Landing/Landing";
 
 const Home = () => {
     return (
-        <Box sx={{
-            background:"green",
-            width:"200px",
-            height:"200px"
-        }}>
-            home
-        </Box>
+       <>
+        <Landing/>
+       </>
     );
 };
 

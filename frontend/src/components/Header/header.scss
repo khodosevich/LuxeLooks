@@ -1,5 +1,24 @@
 .header {
-  background: #ffffff;
+
+  background: transparent;
+  color: white;
+
+  position: relative;
+
+  transition: all 0.5s;
+
+  &:hover {
+    background: #ffffff;
+    color: black;
+  }
+
+  &:hover .logo {
+    color: black;
+  }
+
+
+  z-index: 100;
+
 }
 
 .navbar {
@@ -12,7 +31,13 @@
 }
 
 .logo {
-  color: var(--gray-800, #424551);
+
+  color: white;
+
+  &:hover{
+    color: var(--gray-800, #424551);
+  }
+
   font-family: Montserrat;
   font-size: 26px;
   font-style: normal;
@@ -23,7 +48,6 @@
 .menu {
   display: flex;
   gap:40px;
-
 }
 
 .search-input {
@@ -37,7 +61,7 @@
 
   transition: all 0.4s;
   &:hover {
-    font-size: 20px;
+    transform: scale(1.2);
     color: #cccccc;
   }
 
@@ -45,10 +69,6 @@
 
 .sale {
   color: #FF4242;
-
-  &:hover {
-    color: #d29e9e;
-  }
 
 }
 
@@ -65,6 +85,12 @@
   font-size: 14px;
 
   font-family: Montserrat;
+
+  transition: all .5s;
+
+  &:hover {
+    transform: scale(1.09);
+  }
 
 }
 
@@ -96,7 +122,7 @@
 
 .after__cart {
   border-radius: 4px;
-  background: var(--success, #03CEA4);
+  background: var(--success, #75a17f);
   padding: 1px 8px;
   font-family: Montserrat;
 }
