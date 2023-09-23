@@ -38,7 +38,6 @@ const Header = () => {
                         <i className="fa" aria-hidden="true"></i>
                     </div>
                     <div className="bag">
-
                         <NavLink to="/bag">
                             <img className="shop__cart" src={cardBag} alt="cart"/>
                         </NavLink>
