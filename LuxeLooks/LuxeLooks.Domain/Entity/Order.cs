@@ -15,4 +15,5 @@ public class Order
     public decimal Price { get; set; }
     public OrderStatus Status { get; set; }
     public Guid UserId { get; set; }
+    public DateTime CreateTime { get; set; }
 }

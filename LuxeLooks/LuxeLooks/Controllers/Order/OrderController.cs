@@ -1,128 +1,98 @@
 ﻿using System.Net;
 using LuxeLooks.Domain.Entity;
+using LuxeLooks.Domain.Enum;
+using LuxeLooks.Domain.Models;
 using LuxeLooks.Domain.Response;
-using LuxeLooks.Domain.ViewModels;
 using LuxeLooks.Service;
+using LuxeLooks.Service.Services;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace LuxeLooks.Controllers.Order;
 
+[Route("Order")]
 public class OrderController : Controller
 {
     private readonly OrderService _orderService;
-    private readonly ProductService _productService;
     private readonly ILogger<OrderController> _logger;
-    private readonly UserManager<IdentityUser> _userManager;
-    private readonly IHttpContextAccessor _httpContextAccessor;
+    private readonly UserService _userService;
 
-    public OrderController(OrderService orderService, ProductService productService, ILogger<OrderController> logger,
-        UserManager<IdentityUser> userManager, IHttpContextAccessor httpContextAccessor)
+    public OrderController(OrderService orderService, ILogger<OrderController> logger,  UserService userService)
     {
         _orderService = orderService;
-        _productService = productService;
         _logger = logger;
-        _userManager = userManager;
-        _httpContextAccessor = httpContextAccessor;
+        _userService = userService;
     }
-
-    [Authorize]
-    [HttpGet("Place-Order")]
-    public async Task<IActionResult> PlaceOrder(List<Guid> ids)
+    private IActionResult HandleResponse<T>(BaseResponse<T> response)
     {
-        IdentityUser user = await _userManager.GetUserAsync(HttpContext.User);
-        BaseResponse<IEnumerable<Product>> response = await _productService.GetDevices(true);
         if (response.StatusCode != HttpStatusCode.OK)
         {
-            _logger.LogError($"Error : {response.Description}");
+            _logger.LogError($"Response from service status is not OK: {response.StatusCode}");
             return StatusCode((int)response.StatusCode, response.Description);
         }
 
-        _logger.LogInformation("Успешное получение Девайса из базы данных");
-        List<Product> products = response.Data
-            .SelectMany(device =>
-                ids.Contains(device.Id)
-                    ? Enumerable.Repeat(device, ids.Count(id => id == device.Id))
-                    : Enumerable.Empty<Product>())
-            .ToList();
-
-        ProductOrderViewModel model = new ProductOrderViewModel()
-        {
-            Products = products,
-            Order = new Domain.Entity.Order()
-                { ProductsIds = ids, UserId = new Guid(user.Id), Email = user.Email }
-        };
-        return Ok();
+        return Ok(response.Data);
     }
-
-    [HttpPost]
-    public async Task<IActionResult> PlaceOrder(ProductOrderViewModel viewModel)
+    
+    [Authorize]
+    [HttpPost("CreateOrder")]
+    public async Task<IActionResult> CreateOrder([FromBody]OrderRequest request)
     {
         if (!ModelState.IsValid)
         {
-            foreach (var key in ModelState.Keys)
-            {
-                var fieldState = ModelState[key];
-                if (fieldState.ValidationState == ModelValidationState.Invalid)
-                {
-                    var errors = fieldState.Errors;
-                    foreach (var error in errors)
-                    {
-                        var errorMessage = error.ErrorMessage;
-                        _logger.LogError(errorMessage);
-                    }
-                }
-            }
-
-            return BadRequest();
+            return BadRequest("Invalid data");
+        }
+        if (!Guid.TryParse(request.UserId, out var userId))
+        {
+            return BadRequest("Invalid ID format");
         }
 
-        _httpContextAccessor.HttpContext.Session.Remove("Cart");
-        await _orderService.CreateOrder(viewModel.Order);
-        _logger.LogInformation("Успешное создание заказа");
+        foreach (var productId in request.ProductsIds)
+        {
+            if (!Guid.TryParse(productId, out var guidProductId))
+            {
+                return BadRequest("Invalid products ID format");
+            }
+        }
+        List<Guid> productsIds = request.ProductsIds.Select(Guid.Parse).ToList();
+        var userResponse = await _userService.GetByIdAsync(userId);
+        if (userResponse.StatusCode!=HttpStatusCode.OK)
+        {
+            return HandleResponse(userResponse);
+        }
+
+        var order = new Domain.Entity.Order()
+        {
+            Name = request.Name,
+            Address = request.Address,
+            Email = request.Email,
+            Price = request.Price,
+            ProductsIds = productsIds,
+            Status = OrderStatus.Processing,
+            UserId = userId,
+            CreateTime = DateTime.Now
+        };
+        await _orderService.CreateOrder(order);
         return Ok();
     }
 
-    public async Task<IActionResult> GetOrdersHistory(Guid userId)
+    [Authorize]
+    [HttpGet("GetOrderByUserId/{userId}")]
+    public async Task<IActionResult> GetOrdersByUserId(string id)
     {
         bool useCache = false;
-        BaseResponse<IEnumerable<Domain.Entity.Order>> response = await _orderService.GetOrders(useCache);
-        if (response.StatusCode != HttpStatusCode.OK)
+        if (!Guid.TryParse(id, out var guid))
         {
-            _logger.LogError($"Error : {response.Description}");
-            return StatusCode((int)response.StatusCode, response.Description);
+            return BadRequest("Invalid ID format");
         }
-
-        List<ProductOrderViewModel> models = new List<ProductOrderViewModel>();
-        foreach (var order in response.Data)
+        var response=await _orderService.GetOrders(useCache);
+        if (response.StatusCode!=HttpStatusCode.OK)
         {
-            if (order.UserId == userId)
-            {
-                List<Product> products = new List<Product>();
-                foreach (var id in order.ProductsIds)
-                {
-                        products.Add((await _productService.GetById(id)).Data!);
-                }
-
-                models.Add(new ProductOrderViewModel() { Products = products, Order = order });
-            }
+            return HandleResponse(response);
         }
-
-        return Ok(models);
+        var orders = response.Data.Where(order => order.UserId == guid).ToList();
+        return Ok(orders);
     }
-
-    public async Task<IActionResult> Delete(Guid orderId)
-    {
-        BaseResponse<bool> response = await _orderService.DeleteOrder(orderId);
-        if (response.StatusCode != HttpStatusCode.OK)
-        {
-            _logger.LogError($"Error : {response.Description}");
-            return StatusCode((int)response.StatusCode, response.Description);
-        }
-
-        string userId = (await _userManager.GetUserAsync(HttpContext.User)).Id;
-        return RedirectToAction("GetOrdersHistory", new { userId = userId });
-    }
+    
 }
