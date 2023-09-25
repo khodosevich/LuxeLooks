@@ -19,7 +19,10 @@ public static class WebApplicationBuilderExtension
     public static void AddDataBase(this WebApplicationBuilder builder)
     {
         string? deviceConnection = builder.Configuration.GetConnectionString("ConnectionString");
-        builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(deviceConnection));
+        builder.Services.AddDbContext<ApplicationDbContext>(options =>
+        {
+            options.UseNpgsql(deviceConnection);
+        });
     }
 
     public static void AddSession(this WebApplicationBuilder builder)

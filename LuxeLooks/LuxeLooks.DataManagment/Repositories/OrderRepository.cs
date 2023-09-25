@@ -12,7 +12,7 @@ public class OrderRepository
         this.db = db;
     }
 
-    public async Task Create(Order? entity)
+    public async Task Create(Order entity)
     {
         await db.Orders.AddAsync(entity);
         await db.SaveChangesAsync();

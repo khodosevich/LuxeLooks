@@ -1,9 +1,7 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Net;
-using DwellEase.Domain.Models.Identity;
 using LuxeLooks.Domain.Entity;
 using LuxeLooks.Domain.Models.Identity;
-using LuxeLooks.Domain.Response;
 using LuxeLooks.Service.Extensions;
 using LuxeLooks.Service.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -40,6 +38,7 @@ public class AccountController : ControllerBase
         
         if (managedUserResponse.StatusCode!=HttpStatusCode.OK)
         {
+            _logger.LogError(managedUserResponse.Description);
             return BadRequest("Bad credentials");
         }
 
@@ -48,6 +47,7 @@ public class AccountController : ControllerBase
         
         if (isPasswordValidResponse.StatusCode!=HttpStatusCode.OK)
         {
+            _logger.LogError(isPasswordValidResponse.Description);
             return BadRequest("Bad credentials");
         }
 
@@ -61,7 +61,7 @@ public class AccountController : ControllerBase
         user.RefreshToken = _configuration.GenerateRefreshToken();
         user.RefreshTokenExpiryTime = DateTime.UtcNow.AddHours(_configuration.GetSection("Jwt:RefreshTokenValidityInHours").Get<int>());
         await _userService.UpdateAsync(user);
-        
+        _logger.LogInformation($"Successfuly login user: {user.UserName}");
         return Ok(new AuthResponse
         {
             Username = user.UserName!,
@@ -88,6 +88,7 @@ public class AccountController : ControllerBase
 
         if (findUserResponse.StatusCode !=HttpStatusCode.OK) throw new Exception($"User {request.UserName} not found");
             
+        _logger.LogInformation($"Successfuly register user: {findUserResponse.Data.UserName}");
         return await Authenticate(new AuthRequest
         {
             UserName = request.UserName,
@@ -95,7 +96,7 @@ public class AccountController : ControllerBase
         });
     }
     
-    [HttpPost("Refresh-Token")]
+    [HttpPost("RefreshToken")]
     public async Task<IActionResult> RefreshToken(TokenModel? tokenModel)
     {
         if (tokenModel is null || string.IsNullOrEmpty(tokenModel.AccessToken))
@@ -126,15 +127,11 @@ public class AccountController : ControllerBase
         }
 
         var newAccessToken = _configuration.CreateToken(principal.Claims.ToList());
-        var newRefreshToken = _configuration.GenerateRefreshToken();
-
-        user.RefreshToken = newRefreshToken;
         await _userService.UpdateAsync(user);
 
         return new ObjectResult(new
         {
             accessToken = new JwtSecurityTokenHandler().WriteToken(newAccessToken),
-            refreshToken = newRefreshToken
         });
     }
     
@@ -153,7 +150,7 @@ public class AccountController : ControllerBase
     }
     
     [Authorize]
-    [HttpPost("Revoke-all")]
+    [HttpPost("RevokeAll")]
     public async Task<IActionResult> RevokeAll()
     {
         var response =await _userService.GetAllAsync();

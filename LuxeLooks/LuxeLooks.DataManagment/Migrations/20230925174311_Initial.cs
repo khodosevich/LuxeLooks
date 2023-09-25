@@ -81,6 +81,11 @@ namespace LuxeLooks.DataManagment.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "Id", "Description", "ImageUrl", "Name", "Price", "Type" },
+                values: new object[] { new Guid("f9ba9715-f208-4c7a-bf3e-5b16c7c72b7b"), "Super baggy fit jeans with a five-pocket design, belt loops, and a zip fly and top button fastening. Made from 100% cotton", "https://static.pullandbear.net/2/photos//2023/I/0/2/p/7688/526/427/03/7688526427_2_6_8.jpg?t=1689251224432&imwidth=850", "SUPER BAGGY JEANS", 129m, 10 });
+
+            migrationBuilder.InsertData(
                 table: "Roles",
                 columns: new[] { "Id", "NormalizedRoleName", "RoleName" },
                 values: new object[,]
@@ -88,6 +93,11 @@ namespace LuxeLooks.DataManagment.Migrations
                     { new Guid("44546e06-8719-4ad8-b88a-f271ae9d6abe"), "RESIDENT", "Resident" },
                     { new Guid("44546e06-8719-4ad8-b88a-f271ae9d6eab"), "ADMIN", "Admin" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "Id", "Email", "NormalizedUserName", "PasswordHash", "PasswordSalt", "RefreshToken", "RefreshTokenExpiryTime", "RoleId", "UserName" },
+                values: new object[] { new Guid("8da40566-05d4-4e31-943a-9a89fc60768b"), "alsemkovbn@gmail.com", "ADMIN", "$2a$12$qcBXHoZF8PO77zzTEL/Ssel8ZsV02mObOFboOHdO1Y7CLDJUErzxq", "$2a$12$qcBXHoZF8PO77zzTEL/Sse", null, new DateTime(2023, 9, 25, 17, 43, 11, 508, DateTimeKind.Utc).AddTicks(5672), new Guid("44546e06-8719-4ad8-b88a-f271ae9d6abe"), "Admin" });
         }
 
         /// <inheritdoc />

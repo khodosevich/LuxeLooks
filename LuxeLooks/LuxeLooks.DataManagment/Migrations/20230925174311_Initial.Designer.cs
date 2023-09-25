@@ -13,7 +13,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace LuxeLooks.DataManagment.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230922054535_Initial")]
+    [Migration("20230925174311_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -84,6 +84,17 @@ namespace LuxeLooks.DataManagment.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("f9ba9715-f208-4c7a-bf3e-5b16c7c72b7b"),
+                            Description = "Super baggy fit jeans with a five-pocket design, belt loops, and a zip fly and top button fastening. Made from 100% cotton",
+                            ImageUrl = "https://static.pullandbear.net/2/photos//2023/I/0/2/p/7688/526/427/03/7688526427_2_6_8.jpg?t=1689251224432&imwidth=850",
+                            Name = "SUPER BAGGY JEANS",
+                            Price = 129m,
+                            Type = 10
+                        });
                 });
 
             modelBuilder.Entity("LuxeLooks.Domain.Entity.Role", b =>
@@ -157,6 +168,19 @@ namespace LuxeLooks.DataManagment.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("8da40566-05d4-4e31-943a-9a89fc60768b"),
+                            Email = "alsemkovbn@gmail.com",
+                            NormalizedUserName = "ADMIN",
+                            PasswordHash = "$2a$12$qcBXHoZF8PO77zzTEL/Ssel8ZsV02mObOFboOHdO1Y7CLDJUErzxq",
+                            PasswordSalt = "$2a$12$qcBXHoZF8PO77zzTEL/Sse",
+                            RefreshTokenExpiryTime = new DateTime(2023, 9, 25, 17, 43, 11, 508, DateTimeKind.Utc).AddTicks(5672),
+                            RoleId = new Guid("44546e06-8719-4ad8-b88a-f271ae9d6abe"),
+                            UserName = "Admin"
+                        });
                 });
 #pragma warning restore 612, 618
         }
