@@ -1,5 +1,6 @@
 ﻿using LuxeLooks.DataManagment.Repositories;
 using LuxeLooks.Domain.Entity;
+using LuxeLooks.Domain.Enum;
 using Microsoft.EntityFrameworkCore;
 
 namespace LuxeLooks.DataManagment
@@ -30,17 +31,29 @@ namespace LuxeLooks.DataManagment
                 NormalizedRoleName = "ADMIN"
             });
 
-            // modelBuilder.Entity<User>().HasData(new User
-            // {
-            //     Id = Guid.NewGuid(),
-            //     UserName = "Admin",
-            //     NormalizedUserName = "ADMIN",
-            //     Email = "alsemkovbn@gmail.com",
-            //     PasswordSalt = salt,
-            //     PasswordHash = hashedPassword,
-            //     RefreshToken = null,
-            //     RefreshTokenExpiryTime = DateTime.UtcNow, 
-            // });
+            modelBuilder.Entity<User>().HasData(new User
+            {
+                Id = Guid.NewGuid(),
+                UserName = "Admin",
+                NormalizedUserName = "ADMIN",
+                Email = "alsemkovbn@gmail.com",
+                PasswordSalt = salt,
+                PasswordHash = hashedPassword,
+                RefreshToken = null,
+                RefreshTokenExpiryTime = DateTime.UtcNow, 
+            });
+
+            modelBuilder.Entity<Product>().HasData(new Product()
+            {
+                Id = Guid.NewGuid(),
+                Description =
+                    "Super baggy fit jeans with a five-pocket design, belt loops, and a zip fly and top button fastening. Made from 100% cotton",
+                Name = "SUPER BAGGY JEANS",
+                Price = 129,
+                ImageUrl =
+                    "https://static.pullandbear.net/2/photos//2023/I/0/2/p/7688/526/427/03/7688526427_2_6_8.jpg?t=1689251224432&imwidth=850",
+                Type = ProductType.Trousers
+            });
 
             modelBuilder.Entity<Role>().HasData(new Role
             {
@@ -48,34 +61,7 @@ namespace LuxeLooks.DataManagment
                 RoleName = "Resident",
                 NormalizedRoleName = "RESIDENT"
             });
-
-            // Определите структуру таблицы для User
-            modelBuilder.Entity<User>()
-                .ToTable("Users")
-                .HasKey(u => u.Id);
-
-            modelBuilder.Entity<User>()
-                .Property(u => u.UserName)
-                .IsRequired();
-
-            modelBuilder.Entity<User>()
-                .Property(u => u.NormalizedUserName)
-                .IsRequired();
-
-            modelBuilder.Entity<User>()
-                .Property(u => u.Email)
-                .IsRequired();
-
-            modelBuilder.Entity<User>()
-                .Property(u => u.PasswordHash)
-                .IsRequired();
-
-            modelBuilder.Entity<User>()
-                .Property(u => u.PasswordSalt)
-                .IsRequired();
-
-            modelBuilder.Entity<User>()
-                .Property(u => u.RefreshToken);
+            
         }
     }
 }

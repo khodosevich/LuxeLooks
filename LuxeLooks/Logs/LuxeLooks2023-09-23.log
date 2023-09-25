@@ -554,3 +554,6 @@ WHERE "Id" = @p8;
 2023-09-23 19:14:40.5950|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'LuxeLooks' on server ''. 
 2023-09-23 19:14:40.5950|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database 'LuxeLooks' on server '' (1ms). 
 2023-09-23 19:14:40.5950|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:44387/Account/Register application/json 91 - 200 - application/json;+charset=utf-8 2549.8473ms 
+2023-09-23 19:20:56.3759|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-09-23 19:20:56.3759|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-09-23 19:20:56.3759|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
