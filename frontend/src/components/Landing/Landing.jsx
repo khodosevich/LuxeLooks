@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { Navigation, Pagination, Scrollbar, A11y  } from 'swiper/modules';
+import { Navigation, Scrollbar, A11y  } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
@@ -15,11 +15,11 @@ const Landing = () => {
     return (
         <div className="swiper">
             <Swiper
-                modules={[Navigation, Pagination, Scrollbar, A11y ]}
+                modules={[Navigation, Scrollbar, A11y ]}
                 spaceBetween={50}
                 slidesPerView={1}
                 navigation
-                pagination={{ clickable: true }}
+
                 scrollbar={{ draggable: true }}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}

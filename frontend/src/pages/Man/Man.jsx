@@ -1,8 +1,9 @@
 import React from 'react';
+import './man.css'
 
 const Man = () => {
     return (
-        <div>
+        <div className="man__page">
             man
         </div>
     );

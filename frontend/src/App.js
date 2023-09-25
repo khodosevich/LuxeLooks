@@ -8,6 +8,7 @@ import Women from "./pages/Women/Women";
 import Boys from "./pages/Boys/Boys";
 import Sale from "./pages/Sale/Sale";
 import Girls from "./pages/Girls/Girls";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/girls" element={<Girls/>} />
                 <Route path="/sale" element={<Sale/>} />
             </Routes>
+        <Footer/>
     </div>
   );
 }
