@@ -6,6 +6,7 @@ using LuxeLooks.Domain.Response;
 using LuxeLooks.Service;
 using LuxeLooks.Service.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LuxeLooks.Controllers.Order;
@@ -38,6 +39,10 @@ public class OrderController : Controller
     [HttpPost("CreateOrder")]
     public async Task<IActionResult> CreateOrder([FromBody]OrderRequest request)
     {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest("Invalid data");
+        }
         if (!Guid.TryParse(request.UserId, out var userId))
         {
             return BadRequest("Invalid ID format");
@@ -47,7 +52,7 @@ public class OrderController : Controller
         {
             if (!Guid.TryParse(productId, out var guidProductId))
             {
-                return BadRequest("Invalid ID format");
+                return BadRequest("Invalid products ID format");
             }
         }
         List<Guid> productsIds = request.ProductsIds.Select(Guid.Parse).ToList();
@@ -65,7 +70,8 @@ public class OrderController : Controller
             Price = request.Price,
             ProductsIds = productsIds,
             Status = OrderStatus.Processing,
-            UserId = userId
+            UserId = userId,
+            CreateTime = DateTime.Now
         };
         await _orderService.CreateOrder(order);
         return Ok();

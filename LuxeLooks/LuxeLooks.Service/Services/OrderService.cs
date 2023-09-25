@@ -69,7 +69,8 @@ public class OrderService
             Address = orderModel.Address,
             Price = orderModel.Price,
             Status = orderModel.Status,
-            UserId = orderModel.UserId
+            UserId = orderModel.UserId,
+            CreateTime = DateTime.Now
         };
         await _orderRepository.Create(order);
         baseResponse.StatusCode = HttpStatusCode.OK;
