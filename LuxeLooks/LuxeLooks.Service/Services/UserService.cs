@@ -34,7 +34,7 @@ public class UserService
     {
         return Task.FromResult(users.Select(user =>
         {
-            user.RefreshTokenExpiryTime = user.RefreshTokenExpiryTime.ToLocalTime();
+            user.RefreshTokenExpiryTime = user.RefreshTokenExpiryTime;
             return user;
         }).ToList());
     }
