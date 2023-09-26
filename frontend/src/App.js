@@ -9,21 +9,39 @@ import Boys from "./pages/Boys/Boys";
 import Sale from "./pages/Sale/Sale";
 import Girls from "./pages/Girls/Girls";
 import Footer from "./components/footer/Footer";
+import axios from "axios";
 
 function App() {
+
+    const request = () => {
+        console.log("hello")
+
+        axios.get("https://localhost:7227/Product/GetAll")
+            .then(response => {
+                console.log(response.data);
+            })
+            .catch(error => {
+                console.error("Произошла ошибка:", error);
+            });
+
+    }
+
   return (
     <div className={style.App}>
-        <Header/>
-            <Routes>
-                <Route path="/" element={<Home/>} />
-                <Route path="/about" element={<About/>} />
-                <Route path="/man" element={<Man/>} />
-                <Route path="/women" element={<Women/>} />
-                <Route path="/boys" element={<Boys/>} />
-                <Route path="/girls" element={<Girls/>} />
-                <Route path="/sale" element={<Sale/>} />
-            </Routes>
-        <Footer/>
+
+        <button onClick={request}>click</button>
+
+        {/*<Header/>*/}
+        {/*    <Routes>*/}
+        {/*        <Route path="/" element={<Home/>} />*/}
+        {/*        <Route path="/about" element={<About/>} />*/}
+        {/*        <Route path="/man" element={<Man/>} />*/}
+        {/*        <Route path="/women" element={<Women/>} />*/}
+        {/*        <Route path="/boys" element={<Boys/>} />*/}
+        {/*        <Route path="/girls" element={<Girls/>} />*/}
+        {/*        <Route path="/sale" element={<Sale/>} />*/}
+        {/*    </Routes>*/}
+        {/*<Footer/>*/}
     </div>
   );
 }
