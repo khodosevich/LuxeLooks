@@ -1,0 +1,29 @@
+[
+  {
+    "image": "https://images.pexels.com/photos/6311719/pexels-photo-6311719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "name": "slide1",
+    "color": "white slide",
+    "description": "New collection",
+    "title": "Menswear 2023",
+    "btnFirst":"Shop sale",
+    "btnSecond": "Shop the menswear"
+  },
+  {
+    "image": "https://images.pexels.com/photos/102129/pexels-photo-102129.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "name": "slide2",
+    "color": "green slide",
+    "description": "New collection",
+    "title": "Menswear 2023",
+    "btnFirst":"Shop sale",
+    "btnSecond": "Shop the menswear"
+  },
+  {
+    "image": "https://images.pexels.com/photos/257092/pexels-photo-257092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "name": "slide3",
+    "color": "red slide",
+    "description": "New collection",
+    "title": "Menswear 2023",
+    "btnFirst":"Shop sale",
+    "btnSecond": "Shop the menswear"
+  }
+]
