@@ -1,12 +1,11 @@
-import React, {useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import classes from "../../App.module.css"
 import links from "./links.json"
 
 import "./header.css"
 import {Link, NavLink} from "react-router-dom";
 import cardBag from "../../assets/cart.svg";
-
-
+import {MyContext} from "../../App";
 
 
 const Header = () => {
@@ -16,6 +15,21 @@ const Header = () => {
     const handlerSearchInput = (e) => {
         console.log(e.target.value)
     }
+
+    const {user,setUser} = useContext(MyContext)
+
+    const logout = () => {
+
+        setUser({
+            token: "",
+            username: "",
+            isAuthenticated: false,
+        })
+    }
+
+    useEffect(() => {
+
+    }, [user]);
 
     return (
         <div className="header">
@@ -43,6 +57,23 @@ const Header = () => {
                         </NavLink>
                         <span className="after__cart">0</span>
                     </div>
+
+
+                    {
+                        user.isAuthenticated
+                            ? <div className="account">
+                                <button onClick={logout} className="login-btn">
+                                       logout
+                                </button>
+                             </div>
+                            : <div className="account">
+                                <NavLink to="/registration">
+                                    <button  className="login-btn">
+                                             login
+                                    </button>
+                                </NavLink>
+                            </div>
+                    }
                 </div>
             </div>
         </div>

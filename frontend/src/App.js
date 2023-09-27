@@ -1,47 +1,90 @@
+import React, {useState} from 'react';
+
+
 import style from './App.module.css';
-import Header from "./components/Header/Header";
-import { Route, Routes} from "react-router-dom";
-import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
-import Man from "./pages/Man/Man";
-import Women from "./pages/Women/Women";
-import Boys from "./pages/Boys/Boys";
-import Sale from "./pages/Sale/Sale";
-import Girls from "./pages/Girls/Girls";
+import Header from "./components/header/Header";
+import {Route, Routes, useLocation, useNavigate, useNavigation} from "react-router-dom";
+import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Man from "./pages/man/Man";
+import Women from "./pages/women/Women";
+import Boys from "./pages/boys/Boys";
+import Sale from "./pages/sale/Sale";
+import Girls from "./pages/girls/Girls";
 import Footer from "./components/footer/Footer";
 import axios from "axios";
+import {method} from "./api/methods";
+import Registration from "./pages/registration/Registration";
+import Bag from "./pages/Bag/Bag";
+import SignIn from "./pages/signin/SignIn";
+
+
+
+export const MyContext = React.createContext();
+
 
 function App() {
+    const location = useLocation();
+
+    const [user, setUser] = useState({
+        token: "",
+        username: "",
+        isAuthenticated: false,
+    })
+
+    console.log(location)
 
     const request = () => {
         console.log("hello")
 
-        axios.get("https://localhost:7227/Product/GetAll")
-            .then(response => {
-                console.log(response.data);
-            })
-            .catch(error => {
-                console.error("Произошла ошибка:", error);
-            });
+        // method.getAllProduct().then(response => {
+        //     console.log(response.data);
+        // }).catch(error => {
+        //     console.error("Произошла ошибка:", error);
+        // });
+        //
+        // method.register({
+        //     "Email":"matveyhelo@yandex.ru",
+        //     "Password": "123456789",
+        //     "UserName": "123"
+        // }).then(response => {
+        //     console.log(response);
+        // }).catch(error => {
+        //     console.error("Произошла ошибка:", error);
+        // });
+
+        // method.registration({
+        //     "Password": "123456789",
+        //     "UserName": "123"
+        // }).then(response => {
+        //     console.log(response);
+        // }).catch(error => {
+        //     console.error("Произошла ошибка:", error);
+        // });
 
     }
 
+    const renderHeaderCondition = location.pathname !== "/registration" &&  location.pathname !== "/signIn";
+    const renderFooterCondition = location.pathname !== "/registration" &&  location.pathname !== "/signIn";
+
   return (
     <div className={style.App}>
-
-        <button onClick={request}>click</button>
-
-        {/*<Header/>*/}
-        {/*    <Routes>*/}
-        {/*        <Route path="/" element={<Home/>} />*/}
-        {/*        <Route path="/about" element={<About/>} />*/}
-        {/*        <Route path="/man" element={<Man/>} />*/}
-        {/*        <Route path="/women" element={<Women/>} />*/}
-        {/*        <Route path="/boys" element={<Boys/>} />*/}
-        {/*        <Route path="/girls" element={<Girls/>} />*/}
-        {/*        <Route path="/sale" element={<Sale/>} />*/}
-        {/*    </Routes>*/}
-        {/*<Footer/>*/}
+        <MyContext.Provider value={{user,setUser}}>
+            {renderHeaderCondition && <Header/>}
+                <Routes>
+                    <Route path="/" element={<Home/>} />
+                    <Route path="/about" element={<About/>} />
+                    <Route path="/man" element={<Man/>} />
+                    <Route path="/women" element={<Women/>} />
+                    <Route path="/boys" element={<Boys/>} />
+                    <Route path="/girls" element={<Girls/>} />
+                    <Route path="/sale" element={<Sale/>} />
+                    <Route path="/bag" element={<Bag/>} />
+                    <Route path="/registration" element={<Registration/>} />
+                    <Route path="/signIn" element={<SignIn/>} />
+                </Routes>
+            {renderHeaderCondition && <Footer/>}
+        </MyContext.Provider>
     </div>
   );
 }

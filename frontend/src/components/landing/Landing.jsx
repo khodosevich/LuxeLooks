@@ -8,7 +8,7 @@ import 'swiper/css/scrollbar';
 import 'swiper/css';
 
 
-import Slide from "../Slide/Slide";
+import Slide from "../slide/Slide";
 import sliders from "./slides.json"
 
 const Landing = () => {

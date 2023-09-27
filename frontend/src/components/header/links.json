@@ -18,10 +18,5 @@
     "name": "Girls",
     "class": "menu__item",
     "to": "/girls"
-  },
-  {
-    "name": "Sale",
-    "class": "menu__item sale",
-    "to": "/sale"
   }
 ]

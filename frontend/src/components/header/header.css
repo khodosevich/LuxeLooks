@@ -12,6 +12,10 @@
 .header:hover .logo {
   color: black;
 }
+.header:hover .login-btn {
+  background: #494848;
+  color: #cccccc;
+}
 
 .navbar {
   display: flex;
@@ -45,6 +49,7 @@
 
 .menu__item {
   font-size: 16px;
+  cursor: pointer;
   transition: all 0.4s;
 }
 .menu__item:hover {
@@ -82,6 +87,7 @@
   position: absolute;
   top: 12px;
   left: 100%;
+  width: 20px;
 }
 
 .bag {
@@ -100,6 +106,23 @@
   background: var(--success, #75a17f);
   padding: 1px 8px;
   font-family: Montserrat;
+}
+
+.login-btn {
+  outline: none;
+  border: 0;
+  font-family: Montserrat;
+  padding: 10px 20px;
+  color: #33333d;
+  border-radius: 50px;
+  transition: all 0.1s;
+}
+.login-btn:hover {
+  background: #000;
+}
+
+.account button {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=header.css.map */

@@ -15,7 +15,7 @@ const Categories = () => {
                 <div className="categories-content">
                     <div className="categories__items">
                         <div className="categories__item">
-                            <NavLink to="#">
+                            <NavLink to="/women">
                                 <img className="categories__item__img" src={img1} alt="Women’s"/>
                                 <h4 className="categories__item__title">
                                     Women’s
@@ -24,7 +24,7 @@ const Categories = () => {
 
                         </div>
                         <div className="categories__item">
-                            <NavLink to="#">
+                            <NavLink to="/man">
                                 <img className="categories__item__img" src={img2} alt="Women’s"/>
                                 <h4 className="categories__item__title">
                                     Man’s
@@ -32,7 +32,7 @@ const Categories = () => {
                             </NavLink>
                         </div>
                         <div className="categories__item">
-                            <NavLink to="#">
+                            <NavLink to="/girls">
                                 <img className="categories__item__img" src={img3} alt="Women’s"/>
                                 <h4 className="categories__item__title">
                                     Kids’s

@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {MyContext} from "../../App";
 
 const Girls = () => {
+
     return (
         <div>
             girls
