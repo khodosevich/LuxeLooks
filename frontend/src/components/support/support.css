@@ -1,0 +1,45 @@
+.support {
+  padding: 100px 0;
+}
+
+.support__container {
+  width: 1232px;
+  margin: 0 auto;
+}
+
+.support__support__items {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  align-items: center;
+}
+
+.support__support__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.support__support__item-title {
+  margin-top: 24px;
+  color: #1E212C;
+  text-align: center;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.support__support__item-description {
+  color: #787A80;
+  text-align: center;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+/*# sourceMappingURL=support.css.map */

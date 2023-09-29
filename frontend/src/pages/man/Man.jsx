@@ -13,7 +13,6 @@ const Man = () => {
                   man
                 </div>
             </div>
-
         </div>
     );
 };

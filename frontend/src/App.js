@@ -19,7 +19,6 @@ import Bag from "./pages/Bag/Bag";
 import SignIn from "./pages/signin/SignIn";
 
 
-
 export const MyContext = React.createContext();
 
 
@@ -31,38 +30,6 @@ function App() {
         username: "",
         isAuthenticated: false,
     })
-
-    console.log(location)
-
-    const request = () => {
-        console.log("hello")
-
-        // method.getAllProduct().then(response => {
-        //     console.log(response.data);
-        // }).catch(error => {
-        //     console.error("Произошла ошибка:", error);
-        // });
-        //
-        // method.register({
-        //     "Email":"matveyhelo@yandex.ru",
-        //     "Password": "123456789",
-        //     "UserName": "123"
-        // }).then(response => {
-        //     console.log(response);
-        // }).catch(error => {
-        //     console.error("Произошла ошибка:", error);
-        // });
-
-        // method.registration({
-        //     "Password": "123456789",
-        //     "UserName": "123"
-        // }).then(response => {
-        //     console.log(response);
-        // }).catch(error => {
-        //     console.error("Произошла ошибка:", error);
-        // });
-
-    }
 
     const renderHeaderCondition = location.pathname !== "/registration" &&  location.pathname !== "/signIn";
     const renderFooterCondition = location.pathname !== "/registration" &&  location.pathname !== "/signIn";
@@ -83,7 +50,7 @@ function App() {
                     <Route path="/registration" element={<Registration/>} />
                     <Route path="/signIn" element={<SignIn/>} />
                 </Routes>
-            {renderHeaderCondition && <Footer/>}
+            {renderFooterCondition && <Footer/>}
         </MyContext.Provider>
     </div>
   );
