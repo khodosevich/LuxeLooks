@@ -1,2 +1,4 @@
 .idea
 .vscode
+Delete .DS_Store
+/frontend/node_modules/*
