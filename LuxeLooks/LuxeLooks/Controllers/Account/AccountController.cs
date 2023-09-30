@@ -157,6 +157,7 @@ public class AccountController : ControllerBase
         var user = response.Data;
         user.RefreshToken = null;
         await _userService.UpdateAsync(user);
+        HttpContext.Response.Cookies.Delete("refreshToken");
 
         return Ok();
     }

@@ -11,7 +11,8 @@ namespace LuxeLooks.DataManagment
         public DbSet<Role> Roles { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
-        
+        public DbSet<Subscribe> Subscribes { get; set; }
+
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) { }

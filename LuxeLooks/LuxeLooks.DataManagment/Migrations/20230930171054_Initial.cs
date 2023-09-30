@@ -65,6 +65,19 @@ namespace LuxeLooks.DataManagment.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Subscribes",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Email = table.Column<string>(type: "text", nullable: false),
+                    Category = table.Column<string>(type: "text", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Subscribes", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
@@ -88,10 +101,10 @@ namespace LuxeLooks.DataManagment.Migrations
                 columns: new[] { "Id", "Description", "ImageUrl", "IsForKids", "IsForMen", "Name", "Price", "Type" },
                 values: new object[,]
                 {
-                    { new Guid("03ced595-265e-495a-b123-d371c0d46c24"), "Стильная куртка для мальчика из коллекции OUTERWEAR BOY JUNIOR станет идеальным выбором для повседневного отдыхам в холодное время года. Мембранная куртка оснащена флисовой подкладкой, светоотражающими элементами икарманами для любимых мелочей. Рукава отделаны эластичной манжетой, которая сохранит тепло в холодное время года.", "https://buslik.by/upload/resize_cache/iblock/a17/486_568_1/ld3wu2gwzmuhvkb6i1uam369xu4n5ow6.jpg", true, true, "Куртка для мальчика OUTERWEAR BOY JUNIOR", 104.9m, 0 },
-                    { new Guid("42b4e367-16a8-4a03-ba3f-d729c2535a86"), "Super baggy fit jeans with a five-pocket design, belt loops, and a zip fly and top button fastening. Made from 100% cotton", "https://static.pullandbear.net/2/photos//2023/I/0/2/p/7688/526/427/03/7688526427_2_6_8.jpg?t=1689251224432&imwidth=850", false, true, "SUPER BAGGY JEANS", 129m, 10 },
-                    { new Guid("7b23b319-6d1d-4317-abd4-76e9a64ea7fa"), "Flat Mary Jane shoes. Available in several colours. Patent effect. Chunky sole. Buckled front strap.", "https://static.pullandbear.net/2/photos//2023/I/1/1/p/1473/240/022/1473240022_2_1_8.jpg?t=1692269215615&imwidth=375", false, false, "CHUNKY SOLE FLAT SHOES", 149m, 2 },
-                    { new Guid("7c7b8cf9-1212-42fa-8b67-637464359062"), "Oversized fit wide-leg low-rise baggy jeans with a five-pocket design, belt loops, a zip fly and top button fastening and faded details. Made from cotton.", "https://static.pullandbear.net/2/photos//2023/I/0/1/p/7688/309/427/7688309427_2_1_8.jpg?t=1691508453560&imwidth=375", false, false, "ДЖИНСЫ ОВЕРСАЙЗ СВОБОДНОГО КРОЯ", 129m, 10 }
+                    { new Guid("1bcb2503-27e4-4fd9-82e7-afb4b41f850e"), "Стильная куртка для мальчика из коллекции OUTERWEAR BOY JUNIOR станет идеальным выбором для повседневного отдыхам в холодное время года. Мембранная куртка оснащена флисовой подкладкой, светоотражающими элементами икарманами для любимых мелочей. Рукава отделаны эластичной манжетой, которая сохранит тепло в холодное время года.", "https://buslik.by/upload/resize_cache/iblock/a17/486_568_1/ld3wu2gwzmuhvkb6i1uam369xu4n5ow6.jpg", true, true, "Куртка для мальчика OUTERWEAR BOY JUNIOR", 104.9m, 0 },
+                    { new Guid("83954ebc-93dd-49e3-a237-aa7c8e7b9998"), "Flat Mary Jane shoes. Available in several colours. Patent effect. Chunky sole. Buckled front strap.", "https://static.pullandbear.net/2/photos//2023/I/1/1/p/1473/240/022/1473240022_2_1_8.jpg?t=1692269215615&imwidth=375", false, false, "CHUNKY SOLE FLAT SHOES", 149m, 2 },
+                    { new Guid("ae6acf8b-432b-491b-ba27-30589c9e33eb"), "Oversized fit wide-leg low-rise baggy jeans with a five-pocket design, belt loops, a zip fly and top button fastening and faded details. Made from cotton.", "https://static.pullandbear.net/2/photos//2023/I/0/1/p/7688/309/427/7688309427_2_1_8.jpg?t=1691508453560&imwidth=375", false, false, "ДЖИНСЫ ОВЕРСАЙЗ СВОБОДНОГО КРОЯ", 129m, 10 },
+                    { new Guid("fbb4adbc-e8fd-41b2-8d50-7f7cf2786ccf"), "Super baggy fit jeans with a five-pocket design, belt loops, and a zip fly and top button fastening. Made from 100% cotton", "https://static.pullandbear.net/2/photos//2023/I/0/2/p/7688/526/427/03/7688526427_2_6_8.jpg?t=1689251224432&imwidth=850", false, true, "SUPER BAGGY JEANS", 129m, 10 }
                 });
 
             migrationBuilder.InsertData(
@@ -106,7 +119,7 @@ namespace LuxeLooks.DataManagment.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Email", "NormalizedUserName", "PasswordHash", "PasswordSalt", "RefreshToken", "RefreshTokenExpiryTime", "RoleId", "UserName" },
-                values: new object[] { new Guid("5b161353-2e3d-4b54-821e-4c6f34cefd31"), "alsemkovbn@gmail.com", "ADMIN", "$2a$12$iW6RyEqQv.ZON5f.ipkDxeyYfa9OJhRNqAPLZ1GomhuU6NfU/l/Bu", "$2a$12$iW6RyEqQv.ZON5f.ipkDxe", null, new DateTime(2023, 9, 28, 12, 12, 24, 40, DateTimeKind.Utc).AddTicks(9292), new Guid("44546e06-8719-4ad8-b88a-f271ae9d6abe"), "Admin" });
+                values: new object[] { new Guid("4dd6d1f4-9d3d-4c7b-a06e-2eda62c7c9a9"), "alsemkovbn@gmail.com", "ADMIN", "$2a$12$MflrlsA1Fqt6xmyzzWqScOnx1/iSzSEOFw4Ae2ud6eORSbZJftoD2", "$2a$12$MflrlsA1Fqt6xmyzzWqScO", null, new DateTime(2023, 9, 30, 17, 10, 54, 420, DateTimeKind.Utc).AddTicks(2475), new Guid("44546e06-8719-4ad8-b88a-f271ae9d6abe"), "Admin" });
         }
 
         /// <inheritdoc />
@@ -120,6 +133,9 @@ namespace LuxeLooks.DataManagment.Migrations
 
             migrationBuilder.DropTable(
                 name: "Roles");
+
+            migrationBuilder.DropTable(
+                name: "Subscribes");
 
             migrationBuilder.DropTable(
                 name: "Users");

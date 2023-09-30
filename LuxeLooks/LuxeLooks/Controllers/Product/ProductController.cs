@@ -1,19 +1,25 @@
 ﻿using System.Net;
+using LuxeLooks.Domain.Enum;
+using LuxeLooks.Domain.Models;
 using LuxeLooks.Domain.Response;
 using LuxeLooks.Service.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LuxeLooks.Controllers.Product;
+
 [Route("Product")]
-public class ProductController:ControllerBase
+public class ProductController : ControllerBase
 {
     private readonly ILogger<ProductController> _logger;
     private readonly ProductService _productService;
+    private readonly NotificationService _notificationService;
 
-    public ProductController(ILogger<ProductController> logger, ProductService productService)
+    public ProductController(ILogger<ProductController> logger, ProductService productService,
+        NotificationService notificationService)
     {
         _logger = logger;
         _productService = productService;
+        _notificationService = notificationService;
     }
 
     private IActionResult HandleResponse<T>(BaseResponse<T> response)
@@ -26,15 +32,15 @@ public class ProductController:ControllerBase
 
         return Ok(response.Data);
     }
-    
+
     [HttpGet("GetAll")]
     public async Task<IActionResult> GetAllProducts()
     {
         bool useCache = false;
-        var response =await _productService.GetProducts(useCache);
+        var response = await _productService.GetProducts(useCache);
         return HandleResponse(response);
     }
-    
+
     [HttpGet("GetById/{id}")]
     public async Task<IActionResult> GetProductById(string id)
     {
@@ -46,7 +52,7 @@ public class ProductController:ControllerBase
         var response = await _productService.GetById(guid);
         return HandleResponse(response);
     }
-    
+
     [HttpGet("GetByName/{username}")]
     public async Task<IActionResult> GetProductByName(string userName)
     {
@@ -64,8 +70,37 @@ public class ProductController:ControllerBase
                 return BadRequest("Invalid products ID format");
             }
         }
+
         List<Guid> guidProductsIds = productsIds.Select(Guid.Parse).ToList();
         var response = await _productService.GetManyProducts(guidProductsIds);
         return HandleResponse(response);
+    }
+
+    [HttpPut("CreateProduct")]
+    public async Task<IActionResult> CreateProduct([FromBody]CreateProductRequest request)
+    {
+        if (!Enum.IsDefined(typeof(ProductType), request.Type))
+        {
+            return BadRequest("Invalid type of product");
+        }
+
+        var product = new Domain.Entity.Product()
+        {
+            Description = request.Description,
+            Type = (ProductType)Enum.Parse(typeof(ProductType), request.Type),
+            ImageUrl = request.ImageUrl,
+            IsForKids = request.IsForKids,
+            IsForMen = request.IsForMen,
+            Name = request.Name,
+            Price = request.Price
+        };
+        var response = await _productService.CreateProduct(product);
+        if (response.StatusCode!=HttpStatusCode.OK)
+        {
+            return HandleResponse(response);
+        }
+
+        //await _notificationService.SendNotificationsForNewProductAsync(product);
+        return Ok();
     }
 }
