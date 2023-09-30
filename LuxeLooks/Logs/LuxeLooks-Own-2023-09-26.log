@@ -1,0 +1,351 @@
+2023-09-26 00:00:24.0758|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 00:00:24.1676|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:00:24.1676|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:00:24.1676|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 00:00:29.2216|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 00:00:29.8547|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Alexey |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 00:01:27.4442|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 00:02:27.1343|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 00:02:27.2309|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:02:27.2309|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:02:27.2309|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 00:02:29.2580|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 00:02:42.9964|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 00:02:43.2032|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:02:43.2032|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:02:43.2032|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 00:04:39.8672|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 00:04:39.9751|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:04:39.9751|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:04:39.9751|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 00:05:52.7524|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 00:05:53.1852|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Alexey |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 00:06:06.0258|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.AspNetCore.Http.SessionExtensions.GetString(ISession session, String key)
+   at LuxeLooks.Extensions.SessionExtensions.GetObject[T](ISession session, String key)
+   at LuxeLooks.Controllers.Cart.CartController.AddToCart(String id)
+   at lambda_method142(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)|url: https://localhost/Cart/AddToCart/41cbd422-ba27-4b19-b807-15df7b2beb67|action: AddToCart|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke| body: 
+2023-09-26 00:06:20.1642|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 00:06:33.6506|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 00:06:33.8795|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:06:33.8795|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:06:33.8795|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 00:07:18.8410|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 00:07:18.9337|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:07:18.9337|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:07:18.9337|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 00:07:27.6959|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.AspNetCore.Http.SessionExtensions.GetString(ISession session, String key)
+   at LuxeLooks.Extensions.SessionExtensions.GetObject[T](ISession session, String key) in C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\Extensions\SessionExtensions.cs:line 14
+   at LuxeLooks.Controllers.Cart.CartController.AddToCart(String id) in C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\Controllers\Cart\CartController.cs:line 53
+   at lambda_method6(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)|url: https://localhost/Cart/AddToCart/41cbd422-ba27-4b19-b807-15df7b2beb67|action: AddToCart|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke| body: 
+2023-09-26 00:09:18.4285|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 00:09:25.6019|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 00:09:25.6897|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:09:25.6897|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:09:25.6897|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 00:09:29.9150|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.AspNetCore.Http.SessionExtensions.GetString(ISession session, String key)
+   at LuxeLooks.Extensions.SessionExtensions.GetObject[T](ISession session, String key) in C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\Extensions\SessionExtensions.cs:line 14
+   at LuxeLooks.Controllers.Cart.CartController.AddToCart(String id) in C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\Controllers\Cart\CartController.cs:line 53
+   at lambda_method6(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)|url: https://localhost/Cart/AddToCart/41cbd422-ba27-4b19-b807-15df7b2beb67|action: AddToCart|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke| body: 
+2023-09-26 00:11:11.8100|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 00:11:21.4235|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 00:11:21.5255|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:11:21.5255|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:11:21.5255|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 00:11:43.4063|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 00:11:43.8921|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Alexey |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 00:13:22.5902|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 00:13:22.6057|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Alexey |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 00:14:19.6461|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 00:14:32.2914|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 00:14:32.5066|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:14:32.5066|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:14:32.5078|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 00:16:14.9769|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 00:16:15.1958|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:16:15.1958|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:16:15.1958|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 00:17:05.6070|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 00:17:05.6976|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:17:05.6976|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:17:05.6976|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 00:17:13.2514|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly register user: Alexey |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Register| body: 
+2023-09-26 00:17:14.3369|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 00:17:14.6507|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Alexey |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 00:20:19.5160|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 00:21:22.4828|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 00:21:22.5822|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:21:22.5822|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:21:22.5822|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 00:21:43.0454|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly register user: Alexey |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Register| body: 
+2023-09-26 00:21:43.9852|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 00:21:44.2763|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Alexey |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 00:23:03.3441|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 00:23:03.3582|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Alexey |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 00:23:38.4932|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly register user: Alexey |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Register| body: 
+2023-09-26 00:23:39.4986|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 00:23:39.4986|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Alexey |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 00:24:54.9877|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 00:25:07.8515|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 00:25:07.9294|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:25:07.9294|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:25:07.9294|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 00:25:33.4380|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 00:25:34.0360|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Alexey |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 00:27:13.5231|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.AspNetCore.Http.SessionExtensions.GetString(ISession session, String key)
+   at LuxeLooks.Extensions.SessionExtensions.GetObject[T](ISession session, String key) in C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\Extensions\SessionExtensions.cs:line 14
+   at LuxeLooks.Controllers.Cart.CartController.AddToCart(String id) in C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\Controllers\Cart\CartController.cs:line 53
+   at lambda_method149(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)|url: https://localhost/Cart/AddToCart/41cbd422-ba27-4b19-b807-15df7b2beb67|action: AddToCart|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke| body: 
+2023-09-26 00:27:58.3534|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 00:29:11.5647|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 00:29:11.6555|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:29:11.6555|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:29:11.6555|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 00:29:13.6358|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.AspNetCore.Http.SessionExtensions.GetString(ISession session, String key)
+   at LuxeLooks.Extensions.SessionExtensions.GetObject[T](ISession session, String key) in C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\Extensions\SessionExtensions.cs:line 14
+   at LuxeLooks.Controllers.Cart.CartController.GetCart() in C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\Controllers\Cart\CartController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)|url: https://localhost/Cart/GetCart|action: GetCart|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke| body: 
+2023-09-26 00:31:08.1716|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 00:31:19.9766|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 00:31:20.2219|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:31:20.2219|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 00:31:20.2219|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 00:31:21.4314|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: Session has not been configured for this application or request.
+   at Microsoft.AspNetCore.Http.DefaultHttpContext.get_Session()
+   at LuxeLooks.Controllers.Cart.CartController.GetCart() in C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\Controllers\Cart\CartController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)|url: https://localhost/Cart/GetCart|action: GetCart|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke| body: 
+2023-09-26 01:01:15.2799|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 01:01:15.4301|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 01:01:15.4301|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 01:01:15.4301|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 01:01:52.0894|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 01:01:52.1576|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 01:01:52.1576|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 01:01:52.1576|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 01:08:29.4226|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 01:08:37.0172|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 01:08:37.0934|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 01:08:37.0934|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 01:08:37.0934|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 01:11:37.5550|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 01:11:37.7457|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Alexey |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 01:14:02.4491|0|INFO|LuxeLooks.Service.Services.UserService|Successfully get user with id: bc64d855-4383-4b92-b036-b49f0c95fe20 |url: https://localhost/Order/CreateOrder|action: CreateOrder|LuxeLooks.Service.Services.UserService.GetByIdAsync| body: 
+2023-09-26 01:14:02.5864|0|INFO|LuxeLooks.Service.Services.OrderService|Успешное создание заказа |url: https://localhost/Order/CreateOrder|action: CreateOrder|LuxeLooks.Service.Services.OrderService.CreateOrder| body: 
+2023-09-26 01:16:34.2344|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+LuxeLooks.Controllers.Cart.CartController.RemoveFromCart (LuxeLooks)
+LuxeLooks.Controllers.Cart.CartController.RemoveFromCart (LuxeLooks)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)|url: https://localhost/Cart/RemoveFromCart|action: |Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke| body: 
+2023-09-26 01:19:39.1101|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+LuxeLooks.Controllers.Cart.CartController.RemoveFromCart (LuxeLooks)
+LuxeLooks.Controllers.Cart.CartController.RemoveFromCart (LuxeLooks)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)|url: https://localhost/Cart/RemoveFromCart|action: |Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke| body: 
+2023-09-26 01:19:47.7622|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 01:20:10.8682|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 01:20:10.9268|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 01:20:10.9268|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 01:20:10.9268|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 01:20:26.3369|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 01:20:26.6061|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Alexey |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 01:21:00.1615|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 01:21:07.0143|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 01:21:07.1494|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 01:21:07.1494|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 01:21:07.1494|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 12:53:51.3542|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 12:53:51.4733|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 12:53:51.4733|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 12:53:51.4733|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 12:53:56.7043|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 16:26:13.1558|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 16:26:13.6351|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 16:26:13.6351|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 16:26:13.6351|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 16:27:12.6014|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 16:27:21.1762|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 16:27:21.4143|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7227 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-09-26 16:27:21.4143|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5219 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-09-26 16:27:21.4143|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 16:27:21.4143|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 16:27:21.4143|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 16:28:09.5230|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly register user: Ivan |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Register| body: 
+2023-09-26 16:28:10.4844|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 16:28:10.6333|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Ivan |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 16:28:42.6187|0|INFO|LuxeLooks.Service.Services.UserService|Successfully get user with id: bc64d855-4383-4b92-b036-b49f0c95fe20 |url: https://localhost/Order/CreateOrder|action: CreateOrder|LuxeLooks.Service.Services.UserService.GetByIdAsync| body: 
+2023-09-26 16:28:42.7902|0|INFO|LuxeLooks.Service.Services.OrderService|Успешное создание заказа |url: https://localhost/Order/CreateOrder|action: CreateOrder|LuxeLooks.Service.Services.OrderService.CreateOrder| body: 
+2023-09-26 16:36:28.4141|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 16:36:28.4291|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Ivan |url: https://localhost/Account/Login|action: Authenticate|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 16:37:33.5786|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 16:39:23.5477|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 16:39:23.6844|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7227 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-09-26 16:39:23.6844|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5219 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-09-26 16:39:23.6844|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 16:39:23.6844|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 16:39:23.6844|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 16:39:56.0400|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 18:03:37.9289|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 18:03:38.5387|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7227 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-09-26 18:03:38.5453|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5219 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-09-26 18:03:38.5547|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 18:03:38.5705|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 18:03:38.5705|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 18:14:21.6952|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 18:14:21.8009|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 18:14:21.8009|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 18:14:21.8009|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 18:17:15.9863|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 19:46:21.6608|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 19:46:22.1055|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7227 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-09-26 19:46:22.1155|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5219 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-09-26 19:46:22.1236|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 19:46:22.1236|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 19:46:22.1236|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 19:48:10.6661|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly register user: Ivan |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Register| body: 
+2023-09-26 19:48:10.9616|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 19:48:11.0594|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Ivan |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 19:57:55.9994|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-09-26 20:04:10.6474|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-09-26 20:04:10.7565|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7227 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-09-26 20:04:10.7565|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5219 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-09-26 20:04:10.7565|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 20:04:10.7580|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-09-26 20:04:10.7580|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-09-26 20:07:17.3388|0|ERROR|LuxeLooks.Service.Services.UserService|User with username: lox12 not found |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.UserService.HandleError| body: 
+2023-09-26 20:07:17.3388|0|ERROR|LuxeLooks.Service.Services.UserService|User with username: lox12 not found |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.UserService.HandleError| body: 
+2023-09-26 20:07:17.8234|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly register user: lox12 |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Register| body: 
+2023-09-26 20:07:17.8234|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly register user: lox12 |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Register| body: 
+2023-09-26 20:07:18.1634|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 20:07:18.1634|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 20:07:18.2578|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: lox12 |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 20:07:18.2578|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: lox12 |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 20:09:38.3984|0|ERROR|LuxeLooks.Service.Services.UserService|User with username: Amiytt not found |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.UserService.HandleError| body: 
+2023-09-26 20:09:38.3984|0|ERROR|LuxeLooks.Service.Services.UserService|User with username: Amiytt not found |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.UserService.HandleError| body: 
+2023-09-26 20:09:38.6796|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly register user: Amiytt |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Register| body: 
+2023-09-26 20:09:38.6796|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly register user: Amiytt |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Register| body: 
+2023-09-26 20:09:38.9655|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 20:09:38.9766|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 20:09:38.9766|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Amiytt |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 20:09:38.9766|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Amiytt |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 20:10:37.3668|0|ERROR|LuxeLooks.Service.Services.UserService|User with username: Алексей not found |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.UserService.HandleError| body: 
+2023-09-26 20:10:37.3668|0|ERROR|LuxeLooks.Service.Services.UserService|User with username: Алексей not found |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.UserService.HandleError| body: 
+2023-09-26 20:10:37.6367|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly register user: Алексей |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Register| body: 
+2023-09-26 20:10:37.6479|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly register user: Алексей |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Register| body: 
+2023-09-26 20:10:37.9203|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 20:10:37.9292|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 20:10:37.9292|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Алексей |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 20:10:37.9292|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Алексей |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-09-26 20:12:40.9142|0|ERROR|LuxeLooks.Service.Services.UserService|User with username: Alexey not found |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.UserService.HandleError| body: 
+2023-09-26 20:12:41.1662|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly register user: Alexey |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Register| body: 
+2023-09-26 20:12:41.4215|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6abe |url: https://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-09-26 20:12:41.4293|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Alexey |url: https://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 

@@ -1,0 +1,17 @@
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\bin\Debug\net7.0\LuxeLooks.DataManagment.deps.json
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\bin\Debug\net7.0\LuxeLooks.DataManagment.runtimeconfig.json
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\bin\Debug\net7.0\LuxeLooks.DataManagment.dll
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\bin\Debug\net7.0\LuxeLooks.DataManagment.pdb
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\bin\Debug\net7.0\LuxeLooks.Domain.dll
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\bin\Debug\net7.0\LuxeLooks.Domain.pdb
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\obj\Debug\net7.0\LuxeLooks.DataManagment.csproj.AssemblyReference.cache
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\obj\Debug\net7.0\LuxeLooks.DataManagment.GeneratedMSBuildEditorConfig.editorconfig
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\obj\Debug\net7.0\LuxeLooks.DataManagment.AssemblyInfoInputs.cache
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\obj\Debug\net7.0\LuxeLooks.DataManagment.AssemblyInfo.cs
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\obj\Debug\net7.0\LuxeLooks.DataManagment.csproj.CoreCompileInputs.cache
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\obj\Debug\net7.0\LuxeLooks.DataManagment.csproj.CopyComplete
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\obj\Debug\net7.0\LuxeLooks.DataManagment.dll
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\obj\Debug\net7.0\refint\LuxeLooks.DataManagment.dll
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\obj\Debug\net7.0\LuxeLooks.DataManagment.pdb
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\obj\Debug\net7.0\LuxeLooks.DataManagment.genruntimeconfig.cache
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\obj\Debug\net7.0\ref\LuxeLooks.DataManagment.dll
