@@ -23,8 +23,12 @@ const Registration = () => {
 
                     <Button variant="contained">Registration</Button>
 
-                    <NavLink className="exist-account" to="/signIn">
+                    <NavLink className="exist-account" to="/signin">
                         exist account? SignIN
+                    </NavLink>
+
+                    <NavLink className="exist-account" to="/">
+                        На главную
                     </NavLink>
                 </div>
             </div>

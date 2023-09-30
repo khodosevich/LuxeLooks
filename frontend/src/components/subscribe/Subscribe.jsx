@@ -18,6 +18,16 @@ const Subscribe = () => {
         setIsChecked(!isChecked);
     };
 
+    const [inputData,setInputData] = useState("")
+
+    const inputHandler = (e) => {
+        setInputData(e.target.value)
+    }
+
+    const updateInput = () => {
+        setInputData("");
+    }
+
     return (
         <div className="subscribe">
             <div className="subscribe-container">
@@ -59,8 +69,8 @@ const Subscribe = () => {
                                 Email
                             </p>
                             <div className="subscribe__info-email__btn">
-                                <input placeholder='Your working email' className="subscribe__info-email__input" type="text"/>
-                                <button className="subscribe__info-email__button">
+                                <input value={inputData} onChange={inputHandler} placeholder='Your working email' className="subscribe__info-email__input" type="text"/>
+                                <button onClick={updateInput} className="subscribe__info-email__button">
                                     Subscribe
                                 </button>
                             </div>

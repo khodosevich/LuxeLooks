@@ -78,13 +78,14 @@ const SignIn = () => {
                                     Registration
                                 </NavLink>
 
+                                <NavLink className="exist-account" to="/">
+                                    На главную
+                                </NavLink>
                             </div>
                         </div>
                     </div>
             }
         </>
-
-
 
     );
 };

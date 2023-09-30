@@ -1,10 +1,23 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {MyContext} from "../../App";
+import {Navigate} from "react-router-dom";
 
 const Bag = () => {
+
+
+    const {user,setUser} = useContext(MyContext);
+
+
     return (
-        <div>
-            bag
-        </div>
+        <>
+            {
+                user.isAuthenticated
+                    ? <div>
+                        bag
+                    </div>
+                    :<Navigate to="/signin"/>
+            }
+        </>
     );
 };
 

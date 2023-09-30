@@ -31,8 +31,8 @@ function App() {
         isAuthenticated: false,
     })
 
-    const renderHeaderCondition = location.pathname !== "/registration" &&  location.pathname !== "/signIn";
-    const renderFooterCondition = location.pathname !== "/registration" &&  location.pathname !== "/signIn";
+    const renderHeaderCondition = location.pathname !== "/registration" &&  location.pathname !== "/signin";
+    const renderFooterCondition = location.pathname !== "/registration" &&  location.pathname !== "/signin";
 
   return (
     <div className={style.App}>
@@ -48,7 +48,7 @@ function App() {
                     <Route path="/sale" element={<Sale/>} />
                     <Route path="/bag" element={<Bag/>} />
                     <Route path="/registration" element={<Registration/>} />
-                    <Route path="/signIn" element={<SignIn/>} />
+                    <Route path="/signin" element={<SignIn/>} />
                 </Routes>
             {renderFooterCondition && <Footer/>}
         </MyContext.Provider>
