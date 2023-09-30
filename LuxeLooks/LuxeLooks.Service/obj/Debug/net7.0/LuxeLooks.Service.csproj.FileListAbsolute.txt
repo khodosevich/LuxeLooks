@@ -1,0 +1,17 @@
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.Service\bin\Debug\net7.0\LuxeLooks.Service.deps.json
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.Service\bin\Debug\net7.0\LuxeLooks.Service.dll
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.Service\bin\Debug\net7.0\LuxeLooks.Service.pdb
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.Service\bin\Debug\net7.0\LuxeLooks.DataManagment.dll
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.Service\bin\Debug\net7.0\LuxeLooks.Domain.dll
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.Service\bin\Debug\net7.0\LuxeLooks.DataManagment.pdb
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.Service\bin\Debug\net7.0\LuxeLooks.Domain.pdb
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.Service\obj\Debug\net7.0\LuxeLooks.Service.csproj.AssemblyReference.cache
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.Service\obj\Debug\net7.0\LuxeLooks.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.Service\obj\Debug\net7.0\LuxeLooks.Service.AssemblyInfoInputs.cache
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.Service\obj\Debug\net7.0\LuxeLooks.Service.AssemblyInfo.cs
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.Service\obj\Debug\net7.0\LuxeLooks.Service.csproj.CoreCompileInputs.cache
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.Service\obj\Debug\net7.0\LuxeLooks.Service.csproj.CopyComplete
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.Service\obj\Debug\net7.0\LuxeLooks.Service.dll
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.Service\obj\Debug\net7.0\refint\LuxeLooks.Service.dll
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.Service\obj\Debug\net7.0\LuxeLooks.Service.pdb
+C:\5Sem\LuxeLooksNew\LuxeLooks\LuxeLooks\LuxeLooks.Service\obj\Debug\net7.0\ref\LuxeLooks.Service.dll
