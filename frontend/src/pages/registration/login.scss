@@ -1,0 +1,53 @@
+.registration {
+
+  position: relative;
+  left: 0;
+  background: #000;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding-top: 100px ;
+}
+
+.registration__container {
+  width: 1232px;
+  margin: 0 auto;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.registration-content {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+  padding: 100px 150px;
+
+}
+
+.inputs__registration {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.exist-account {
+  color: cornflowerblue;
+  text-decoration: underline;
+
+  transition: all .5s;
+
+  &:hover{
+    color: #94add7;
+  }
+
+}

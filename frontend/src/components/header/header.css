@@ -1,0 +1,128 @@
+.header {
+  background: transparent;
+  color: white;
+  position: relative;
+  transition: all 0.5s;
+  z-index: 100;
+}
+.header:hover {
+  background: #ffffff;
+  color: black;
+}
+.header:hover .logo {
+  color: black;
+}
+.header:hover .login-btn {
+  background: #494848;
+  color: #cccccc;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  color: white;
+  font-family: Montserrat;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+.logo:hover {
+  color: var(--gray-800, #424551);
+}
+
+.menu {
+  display: flex;
+  gap: 40px;
+}
+
+.search-input {
+  max-width: 380px;
+  position: relative;
+  display: inline-block;
+}
+
+.menu__item {
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.menu__item:hover {
+  transform: scale(1.2);
+  color: #cccccc;
+}
+
+.sale {
+  color: #FF4242;
+}
+
+.input_header {
+  outline: 0;
+  background: #ffffff;
+  width: 380px;
+  padding: 11px 16px 12px 16px;
+  border-radius: 4px;
+  border: 1px solid #D7DADD;
+  font-size: 14px;
+  font-family: Montserrat;
+  transition: all 0.5s;
+}
+.input_header:hover {
+  transform: scale(1.09);
+}
+
+.fa {
+  cursor: pointer;
+  background: url("../../assets/search.svg") no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.search-input i {
+  position: absolute;
+  top: 12px;
+  left: 100%;
+  width: 20px;
+}
+
+.bag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shop__cart {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.after__cart {
+  border-radius: 4px;
+  background: var(--success, #75a17f);
+  padding: 1px 8px;
+  font-family: Montserrat;
+}
+
+.login-btn {
+  outline: none;
+  border: 0;
+  font-family: Montserrat;
+  padding: 10px 20px;
+  color: #33333d;
+  border-radius: 50px;
+  transition: all 0.1s;
+}
+.login-btn:hover {
+  background: #000;
+}
+
+.account button {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=header.css.map */
