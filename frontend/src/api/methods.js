@@ -8,7 +8,13 @@ export const api = axios.create({
 export const method = {
 
     async register(data) {
-        await api.post("Account/Register", data)
+        let value = {} ;
+        await api.post("Account/Register", data).then(r => {
+            console.log( r.data)
+            value = r.data
+        })
+
+        return value;
     },
     async login(data){
 

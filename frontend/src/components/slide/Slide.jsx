@@ -7,8 +7,6 @@ import {NavLink} from "react-router-dom";
 
 const Slide = ({props}) => {
 
-    console.log(props.name)
-
     return (
         <div className="slider">
             <div className={props.color}>
