@@ -12,6 +12,15 @@
     color: black;
   }
 
+  &.black{
+    background: #000;
+  }
+
+  &.black:hover {
+    background: #ffffff;
+    color: black;
+  }
+
   &:hover .logo {
     color: black;
   }
@@ -21,10 +30,7 @@
     color: #cccccc;
   }
 
-
-
   z-index: 100;
-
 }
 
 .navbar {
@@ -131,7 +137,7 @@
 
 .after__cart {
   border-radius: 4px;
-  background: var(--success, #75a17f);
+  background:#03CEA4;
   padding: 1px 8px;
   font-family: Montserrat;
 }

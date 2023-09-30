@@ -3,7 +3,7 @@ import classes from "../../App.module.css"
 import links from "./links.json"
 
 import "./header.css"
-import {Link, NavLink} from "react-router-dom";
+import {Link, NavLink, useLocation} from "react-router-dom";
 import cardBag from "../../assets/cart.svg";
 import {MyContext} from "../../App";
 
@@ -31,8 +31,13 @@ const Header = () => {
 
     }, [user]);
 
+    const location = useLocation();
+    const renderHeaderCondition = location.pathname !== "/bag";
+
+
+
     return (
-        <div className="header">
+        <div className={`${renderHeaderCondition ? 'header' : 'header black'}`}>
             <div className={classes.container}>
                 <div className="navbar">
                     <div className="logo-container">
