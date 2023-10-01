@@ -118,8 +118,7 @@ public class ProductController : ControllerBase
 
         var orders = orderResponse.Data;
         var products = productsResponse.Data;
-        var last30Days = DateTime.Now.AddDays(-30);
-        var recentOrders = orders.Where(order => order.CreateTime >= last30Days).ToList();
+        var recentOrders = orders.Where(order => order.CreateTime >= DateTime.Now.AddDays(-30)).ToList();
 
         // Создаем словарь для подсчета количества продаж каждого товара
         var productSalesCount = new Dictionary<Guid, int>();
@@ -142,5 +141,42 @@ public class ProductController : ControllerBase
         var sortedProducts = products.OrderByDescending(product => productSalesCount.ContainsKey(product.Id) ? productSalesCount[product.Id] : 0).ToList();
         var top12Products = sortedProducts.Take(12).ToList();
         return Ok(top12Products);
+    }
+
+    [HttpGet("GetPopularTypes")]
+    public async Task<IActionResult> GetPopularTypes()
+    { 
+        var orderResponse = await _orderService.GetOrders(true);
+        var productsResponse = await _productService.GetProducts(true);
+        if (orderResponse.StatusCode!=HttpStatusCode.OK||productsResponse.StatusCode!=HttpStatusCode.OK)
+        {
+            return NoContent();
+        }
+
+        var orders = orderResponse.Data;
+        var products = productsResponse.Data;
+        var recentOrders = orders.Where(order => order.CreateTime >= DateTime.Now.AddDays(-30)).ToList();
+        var productTypeSalesCount = new Dictionary<string, int>();
+        
+        foreach (var order in recentOrders)
+        {
+            foreach (var productId in order.ProductsIds)
+            {
+                var product = products.FirstOrDefault(p => p.Id == productId);
+                if (product != null)
+                {
+                    if (productTypeSalesCount.ContainsKey(product.Type))
+                    {
+                        productTypeSalesCount[product.Type]++;
+                    }
+                    else
+                    {
+                        productTypeSalesCount[product.Type] = 1;
+                    }
+                }
+            }
+        }
+        var top6ProductTypes = productTypeSalesCount.OrderByDescending(kv => kv.Value).Take(6).Select(kv => kv.Key).ToList();
+        return Ok(top6ProductTypes);
     }
 }
