@@ -13,13 +13,15 @@ public class ProductController : ControllerBase
     private readonly ILogger<ProductController> _logger;
     private readonly ProductService _productService;
     private readonly NotificationService _notificationService;
+    private readonly OrderService _orderService;
 
     public ProductController(ILogger<ProductController> logger, ProductService productService,
-        NotificationService notificationService)
+        NotificationService notificationService, OrderService orderService)
     {
         _logger = logger;
         _productService = productService;
         _notificationService = notificationService;
+        _orderService = orderService;
     }
 
     private IActionResult HandleResponse<T>(BaseResponse<T> response)
@@ -102,5 +104,43 @@ public class ProductController : ControllerBase
 
         //await _notificationService.SendNotificationsForNewProductAsync(product);
         return Ok();
+    }
+
+    [HttpGet("GetPopularProducts")]
+    public async Task<IActionResult> GetPopularProducts()
+    {
+        var orderResponse = await _orderService.GetOrders(true);
+        var productsResponse = await _productService.GetProducts(true);
+        if (orderResponse.StatusCode!=HttpStatusCode.OK||productsResponse.StatusCode!=HttpStatusCode.OK)
+        {
+            return NoContent();
+        }
+
+        var orders = orderResponse.Data;
+        var products = productsResponse.Data;
+        var last30Days = DateTime.Now.AddDays(-30);
+        var recentOrders = orders.Where(order => order.CreateTime >= last30Days).ToList();
+
+        // Создаем словарь для подсчета количества продаж каждого товара
+        var productSalesCount = new Dictionary<Guid, int>();
+
+        foreach (var order in recentOrders)
+        {
+            foreach (var productId in order.ProductsIds)
+            {
+                if (productSalesCount.ContainsKey(productId))
+                {
+                    productSalesCount[productId]++;
+                }
+                else
+                {
+                    productSalesCount[productId] = 1;
+                }
+            }
+        }
+        
+        var sortedProducts = products.OrderByDescending(product => productSalesCount.ContainsKey(product.Id) ? productSalesCount[product.Id] : 0).ToList();
+        var top12Products = sortedProducts.Take(12).ToList();
+        return Ok(top12Products);
     }
 }

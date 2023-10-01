@@ -73,8 +73,7 @@ public class AccountController : ControllerBase
         {
             Username = user.UserName!,
             Email = user.Email!,
-            Token = accessToken,
-            RefreshToken = user.RefreshToken
+            Token = accessToken
         });
     }
     

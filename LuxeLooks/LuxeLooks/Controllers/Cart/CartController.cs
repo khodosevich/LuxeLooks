@@ -37,6 +37,7 @@ public class CartController : ControllerBase
             return Ok(products);
         }
         _logger.LogError("Cart data is failed");
+       
         return NoContent();
     } 
     
