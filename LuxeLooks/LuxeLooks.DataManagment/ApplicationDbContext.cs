@@ -11,7 +11,8 @@ namespace LuxeLooks.DataManagment
         public DbSet<Role> Roles { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
-        
+        public DbSet<Subscribe> Subscribes { get; set; }
+
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) { }
@@ -95,14 +96,135 @@ namespace LuxeLooks.DataManagment
                 IsForKids = true,
                 IsForMen = true
             });
-
-            modelBuilder.Entity<Role>().HasData(new Role
+            modelBuilder.Entity<Product>().HasData(new Product()
             {
-                Id = new Guid("44546e06-8719-4ad8-b88a-f271ae9d6abe"),
-                RoleName = "Resident",
-                NormalizedRoleName = "RESIDENT"
+                Id = Guid.NewGuid(),
+                Description =
+                    "Short black dress with gathered detail in the centre, a boat neck and tie detail.",
+                Name = "КОРОТКОЕ ПЛАТЬЕ СО СБОРКОЙ",
+                Price = new decimal(89.99),
+                ImageUrl =
+                    "https://static.pullandbear.net/2/photos//2023/I/0/1/p/7393/409/800/7393409800_2_1_8.jpg?t=1695910228791&imwidth=850",
+                Type = ProductType.Dress,
+                IsForKids = false,
+                IsForMen = false
             });
-            
+            modelBuilder.Entity<Product>().HasData(new Product()
+            {
+                Id = Guid.NewGuid(),
+                Description =
+                    "Platform sandals. Available in several colours. Wide paper straps on the instep. Jute sole.Platform height: 6 cm. Name ",
+                Price = new decimal(119),
+                ImageUrl =
+                    "https://static.pullandbear.net/2/photos//2023/I/1/1/p/1812/240/040/1812240040_2_1_8.jpg?t=1685434047342&imwidth=850",
+                Type = ProductType.Shoes,
+                IsForKids = false,
+                IsForMen = false
+            });
+            modelBuilder.Entity<Product>().HasData(new Product()
+            {
+                Id = Guid.NewGuid(),
+                Description =
+                    "Джинсовые шорты с высокой посадкой, шлевками и необработанной кромкой. Застегиваются на молнию и пуговицу.",
+                Name = "DENIM SHORTS",
+                Price = new decimal(99),
+                ImageUrl =
+                    "https://static.pullandbear.net/2/photos//2023/I/0/1/p/4691/301/800/4691301800_2_1_8.jpg?t=1678879499635&imwidth=850",
+                Type = ProductType.Shorts,
+                IsForKids = false,
+                IsForMen = false
+            });
+            modelBuilder.Entity<Product>().HasData(new Product()
+            {
+                Id = Guid.NewGuid(),
+                Description =
+                    "Укороченная рубашка из 100% хлопка. Короткие рукава, классический воротник. Застегивается на пуговицы.",
+                Name = "FASHIONABLE SHIRT",
+                Price = new decimal(89.99),
+                ImageUrl =
+                    "https://static.pullandbear.net/2/photos//2023/I/0/1/p/4471/327/250/4471327250_2_1_8.jpg?t=1683820029841&imwidth=850",
+                Type = ProductType.Shirt,
+                IsForKids = false,
+                IsForMen = false
+            });
+            modelBuilder.Entity<Product>().HasData(new Product()
+            {
+                Id = Guid.NewGuid(),
+                Description =
+                    "Прорезиненные сандалии STWD с широким ремешком. Модель представлена в нескольких расцветках. Высота подошвы: 2,5 см.",
+                Name = "STWD RUBBER SANDALS",
+                Price = new decimal(69.99),
+                ImageUrl =
+                    "https://static.pullandbear.net/2/photos//2023/I/1/2/p/2683/140/002/2683140002_2_1_8.jpg?t=1691480808944&imwidth=850",
+                Type = ProductType.Flipflops,
+                IsForKids = false,
+                IsForMen = true
+            });
+            modelBuilder.Entity<Product>().HasData(new Product()
+            {
+                Id = Guid.NewGuid(),
+                Description =
+                   " Retro-style plimsoll trainers available in various colours. Contrast details. Rubberised sole. Lace-up fastening.\nSTARFIT®. Flexible technical insole made of polyurethane composite foam, designed to offer greater comfort.",
+                Name = "RETRO SNEAKERS",
+                Price = new decimal(119),
+                ImageUrl =
+                    "https://static.pullandbear.net/2/photos//2023/I/1/2/p/2273/240/004/2273240004_2_1_8.jpg?t=1693303144091&imwidth=850",
+                Type = ProductType.Sneakers,
+                IsForKids = false,
+                IsForMen = true
+            });
+            modelBuilder.Entity<Product>().HasData(new Product()
+            {
+                Id = Guid.NewGuid(),
+                Description =
+                    "верх 96% акрил 3% полиэстер 1% метал.нить / подкладка 100% полиэстер",
+                Name = "HAT FOR GIRL",
+                Price = new decimal(44.9),
+                ImageUrl =
+                    "https://boomkids.by/media/img/mc/lfd236_1.jpg",
+                Type = ProductType.Hat,
+                IsForKids = true,
+                IsForMen = false
+            });
+            modelBuilder.Entity<Product>().HasData(new Product()
+            {
+                Id = Guid.NewGuid(),
+                Description =
+                    "машинная стирка, зауженная талия, прямой крой штанин, ткань устойчива к образованию пятен с водо-и грязеотталкивающим покрытием (Teflon),регулируемый пояс, не регулируется по длинне, застежка на крючок и планку.",
+                Name = "Trousers for boy",
+                Price = new decimal(54.99),
+                ImageUrl =
+                    "https://boomkids.by/media/img/next/194361_1.jpg",
+                Type = ProductType.Trousers,
+                IsForKids = true,
+                IsForMen = true
+            });
+            modelBuilder.Entity<Product>().HasData(new Product()
+            {
+                Id = Guid.NewGuid(),
+                Description =
+                    "С сердцем на бегунке и устойчивым к появлению пятен тефлоновым покрытием.",
+                Name = "Sundress for girls",
+                Price = new decimal(48.99),
+                ImageUrl =
+                    "https://boomkids.by/media/img/next/321926_1.jpg",
+                Type = ProductType.Dress,
+                IsForKids = true,
+                IsForMen = false
+            });
+            modelBuilder.Entity<Product>().HasData(new Product()
+            {
+                Id = Guid.NewGuid(),
+                Description =
+                    "Basic hoodie available in several colours, featuring an STWD logo. Made of cotton.",
+                Name = "LOGO HOODIE",
+                Price = new decimal(119),
+                ImageUrl =
+                    "https://static.pullandbear.net/2/photos//2023/I/0/2/p/7592/517/712/7592517712_2_1_8.jpg?t=1690994251463&imwidth=850",
+                Type = ProductType.Hoodie,
+                IsForKids = false,
+                IsForMen = true
+            });
         }
     }
 }

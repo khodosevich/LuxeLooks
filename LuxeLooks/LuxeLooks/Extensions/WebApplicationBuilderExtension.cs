@@ -77,6 +77,9 @@ public static class WebApplicationBuilderExtension
         builder.Services.AddScoped<UserService>();
         builder.Services.AddScoped<UserRepository>();
         builder.Services.AddScoped<RoleRepository>();
+        builder.Services.AddScoped<SubcribeRepository>();
+        builder.Services.AddScoped<NotificationService>();
+        builder.Services.AddScoped<SubcsribeService>();
     }
     public static void AddLogging(this WebApplicationBuilder builder)
     {
