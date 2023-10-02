@@ -11,6 +11,7 @@ public enum ProductType
     [Display(Name = "TShirt")] TShirt,
     [Display(Name = "Hoodie")] Hoodie,
     [Display(Name = "Longsleeve")] Longsleeve,
+    [Display(Name = "Shorts")] Shorts,
     [Display(Name = "Shirt")] Shirt,
     [Display(Name = "Socks")] Socks,
     [Display(Name = "Flipflops")] Flipflops,

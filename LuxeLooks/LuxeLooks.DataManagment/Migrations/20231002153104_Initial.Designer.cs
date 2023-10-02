@@ -13,7 +13,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace LuxeLooks.DataManagment.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230930171054_Initial")]
+    [Migration("20231002153104_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -97,18 +97,18 @@ namespace LuxeLooks.DataManagment.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("fbb4adbc-e8fd-41b2-8d50-7f7cf2786ccf"),
+                            Id = new Guid("1f5b4b74-a205-4151-ae92-af61f3e6b6f5"),
                             Description = "Super baggy fit jeans with a five-pocket design, belt loops, and a zip fly and top button fastening. Made from 100% cotton",
                             ImageUrl = "https://static.pullandbear.net/2/photos//2023/I/0/2/p/7688/526/427/03/7688526427_2_6_8.jpg?t=1689251224432&imwidth=850",
                             IsForKids = false,
                             IsForMen = true,
                             Name = "SUPER BAGGY JEANS",
                             Price = 129m,
-                            Type = 10
+                            Type = 11
                         },
                         new
                         {
-                            Id = new Guid("83954ebc-93dd-49e3-a237-aa7c8e7b9998"),
+                            Id = new Guid("32fa97c1-d303-4c43-ab7d-48f0eb847e82"),
                             Description = "Flat Mary Jane shoes. Available in several colours. Patent effect. Chunky sole. Buckled front strap.",
                             ImageUrl = "https://static.pullandbear.net/2/photos//2023/I/1/1/p/1473/240/022/1473240022_2_1_8.jpg?t=1692269215615&imwidth=375",
                             IsForKids = false,
@@ -119,18 +119,18 @@ namespace LuxeLooks.DataManagment.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ae6acf8b-432b-491b-ba27-30589c9e33eb"),
+                            Id = new Guid("5c9da7ae-bfef-451d-b0e1-df5b80b76f88"),
                             Description = "Oversized fit wide-leg low-rise baggy jeans with a five-pocket design, belt loops, a zip fly and top button fastening and faded details. Made from cotton.",
                             ImageUrl = "https://static.pullandbear.net/2/photos//2023/I/0/1/p/7688/309/427/7688309427_2_1_8.jpg?t=1691508453560&imwidth=375",
                             IsForKids = false,
                             IsForMen = false,
                             Name = "ДЖИНСЫ ОВЕРСАЙЗ СВОБОДНОГО КРОЯ",
                             Price = 129m,
-                            Type = 10
+                            Type = 11
                         },
                         new
                         {
-                            Id = new Guid("1bcb2503-27e4-4fd9-82e7-afb4b41f850e"),
+                            Id = new Guid("22fd7889-8c22-4c19-ae57-1e30de57e73b"),
                             Description = "Стильная куртка для мальчика из коллекции OUTERWEAR BOY JUNIOR станет идеальным выбором для повседневного отдыхам в холодное время года. Мембранная куртка оснащена флисовой подкладкой, светоотражающими элементами икарманами для любимых мелочей. Рукава отделаны эластичной манжетой, которая сохранит тепло в холодное время года.",
                             ImageUrl = "https://buslik.by/upload/resize_cache/iblock/a17/486_568_1/ld3wu2gwzmuhvkb6i1uam369xu4n5ow6.jpg",
                             IsForKids = true,
@@ -138,6 +138,115 @@ namespace LuxeLooks.DataManagment.Migrations
                             Name = "Куртка для мальчика OUTERWEAR BOY JUNIOR",
                             Price = 104.9m,
                             Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("d737c806-2db4-4839-8871-7d85668e8495"),
+                            Description = "Short black dress with gathered detail in the centre, a boat neck and tie detail.",
+                            ImageUrl = "https://static.pullandbear.net/2/photos//2023/I/0/1/p/7393/409/800/7393409800_2_1_8.jpg?t=1695910228791&imwidth=850",
+                            IsForKids = false,
+                            IsForMen = false,
+                            Name = "КОРОТКОЕ ПЛАТЬЕ СО СБОРКОЙ",
+                            Price = 89.99m,
+                            Type = 13
+                        },
+                        new
+                        {
+                            Id = new Guid("49acb3f1-f7aa-40f8-8a30-da7958ea14fa"),
+                            Description = "Platform sandals. Available in several colours. Wide paper straps on the instep. Jute sole.Platform height: 6 cm. Name ",
+                            ImageUrl = "https://static.pullandbear.net/2/photos//2023/I/1/1/p/1812/240/040/1812240040_2_1_8.jpg?t=1685434047342&imwidth=850",
+                            IsForKids = false,
+                            IsForMen = false,
+                            Price = 119m,
+                            Type = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("86289e02-bf7b-4fb9-bd06-68582456713e"),
+                            Description = "Джинсовые шорты с высокой посадкой, шлевками и необработанной кромкой. Застегиваются на молнию и пуговицу.",
+                            ImageUrl = "https://static.pullandbear.net/2/photos//2023/I/0/1/p/4691/301/800/4691301800_2_1_8.jpg?t=1678879499635&imwidth=850",
+                            IsForKids = false,
+                            IsForMen = false,
+                            Name = "DENIM SHORTS",
+                            Price = 99m,
+                            Type = 7
+                        },
+                        new
+                        {
+                            Id = new Guid("a04c0bd7-4562-4162-9b09-0b8a54bfd7d3"),
+                            Description = "Укороченная рубашка из 100% хлопка. Короткие рукава, классический воротник. Застегивается на пуговицы.",
+                            ImageUrl = "https://static.pullandbear.net/2/photos//2023/I/0/1/p/4471/327/250/4471327250_2_1_8.jpg?t=1683820029841&imwidth=850",
+                            IsForKids = false,
+                            IsForMen = false,
+                            Name = "FASHIONABLE SHIRT",
+                            Price = 89.99m,
+                            Type = 8
+                        },
+                        new
+                        {
+                            Id = new Guid("1ef25a84-69cc-44b3-a7fc-e5b27c902852"),
+                            Description = "Прорезиненные сандалии STWD с широким ремешком. Модель представлена в нескольких расцветках. Высота подошвы: 2,5 см.",
+                            ImageUrl = "https://static.pullandbear.net/2/photos//2023/I/1/2/p/2683/140/002/2683140002_2_1_8.jpg?t=1691480808944&imwidth=850",
+                            IsForKids = false,
+                            IsForMen = true,
+                            Name = "STWD RUBBER SANDALS",
+                            Price = 69.99m,
+                            Type = 10
+                        },
+                        new
+                        {
+                            Id = new Guid("e0250f13-9492-4df1-9de2-0767451985de"),
+                            Description = " Retro-style plimsoll trainers available in various colours. Contrast details. Rubberised sole. Lace-up fastening.\nSTARFIT®. Flexible technical insole made of polyurethane composite foam, designed to offer greater comfort.",
+                            ImageUrl = "https://static.pullandbear.net/2/photos//2023/I/1/2/p/2273/240/004/2273240004_2_1_8.jpg?t=1693303144091&imwidth=850",
+                            IsForKids = false,
+                            IsForMen = true,
+                            Name = "RETRO SNEAKERS",
+                            Price = 119m,
+                            Type = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("8d57506e-8dbe-45d2-b7d5-883cd246344a"),
+                            Description = "верх 96% акрил 3% полиэстер 1% метал.нить / подкладка 100% полиэстер",
+                            ImageUrl = "https://boomkids.by/media/img/mc/lfd236_1.jpg",
+                            IsForKids = true,
+                            IsForMen = false,
+                            Name = "HAT FOR GIRL",
+                            Price = 44.9m,
+                            Type = 14
+                        },
+                        new
+                        {
+                            Id = new Guid("5c5038c0-55b1-4fcb-aae4-5b3cd4120fcf"),
+                            Description = "машинная стирка, зауженная талия, прямой крой штанин, ткань устойчива к образованию пятен с водо-и грязеотталкивающим покрытием (Teflon),регулируемый пояс, не регулируется по длинне, застежка на крючок и планку.",
+                            ImageUrl = "https://boomkids.by/media/img/next/194361_1.jpg",
+                            IsForKids = true,
+                            IsForMen = true,
+                            Name = "Trousers for boy",
+                            Price = 54.99m,
+                            Type = 11
+                        },
+                        new
+                        {
+                            Id = new Guid("9b9656a7-edd1-4d80-b492-1c0d89ccc657"),
+                            Description = "С сердцем на бегунке и устойчивым к появлению пятен тефлоновым покрытием.",
+                            ImageUrl = "https://boomkids.by/media/img/next/321926_1.jpg",
+                            IsForKids = true,
+                            IsForMen = false,
+                            Name = "Sundress for girls",
+                            Price = 48.99m,
+                            Type = 13
+                        },
+                        new
+                        {
+                            Id = new Guid("0a3e4e15-debc-4e52-9cba-2cd874fadb6b"),
+                            Description = "Basic hoodie available in several colours, featuring an STWD logo. Made of cotton.",
+                            ImageUrl = "https://static.pullandbear.net/2/photos//2023/I/0/2/p/7592/517/712/7592517712_2_1_8.jpg?t=1690994251463&imwidth=850",
+                            IsForKids = false,
+                            IsForMen = true,
+                            Name = "LOGO HOODIE",
+                            Price = 119m,
+                            Type = 5
                         });
                 });
 
@@ -165,12 +274,6 @@ namespace LuxeLooks.DataManagment.Migrations
                             Id = new Guid("44546e06-8719-4ad8-b88a-f271ae9d6eab"),
                             NormalizedRoleName = "ADMIN",
                             RoleName = "Admin"
-                        },
-                        new
-                        {
-                            Id = new Guid("44546e06-8719-4ad8-b88a-f271ae9d6abe"),
-                            NormalizedRoleName = "RESIDENT",
-                            RoleName = "Resident"
                         });
                 });
 
@@ -235,12 +338,12 @@ namespace LuxeLooks.DataManagment.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("4dd6d1f4-9d3d-4c7b-a06e-2eda62c7c9a9"),
+                            Id = new Guid("3fd2e46e-d8ba-4039-b9e0-c21ae065b935"),
                             Email = "alsemkovbn@gmail.com",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "$2a$12$MflrlsA1Fqt6xmyzzWqScOnx1/iSzSEOFw4Ae2ud6eORSbZJftoD2",
-                            PasswordSalt = "$2a$12$MflrlsA1Fqt6xmyzzWqScO",
-                            RefreshTokenExpiryTime = new DateTime(2023, 9, 30, 17, 10, 54, 420, DateTimeKind.Utc).AddTicks(2475),
+                            PasswordHash = "$2a$12$3XwHuKBI6FAt3zeT6gVY..QGBvKM5Wdo6E6HDPlb8l340KTLCYXI.",
+                            PasswordSalt = "$2a$12$3XwHuKBI6FAt3zeT6gVY..",
+                            RefreshTokenExpiryTime = new DateTime(2023, 10, 2, 15, 31, 3, 993, DateTimeKind.Utc).AddTicks(9252),
                             RoleId = new Guid("44546e06-8719-4ad8-b88a-f271ae9d6abe"),
                             UserName = "Admin"
                         });
