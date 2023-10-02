@@ -1,15 +1,15 @@
 ﻿.idea
 .vs
 
+/LuxeLooks/bin/*
+/LuxeLooks/obj/*
 
-\LuxeLooks\LuxeLooks\LuxeLooks.Service\bin\Debug\net7.0\*
-\LuxeLooks\LuxeLooks\LuxeLooks.Service\obj\Debug\net7.0\*
+/LuxeLooks.Domain/bin/*
+/LuxeLooks.Domain/obj/*
 
-\LuxeLooks\LuxeLooks\LuxeLooks.Domain\bin\Debug\net7.0\*
-\LuxeLooks\LuxeLooks\LuxeLooks.Domain\obj\Debug\net7.0\*
+/LuxeLooks.Service/bin/*
+/LuxeLooks.Service/obj/*
 
-\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\bin\Debug\net7.0\*
-\LuxeLooks\LuxeLooks\LuxeLooks.DataManagment\obj\Debug\net7.0\*
+/LuxeLooks.DataManagment/bin/*
+/LuxeLooks.DataManagment/obj/*
 
-\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\*
-\LuxeLooks\LuxeLooks\LuxeLooks\obj\Debug\net7.0\*
