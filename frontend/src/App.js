@@ -27,7 +27,8 @@ function App() {
 
     const [user, setUser] = useState({
         token: "",
-        username: "matvey",
+        username: "",
+        email:"",
         isAuthenticated: false,
     })
 

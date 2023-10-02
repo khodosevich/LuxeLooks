@@ -27,6 +27,7 @@ const Registration = () => {
         setUser({
             token: person.token,
             username: person.username,
+            email: person.email,
             isAuthenticated: true,
         });
 

@@ -23,6 +23,9 @@ export const method = {
             console.log( r.data)
             value = r.data
         })
+
+        console.log("api login" , value)
+
         return value;
     },
     async getAllProduct() {
