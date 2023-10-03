@@ -9,6 +9,13 @@
   background: #ffffff;
   color: black;
 }
+.header.black {
+  background: #000;
+}
+.header.black:hover {
+  background: #ffffff;
+  color: black;
+}
 .header:hover .logo {
   color: black;
 }
@@ -103,7 +110,7 @@
 
 .after__cart {
   border-radius: 4px;
-  background: var(--success, #75a17f);
+  background: #03CEA4;
   padding: 1px 8px;
   font-family: Montserrat;
 }

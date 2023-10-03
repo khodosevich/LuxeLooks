@@ -21,12 +21,10 @@ const Landing = () => {
                 navigation
 
                 scrollbar={{ draggable: true }}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
             >
                     {sliders.map((el,index) => (
-                        <SwiperSlide>
-                          <Slide key={index} props={el}/>
+                        <SwiperSlide key={index}>
+                          <Slide props={el}/>
                         </SwiperSlide>
                     ))}
             </Swiper>
