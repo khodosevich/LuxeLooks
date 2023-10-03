@@ -40,25 +40,6 @@ public class OrderService
         return baseResponse;
     }
 
-    public async Task<BaseResponse<Order>> GetByName(string name)
-    {
-        var baseResponse = new BaseResponse<Order>();
-
-        var order = (await _orderRepository.GetAll()).FirstOrDefault(x => x.Name == name);
-        if (order == null)
-        {
-            baseResponse.Description = "Заказ не найден";
-            baseResponse.StatusCode = HttpStatusCode.NoContent;
-            _logger.LogError("Ошибка получения заказа");
-            return baseResponse;
-        }
-
-        baseResponse.StatusCode = HttpStatusCode.OK;
-        baseResponse.Data = order;
-        _logger.LogInformation("Успешное получение заказа");
-        return baseResponse;
-    }
-
     public async Task<BaseResponse<bool>> CreateOrder(Order orderModel)
     {
         var baseResponse = new BaseResponse<bool>();
@@ -77,26 +58,6 @@ public class OrderService
         baseResponse.StatusCode = HttpStatusCode.OK;
         baseResponse.Data = true;
         _logger.LogInformation("Успешное создание заказа");
-        return baseResponse;
-    }
-
-    public async Task<BaseResponse<bool>> DeleteOrder(Guid id)
-    {
-        var baseResponse = new BaseResponse<bool>();
-
-        var order = (await _orderRepository.GetAll()).FirstOrDefault(x => x.Id == id);
-        if (order == null)
-        {
-            baseResponse.Description = "Заказ не найден";
-            baseResponse.StatusCode = HttpStatusCode.NoContent;
-            _logger.LogError("Ошибка получения заказа при попытке удаления заказа");
-            return baseResponse;
-        }
-
-        await _orderRepository.Delete(order);
-        baseResponse.StatusCode = HttpStatusCode.OK;
-        baseResponse.Data = true;
-        _logger.LogInformation("Успешное удаление заказа");
         return baseResponse;
     }
 
@@ -142,43 +103,6 @@ public class OrderService
             {
                 Description = $"[GetDevices] : {exception.Message}"
             };
-        }
-    }
-
-    public async Task<BaseResponse<Order>> Edit(Order model)
-    {
-        var baseResponse = new BaseResponse<Order>();
-        try
-        {
-            var order = (await _orderRepository.GetAll()).FirstOrDefault(x => x.Id == model.Id);
-            if (order == null)
-            {
-                baseResponse.Description = "Заказ не найден";
-                baseResponse.StatusCode = HttpStatusCode.NoContent;
-                _logger.LogError("Ошибка получения заказа");
-                return baseResponse;
-            }
-
-            order.Name = model.Name;
-            order.ProductsIds = model.ProductsIds;
-            order.Email = model.Email;
-            order.Address = model.Address;
-            order.Price = model.Price;
-            order.Status = model.Status;
-            order.UserId = model.UserId;
-
-            await _orderRepository.Update(order);
-            baseResponse.StatusCode = HttpStatusCode.OK;
-            _logger.LogInformation("Успешное редактирование заказа");
-            return baseResponse;
-        }
-        catch (Exception e)
-        {
-            var response = new BaseResponse<Order>();
-            response.StatusCode = HttpStatusCode.NotFound;
-            response.Description = e.Message;
-            _logger.LogCritical("Возникло исключение при попытке редактирования заказа");
-            return response;
         }
     }
 }

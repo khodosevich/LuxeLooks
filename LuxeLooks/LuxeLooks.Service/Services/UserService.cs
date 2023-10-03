@@ -52,32 +52,6 @@ public class UserService
     }
 
 
-    public async Task<BaseResponse<bool>> AddToRoleAsync(User user, string role)
-    {
-        if (!(role == "Admin" || role == "Creator" || role == "Resident"))
-        {
-            HandleError<bool>("Role are not contains right role type", HttpStatusCode.BadRequest);
-        }
-
-        var roles = (await _roleService.GetAllAsync()).Data;
-        user.RoleId = (roles.FirstOrDefault(a => a.RoleName == role)).Id;
-        await _userRepository.Update(user);
-        return new BaseResponse<bool>() { StatusCode = HttpStatusCode.OK };
-    }
-
-    public async Task<BaseResponse<bool>> DeleteAsync(Guid id)
-    {
-        var user = (await _userRepository.GetAll()).FirstOrDefault(a=>a.Id==id);
-        if (user == null)
-        {
-            return HandleError<bool>($"User with id: {id} not found", HttpStatusCode.NoContent);
-        }
-
-        await _userRepository.Delete(user);
-        _logger.LogInformation($"Successfully delete user with id: {id}");
-        return new BaseResponse<bool>() { StatusCode = HttpStatusCode.OK };
-    }
-
     public async Task<BaseResponse<User>> GetByIdAsync(Guid id)
     {
         var user = (await _userRepository.GetAll()).FirstOrDefault(a=>a.Id==id);
@@ -113,17 +87,6 @@ public class UserService
         findUser.RefreshTokenExpiryTime=findUser.RefreshTokenExpiryTime.ToUniversalTime();
         await _userRepository.Update(findUser);
         return new BaseResponse<bool>() { StatusCode = HttpStatusCode.OK };
-    }
-
-    public async Task<BaseResponse<User>> FindByEmailAsync(string email)
-    {
-        var user = (await _userRepository.GetAll()).FirstOrDefault(a => a.Email == email);
-        if (user == null)
-        {
-            return HandleError<User>($"User with email: {email} not found", HttpStatusCode.NoContent);
-        }
-        user=(await CorrectUsersRefreshTokenExpiryTime(new List<User>() { user }))[0];
-        return new BaseResponse<User>() { Data = user, StatusCode = HttpStatusCode.OK };
     }
 
     public async Task<BaseResponse<bool>> CheckPasswordAsync(User user, string password)

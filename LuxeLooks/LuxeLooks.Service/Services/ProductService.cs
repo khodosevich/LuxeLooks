@@ -94,26 +94,6 @@ public class ProductService
         return response;
     }
 
-    public async Task<BaseResponse<bool>> DeleteProduct(Guid id)
-    {
-        var response = new BaseResponse<bool>();
-
-        var product = (await _productRepository.GetAll()).FirstOrDefault(x=>x.Id==id);
-        if (product == null)
-        {
-            response.Description = "Девайс не найден";
-            response.StatusCode = HttpStatusCode.NoContent;
-            _logger.LogError("Ошибка : девайсы не найдены");
-            return response;
-        }
-
-        await _productRepository.Delete(product);
-        response.StatusCode = HttpStatusCode.OK;
-        response.Data = true;
-        _logger.LogInformation("Успешное удаление девайса");
-        return response;
-    }
-
     public async Task<BaseResponse<List<ProductResponse>>> GetProducts(bool useCache)
     {
         var response = new BaseResponse<List<ProductResponse>>();
@@ -174,41 +154,5 @@ public class ProductService
         response.Data = GetProductResponsesFromProducts(products);
         response.StatusCode = HttpStatusCode.OK;
         return response;
-    }
-
-    public async Task<BaseResponse<ProductResponse>> Edit(Product model)
-    {
-        var response = new BaseResponse<ProductResponse>();
-        try
-        {
-            var product = (await _productRepository.GetAll()).FirstOrDefault(x=>x.Id==model.Id);
-            if (product == null)
-            {
-                response.Description = "Девайс не найден";
-                response.StatusCode = HttpStatusCode.NoContent;
-                _logger.LogError("Ошибка : девайс для редактирования не найдены");
-                return response;
-            }
-
-            product.Description = model.Description;
-            product.Name = model.Name;
-            product.Price = model.Price;
-            product.ImageUrl = model.ImageUrl;
-            product.Type = (ProductType)Convert.ToInt32(model.Type);
-            product.IsForKids = model.IsForKids;
-            product.IsForMen = model.IsForMen;
-            await _productRepository.Update(product);
-            response.StatusCode = HttpStatusCode.OK;
-            _logger.LogInformation("Успешное редактирование девайса");
-            return response;
-        }
-        catch (Exception e)
-        {
-            response = new BaseResponse<ProductResponse>();
-            response.StatusCode = HttpStatusCode.NotFound;
-            response.Description = e.Message;
-            
-            return response;
-        }
     }
 }
