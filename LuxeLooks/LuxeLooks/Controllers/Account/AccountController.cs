@@ -73,8 +73,7 @@ public class AccountController : ControllerBase
         {
             Username = user.UserName!,
             Email = user.Email!,
-            Token = accessToken,
-            RefreshToken = user.RefreshToken
+            Token = accessToken
         });
     }
     
@@ -157,6 +156,7 @@ public class AccountController : ControllerBase
         var user = response.Data;
         user.RefreshToken = null;
         await _userService.UpdateAsync(user);
+        HttpContext.Response.Cookies.Delete("refreshToken");
 
         return Ok();
     }
