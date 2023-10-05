@@ -29,7 +29,16 @@ export const method = {
         return value;
     },
     async getAllProduct() {
-        return await api.get('Product/GetAll')
+        return await api.get('Product/GetAll').then(r => {
+            console.log( r.data)
+            return r.data
+        })
+    },
+
+    async subscribe(data){
+        console.log(data.Email)
+        console.log(data.Category)
+        await api.put("Subscribe/CreateSubscribe",data)
     }
 
 }

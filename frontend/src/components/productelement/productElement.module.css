@@ -1,0 +1,15 @@
+.product__element {
+
+    width: 285px;
+    height: 410px;
+
+    border-radius: 4px;
+
+    background: #fcfcfc;
+}
+
+.product__element__img{
+    width: 285px;
+    height: 320px;
+    contain: content;
+}
