@@ -150,7 +150,7 @@ public class ProductController : ControllerBase
         var productsResponse = await _productService.GetProducts(true);
         if (orderResponse.StatusCode!=HttpStatusCode.OK||productsResponse.StatusCode!=HttpStatusCode.OK)
         {
-            return NoContent();
+            return Ok(new List<string>(){"Hat","Hoodie","Cap","TShirt","Socks","Jacket"});
         }
 
         var orders = orderResponse.Data;
