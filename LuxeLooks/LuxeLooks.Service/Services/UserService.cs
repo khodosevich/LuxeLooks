@@ -10,13 +10,11 @@ public class UserService
 {
     private readonly UserRepository _userRepository;
     private readonly ILogger<UserService> _logger;
-    private readonly RoleService _roleService;
 
-    public UserService(UserRepository userRepository, ILogger<UserService> logger, RoleService roleService)
+    public UserService(UserRepository userRepository, ILogger<UserService> logger)
     {
         _userRepository = userRepository;
         _logger = logger;
-        _roleService = roleService;
     }
 
     private BaseResponse<T> HandleError<T>(string description, HttpStatusCode error)
