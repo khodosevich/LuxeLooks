@@ -4,7 +4,7 @@ import links from "./links.json"
 
 import "./header.css"
 import {Link, NavLink, useLocation} from "react-router-dom";
-import cardBag from "../../assets/cart.svg";
+import cardBag from "../../assets/cart1.svg";
 import {MyContext} from "../../App";
 
 
@@ -18,21 +18,14 @@ const Header = () => {
 
     const {user,setUser} = useContext(MyContext)
 
-    const logout = () => {
 
-        setUser({
-            token: "",
-            username: "",
-            isAuthenticated: false,
-        })
-    }
 
     useEffect(() => {
 
     }, [user]);
 
     const location = useLocation();
-    const renderHeaderCondition = location.pathname !== "/bag";
+    const renderHeaderCondition = location.pathname !== "/sidebar" &&  location.pathname !== "/bag"  &&  location.pathname !== "/man" &&  location.pathname !== "/women" &&  location.pathname !== "/girls" &&  location.pathname !== "/boys"  &&  location.pathname !== "/account" &&  location.pathname !== "/account/profileinfo" &&  location.pathname !== "/account/myorders";
 
 
 
@@ -67,9 +60,11 @@ const Header = () => {
                     {
                         user.isAuthenticated
                             ? <div className="account">
-                                <button onClick={logout} className="login-btn">
-                                       logout
+                            <NavLink to="/account" >
+                                <button className="login-btn">
+                                    Account
                                 </button>
+                            </NavLink>
                              </div>
                             : <div className="account">
                                 <NavLink to="/registration">
