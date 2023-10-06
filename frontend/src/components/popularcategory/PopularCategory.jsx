@@ -10,21 +10,22 @@ const PopularCategory = () => {
 
     const [product,setProduct] = useState([])
 
+    const setDataCategory = async () => {
+        try{
+            const data = await method.getAllProduct();
+
+            const uniqueProducts = Array.from(new Set(data));
+
+            const limitedProducts = uniqueProducts.slice(0, 6);
+            setProduct(limitedProducts);
+        }catch(e){
+            console.log("Error: " , e)
+        }
+    }
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const data = await method.getAllProduct();
 
-                const uniqueProducts = Array.from(new Set(data));
-
-                const limitedProducts = uniqueProducts.slice(0, 6);
-                setProduct(limitedProducts);
-            } catch (error) {
-                console.error("Произошла ошибка:", error);
-            }
-        }
-        fetchData();
+        setDataCategory();
     }, []);
 
 
