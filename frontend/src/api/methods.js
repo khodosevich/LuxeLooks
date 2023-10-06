@@ -29,7 +29,7 @@ export const method = {
         return value;
     },
     async getAllProduct() {
-        return await api.get('Product/GetAll').then(r => {
+        return await api.get("Product/GetAll").then(r => {
             console.log( r.data)
             return r.data
         })
