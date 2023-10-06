@@ -30,6 +30,12 @@ namespace LuxeLooks.DataManagment
                 RoleName = "Admin",
                 NormalizedRoleName = "ADMIN"
             });
+            modelBuilder.Entity<Role>().HasData(new Role
+            {
+                Id = Guid.NewGuid(),
+                RoleName = "Resident",
+                NormalizedRoleName = "RESIDENT"
+            });
 
             modelBuilder.Entity<User>().HasData(new User
             {

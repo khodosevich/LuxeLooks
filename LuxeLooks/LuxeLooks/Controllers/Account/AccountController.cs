@@ -97,8 +97,8 @@ public class AccountController : ControllerBase
 
         var findUserResponse = await _userService.FindByNameAsync(request.UserName);
 
-        if (findUserResponse.StatusCode !=HttpStatusCode.OK) throw new Exception($"User {request.UserName} not found");
-            
+        if (findUserResponse.StatusCode != HttpStatusCode.OK) throw new Exception($"User {request.UserName} not found");
+        await _userService.AddToRoleAsync(findUserResponse.Data.Id, "Resident");
         _logger.LogInformation($"Successfuly register user: {findUserResponse.Data.UserName}");
         return await Authenticate(new AuthRequest
         {

@@ -10,11 +10,13 @@ public class UserService
 {
     private readonly UserRepository _userRepository;
     private readonly ILogger<UserService> _logger;
+    private readonly RoleService _roleService;
 
-    public UserService(UserRepository userRepository, ILogger<UserService> logger)
+    public UserService(UserRepository userRepository, ILogger<UserService> logger, RoleService roleService)
     {
         _userRepository = userRepository;
         _logger = logger;
+        _roleService = roleService;
     }
 
     private BaseResponse<T> HandleError<T>(string description, HttpStatusCode error)
@@ -114,4 +116,24 @@ public class UserService
         users=await CorrectUsersRefreshTokenExpiryTime(users);
         return new BaseResponse<List<User>>() { Data = users, StatusCode = HttpStatusCode.OK };
     }
+
+    public async Task<BaseResponse<bool>> AddToRoleAsync(Guid userId, string roleName)
+    {
+        var user = (await _userRepository.GetAll()).FirstOrDefault(a => a.Id == userId);
+        if (user==null)
+        {
+            return HandleError<bool>("User is not found", HttpStatusCode.NoContent);
+        }
+
+        var role = (await _roleService.GetAllAsync()).Data.FirstOrDefault(a=>a.RoleName==roleName);
+        if (role==null)
+        {
+            return HandleError<bool>("Role name incorrect", HttpStatusCode.NoContent);
+        }
+
+        user.RoleId = role.Id;
+        await _userRepository.Update(user);
+        return new BaseResponse<bool>() { StatusCode = HttpStatusCode.OK };
+    }
+    
 }
