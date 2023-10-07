@@ -80,6 +80,8 @@ public static class WebApplicationBuilderExtension
         builder.Services.AddScoped<SubcribeRepository>();
         builder.Services.AddScoped<NotificationService>();
         builder.Services.AddScoped<SubcsribeService>();
+        builder.Services.AddScoped<CategoryRepository>();
+        builder.Services.AddScoped<CategoryService>();
     }
     public static void AddLogging(this WebApplicationBuilder builder)
     {

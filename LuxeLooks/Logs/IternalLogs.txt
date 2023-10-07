@@ -1943,3 +1943,35 @@
 2023-10-07 10:53:50.9276 Info Configuration initialized.
 2023-10-07 10:53:50.9276 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
 2023-10-07 10:53:53.0918 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+2023-10-07 11:33:02.3919 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-07 11:33:02.3919 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-07 11:33:02.3919 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2023-10-07 11:33:02.3919 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2023-10-07 11:33:02.4091 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-07 11:33:02.4091 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
+2023-10-07 11:33:02.4277 Info Configuration initialized.
+2023-10-07 11:33:02.4277 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
+2023-10-07 11:33:50.2389 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-07 11:33:50.2444 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-07 11:33:50.2444 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2023-10-07 11:33:50.2444 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2023-10-07 11:33:50.2444 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-07 11:33:50.2598 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
+2023-10-07 11:33:50.2598 Info Configuration initialized.
+2023-10-07 11:33:50.2598 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
+2023-10-07 12:23:52.1403 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-07 12:23:52.1403 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-07 12:23:52.1403 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2023-10-07 12:23:52.1403 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2023-10-07 12:23:52.1505 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-07 12:23:52.1505 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
+2023-10-07 12:23:52.1505 Info Configuration initialized.
+2023-10-07 12:23:52.1505 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
+2023-10-07 12:24:07.8795 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-07 12:24:07.8841 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-07 12:24:07.8841 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2023-10-07 12:24:07.8841 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2023-10-07 12:24:07.8841 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-07 12:24:07.8841 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
+2023-10-07 12:24:07.9043 Info Configuration initialized.
+2023-10-07 12:24:07.9043 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
