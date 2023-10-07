@@ -60,7 +60,7 @@ const Header = () => {
                     {
                         user.isAuthenticated
                             ? <div className="account">
-                            <NavLink to="/account" >
+                            <NavLink to="/account/profileinfo" >
                                 <button className="login-btn">
                                     Account
                                 </button>

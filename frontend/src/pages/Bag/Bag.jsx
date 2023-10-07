@@ -1,33 +1,33 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {MyContext} from "../../App";
 import {Navigate} from "react-router-dom";
-import BagElement from "../../components/bagelement/BagElement";
+import BagElement from "./bagelement/BagElement";
 
 import './bag.css'
+import {method} from "../../api/methods";
 
 const Bag = () => {
 
 
     const {user,setUser} = useContext(MyContext);
 
-    const [products,setProducts] = useState({
-        id:0
-    });
+    const [products,setProducts] = useState([]);
 
-    const addProduct = () => {
-        setProducts(prev => ({
-            ...prev,
-            id: 1
-        }))
+    const addProduct = async () => {
 
-
-        console.log(products)
+        try{
+            const data = await method.getAllProduct();
+            setProducts(data)
+        }catch (e) {
+            console.log("error" , e)
+        }
 
     }
 
     useEffect(() => {
-        console.log(products)
-    }, [products]);
+        addProduct()
+    },[])
+
 
     return (
 
@@ -43,12 +43,12 @@ const Bag = () => {
 
 
                                     {
-                                        products > 0
+                                        products.length > 0
                                             ? <>
                                                 <div className="bag__elements">
                                                     {
                                                         products.map(el => (
-                                                            <div>{el.id}</div>
+                                                            <BagElement key={el.id} props={el} />
                                                         ))
                                                     }
                                                 </div>

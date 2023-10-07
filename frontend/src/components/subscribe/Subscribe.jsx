@@ -50,17 +50,19 @@ const Subscribe = () => {
         if(dataToSubscribe.Email && dataToSubscribe.Category && isChecked){
             method.subscribe(dataToSubscribe);
             alert("all is good")
+
+            setDataToSubscribe({
+                Category:"",
+                Email:""
+            })
+
+            setActiveIndex(-1);
+            setIsChecked(false);
+
         }else {
             alert("check your data")
         }
 
-        setDataToSubscribe({
-            Category:"",
-            Email:""
-        })
-
-        setActiveIndex(-1);
-        setIsChecked(false);
     }
 
     return (
