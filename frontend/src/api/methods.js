@@ -18,9 +18,10 @@ export const method = {
     },
     async login(data){
 
+        console.log("hello")
         let value = {} ;
         await api.post("Account/Login", data).then(r => {
-            console.log( r.data)
+            console.log("response" , r.data)
             value = r.data
         })
 
