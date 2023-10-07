@@ -111,9 +111,9 @@ public class ProductController : ControllerBase
     {
         var orderResponse = await _orderService.GetOrders(true);
         var productsResponse = await _productService.GetProducts(true);
-        if (orderResponse.StatusCode!=HttpStatusCode.OK||productsResponse.StatusCode!=HttpStatusCode.OK)
+        if (orderResponse.StatusCode!=HttpStatusCode.OK)
         {
-            return NoContent();
+            return Ok(productsResponse.Data.Take(12));
         }
 
         var orders = orderResponse.Data;

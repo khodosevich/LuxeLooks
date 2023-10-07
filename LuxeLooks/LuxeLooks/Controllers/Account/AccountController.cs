@@ -78,7 +78,7 @@ public class AccountController : ControllerBase
     }
     
     [HttpPost("Register")]
-    public async Task<ActionResult<AuthResponse>> Register( RegisterRequest request)
+    public async Task<ActionResult<AuthResponse>> Register([FromBody] RegisterRequest request)
     {
         if (!ModelState.IsValid) return BadRequest(request);
         var user = new User()

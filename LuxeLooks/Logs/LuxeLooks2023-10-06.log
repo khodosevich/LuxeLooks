@@ -1146,3 +1146,253 @@ WHERE "Id" = @p8;
 2023-10-06 16:27:05.7337|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6DVA3MJ5C" sending FIN because: "The Socket transport's send loop completed gracefully." 
 2023-10-06 16:27:05.7337|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6DVA3MJ5F" sending FIN because: "The Socket transport's send loop completed gracefully." 
 2023-10-06 16:27:05.7626|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2023-10-06 22:24:39.2914|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2023-10-06 22:24:39.4292|0|INFO|Program|Program initial 
+2023-10-06 22:24:39.4292|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2023-10-06 22:24:39.4583|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Алексей\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-10-06 22:24:39.4583|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Алексей\AppData\Local\ASP.NET\DataProtection-Keys\key-201f091d-1492-40cf-8448-2970d8f8302a.xml'. 
+2023-10-06 22:24:39.4657|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Алексей\AppData\Local\ASP.NET\DataProtection-Keys\key-36f42311-3483-4917-8846-1f1bdd7768ee.xml'. 
+2023-10-06 22:24:39.4657|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Алексей\AppData\Local\ASP.NET\DataProtection-Keys\key-8c2d20ac-a7d5-4fe4-b7a0-731f36d4f54e.xml'. 
+2023-10-06 22:24:39.4657|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Алексей\AppData\Local\ASP.NET\DataProtection-Keys\key-fe0fd9ec-cbd2-45ba-94c2-4c4db8302271.xml'. 
+2023-10-06 22:24:39.4657|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {201f091d-1492-40cf-8448-2970d8f8302a}. 
+2023-10-06 22:24:39.4657|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {36f42311-3483-4917-8846-1f1bdd7768ee}. 
+2023-10-06 22:24:39.4657|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {8c2d20ac-a7d5-4fe4-b7a0-731f36d4f54e}. 
+2023-10-06 22:24:39.4657|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {fe0fd9ec-cbd2-45ba-94c2-4c4db8302271}. 
+2023-10-06 22:24:39.4854|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {36f42311-3483-4917-8846-1f1bdd7768ee} with expiration date 2023-12-30 19:24:09Z as default key. 
+2023-10-06 22:24:39.4854|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-10-06 22:24:39.4854|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2023-10-06 22:24:39.4942|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-10-06 22:24:39.4942|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2023-10-06 22:24:39.4942|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2023-10-06 22:24:39.4942|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {36f42311-3483-4917-8846-1f1bdd7768ee} as the default key. 
+2023-10-06 22:24:39.4942|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {36f42311-3483-4917-8846-1f1bdd7768ee} was loaded during application startup. 
+2023-10-06 22:24:39.5568|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5219 
+2023-10-06 22:24:39.5568|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly LuxeLooks 
+2023-10-06 22:24:39.5568|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-10-06 22:24:39.5587|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-10-06 22:24:39.5587|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks 
+2023-10-06 22:24:39.5587|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2023-10-06 22:24:39.6290|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6K7H9392R" received FIN. 
+2023-10-06 22:24:39.6363|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392R" accepted. 
+2023-10-06 22:24:39.6363|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392R" started. 
+2023-10-06 22:24:39.6535|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6K7H9392R" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-10-06 22:24:39.6535|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392R" disconnecting. 
+2023-10-06 22:24:39.6535|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392R" stopped. 
+2023-10-06 22:24:39.7877|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392S" accepted. 
+2023-10-06 22:24:39.8031|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392T" accepted. 
+2023-10-06 22:24:39.8077|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392S" started. 
+2023-10-06 22:24:39.8077|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392T" started. 
+2023-10-06 22:24:39.8627|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5219/swagger - - 
+2023-10-06 22:24:39.8670|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2023-10-06 22:24:39.8670|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-10-06 22:24:39.9850|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-10-06 22:24:39.9968|0|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {36f42311-3483-4917-8846-1f1bdd7768ee} with purposes ('C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\', 'SessionMiddleware'). 
+2023-10-06 22:24:39.9968|0|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2023-10-06 22:24:40.0141|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger does not match a supported file type 
+2023-10-06 22:24:40.0509|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger' 
+2023-10-06 22:24:40.0509|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2023-10-06 22:24:40.0980|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392T" completed keep alive response. 
+2023-10-06 22:24:40.0980|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5219/swagger - - - 404 0 - 242.8095ms 
+2023-10-06 22:25:07.3713|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6K7H9392U" received FIN. 
+2023-10-06 22:25:07.3713|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392U" accepted. 
+2023-10-06 22:25:07.3713|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392U" started. 
+2023-10-06 22:25:07.3713|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392V" accepted. 
+2023-10-06 22:25:07.3738|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6K7H9392U" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-10-06 22:25:07.3738|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392V" started. 
+2023-10-06 22:25:07.3738|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392U" disconnecting. 
+2023-10-06 22:25:07.3738|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392U" stopped. 
+2023-10-06 22:25:07.3738|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.BadRequests|Connection id "0HMU6K7H9392V" bad request data: "Detected a TLS handshake to an endpoint that does not have TLS enabled." Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Detected a TLS handshake to an endpoint that does not have TLS enabled.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.GetUnknownMethodLength(ReadOnlySpan`1 span)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, ReadOnlySpan`1 requestLine)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, SequenceReader`1& reader)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TakeStartLine(SequenceReader`1& reader)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.ParseRequest(SequenceReader`1& reader)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TryParseRequest(ReadResult result, Boolean& endConnection)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2023-10-06 22:25:07.4091|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392V" disconnecting. 
+2023-10-06 22:25:07.4091|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392V" stopped. 
+2023-10-06 22:25:07.4091|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6K7H9392V" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-10-06 22:25:28.2864|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6K7H93930" received FIN. 
+2023-10-06 22:25:28.2864|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93930" accepted. 
+2023-10-06 22:25:28.2864|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93930" started. 
+2023-10-06 22:25:28.2864|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93931" accepted. 
+2023-10-06 22:25:28.2864|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6K7H93930" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-10-06 22:25:28.2864|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93931" started. 
+2023-10-06 22:25:28.2864|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93930" disconnecting. 
+2023-10-06 22:25:28.2864|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93930" stopped. 
+2023-10-06 22:25:28.2864|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.BadRequests|Connection id "0HMU6K7H93931" bad request data: "Detected a TLS handshake to an endpoint that does not have TLS enabled." Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Detected a TLS handshake to an endpoint that does not have TLS enabled.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.GetUnknownMethodLength(ReadOnlySpan`1 span)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, ReadOnlySpan`1 requestLine)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, SequenceReader`1& reader)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TakeStartLine(SequenceReader`1& reader)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.ParseRequest(SequenceReader`1& reader)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TryParseRequest(ReadResult result, Boolean& endConnection)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2023-10-06 22:25:28.2937|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93931" disconnecting. 
+2023-10-06 22:25:28.2937|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93931" stopped. 
+2023-10-06 22:25:28.2937|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6K7H93931" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-10-06 22:25:28.2937|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6K7H93931" received FIN. 
+2023-10-06 22:25:37.6819|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93932" accepted. 
+2023-10-06 22:25:37.6819|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6K7H93932" received FIN. 
+2023-10-06 22:25:37.6819|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93933" accepted. 
+2023-10-06 22:25:37.6819|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93932" started. 
+2023-10-06 22:25:37.6819|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93933" started. 
+2023-10-06 22:25:37.6819|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6K7H93932" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-10-06 22:25:37.6819|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.BadRequests|Connection id "0HMU6K7H93933" bad request data: "Detected a TLS handshake to an endpoint that does not have TLS enabled." Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Detected a TLS handshake to an endpoint that does not have TLS enabled.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.GetUnknownMethodLength(ReadOnlySpan`1 span)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, ReadOnlySpan`1 requestLine)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, SequenceReader`1& reader)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TakeStartLine(SequenceReader`1& reader)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.ParseRequest(SequenceReader`1& reader)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TryParseRequest(ReadResult result, Boolean& endConnection)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2023-10-06 22:25:37.6819|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93932" disconnecting. 
+2023-10-06 22:25:37.6871|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93933" disconnecting. 
+2023-10-06 22:25:37.6871|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93932" stopped. 
+2023-10-06 22:25:37.6871|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93933" stopped. 
+2023-10-06 22:25:37.6871|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6K7H93933" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-10-06 22:25:48.2515|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93934" accepted. 
+2023-10-06 22:25:48.2515|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93934" started. 
+2023-10-06 22:25:48.2515|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6K7H93934" received FIN. 
+2023-10-06 22:25:48.2515|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93935" accepted. 
+2023-10-06 22:25:48.2515|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6K7H93934" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-10-06 22:25:48.2515|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93935" started. 
+2023-10-06 22:25:48.2515|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93934" disconnecting. 
+2023-10-06 22:25:48.2515|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5219/Product/GetPopularProducts - - 
+2023-10-06 22:25:48.2515|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-10-06 22:25:48.2515|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93934" stopped. 
+2023-10-06 22:25:48.2576|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-10-06 22:25:48.2576|0|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {36f42311-3483-4917-8846-1f1bdd7768ee} with purposes ('C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\', 'SessionMiddleware'). 
+2023-10-06 22:25:48.2576|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /Product/GetPopularProducts does not match a supported file type 
+2023-10-06 22:25:48.2576|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/Product/GetPopularProducts' 
+2023-10-06 22:25:48.2576|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'LuxeLooks.Controllers.Product.ProductController.GetPopularProducts (LuxeLooks)' with route pattern 'Product/GetPopularProducts' is valid for the request path '/Product/GetPopularProducts' 
+2023-10-06 22:25:48.2763|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'LuxeLooks.Controllers.Product.ProductController.GetPopularProducts (LuxeLooks)' 
+2023-10-06 22:25:48.2763|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'LuxeLooks.Controllers.Product.ProductController.GetPopularProducts (LuxeLooks)' 
+2023-10-06 22:25:48.3146|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetPopularProducts", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPopularProducts() on controller LuxeLooks.Controllers.Product.ProductController (LuxeLooks). 
+2023-10-06 22:25:48.3146|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2023-10-06 22:25:48.3146|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2023-10-06 22:25:48.3146|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000) 
+2023-10-06 22:25:48.3146|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2023-10-06 22:25:48.3146|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): None 
+2023-10-06 22:25:48.3146|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller LuxeLooks.Controllers.Product.ProductController (LuxeLooks) 
+2023-10-06 22:25:48.6116|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2023-10-06 22:25:48.7070|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller LuxeLooks.Controllers.Product.ProductController (LuxeLooks) 
+2023-10-06 22:25:48.7070|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-10-06 22:25:48.7070|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-10-06 22:25:48.7224|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method LuxeLooks.Controllers.Product.ProductController.GetPopularProducts (LuxeLooks) - Validation state: Valid 
+2023-10-06 22:25:51.7258|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.11 initialized 'ApplicationDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.11+c25a0d7b68d66c6ab3849a3b4333964faea6adc9' with options: None 
+2023-10-06 22:25:51.7886|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Order>()' 
+2023-10-06 22:25:52.1580|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Order>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Order.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Order.Address (string), 1], [Property: Order.CreateTime (DateTime) Required, 2], [Property: Order.Email (string) Required, 3], [Property: Order.Name (string), 4], [Property: Order.Price (decimal) Required, 5], [Property: Order.ProductsIds (List<Guid>) Required, 6], [Property: Order.Status (OrderStatus) Required, 7], [Property: Order.UserId (Guid) Required, 8] }
+        SELECT o.Id, o.Address, o.CreateTime, o.Email, o.Name, o.Price, o.ProductsIds, o.Status, o.UserId
+        FROM Orders AS o), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Order>, 
+    LuxeLooks.DataManagment.ApplicationDbContext, 
+    False, 
+    False, 
+    True
+)' 
+2023-10-06 22:25:52.2425|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-10-06 22:25:52.2491|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2023-10-06 22:25:52.3354|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (78ms). 
+2023-10-06 22:25:52.3559|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (106ms). 
+2023-10-06 22:25:52.3559|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (122ms). 
+2023-10-06 22:25:52.3731|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2023-10-06 22:25:52.7327|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-06 22:25:52.7694|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreateTime", o."Email", o."Name", o."Price", o."ProductsIds", o."Status", o."UserId"
+FROM "Orders" AS o 
+2023-10-06 22:25:52.8817|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (116ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreateTime", o."Email", o."Name", o."Price", o."ProductsIds", o."Status", o."UserId"
+FROM "Orders" AS o 
+2023-10-06 22:25:52.9168|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-06 22:25:52.9500|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 43ms reading results. 
+2023-10-06 22:25:52.9695|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-06 22:25:52.9897|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (19ms). 
+2023-10-06 22:25:52.9939|0|ERROR|LuxeLooks.Service.Services.OrderService|Ошибка : заказы не найдены 
+2023-10-06 22:25:52.9939|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Product>()' 
+2023-10-06 22:25:53.0183|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Product>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Product.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Product.Description (string), 1], [Property: Product.ImageUrl (string), 2], [Property: Product.IsForKids (bool) Required, 3], [Property: Product.IsForMen (bool) Required, 4], [Property: Product.Name (string), 5], [Property: Product.Price (decimal?), 6], [Property: Product.Type (ProductType) Required, 7] }
+        SELECT p.Id, p.Description, p.ImageUrl, p.IsForKids, p.IsForMen, p.Name, p.Price, p.Type
+        FROM Products AS p), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Product>, 
+    LuxeLooks.DataManagment.ApplicationDbContext, 
+    False, 
+    False, 
+    True
+)' 
+2023-10-06 22:25:53.0183|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-10-06 22:25:53.0183|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2023-10-06 22:25:53.0240|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (1ms). 
+2023-10-06 22:25:53.0240|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2023-10-06 22:25:53.0240|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-06 22:25:53.0240|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT p."Id", p."Description", p."ImageUrl", p."IsForKids", p."IsForMen", p."Name", p."Price", p."Type"
+FROM "Products" AS p 
+2023-10-06 22:25:53.0449|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT p."Id", p."Description", p."ImageUrl", p."IsForKids", p."IsForMen", p."Name", p."Price", p."Type"
+FROM "Products" AS p 
+2023-10-06 22:25:53.1203|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Product' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-06 22:25:53.1953|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Product' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-06 22:25:53.1964|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Product' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-06 22:25:53.1964|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Product' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-06 22:25:53.1964|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Product' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-06 22:25:53.1964|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Product' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-06 22:25:53.1964|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Product' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-06 22:25:53.1964|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Product' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-06 22:25:53.1964|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Product' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-06 22:25:53.1964|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Product' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-06 22:25:53.1964|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Product' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-06 22:25:53.1964|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Product' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-06 22:25:53.1964|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Product' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-06 22:25:53.1964|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Product' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-06 22:25:53.1964|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-06 22:25:53.1964|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 164ms reading results. 
+2023-10-06 22:25:53.2109|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-06 22:25:53.2109|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2023-10-06 22:25:53.2109|0|INFO|LuxeLooks.Service.Services.ProductService|Все девайсы добавлены в кэш 
+2023-10-06 22:25:53.2321|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method LuxeLooks.Controllers.Product.ProductController.GetPopularProducts (LuxeLooks), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4499.2787ms. 
+2023-10-06 22:25:53.2321|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-10-06 22:25:53.2321|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-10-06 22:25:53.2321|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2023-10-06 22:25:53.2455|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2023-10-06 22:25:53.2455|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2023-10-06 22:25:53.2455|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2023-10-06 22:25:53.2455|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2023-10-06 22:25:53.2455|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2023-10-06 22:25:53.2455|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListPartition`1[[LuxeLooks.Domain.Models.ProductResponse, LuxeLooks.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-10-06 22:25:53.4156|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2023-10-06 22:25:53.4274|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action LuxeLooks.Controllers.Product.ProductController.GetPopularProducts (LuxeLooks) in 5097.7116ms 
+2023-10-06 22:25:53.4274|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'LuxeLooks.Controllers.Product.ProductController.GetPopularProducts (LuxeLooks)' 
+2023-10-06 22:25:53.4376|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93935" completed keep alive response. 
+2023-10-06 22:25:53.4376|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed. 
+2023-10-06 22:25:53.4526|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'LuxeLooks' on server ''. 
+2023-10-06 22:25:53.4526|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database 'LuxeLooks' on server '' (4ms). 
+2023-10-06 22:25:53.4526|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5219/Product/GetPopularProducts - - - 200 - application/json;+charset=utf-8 5205.5076ms 
+2023-10-06 22:26:50.6502|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392S" disconnecting. 
+2023-10-06 22:26:50.6502|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392T" disconnecting. 
+2023-10-06 22:26:50.6502|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392S" stopped. 
+2023-10-06 22:26:50.6502|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H9392T" stopped. 
+2023-10-06 22:26:50.6502|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6K7H9392S" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-10-06 22:26:50.6502|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6K7H9392T" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-10-06 22:27:28.3899|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-10-06 22:27:28.3899|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-10-06 22:27:28.4015|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93935" disconnecting. 
+2023-10-06 22:27:28.4015|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU6K7H93935" stopped. 
+2023-10-06 22:27:28.4015|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU6K7H93935" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-10-06 22:27:28.4015|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
