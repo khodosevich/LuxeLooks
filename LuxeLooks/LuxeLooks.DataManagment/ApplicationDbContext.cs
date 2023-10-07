@@ -12,6 +12,7 @@ namespace LuxeLooks.DataManagment
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Subscribe> Subscribes { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
