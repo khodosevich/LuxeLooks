@@ -16,7 +16,7 @@ public class RegisterRequest
     public string Password { get; set; } = null!;
 
     [Required]
-    [MinLength(5)]
+    [MinLength(4)]
     [Display(Name = "Имя")]
     public string UserName { get; set; } = null!;
     
