@@ -25,7 +25,7 @@ const Header = () => {
     }, [user]);
 
     const location = useLocation();
-    const renderHeaderCondition = location.pathname !== "/sidebar" &&  location.pathname !== "/bag"  &&  location.pathname !== "/man" &&  location.pathname !== "/women" &&  location.pathname !== "/girls" &&  location.pathname !== "/boys"  &&  location.pathname !== "/account" &&  location.pathname !== "/account/profileinfo" &&  location.pathname !== "/account/myorders";
+    const renderHeaderCondition = location.pathname !== "/sidebar" &&  location.pathname !== "/bag"  &&  location.pathname !== "/man" &&  location.pathname !== "/women" &&  location.pathname !== "/girls" &&  location.pathname !== "/boys"  &&  location.pathname !== "/account" &&  location.pathname !== "/account/profileinfo" &&  location.pathname !== "/account/myorders" && location.pathname !== "/category/Sneakers";
 
 
 
