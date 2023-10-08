@@ -38,6 +38,10 @@ export const method = {
         return await api.get("Product/GetPopularProducts").then(r => {
             return r.data
         })
-
+    },
+    async getProductById(id) {
+        return api.get(`/Product/GetById/${id}`).then(r => {
+            return r.data
+        })
     }
 }

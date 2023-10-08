@@ -25,12 +25,12 @@ const Header = () => {
     }, [user]);
 
     const location = useLocation();
-    const renderHeaderCondition = location.pathname !== "/sidebar" &&  location.pathname !== "/bag"  &&  location.pathname !== "/man" &&  location.pathname !== "/women" &&  location.pathname !== "/girls" &&  location.pathname !== "/boys"  &&  location.pathname !== "/account" &&  location.pathname !== "/account/profileinfo" &&  location.pathname !== "/account/myorders" && location.pathname !== "/category/Sneakers";
+    const renderHeaderCondition =  location.pathname !== "/";
 
 
 
     return (
-        <div className={`${renderHeaderCondition ? 'header' : 'header black'}`}>
+        <div className={`${renderHeaderCondition ? 'header black' : 'header'}`}>
             <div className={classes.container}>
                 <div className="navbar">
                     <div className="logo-container">
