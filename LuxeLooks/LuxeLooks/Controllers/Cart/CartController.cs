@@ -22,7 +22,7 @@ public class CartController : ControllerBase
     
     [Authorize]
     [HttpGet("GetCart")]
-    public async Task<IActionResult> GetCart()
+    public async Task<IActionResult> GetCart() 
     {
         List<Guid>? cart = _httpContextAccessor.HttpContext.Session.GetObject<List<Guid>>("Cart");
         if (cart != null)
