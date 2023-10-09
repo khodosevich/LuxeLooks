@@ -1,13 +1,15 @@
 .bag-element {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background: #F4F5F6;
-  max-width: 670px;
   padding: 24px;
 }
 
 .bag-element-description {
   margin-left: 22px;
+  min-width: 210px;
+  max-width: 210px;
 }
 
 .bag-element-description__title {
@@ -42,10 +44,7 @@
   border: 1px solid #D7DADD;
   background: #FFF;
   padding: 9px 12px;
-}
-
-.bag-element-amount {
-  margin-left: 40px;
+  min-width: 72px;
 }
 
 .bag-element-price {

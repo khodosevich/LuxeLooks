@@ -27,8 +27,9 @@
 }
 
 .bag__elements {
-  background: #F4F5F6;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .bag-info__user {

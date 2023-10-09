@@ -7,28 +7,24 @@
 
   transition: all 0.5s;
 
-  &:hover {
-    background: #ffffff;
-    color: black;
-  }
+  //&:hover {
+  //  background: #ffffff;
+  //  color: black;
+  //}
 
   &.black{
-    background: #000;
+    background: #333232;
   }
 
-  &.black:hover {
-    background: #ffffff;
-    color: black;
-  }
 
-  &:hover .logo {
-    color: black;
-  }
+  //&:hover .logo {
+  //  color: black;
+  //}
 
-  &:hover .login-btn {
-    background: #494848;
-    color: #cccccc;
-  }
+  //&:hover .login-btn {
+  //  background: #494848;
+  //  color: #cccccc;
+  //}
 
   z-index: 100;
 }
@@ -46,9 +42,9 @@
 
   color: white;
 
-  &:hover{
-    color: var(--gray-800, #424551);
-  }
+  //&:hover{
+  //  color: var(--gray-800, #424551);
+  //}
 
   font-family: Montserrat;
   font-size: 26px;
@@ -155,9 +151,10 @@
 
   transition: all 0.1s;
 
-  &:hover {
-    background: #000;
-  }
+  //&:hover {
+  //  background: #a1a1a1;
+  //  color:#cccccc;
+  //}
 
 }
 

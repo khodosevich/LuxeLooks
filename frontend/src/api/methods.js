@@ -43,5 +43,10 @@ export const method = {
         return api.get(`/Product/GetById/${id}`).then(r => {
             return r.data
         })
+    },
+    async getProductByName(name) {
+        return api.get(`/Product/GetByName/${name}`).then(r => {
+            return r.data
+        })
     }
 }

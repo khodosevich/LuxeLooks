@@ -10,18 +10,16 @@ const BagElement = ({props}) => {
     return (
         <div className="bag-element">
             <div className="bag-element-img">
-                <img style={{width:"150px" , height:"150px", objectFit:"cover" , borderRadius:"200px"}} src={props.imageUrl} alt=""/>
+                <img style={{width:"80px" , height:"80px", objectFit:"cover" }} src={props.imageUrl} alt=""/>
             </div>
             <div className="bag-element-description">
                 <h3 className="bag-element-description__title">
                     {props.name}
                 </h3>
                 <p className="bag-element-description__color">
-                    Color: pink
+                    Type: {props.type}
                 </p>
-                <p className="bag-element-description__size">
-                    Size: S
-                </p>
+
             </div>
 
             <div className="bag-element-amount">
