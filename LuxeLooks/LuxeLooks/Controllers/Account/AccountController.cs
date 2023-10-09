@@ -65,7 +65,7 @@ public class AccountController : ControllerBase
         HttpContext.Response.Cookies.Append("refreshToken", user.RefreshToken, new CookieOptions
         {
             HttpOnly = true, 
-            Secure = true, 
+            Secure = false, 
             SameSite = SameSiteMode.None, 
             Expires = DateTime.UtcNow.AddMonths(1) 
         });
@@ -132,7 +132,8 @@ public class AccountController : ControllerBase
         }
 
         var user = userResponse.Data;
-        if ( user.RefreshToken != refreshToken || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
+        var userRefreshToken = user.RefreshToken;
+        if ( userRefreshToken != refreshToken || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
         {
             return BadRequest("Invalid access token or refresh token");
         }

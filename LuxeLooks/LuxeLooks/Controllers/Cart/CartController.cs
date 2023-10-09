@@ -3,6 +3,7 @@ using LuxeLooks.Service.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using LuxeLooks.Domain.Models;
+using LuxeLooks.Service.Extensions;
 
 namespace LuxeLooks.Controllers.Cart;
 
@@ -13,7 +14,7 @@ public class CartController : ControllerBase
     private readonly ILogger<CartController> _logger;
     private readonly ProductService _productService;
 
-    public CartController(IHttpContextAccessor httpContextAccessor, ILogger<CartController> logger, ProductService productService)
+    public CartController(IHttpContextAccessor httpContextAccessor, ILogger<CartController> logger, ProductService productService, IConfiguration configuration)
     {
         _httpContextAccessor = httpContextAccessor;
         _logger = logger;
@@ -24,7 +25,7 @@ public class CartController : ControllerBase
     [HttpGet("GetCart")]
     public async Task<IActionResult> GetCart() 
     {
-        List<Guid>? cart = _httpContextAccessor.HttpContext.Session.GetObject<List<Guid>>("Cart");
+        List<Guid>? cart = _httpContextAccessor.HttpContext.Session.GetObject<List<Guid>>($"Cart");
         if (cart != null)
         {
             var response = await _productService.GetProducts(false);
@@ -50,7 +51,7 @@ public class CartController : ControllerBase
             _logger.LogError("Invalid ID format");
             return BadRequest("Invalid ID format");
         }
-        List<Guid> cart = _httpContextAccessor.HttpContext.Session.GetObject<List<Guid>>("Cart") ?? new List<Guid>();
+        List<Guid> cart = _httpContextAccessor.HttpContext.Session.GetObject<List<Guid>>($"Cart") ?? new List<Guid>();
         cart.Add(productId);
         _httpContextAccessor.HttpContext.Session.SetObject("Cart",cart);
         _logger.LogInformation($"Successfully added product with id: {request.Id}");
