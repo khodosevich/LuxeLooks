@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using LuxeLooks.Domain.Entity;
 using LuxeLooks.Domain.Enum;
 using LuxeLooks.Domain.Models;
 using LuxeLooks.Domain.Response;
@@ -14,14 +15,16 @@ public class ProductController : ControllerBase
     private readonly ProductService _productService;
     private readonly NotificationService _notificationService;
     private readonly OrderService _orderService;
+    private readonly CategoryService _categoryService;
 
     public ProductController(ILogger<ProductController> logger, ProductService productService,
-        NotificationService notificationService, OrderService orderService)
+        NotificationService notificationService, OrderService orderService, CategoryService categoryService)
     {
         _logger = logger;
         _productService = productService;
         _notificationService = notificationService;
         _orderService = orderService;
+        _categoryService = categoryService;
     }
 
     private IActionResult HandleResponse<T>(BaseResponse<T> response)
@@ -55,10 +58,10 @@ public class ProductController : ControllerBase
         return HandleResponse(response);
     }
 
-    [HttpGet("GetByName/{username}")]
-    public async Task<IActionResult> GetProductByName(string userName)
+    [HttpGet("GetByName/{name}")]
+    public async Task<IActionResult> GetProductByName(string name)
     {
-        var response = await _productService.GetByName(userName);
+        var response = await _productService.GetByName(name);
         return HandleResponse(response);
     }
 
@@ -150,7 +153,7 @@ public class ProductController : ControllerBase
         var productsResponse = await _productService.GetProducts(true);
         if (orderResponse.StatusCode!=HttpStatusCode.OK||productsResponse.StatusCode!=HttpStatusCode.OK)
         {
-            return Ok(new List<string>(){"Hat","Hoodie","Cap","TShirt","Socks","Jacket"});
+           return Ok((await _categoryService.GetAll()).Data.Take(6).ToList());
         }
 
         var orders = orderResponse.Data;
@@ -177,6 +180,13 @@ public class ProductController : ControllerBase
             }
         }
         var top6ProductTypes = productTypeSalesCount.OrderByDescending(kv => kv.Value).Take(6).Select(kv => kv.Key).ToList();
-        return Ok(top6ProductTypes);
+        var enumValues = top6ProductTypes
+            .Select(enumString => Enum.Parse(typeof(ProductType), enumString))
+            .Cast<ProductType>()
+            .ToList();
+                
+        var categories=(await _categoryService.GetAll()).Data.Where(category => enumValues.Contains(category.ProductType))
+            .ToList();
+        return Ok(categories);
     }
 }

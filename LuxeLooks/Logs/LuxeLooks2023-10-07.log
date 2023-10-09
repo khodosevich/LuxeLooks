@@ -573,3 +573,449 @@ VALUES ('20231007092353_Added Category', '7.0.11');
 2023-10-07 12:24:09.1961|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed. 
 2023-10-07 12:24:09.1961|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'LuxeLooks' on server ''. 
 2023-10-07 12:24:09.1961|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database 'LuxeLooks' on server '' (1ms). 
+2023-10-07 12:27:43.2589|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2023-10-07 12:27:43.3291|0|INFO|Program|Program initial 
+2023-10-07 12:27:43.3291|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2023-10-07 12:27:43.3452|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Алексей\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-10-07 12:27:43.3452|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Алексей\AppData\Local\ASP.NET\DataProtection-Keys\key-201f091d-1492-40cf-8448-2970d8f8302a.xml'. 
+2023-10-07 12:27:43.3452|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Алексей\AppData\Local\ASP.NET\DataProtection-Keys\key-36f42311-3483-4917-8846-1f1bdd7768ee.xml'. 
+2023-10-07 12:27:43.3452|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Алексей\AppData\Local\ASP.NET\DataProtection-Keys\key-8c2d20ac-a7d5-4fe4-b7a0-731f36d4f54e.xml'. 
+2023-10-07 12:27:43.3452|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Алексей\AppData\Local\ASP.NET\DataProtection-Keys\key-fe0fd9ec-cbd2-45ba-94c2-4c4db8302271.xml'. 
+2023-10-07 12:27:43.3452|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {201f091d-1492-40cf-8448-2970d8f8302a}. 
+2023-10-07 12:27:43.3589|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {36f42311-3483-4917-8846-1f1bdd7768ee}. 
+2023-10-07 12:27:43.3589|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {8c2d20ac-a7d5-4fe4-b7a0-731f36d4f54e}. 
+2023-10-07 12:27:43.3589|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {fe0fd9ec-cbd2-45ba-94c2-4c4db8302271}. 
+2023-10-07 12:27:43.3589|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {36f42311-3483-4917-8846-1f1bdd7768ee} with expiration date 2023-12-30 19:24:09Z as default key. 
+2023-10-07 12:27:43.3589|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-10-07 12:27:43.3589|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2023-10-07 12:27:43.3589|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-10-07 12:27:43.3589|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2023-10-07 12:27:43.3589|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2023-10-07 12:27:43.3773|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {36f42311-3483-4917-8846-1f1bdd7768ee} as the default key. 
+2023-10-07 12:27:43.3773|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {36f42311-3483-4917-8846-1f1bdd7768ee} was loaded during application startup. 
+2023-10-07 12:27:43.4083|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5219 
+2023-10-07 12:27:43.4083|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly LuxeLooks 
+2023-10-07 12:27:43.4083|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-10-07 12:27:43.4083|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-10-07 12:27:43.4083|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks 
+2023-10-07 12:27:43.4083|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2023-10-07 12:27:43.6333|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU72UKFO9UD" received FIN. 
+2023-10-07 12:27:43.6403|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UD" accepted. 
+2023-10-07 12:27:43.6403|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UD" started. 
+2023-10-07 12:27:43.6507|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU72UKFO9UD" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-10-07 12:27:43.6507|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UD" disconnecting. 
+2023-10-07 12:27:43.6507|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UD" stopped. 
+2023-10-07 12:27:43.7863|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UE" accepted. 
+2023-10-07 12:27:43.7863|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UE" started. 
+2023-10-07 12:27:43.7863|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UF" accepted. 
+2023-10-07 12:27:43.7886|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UF" started. 
+2023-10-07 12:27:43.8195|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5219/swagger - - 
+2023-10-07 12:27:43.8195|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2023-10-07 12:27:43.8195|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-10-07 12:27:43.8500|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-10-07 12:27:43.8500|0|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {36f42311-3483-4917-8846-1f1bdd7768ee} with purposes ('C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\', 'SessionMiddleware'). 
+2023-10-07 12:27:43.8577|0|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2023-10-07 12:27:43.8577|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger does not match a supported file type 
+2023-10-07 12:27:43.9018|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger' 
+2023-10-07 12:27:43.9030|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2023-10-07 12:27:43.9030|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UF" completed keep alive response. 
+2023-10-07 12:27:43.9030|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5219/swagger - - - 404 0 - 95.3324ms 
+2023-10-07 12:27:48.6670|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UG" accepted. 
+2023-10-07 12:27:48.6670|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UG" started. 
+2023-10-07 12:27:48.6670|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UH" accepted. 
+2023-10-07 12:27:48.6670|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU72UKFO9UG" received FIN. 
+2023-10-07 12:27:48.6670|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UH" started. 
+2023-10-07 12:27:48.6670|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU72UKFO9UG" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-10-07 12:27:48.6670|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UG" disconnecting. 
+2023-10-07 12:27:48.6670|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5219/Account/Register application/json 89 
+2023-10-07 12:27:48.6670|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-10-07 12:27:48.6670|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UG" stopped. 
+2023-10-07 12:27:48.6670|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-10-07 12:27:48.6670|0|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {36f42311-3483-4917-8846-1f1bdd7768ee} with purposes ('C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\', 'SessionMiddleware'). 
+2023-10-07 12:27:48.6670|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2023-10-07 12:27:48.6670|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/Account/Register' 
+2023-10-07 12:27:48.6670|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'LuxeLooks.Controllers.Account.AccountController.Register (LuxeLooks)' with route pattern 'Account/Register' is valid for the request path '/Account/Register' 
+2023-10-07 12:27:48.6670|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'LuxeLooks.Controllers.Account.AccountController.Register (LuxeLooks)' 
+2023-10-07 12:27:48.6836|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'LuxeLooks.Controllers.Account.AccountController.Register (LuxeLooks)' 
+2023-10-07 12:27:48.7055|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[LuxeLooks.Domain.Models.Identity.AuthResponse]] Register(LuxeLooks.Domain.Models.Identity.RegisterRequest) on controller LuxeLooks.Controllers.Account.AccountController (LuxeLooks). 
+2023-10-07 12:27:48.7055|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2023-10-07 12:27:48.7055|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2023-10-07 12:27:48.7055|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2023-10-07 12:27:48.7055|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2023-10-07 12:27:48.7055|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2023-10-07 12:27:48.7055|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller LuxeLooks.Controllers.Account.AccountController (LuxeLooks) 
+2023-10-07 12:27:48.8507|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2023-10-07 12:27:48.8732|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller LuxeLooks.Controllers.Account.AccountController (LuxeLooks) 
+2023-10-07 12:27:48.8772|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.RegisterRequest' ... 
+2023-10-07 12:27:48.8772|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.RegisterRequest' using the name '' in request data ... 
+2023-10-07 12:27:48.8772|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2023-10-07 12:27:48.9081|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMU72UKFO9UH", Request id "0HMU72UKFO9UH:00000001": started reading request body. 
+2023-10-07 12:27:48.9081|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMU72UKFO9UH", Request id "0HMU72UKFO9UH:00000001": done reading request body. 
+2023-10-07 12:27:48.9153|0|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'LuxeLooks.Domain.Models.Identity.RegisterRequest' 
+2023-10-07 12:27:48.9153|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.RegisterRequest'. 
+2023-10-07 12:27:48.9153|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.RegisterRequest'. 
+2023-10-07 12:27:48.9153|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.RegisterRequest' ... 
+2023-10-07 12:27:48.9153|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.RegisterRequest'. 
+2023-10-07 12:27:48.9153|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-10-07 12:27:48.9153|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-10-07 12:27:48.9153|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-10-07 12:27:48.9153|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-10-07 12:27:48.9349|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method LuxeLooks.Controllers.Account.AccountController.Register (LuxeLooks) - Validation state: Valid 
+2023-10-07 12:27:48.9349|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method LuxeLooks.Controllers.Account.AccountController.Register (LuxeLooks) with arguments (LuxeLooks.Domain.Models.Identity.RegisterRequest) 
+2023-10-07 12:27:50.1845|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.11 initialized 'ApplicationDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.11+c25a0d7b68d66c6ab3849a3b4333964faea6adc9' with options: None 
+2023-10-07 12:27:50.2112|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<User>()' 
+2023-10-07 12:27:50.3589|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.Email (string) Required, 1], [Property: User.NormalizedUserName (string) Required, 2], [Property: User.PasswordHash (string) Required, 3], [Property: User.PasswordSalt (string) Required, 4], [Property: User.RefreshToken (string), 5], [Property: User.RefreshTokenExpiryTime (DateTime) Required, 6], [Property: User.RoleId (Guid) Required, 7], [Property: User.UserName (string) Required, 8] }
+        SELECT u.Id, u.Email, u.NormalizedUserName, u.PasswordHash, u.PasswordSalt, u.RefreshToken, u.RefreshTokenExpiryTime, u.RoleId, u.UserName
+        FROM Users AS u), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+    LuxeLooks.DataManagment.ApplicationDbContext, 
+    False, 
+    False, 
+    True
+)' 
+2023-10-07 12:27:50.3909|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-10-07 12:27:50.3909|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2023-10-07 12:27:50.4784|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (83ms). 
+2023-10-07 12:27:50.4835|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (93ms). 
+2023-10-07 12:27:50.4835|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (97ms). 
+2023-10-07 12:27:50.4835|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2023-10-07 12:27:50.6502|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:27:50.6678|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2023-10-07 12:27:50.7180|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (49ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2023-10-07 12:27:50.7645|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-07 12:27:50.7906|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-07 12:27:50.8012|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:27:50.8129|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 84ms reading results. 
+2023-10-07 12:27:50.8222|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:27:50.8222|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (6ms). 
+2023-10-07 12:27:50.8222|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method LuxeLooks.Controllers.Account.AccountController.Register (LuxeLooks), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 1896.4515ms. 
+2023-10-07 12:27:50.8222|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-10-07 12:27:50.8222|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-10-07 12:27:50.8379|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-10-07 12:27:50.8379|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-10-07 12:27:50.8379|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-10-07 12:27:50.8379|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-10-07 12:27:50.8379|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2023-10-07 12:27:50.8379|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2023-10-07 12:27:50.8379|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2023-10-07 12:27:50.8379|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2023-10-07 12:27:50.8379|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2023-10-07 12:27:50.8379|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response. 
+2023-10-07 12:27:50.8379|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'. 
+2023-10-07 12:27:50.8537|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2023-10-07 12:27:50.8537|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-10-07 12:27:50.8537|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-10-07 12:27:50.8997|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action LuxeLooks.Controllers.Account.AccountController.Register (LuxeLooks) in 2179.7739ms 
+2023-10-07 12:27:50.9027|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'LuxeLooks.Controllers.Account.AccountController.Register (LuxeLooks)' 
+2023-10-07 12:27:50.9027|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UH" completed keep alive response. 
+2023-10-07 12:27:50.9214|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed. 
+2023-10-07 12:27:50.9371|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'LuxeLooks' on server ''. 
+2023-10-07 12:27:50.9371|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database 'LuxeLooks' on server '' (8ms). 
+2023-10-07 12:27:50.9371|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5219/Account/Register application/json 89 - 400 - text/plain;+charset=utf-8 2276.4418ms 
+2023-10-07 12:28:00.9851|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5219/Account/Register application/json 93 
+2023-10-07 12:28:00.9851|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-10-07 12:28:00.9944|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-10-07 12:28:00.9944|0|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {36f42311-3483-4917-8846-1f1bdd7768ee} with purposes ('C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\', 'SessionMiddleware'). 
+2023-10-07 12:28:00.9944|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2023-10-07 12:28:00.9944|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/Account/Register' 
+2023-10-07 12:28:00.9944|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'LuxeLooks.Controllers.Account.AccountController.Register (LuxeLooks)' with route pattern 'Account/Register' is valid for the request path '/Account/Register' 
+2023-10-07 12:28:00.9944|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'LuxeLooks.Controllers.Account.AccountController.Register (LuxeLooks)' 
+2023-10-07 12:28:00.9944|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'LuxeLooks.Controllers.Account.AccountController.Register (LuxeLooks)' 
+2023-10-07 12:28:00.9944|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[LuxeLooks.Domain.Models.Identity.AuthResponse]] Register(LuxeLooks.Domain.Models.Identity.RegisterRequest) on controller LuxeLooks.Controllers.Account.AccountController (LuxeLooks). 
+2023-10-07 12:28:00.9944|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2023-10-07 12:28:00.9944|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2023-10-07 12:28:00.9944|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2023-10-07 12:28:00.9944|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2023-10-07 12:28:00.9944|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2023-10-07 12:28:00.9944|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller LuxeLooks.Controllers.Account.AccountController (LuxeLooks) 
+2023-10-07 12:28:01.0100|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller LuxeLooks.Controllers.Account.AccountController (LuxeLooks) 
+2023-10-07 12:28:01.0100|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.RegisterRequest' ... 
+2023-10-07 12:28:01.0100|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.RegisterRequest' using the name '' in request data ... 
+2023-10-07 12:28:01.0100|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2023-10-07 12:28:01.0100|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMU72UKFO9UH", Request id "0HMU72UKFO9UH:00000002": started reading request body. 
+2023-10-07 12:28:01.0100|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMU72UKFO9UH", Request id "0HMU72UKFO9UH:00000002": done reading request body. 
+2023-10-07 12:28:01.0100|0|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'LuxeLooks.Domain.Models.Identity.RegisterRequest' 
+2023-10-07 12:28:01.0100|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.RegisterRequest'. 
+2023-10-07 12:28:01.0100|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.RegisterRequest'. 
+2023-10-07 12:28:01.0100|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.RegisterRequest' ... 
+2023-10-07 12:28:01.0100|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.RegisterRequest'. 
+2023-10-07 12:28:01.0100|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-10-07 12:28:01.0100|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-10-07 12:28:01.0100|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-10-07 12:28:01.0100|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-10-07 12:28:01.0100|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method LuxeLooks.Controllers.Account.AccountController.Register (LuxeLooks) - Validation state: Valid 
+2023-10-07 12:28:01.0100|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method LuxeLooks.Controllers.Account.AccountController.Register (LuxeLooks) with arguments (LuxeLooks.Domain.Models.Identity.RegisterRequest) 
+2023-10-07 12:28:01.0593|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.11 initialized 'ApplicationDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.11+c25a0d7b68d66c6ab3849a3b4333964faea6adc9' with options: None 
+2023-10-07 12:28:01.0593|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-10-07 12:28:01.0593|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2023-10-07 12:28:01.0593|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (0ms). 
+2023-10-07 12:28:01.0593|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (1ms). 
+2023-10-07 12:28:01.0593|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (2ms). 
+2023-10-07 12:28:01.0593|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2023-10-07 12:28:01.0593|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:01.0593|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2023-10-07 12:28:01.0593|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2023-10-07 12:28:01.0593|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-07 12:28:01.0593|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-07 12:28:01.0593|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:01.0732|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 2ms reading results. 
+2023-10-07 12:28:01.0732|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:01.0732|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2023-10-07 12:28:01.0732|0|ERROR|LuxeLooks.Service.Services.UserService|User with username: Ivanusha not found 
+2023-10-07 12:28:02.0221|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"ApplicationDbContext"' generated a value for the property '"Id"."User"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-07 12:28:02.0638|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-07 12:28:02.0638|0|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'ApplicationDbContext'. 
+2023-10-07 12:28:02.0828|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'ApplicationDbContext'. 
+2023-10-07 12:28:02.1210|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'ApplicationDbContext'. 
+2023-10-07 12:28:02.2975|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2023-10-07 12:28:02.2975|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.2975|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-10-07 12:28:02.2975|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:02.3138|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (10ms). 
+2023-10-07 12:28:02.3222|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?', @p4='?', @p5='?', @p6='?' (DbType = DateTime), @p7='?' (DbType = Guid), @p8='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "Email", "NormalizedUserName", "PasswordHash", "PasswordSalt", "RefreshToken", "RefreshTokenExpiryTime", "RoleId", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); 
+2023-10-07 12:28:02.3735|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (59ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?', @p4='?', @p5='?', @p6='?' (DbType = DateTime), @p7='?' (DbType = Guid), @p8='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "Email", "NormalizedUserName", "PasswordHash", "PasswordSalt", "RefreshToken", "RefreshTokenExpiryTime", "RoleId", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); 
+2023-10-07 12:28:02.3735|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.3735|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 8ms reading results. 
+2023-10-07 12:28:02.3869|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.3869|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2023-10-07 12:28:02.4077|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'User' tracked by 'ApplicationDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-07 12:28:02.4077|0|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database. 
+2023-10-07 12:28:02.4077|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-10-07 12:28:02.4077|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:02.4077|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:02.4077|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2023-10-07 12:28:02.4077|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.4172|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2023-10-07 12:28:02.4172|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2023-10-07 12:28:02.4172|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.4172|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results. 
+2023-10-07 12:28:02.4172|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.4172|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2023-10-07 12:28:02.4172|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-10-07 12:28:02.4172|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:02.4172|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:02.4172|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2023-10-07 12:28:02.4172|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.4172|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2023-10-07 12:28:02.4172|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2023-10-07 12:28:02.4172|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.4172|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results. 
+2023-10-07 12:28:02.4172|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.4172|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2023-10-07 12:28:02.4361|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Role>()' 
+2023-10-07 12:28:02.4361|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Role>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Role.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Role.NormalizedRoleName (string) Required, 1], [Property: Role.RoleName (string) Required, 2] }
+        SELECT r.Id, r.NormalizedRoleName, r.RoleName
+        FROM Roles AS r), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Role>, 
+    LuxeLooks.DataManagment.ApplicationDbContext, 
+    False, 
+    False, 
+    True
+)' 
+2023-10-07 12:28:02.4361|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-10-07 12:28:02.4361|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:02.4361|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:02.4497|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2023-10-07 12:28:02.4497|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.4497|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT r."Id", r."NormalizedRoleName", r."RoleName"
+FROM "Roles" AS r 
+2023-10-07 12:28:02.4497|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT r."Id", r."NormalizedRoleName", r."RoleName"
+FROM "Roles" AS r 
+2023-10-07 12:28:02.4497|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Role' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-07 12:28:02.4730|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Role' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-07 12:28:02.4730|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.4730|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 19ms reading results. 
+2023-10-07 12:28:02.4730|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.4730|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2023-10-07 12:28:02.4730|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'User' tracked by 'ApplicationDbContext' changed state from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-07 12:28:02.4730|0|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'ApplicationDbContext'. 
+2023-10-07 12:28:02.4730|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'ApplicationDbContext'. 
+2023-10-07 12:28:02.4875|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'ApplicationDbContext'. 
+2023-10-07 12:28:02.4997|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2023-10-07 12:28:02.4997|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.4997|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-10-07 12:28:02.4997|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:02.4997|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:02.4997|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p8='?' (DbType = Guid), @p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?' (DbType = DateTime), @p6='?' (DbType = Guid), @p7='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Users" SET "Email" = @p0, "NormalizedUserName" = @p1, "PasswordHash" = @p2, "PasswordSalt" = @p3, "RefreshToken" = @p4, "RefreshTokenExpiryTime" = @p5, "RoleId" = @p6, "UserName" = @p7
+WHERE "Id" = @p8; 
+2023-10-07 12:28:02.4997|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?' (DbType = DateTime), @p6='?' (DbType = Guid), @p7='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Users" SET "Email" = @p0, "NormalizedUserName" = @p1, "PasswordHash" = @p2, "PasswordSalt" = @p3, "RefreshToken" = @p4, "RefreshTokenExpiryTime" = @p5, "RoleId" = @p6, "UserName" = @p7
+WHERE "Id" = @p8; 
+2023-10-07 12:28:02.5093|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.5093|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 1ms reading results. 
+2023-10-07 12:28:02.5093|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.5093|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2023-10-07 12:28:02.5093|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'User' tracked by 'ApplicationDbContext' changed state from 'Modified' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-07 12:28:02.5093|0|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database. 
+2023-10-07 12:28:02.5093|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly register user: Ivanusha 
+2023-10-07 12:28:02.5241|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-10-07 12:28:02.5241|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:02.5241|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (1ms). 
+2023-10-07 12:28:02.5241|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2023-10-07 12:28:02.5241|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.5241|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2023-10-07 12:28:02.5241|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2023-10-07 12:28:02.5241|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.5241|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results. 
+2023-10-07 12:28:02.5241|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.5241|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2023-10-07 12:28:02.5241|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-10-07 12:28:02.5241|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:02.5241|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:02.5241|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2023-10-07 12:28:02.5241|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.5241|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2023-10-07 12:28:02.5392|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2023-10-07 12:28:02.5392|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.5392|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results. 
+2023-10-07 12:28:02.5392|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:02.5392|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2023-10-07 12:28:03.4326|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-10-07 12:28:03.4326|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (1ms). 
+2023-10-07 12:28:03.4326|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (1ms). 
+2023-10-07 12:28:03.4342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2023-10-07 12:28:03.4342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:03.4342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2023-10-07 12:28:03.4342|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2023-10-07 12:28:03.4342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:03.4342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results. 
+2023-10-07 12:28:03.4342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:03.4342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2023-10-07 12:28:03.4342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-10-07 12:28:03.4342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:03.4342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:03.4342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2023-10-07 12:28:03.4342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:03.4342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT r."Id", r."NormalizedRoleName", r."RoleName"
+FROM "Roles" AS r 
+2023-10-07 12:28:03.4342|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT r."Id", r."NormalizedRoleName", r."RoleName"
+FROM "Roles" AS r 
+2023-10-07 12:28:03.4342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:03.4342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results. 
+2023-10-07 12:28:03.4342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:03.4342|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2023-10-07 12:28:03.4527|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 6c163236-1979-41a3-b736-8e2496b596f3 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2023-10-07 12:28:03.7498|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results. 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'User' tracked by 'ApplicationDbContext' changed state from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'ApplicationDbContext'. 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'ApplicationDbContext'. 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'ApplicationDbContext'. 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2023-10-07 12:28:03.7498|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p8='?' (DbType = Guid), @p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?' (DbType = DateTime), @p6='?' (DbType = Guid), @p7='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Users" SET "Email" = @p0, "NormalizedUserName" = @p1, "PasswordHash" = @p2, "PasswordSalt" = @p3, "RefreshToken" = @p4, "RefreshTokenExpiryTime" = @p5, "RoleId" = @p6, "UserName" = @p7
+WHERE "Id" = @p8; 
+2023-10-07 12:28:03.7652|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?' (DbType = DateTime), @p6='?' (DbType = Guid), @p7='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Users" SET "Email" = @p0, "NormalizedUserName" = @p1, "PasswordHash" = @p2, "PasswordSalt" = @p3, "RefreshToken" = @p4, "RefreshTokenExpiryTime" = @p5, "RoleId" = @p6, "UserName" = @p7
+WHERE "Id" = @p8; 
+2023-10-07 12:28:03.7652|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:03.7652|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results. 
+2023-10-07 12:28:03.7652|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2023-10-07 12:28:03.7652|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2023-10-07 12:28:03.7652|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'User' tracked by 'ApplicationDbContext' changed state from 'Modified' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2023-10-07 12:28:03.7652|0|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database. 
+2023-10-07 12:28:03.7652|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Ivanusha 
+2023-10-07 12:28:03.7748|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method LuxeLooks.Controllers.Account.AccountController.Register (LuxeLooks), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2755.8225ms. 
+2023-10-07 12:28:03.7748|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-10-07 12:28:03.7748|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-10-07 12:28:03.7748|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-10-07 12:28:03.7748|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-10-07 12:28:03.7748|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-10-07 12:28:03.7748|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-10-07 12:28:03.7748|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2023-10-07 12:28:03.7748|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2023-10-07 12:28:03.7748|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2023-10-07 12:28:03.7748|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2023-10-07 12:28:03.7748|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2023-10-07 12:28:03.7748|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2023-10-07 12:28:03.7748|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'LuxeLooks.Domain.Models.Identity.AuthResponse'. 
+2023-10-07 12:28:03.8018|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2023-10-07 12:28:03.8018|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-10-07 12:28:03.8018|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-10-07 12:28:03.8018|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action LuxeLooks.Controllers.Account.AccountController.Register (LuxeLooks) in 2797.3656ms 
+2023-10-07 12:28:03.8018|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'LuxeLooks.Controllers.Account.AccountController.Register (LuxeLooks)' 
+2023-10-07 12:28:03.8018|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UH" completed keep alive response. 
+2023-10-07 12:28:03.8018|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed. 
+2023-10-07 12:28:03.8018|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'LuxeLooks' on server ''. 
+2023-10-07 12:28:03.8055|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database 'LuxeLooks' on server '' (0ms). 
+2023-10-07 12:28:03.8055|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5219/Account/Register application/json 93 - 200 - application/json;+charset=utf-8 2820.6754ms 
+2023-10-07 12:28:22.1130|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-10-07 12:28:22.1130|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-10-07 12:28:22.1130|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UE" disconnecting. 
+2023-10-07 12:28:22.1130|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UE" stopped. 
+2023-10-07 12:28:22.1130|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UF" disconnecting. 
+2023-10-07 12:28:22.1229|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UH" disconnecting. 
+2023-10-07 12:28:22.1229|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU72UKFO9UE" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-10-07 12:28:22.1229|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UF" stopped. 
+2023-10-07 12:28:22.1229|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMU72UKFO9UH" stopped. 
+2023-10-07 12:28:22.1229|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU72UKFO9UF" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-10-07 12:28:22.1229|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMU72UKFO9UH" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-10-07 12:28:22.1229|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
