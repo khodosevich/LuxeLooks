@@ -1,0 +1,80 @@
+.item__care {
+  position: relative;
+}
+
+.item__care__first::before {
+  content: "";
+  position: absolute;
+  background-image: url('../../assets/hand-wash.svg');
+  background-size: cover;
+  width: 22px;
+  height: 22px;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+
+}
+
+.item__care__second::before {
+  content: "";
+  position: absolute;
+  background-image: url('../../assets/no-ironing.svg');
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+
+}
+
+.item__care__third::before {
+  content: "";
+  position: absolute;
+  background-image: url('../../assets/no-bleach.svg');
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+
+}
+
+.item__care__four::before {
+  content: "";
+  position: absolute;
+  background-image: url('../../assets/no-tumble-dry.svg');
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+}
+
+
+.menu__fabric {
+  position: relative;
+}
+
+.fabric__item::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #17696A;
+  transform: translateY(-50%);
+  margin-left: -20px;
+  top: 50%;
+}
+
+
+.fabric__item:nth-child(1)::before {
+  top: 13px;
+}
+
+.fabric__item:nth-child(3)::before {
+  top: 65px;
+}

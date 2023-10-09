@@ -19,9 +19,13 @@ import Bag from "./pages/Bag/Bag";
 import SignIn from "./pages/signin/SignIn";
 import SideBar from "./pages/sidebar/SideBar";
 import Profile from "./components/profile/Profile";
+import CategoryTypeItems from "./components/popularcategory/CategoryTypeItems";
+import ProductItem from "./pages/product/ProductItem";
 
 
 export const MyContext = React.createContext();
+
+
 
 
 function App() {
@@ -53,6 +57,8 @@ function App() {
                     <Route path="/registration" element={<Registration/>} />
                     <Route path="/signin" element={<SignIn/>} />
                     <Route path="/account/*" element={<Profile/>} />
+                    <Route path="/category/:categoryName" element={<CategoryTypeItems/>} />
+                    <Route path="/product/:productName" element={<ProductItem/>} />
                 </Routes>
             {renderFooterCondition && <Footer/>}
         </MyContext.Provider>

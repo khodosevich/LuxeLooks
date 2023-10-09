@@ -3,9 +3,10 @@ import classes from "../../App.module.css"
 import links from "./links.json"
 
 import "./header.css"
-import {Link, NavLink, useLocation} from "react-router-dom";
+import {Link, Navigate, NavLink, useLocation, useNavigate} from "react-router-dom";
 import cardBag from "../../assets/cart1.svg";
 import {MyContext} from "../../App";
+import {method} from "../../api/methods";
 
 
 const Header = () => {
@@ -13,24 +14,30 @@ const Header = () => {
     const [searchState,setSearchState] = useState("");
 
     const handlerSearchInput = (e) => {
-        console.log(e.target.value)
+        setSearchState(e.target.value)
     }
 
     const {user,setUser} = useContext(MyContext)
 
-
+    let navigate = useNavigate();
 
     useEffect(() => {
 
     }, [user]);
 
     const location = useLocation();
-    const renderHeaderCondition = location.pathname !== "/sidebar" &&  location.pathname !== "/bag"  &&  location.pathname !== "/man" &&  location.pathname !== "/women" &&  location.pathname !== "/girls" &&  location.pathname !== "/boys"  &&  location.pathname !== "/account" &&  location.pathname !== "/account/profileinfo" &&  location.pathname !== "/account/myorders";
+    const renderHeaderCondition =  location.pathname !== "/";
 
+
+    const search = async () => {
+       const data = await method.getProductByName(searchState)
+        setSearchState("")
+        navigate(`/product/${data.id}`)
+    }
 
 
     return (
-        <div className={`${renderHeaderCondition ? 'header' : 'header black'}`}>
+        <div className={`${renderHeaderCondition ? 'header black' : 'header'}`}>
             <div className={classes.container}>
                 <div className="navbar">
                     <div className="logo-container">
@@ -46,9 +53,10 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="search-input">
-                        <input onChange={handlerSearchInput} className="input_header" type="text" placeholder="Search for products..."/>
-                        <i className="fa" aria-hidden="true"></i>
+                        <input value={searchState} onChange={handlerSearchInput} className="input_header" type="text" placeholder="Search for products..."/>
+                        <i onClick={search} className="fa" aria-hidden="true"></i>
                     </div>
+
                     <div className="bag">
                         <NavLink to="/bag">
                             <img className="shop__cart" src={cardBag} alt="cart"/>
