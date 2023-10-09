@@ -38,3 +38,179 @@
 2023-10-09 14:35:52.1823|0|ERROR|LuxeLooks.Service.Services.OrderService|Ошибка : заказы не найдены |url: http://localhost/Product/GetPopularTypes|action: GetPopularTypes|LuxeLooks.Service.Services.OrderService.GetOrders| body: 
 2023-10-09 14:35:52.1823|0|INFO|LuxeLooks.Service.Services.ProductService|Получение всех девайсов из кэша |url: http://localhost/Product/GetPopularTypes|action: GetPopularTypes|LuxeLooks.Service.Services.ProductService.GetProducts| body: 
 2023-10-09 14:36:18.4508|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-10-09 18:02:01.4081|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-10-09 18:02:01.9696|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5219 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-10-09 18:02:01.9696|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-10-09 18:02:01.9696|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-10-09 18:02:01.9696|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-10-09 18:02:31.9986|0|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/Account/Login|action: |Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.TryGetHttpsPort| body: 
+2023-10-09 18:02:38.8212|0|ERROR|LuxeLooks.Service.Services.RoleService|Role with id: 6ce6e84b-f0ac-40d3-a5a9-f48362c18b2f not found |url: http://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.HandleError| body: 
+2023-10-09 18:02:38.8763|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at LuxeLooks.Service.Extensions.JwtTokenExtension.CreateClaims(User user, List`1 roles) in C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks.Service\Extensions\JwtTokenExtension.cs:line 17
+   at LuxeLooks.Service.Services.TokenService.CreateToken(User user) in C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks.Service\Services\TokenService.cs:line 23
+   at LuxeLooks.Controllers.Account.AccountController.Authenticate(AuthRequest request) in C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\Controllers\Account\AccountController.cs:line 60
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)|url: http://localhost/Account/Login|action: Authenticate|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke| body: 
+2023-10-09 18:04:05.6655|0|ERROR|LuxeLooks.Service.Services.UserService|User with username: Ivanusha not found |url: http://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.UserService.HandleError| body: 
+2023-10-09 18:04:07.0740|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly register user: Ivanusha |url: http://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Register| body: 
+2023-10-09 18:04:07.9469|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: f272aa8d-d1f8-452e-9a7b-7c8153fa2885 |url: http://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-10-09 18:04:08.2925|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Ivanusha |url: http://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-10-09 18:04:47.5226|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: f272aa8d-d1f8-452e-9a7b-7c8153fa2885 |url: http://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-10-09 18:04:47.5398|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Ivanusha |url: http://localhost/Account/Login|action: Authenticate|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-10-09 18:04:58.2901|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ArgumentException: IDX12709: CanReadToken() returned false. JWT is not well formed: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ReadJwtToken(String token)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at LuxeLooks.Service.Extensions.JwtTokenExtension.GetPrincipalFromExpiredToken(IConfiguration configuration, String token) in C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks.Service\Extensions\JwtTokenExtension.cs:line 89
+   at LuxeLooks.Controllers.Cart.CartController.AddToCart(CartRequest request, String authorizationHeader) in C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\Controllers\Cart\CartController.cs:line 57
+   at lambda_method160(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)|url: http://localhost/Cart/AddToCart|action: AddToCart|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke| body: 
+2023-10-09 18:06:10.9115|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-10-09 18:06:25.9170|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-10-09 18:06:26.0221|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5219 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-10-09 18:06:26.0221|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-10-09 18:06:26.0221|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-10-09 18:06:26.0221|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-10-09 18:06:26.3208|0|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger|action: |Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.TryGetHttpsPort| body: 
+2023-10-09 18:06:31.6709|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: f272aa8d-d1f8-452e-9a7b-7c8153fa2885 |url: http://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-10-09 18:06:31.9173|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Ivanusha |url: http://localhost/Account/Login|action: Authenticate|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-10-09 18:07:30.1012|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: f272aa8d-d1f8-452e-9a7b-7c8153fa2885 |url: http://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-10-09 18:07:30.1178|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Ivanusha |url: http://localhost/Account/Login|action: Authenticate|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-10-09 18:08:11.1214|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-10-09 18:08:23.5908|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-10-09 18:08:23.9573|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5219 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-10-09 18:08:23.9573|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-10-09 18:08:23.9573|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-10-09 18:08:23.9573|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-10-09 18:08:24.5457|0|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger|action: |Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.TryGetHttpsPort| body: 
+2023-10-09 18:08:35.7623|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: f272aa8d-d1f8-452e-9a7b-7c8153fa2885 |url: http://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-10-09 18:08:36.6148|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Ivanusha |url: http://localhost/Account/Login|action: Authenticate|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-10-09 18:12:10.7744|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-10-09 18:12:11.0099|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5219 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-10-09 18:12:11.0099|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-10-09 18:12:11.0099|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-10-09 18:12:11.0099|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-10-09 18:12:11.7466|0|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger|action: |Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.TryGetHttpsPort| body: 
+2023-10-09 18:13:25.8491|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-10-09 18:13:26.0932|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5219 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-10-09 18:13:26.0932|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-10-09 18:13:26.0932|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-10-09 18:13:26.0932|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-10-09 18:13:26.7944|0|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger|action: |Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.TryGetHttpsPort| body: 
+2023-10-09 18:14:47.4168|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: f272aa8d-d1f8-452e-9a7b-7c8153fa2885 |url: http://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-10-09 18:15:14.9296|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Ivanusha |url: http://localhost/Account/Login|action: Authenticate|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-10-09 21:32:03.9174|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-10-09 21:32:04.0276|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5219 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-10-09 21:32:04.0276|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-10-09 21:32:04.0276|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-10-09 21:32:04.0276|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-10-09 21:32:04.6068|0|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger|action: |Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.TryGetHttpsPort| body: 
+2023-10-09 23:02:45.1397|0|ERROR|LuxeLooks.Service.Services.UserService|User with username: Ivan not found |url: http://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.UserService.HandleError| body: 
+2023-10-09 23:02:46.6207|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly register user: Ivan |url: http://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Register| body: 
+2023-10-09 23:02:47.5104|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: f272aa8d-d1f8-452e-9a7b-7c8153fa2885 |url: http://localhost/Account/Register|action: Register|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-10-09 23:02:47.7781|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Ivan |url: http://localhost/Account/Register|action: Register|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-10-09 23:05:26.0297|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-10-09 23:35:00.5246|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-10-09 23:35:00.6320|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5219 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-10-09 23:35:00.6320|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-10-09 23:35:00.6320|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-10-09 23:35:00.6320|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-10-09 23:35:01.3735|0|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger|action: |Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.TryGetHttpsPort| body: 
+2023-10-09 23:35:17.7804|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: f272aa8d-d1f8-452e-9a7b-7c8153fa2885 |url: http://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-10-09 23:35:18.4246|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Ivan |url: http://localhost/Account/Login|action: Authenticate|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-10-09 23:36:36.8994|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully added product with id: fbb4adbc-e8fd-41b2-8d50-7f7cf2786ccf |url: http://localhost/Cart/AddToCart|action: AddToCart|LuxeLooks.Controllers.Cart.CartController.AddToCart| body: 
+2023-10-09 23:36:37.9047|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully added product with id: fbb4adbc-e8fd-41b2-8d50-7f7cf2786ccf |url: http://localhost/Cart/AddToCart|action: AddToCart|LuxeLooks.Controllers.Cart.CartController.AddToCart| body: 
+2023-10-09 23:36:38.6804|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully added product with id: fbb4adbc-e8fd-41b2-8d50-7f7cf2786ccf |url: http://localhost/Cart/AddToCart|action: AddToCart|LuxeLooks.Controllers.Cart.CartController.AddToCart| body: 
+2023-10-09 23:36:39.0454|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully added product with id: fbb4adbc-e8fd-41b2-8d50-7f7cf2786ccf |url: http://localhost/Cart/AddToCart|action: AddToCart|LuxeLooks.Controllers.Cart.CartController.AddToCart| body: 
+2023-10-09 23:36:39.5264|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully added product with id: fbb4adbc-e8fd-41b2-8d50-7f7cf2786ccf |url: http://localhost/Cart/AddToCart|action: AddToCart|LuxeLooks.Controllers.Cart.CartController.AddToCart| body: 
+2023-10-09 23:37:17.2316|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully get cart |url: http://localhost/Cart/GetCart|action: GetCart|LuxeLooks.Controllers.Cart.CartController.GetCart| body: 
+2023-10-09 23:37:25.3408|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully added product with id: fbb4adbc-e8fd-41b2-8d50-7f7cf2786ccf |url: http://localhost/Cart/AddToCart|action: AddToCart|LuxeLooks.Controllers.Cart.CartController.AddToCart| body: 
+2023-10-09 23:37:26.2795|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully added product with id: fbb4adbc-e8fd-41b2-8d50-7f7cf2786ccf |url: http://localhost/Cart/AddToCart|action: AddToCart|LuxeLooks.Controllers.Cart.CartController.AddToCart| body: 
+2023-10-09 23:37:26.7134|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully added product with id: fbb4adbc-e8fd-41b2-8d50-7f7cf2786ccf |url: http://localhost/Cart/AddToCart|action: AddToCart|LuxeLooks.Controllers.Cart.CartController.AddToCart| body: 
+2023-10-09 23:37:30.5248|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully get cart |url: http://localhost/Cart/GetCart|action: GetCart|LuxeLooks.Controllers.Cart.CartController.GetCart| body: 
+2023-10-09 23:38:03.1752|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
+2023-10-09 23:38:57.1883|0|INFO|Program|Program initial |url: |action: |Program.<Main>$| body: 
+2023-10-09 23:38:57.2969|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5219 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync| body: 
+2023-10-09 23:38:57.2969|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-10-09 23:38:57.2969|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted| body: 
+2023-10-09 23:38:57.2969|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.NotifyStarted| body: 
+2023-10-09 23:38:57.9467|0|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger|action: |Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.TryGetHttpsPort| body: 
+2023-10-09 23:39:01.1807|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully added product with id: 750d0c07-ccfd-487c-a2b8-2f570d2d2d64 |url: http://localhost/Cart/AddToCart|action: AddToCart|LuxeLooks.Controllers.Cart.CartController.AddToCart| body: 
+2023-10-09 23:39:02.8588|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully added product with id: 750d0c07-ccfd-487c-a2b8-2f570d2d2d64 |url: http://localhost/Cart/AddToCart|action: AddToCart|LuxeLooks.Controllers.Cart.CartController.AddToCart| body: 
+2023-10-09 23:39:11.7743|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully get cart |url: http://localhost/Cart/GetCart|action: GetCart|LuxeLooks.Controllers.Cart.CartController.GetCart| body: 
+2023-10-09 23:39:22.3556|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully added product with id: 750d0c07-ccfd-487c-a2b8-2f570d2d2d64 |url: http://localhost/Cart/AddToCart|action: AddToCart|LuxeLooks.Controllers.Cart.CartController.AddToCart| body: 
+2023-10-09 23:39:24.6944|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully added product with id: 750d0c07-ccfd-487c-a2b8-2f570d2d2d64 |url: http://localhost/Cart/AddToCart|action: AddToCart|LuxeLooks.Controllers.Cart.CartController.AddToCart| body: 
+2023-10-09 23:39:26.3057|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully added product with id: 750d0c07-ccfd-487c-a2b8-2f570d2d2d64 |url: http://localhost/Cart/AddToCart|action: AddToCart|LuxeLooks.Controllers.Cart.CartController.AddToCart| body: 
+2023-10-09 23:39:27.5395|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully added product with id: 750d0c07-ccfd-487c-a2b8-2f570d2d2d64 |url: http://localhost/Cart/AddToCart|action: AddToCart|LuxeLooks.Controllers.Cart.CartController.AddToCart| body: 
+2023-10-09 23:39:30.2905|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully get cart |url: http://localhost/Cart/GetCart|action: GetCart|LuxeLooks.Controllers.Cart.CartController.GetCart| body: 
+2023-10-09 23:40:11.4171|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully deleted product with id: 750d0c07-ccfd-487c-a2b8-2f570d2d2d64 |url: http://localhost/Cart/RemoveFromCart|action: RemoveFromCart|LuxeLooks.Controllers.Cart.CartController.RemoveFromCart| body: 
+2023-10-09 23:40:14.9004|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully deleted product with id: 750d0c07-ccfd-487c-a2b8-2f570d2d2d64 |url: http://localhost/Cart/RemoveFromCart|action: RemoveFromCart|LuxeLooks.Controllers.Cart.CartController.RemoveFromCart| body: 
+2023-10-09 23:40:16.6471|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Unexpected end of request content.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1ContentLengthMessageBody.ReadAsyncInternal(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestStream.ReadAsyncInternal(Memory`1 destination, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Text.Json.Serialization.ReadBufferState.ReadFromStreamAsync(Stream utf8Json, CancellationToken cancellationToken, Boolean fillBuffer)
+   at System.Text.Json.JsonSerializer.ReadFromStreamAsync[TValue](Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter.ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder.BindModelAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)|url: http://localhost/Cart/RemoveFromCart|action: RemoveFromCart|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke| body: 
+2023-10-09 23:40:58.6524|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: f272aa8d-d1f8-452e-9a7b-7c8153fa2885 |url: http://localhost/Account/Login|action: Authenticate|LuxeLooks.Service.Services.RoleService.GetByIdAsync| body: 
+2023-10-09 23:40:59.0301|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Ivan |url: http://localhost/Account/Login|action: Authenticate|LuxeLooks.Controllers.Account.AccountController.Authenticate| body: 
+2023-10-09 23:40:59.0425|0|WARN|Microsoft.AspNetCore.Http.ResponseCookies|The cookie 'refreshToken' has set 'SameSite=None' and must also set 'Secure'. |url: http://localhost/Account/Login|action: Authenticate|Microsoft.AspNetCore.Http.ResponseCookies.Append| body: 
+2023-10-09 23:41:14.8975|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully get cart |url: http://localhost/Cart/GetCart|action: GetCart|LuxeLooks.Controllers.Cart.CartController.GetCart| body: 
+2023-10-09 23:41:26.0256|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully deleted product with id: 750d0c07-ccfd-487c-a2b8-2f570d2d2d64 |url: http://localhost/Cart/RemoveFromCart|action: RemoveFromCart|LuxeLooks.Controllers.Cart.CartController.RemoveFromCart| body: 
+2023-10-09 23:41:26.7986|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully deleted product with id: 750d0c07-ccfd-487c-a2b8-2f570d2d2d64 |url: http://localhost/Cart/RemoveFromCart|action: RemoveFromCart|LuxeLooks.Controllers.Cart.CartController.RemoveFromCart| body: 
+2023-10-09 23:41:28.1502|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully deleted product with id: 750d0c07-ccfd-487c-a2b8-2f570d2d2d64 |url: http://localhost/Cart/RemoveFromCart|action: RemoveFromCart|LuxeLooks.Controllers.Cart.CartController.RemoveFromCart| body: 
+2023-10-09 23:41:28.9968|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully deleted product with id: 750d0c07-ccfd-487c-a2b8-2f570d2d2d64 |url: http://localhost/Cart/RemoveFromCart|action: RemoveFromCart|LuxeLooks.Controllers.Cart.CartController.RemoveFromCart| body: 
+2023-10-09 23:41:32.7429|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully get cart |url: http://localhost/Cart/GetCart|action: GetCart|LuxeLooks.Controllers.Cart.CartController.GetCart| body: 
+2023-10-09 23:41:44.7444|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully added product with id: 750d0c07-ccfd-487c-a2b8-2f570d2d2d64 |url: http://localhost/Cart/AddToCart|action: AddToCart|LuxeLooks.Controllers.Cart.CartController.AddToCart| body: 
+2023-10-09 23:41:45.6020|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully added product with id: 750d0c07-ccfd-487c-a2b8-2f570d2d2d64 |url: http://localhost/Cart/AddToCart|action: AddToCart|LuxeLooks.Controllers.Cart.CartController.AddToCart| body: 
+2023-10-09 23:41:48.1496|0|INFO|LuxeLooks.Controllers.Cart.CartController|Successfully get cart |url: http://localhost/Cart/GetCart|action: GetCart|LuxeLooks.Controllers.Cart.CartController.GetCart| body: 
+2023-10-09 23:49:53.7537|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: |Microsoft.Extensions.Hosting.Internal.ApplicationLifetime.StopApplication| body: 
