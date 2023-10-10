@@ -16,7 +16,7 @@ const Bag = () => {
     const addProduct = async () => {
 
         try{
-            const data = await method.getAllProduct();
+            const data = await method.getCart(user.token);
             setProducts(data)
         }catch (e) {
             console.log("error" , e)
@@ -27,6 +27,30 @@ const Bag = () => {
     useEffect(() => {
         addProduct()
     },[])
+
+
+    const completeOrder = () => {
+
+        let price = 0;
+
+        products.map(el => {
+            price = price + el.price
+        })
+
+        alert(price + "$")
+
+    }
+
+
+    const getCart  =  async () => {
+
+        const info = await method.addToCart(user.token)
+
+       const data = await method.getCart(user.token)
+
+        setProducts(data)
+
+    }
 
 
     return (
@@ -43,28 +67,16 @@ const Bag = () => {
 
 
                                     {
-                                        products.length > 0
-                                            ? <>
+                                        Array.isArray(products) && products.length > 0 ? (
                                                 <div className="bag__elements">
-                                                    {
-                                                        products.map(el => (
-                                                            <BagElement key={el.id} props={el} />
-                                                        ))
-                                                    }
+                                                    {products.map(el => (
+                                                        <BagElement key={el.id} props={el} />
+                                                    ))}
                                                 </div>
-                                                <div className="confirm-order">
-                                                    <button className="btn__confirm-order">
-                                                        Complete order
-                                                    </button>
-                                                </div>
-                                            </>
-
-                                            : <>
+                                            ) : <div onClick={getCart}>
                                                Bag is empty
-                                            </>
+                                            </div>
                                     }
-
-                                    <button onClick={addProduct}>click</button>
 
                                 </div>
                                 <div className="bag-info__user">
