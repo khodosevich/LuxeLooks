@@ -34,12 +34,17 @@
   border-radius: 50%;
   width: 48px;
   height: 48px;
+  transition: all 0.5s;
+}
+.img__bg:hover {
+  background: #0c4041;
 }
 
 .trending__content__items {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .trending__content__item-description {

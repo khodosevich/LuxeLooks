@@ -7,24 +7,26 @@
 
   transition: all 0.5s;
 
-  &:hover {
-    background: #ffffff;
-    color: black;
-  }
+  //&:hover {
+  //  background: #ffffff;
+  //  color: black;
+  //}
 
-  &:hover .logo {
-    color: black;
-  }
-
-  &:hover .login-btn {
-    background: #494848;
-    color: #cccccc;
+  &.black{
+    background: #333232;
   }
 
 
+  //&:hover .logo {
+  //  color: black;
+  //}
+
+  //&:hover .login-btn {
+  //  background: #494848;
+  //  color: #cccccc;
+  //}
 
   z-index: 100;
-
 }
 
 .navbar {
@@ -40,9 +42,9 @@
 
   color: white;
 
-  &:hover{
-    color: var(--gray-800, #424551);
-  }
+  //&:hover{
+  //  color: var(--gray-800, #424551);
+  //}
 
   font-family: Montserrat;
   font-size: 26px;
@@ -131,7 +133,7 @@
 
 .after__cart {
   border-radius: 4px;
-  background: var(--success, #75a17f);
+  background:#03CEA4;
   padding: 1px 8px;
   font-family: Montserrat;
 }
@@ -149,9 +151,10 @@
 
   transition: all 0.1s;
 
-  &:hover {
-    background: #000;
-  }
+  //&:hover {
+  //  background: #a1a1a1;
+  //  color:#cccccc;
+  //}
 
 }
 
