@@ -61,7 +61,6 @@ const Header = () => {
                         <NavLink to="/bag">
                             <img className="shop__cart" src={cardBag} alt="cart"/>
                         </NavLink>
-                        <span className="after__cart">0</span>
                     </div>
 
 

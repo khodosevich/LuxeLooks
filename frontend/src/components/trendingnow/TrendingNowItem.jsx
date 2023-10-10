@@ -6,7 +6,7 @@ const TrendingNowItem = ({props}) => {
         <div className="trending__content__item">
             <NavLink to = {`/product/${props.id}`}>
                 <div className="trending__content__item-img">
-                    <img style={{width:"400px" , height:"400px"}} src={props.imageUrl} alt="Shirt"/>
+                    <img style={{width:"400px" , height:"400px" , objectFit:"cover"}} src={props.imageUrl} alt="Shirt"/>
                 </div>
                 <div className="trending__content__item-description">
                     <h4 className="trending__content__item-title">
