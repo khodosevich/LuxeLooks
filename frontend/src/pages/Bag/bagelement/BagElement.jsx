@@ -1,11 +1,20 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 
 import './bagelement.css'
 import {NavLink} from "react-router-dom";
+import {method} from "../../../api/methods";
+import {MyContext} from "../../../App";
 
-const BagElement = ({props}) => {
+const BagElement = ({props , removeProductFromCart}) => {
 
+    const {user,setUser} = useContext(MyContext)
+
+    const removeFromCart = async () => {
+
+        removeProductFromCart(props.id)
+
+    }
 
     return (
         <div className="bag-element">
@@ -23,17 +32,16 @@ const BagElement = ({props}) => {
                     <p className="bag-element-description__color">
                         Type: {props.type}
                     </p>
-
                 </div>
 
-                <div className="bag-element-amount">
-                    <select className="select__element" name="filter_31">
-                        <option value="V1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-                </div>
+                {/*<div className="bag-element-amount">*/}
+                {/*    <select className="select__element" name="filter_31">*/}
+                {/*        <option value="V1">1</option>*/}
+                {/*        <option value="2">2</option>*/}
+                {/*        <option value="3">3</option>*/}
+                {/*        <option value="4">4</option>*/}
+                {/*    </select>*/}
+                {/*</div>*/}
 
                 <h3 className="bag-element-price">
                     {props.price}$
@@ -41,7 +49,7 @@ const BagElement = ({props}) => {
 
 
 
-            <button className="bag-element-btn__delete">
+            <button onClick={removeFromCart} className="bag-element-btn__delete">
                 Delete
             </button>
 

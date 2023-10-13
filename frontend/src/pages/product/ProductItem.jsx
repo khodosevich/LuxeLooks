@@ -1,12 +1,15 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {useLocation} from "react-router-dom";
 import {method} from "../../api/methods";
 import Subscribe from "../../components/subscribe/Subscribe";
 
 import "./productitem.css"
 import ProductNotExist from "../../components/productelement/ProductNotExist";
+import {MyContext} from "../../App";
 
 const ProductItem = () => {
+
+    const {user,setUser} = useContext(MyContext)
 
     const location = useLocation();
 
@@ -29,6 +32,10 @@ const ProductItem = () => {
     }, []);
 
 
+    const addToCart =  async () => {
+
+        await method.addToCart(product.id, user.token).then(r => r);
+    }
 
 
 
@@ -185,15 +192,39 @@ const ProductItem = () => {
                                 </div>
                             </div>
                             <div>
-                                <img style={{width:"390px" , height:"500px"}} src={product.imageUrl} alt=""/>
+
+                                <div>
+                                    <img style={{width:"390px" , height:"500px"}} src={product.imageUrl} alt=""/>
+                                </div>
+                               <div>
+                                   <button onClick={addToCart} style={{
+                                       color: "#FFF",
+                                       textAlign: "center",
+                                       fontFamily: "Lato",
+                                       fontSize: "14px",
+                                       fontStyle: "normal",
+                                       fontWeight: "700",
+                                       lineHeight: "44px",
+                                       letterSpacing: "0.5px",
+                                       borderRadius: "4px",
+                                       background: "#17696A",
+                                       minWidth:"100%",
+                                       border:"0",
+                                       marginTop:"20px",
+                                       cursor:"pointer"
+                                   }}>
+                                       add to cart
+                                   </button>
+                               </div>
+
+
+
                             </div>
                         </div>
                             </> : <>
                               <ProductNotExist/>
                           </>
                     }
-
-
 
                 </div>
             </div>

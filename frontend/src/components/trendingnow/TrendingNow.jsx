@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import './trending.css'
 
@@ -8,6 +8,7 @@ import {method} from "../../api/methods";
 import TrendingNowItem from "./TrendingNowItem";
 
 import { Audio } from 'react-loader-spinner'
+import {logDOM} from "@testing-library/react";
 
 const TrendingNow = () => {
 
@@ -19,30 +20,23 @@ const TrendingNow = () => {
 
     const [index,setIndex ] = useState(0)
 
+
     const fetchData = async () => {
 
         try{
-            const data = await method.getPopularProducts()
-            setProducts(data)
+            await method.getPopularProducts().then(r => {
+                setProducts(r)
+                setActualProduct(r.slice(0, 3))
+                setIsFetching(false)
+            })
         }catch (e){
             console.log("error" , e)
         }
     }
 
 
-
-    useEffect(() => {
-
-        setIsFetching(true)
-        fetchData()
-        setIsFetching(false)
-
-    }, [actualProduct]);
-
-
     const changeTrending = (value) => {
 
-        setIsFetching(true)
 
         if (value === true && index < 3) {
             setIndex(index + 1);
@@ -50,17 +44,25 @@ const TrendingNow = () => {
             setIndex(index - 1);
         }
 
-        if( index === 0 ){
-            setActualProduct(products.slice(0,3))
-        }else if( index === 1) {
-            setActualProduct(products.slice(3,6))
-        }else if( index === 2) {
-            setActualProduct(products.slice(6,9))
-        }else if( index === 3) {
-            setActualProduct(products.slice(9,12))
+        if (index === 0) {
+            setActualProduct(products.slice(0, 3))
+        } else if (index === 1) {
+            setActualProduct(products.slice(3, 6))
+        } else if (index === 2) {
+            setActualProduct(products.slice(6, 9))
+        } else if (index === 3) {
+            setActualProduct(products.slice(9, 12))
         }
+
         setIsFetching(false)
     }
+
+
+    useEffect(() => {
+        fetchData()
+    }, []);
+
+
 
     return (
         <div className="trending-now">

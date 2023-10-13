@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-    // withCredentials:true,
+    withCredentials:true,
     baseURL: "http://localhost:5219/",
 });
 
@@ -41,7 +41,9 @@ export const method = {
         })
     },
     async getProductById(id) {
+        console.log("1111" , id)
         return api.get(`/Product/GetById/${id}`).then(r => {
+            console.log(r.data)
             return r.data
         })
     },
@@ -59,16 +61,15 @@ export const method = {
                     'Content-Type': 'application/json'
                 }
             });
-            console.log(response); // Обработка успешного ответа
-            return response;
+            return response.data;
         } catch (error) {
             console.error(error);
             throw error;
         }
     },
-    async addToCart(userToken) {
+    async addToCart(productId,userToken) {
         const data = {
-            "Id": "b3ee6ca1-af23-41a9-b567-4d765550c885"
+            "Id": productId
         };
         try {
             const response = await api.put('/Cart/AddToCart', data, {
@@ -76,12 +77,61 @@ export const method = {
                     'Authorization': `Bearer ${userToken}`
                 }
             });
-            console.log(response);
-            return response;
+            return response.data;
         } catch (error) {
             console.error(error);
             throw error;
         }
     },
+    async removeFromCart(productId, userToken) {
+
+        try {
+            const response = await api.delete(`/Cart/RemoveFromCart`, {
+                data: {
+                    "Id": productId
+                },
+                headers: {
+                    'Authorization': `Bearer ${userToken}`,
+                    'Content-Type': 'application/json'
+                },
+            });
+
+            return response.data;
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
+    },
+    async getOrderById(userId, userToken) {
+
+        try{
+            const response = await api.get(`/Order/GetOrderByUserId/${userId}`, {
+                headers: {
+                    'Authorization': `Bearer ${userToken}`
+                }
+            });
+            return response.data;
+        }catch (error){
+            console.log("Error: " , error)
+        }
+    },
+    async createOrder(data ,userToken) {
+
+        console.log("create order : " , data)
+
+        try{
+            const response = await api.post(`/Order/CreateOrder`,
+                data
+            ,{
+                headers: {
+                    'Authorization': `Bearer ${userToken}`
+                },
+
+            });
+            return response.data;
+        }catch (error){
+            console.log("Error: " , error)
+        }
+    }
 
 }
