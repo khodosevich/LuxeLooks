@@ -73,4 +73,15 @@ public class CartController : ControllerBase
         _logger.LogInformation($"Successfully deleted product with id: {request.Id}");
         return Ok();
     }
+
+    [Authorize]
+    [HttpDelete("DeleteCart")]
+    public  IActionResult DeleteCart()
+    { 
+        List<Guid> cart = _httpContextAccessor.HttpContext.Session.GetObject<List<Guid>>("Cart") ?? new List<Guid>();
+        cart.Clear();
+        _httpContextAccessor.HttpContext.Session.SetObject("Cart",cart);
+        _logger.LogInformation($"Successfully deleted cart");
+        return Ok();
+    }
 }
