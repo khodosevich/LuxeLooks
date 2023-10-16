@@ -1,1 +1,1 @@
-[Documentation](https://github.com/khodosevich/LuxeLooks/tree/main/Documentation/Requirements)
+[Documentation](https://github.com/khodosevich/LuxeLooks/tree/main/documentation/requirements)
