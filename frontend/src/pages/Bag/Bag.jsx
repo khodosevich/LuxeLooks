@@ -5,7 +5,7 @@ import BagElement from "./bagelement/BagElement";
 
 import './bag.css'
 import {method} from "../../api/methods";
-import {AlertTitle, Button, TextField} from "@mui/material";
+import { Button, TextField} from "@mui/material";
 import jwt_decode from "jwt-decode";
 import Alert from "../../components/alert/Alert";
 
@@ -73,38 +73,48 @@ const Bag = () => {
         return idUser;
     }
 
-    const completeOrderRequest =  () => {
+    const [isOrderPlaced, setIsOrderPlaced] = useState(false);
 
-        const id = getId()
+    const completeOrderRequest = () => {
+        const id = getId();
 
-        const totalPrice = products.reduce((total, product) => total + product.price, 0);
+        let totalPrice = products.reduce((total, product) => total + product.price, 0);
+        totalPrice = totalPrice.toFixed(2);
 
         const ids = products.map(product => product.id);
 
-        setOrder({
-            ...order,
+        setOrder(prevOrder => ({
+            ...prevOrder,
             ProductsIds: ids,
             Price: totalPrice,
             UserId: id
-        })
+        }));
 
-
-        if(order.Price > 0 && order.UserId !== "") {
-            
-            completeOrder(order)
-            setOrder({
-                Name: "",
-                Email: "",
-                Address: "",
-                ProductsIds: [""],
-                Price: 0,
-                UserId: ""
-            })
-
-
-            setModalIsOpen(false);
-        }
+        setIsOrderPlaced(true);
     }
+
+    useEffect(() => {
+        if (isOrderPlaced) {
+            if (order.Price > 0 && order.UserId !== "") {
+                completeOrder(order);
+                setOrder({
+                    Name: "",
+                    Email: "",
+                    Address: "",
+                    ProductsIds: [""],
+                    Price: 0,
+                    UserId: ""
+                });
+
+                method.removeAllCart(user.token)
+                setProducts([])
+
+                setModalIsOpen(false);
+                setIsOrderPlaced(false);
+            }
+        }
+    }, [isOrderPlaced, order]);
+
 
 
 
@@ -137,25 +147,23 @@ const Bag = () => {
                                         padding:"100px 200px",
                                         display:"flex",
                                         flexDirection:"column",
-                                        gap:"50px"
-                                    }}>
 
-                                        <div>
-                                            <button onClick={ () => setModalIsOpen(false) }>
-                                                close
-                                            </button>
-                                        </div>
+                                    }}>
 
                                         {
                                             isAlert && <Alert props={"hello"}/>
                                         }
 
-                                        Form for complete order
+                                        <h3>
+                                            Form for complete order:
+                                        </h3>
+
 
                                         <div style={{
                                             display:"flex",
                                             flexDirection:"column",
-                                            gap:"20px"
+                                            gap:"20px",
+                                            marginTop:"30px"
                                         }}>
 
                                             <TextField
@@ -182,10 +190,37 @@ const Bag = () => {
                                             />
                                         </div>
 
-                                        <Button onClick={completeOrderRequest}
+                                        <Button
+                                            style={{
+                                                margin:"20px 0"
+                                            }}
+                                            onClick={completeOrderRequest}
                                                 variant="contained">
                                             Place an order
                                         </Button>
+
+                                        <div>
+                                            <button
+
+                                                style={{
+                                                    color: "#ffffff",
+                                                    textAlign: "center",
+                                                    fontFamily: "Lato",
+                                                    fontSize: "14px",
+                                                    fontStyle: "normal",
+                                                    fontWeight: "700",
+                                                    lineHeight: "44px",
+                                                    borderRadius: "4px",
+                                                    background: "#ef4e4e",
+                                                    minWidth:"100%",
+                                                    border:"0",
+                                                    cursor:"pointer"
+                                                }}
+
+                                                onClick={ () => setModalIsOpen(false) }>
+                                                cancel
+                                            </button>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -204,8 +239,28 @@ const Bag = () => {
                                                         <BagElement key={index} props={el} removeProductFromCart={removeProductFromCart} />
                                                     ))}
 
+
+
                                                     <div>
-                                                        <button onClick={ () => setModalIsOpen(true)}>
+                                                        <button
+                                                            style={{
+                                                                color: "#FFF",
+                                                                textAlign: "center",
+                                                                fontFamily: "Lato",
+                                                                fontSize: "14px",
+                                                                fontStyle: "normal",
+                                                                fontWeight: "700",
+                                                                lineHeight: "44px",
+                                                                letterSpacing: "0.5px",
+                                                                borderRadius: "4px",
+                                                                background: "#17696A",
+                                                                minWidth:"100%",
+                                                                border:"0",
+                                                                marginTop:"20px",
+                                                                cursor:"pointer"
+                                                            }}
+
+                                                            onClick={ () => setModalIsOpen(true)}>
                                                             complete order
                                                         </button>
                                                     </div>

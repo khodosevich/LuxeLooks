@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {method} from "../../api/methods";
 import {NavLink} from "react-router-dom";
-import {logDOM} from "@testing-library/react";
 
 const OrderElement = ({props}) => {
 

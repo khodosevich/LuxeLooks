@@ -125,12 +125,21 @@ export const method = {
             ,{
                 headers: {
                     'Authorization': `Bearer ${userToken}`
-                },
-
-            });
+                }});
             return response.data;
         }catch (error){
             console.log("Error: " , error)
+        }
+    },
+    async removeAllCart(userToken){
+        console.log(userToken)
+        try{
+            const response = await api.delete("/Cart/DeleteCart",{
+                headers: {
+                    'Authorization': `Bearer ${userToken}`
+                }});
+        }catch (e) {
+            console.log("error" , e)
         }
     }
 

@@ -1,5 +1,7 @@
 .bag-page {
+  min-height: 100%;
   padding: 30px 0 100px 0;
+  margin: 10px 0;
 }
 
 .bag-container {
