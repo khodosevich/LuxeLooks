@@ -1,0 +1,9 @@
+2023-10-17 23:08:20.7525 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-17 23:08:20.8145 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-17 23:08:20.8145 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2023-10-17 23:08:20.8747 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2023-10-17 23:08:20.9009 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-17 23:08:20.9126 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
+2023-10-17 23:08:20.9261 Info Configuration initialized.
+2023-10-17 23:08:20.9261 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
+2023-10-17 23:08:23.1267 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
