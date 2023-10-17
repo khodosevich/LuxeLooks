@@ -11,7 +11,7 @@
 .footer__items {
   display: flex;
   gap: 50px;
-  padding: 60px 40px;
+  padding: 60px 0;
 }
 
 .footer__item {

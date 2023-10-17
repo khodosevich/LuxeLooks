@@ -3,9 +3,10 @@ import classes from "../../App.module.css"
 import links from "./links.json"
 
 import "./header.css"
-import {Link, NavLink} from "react-router-dom";
-import cardBag from "../../assets/cart.svg";
+import {Link, Navigate, NavLink, useLocation, useNavigate} from "react-router-dom";
+import cardBag from "../../assets/cart1.svg";
 import {MyContext} from "../../App";
+import {method} from "../../api/methods";
 
 
 const Header = () => {
@@ -13,26 +14,30 @@ const Header = () => {
     const [searchState,setSearchState] = useState("");
 
     const handlerSearchInput = (e) => {
-        console.log(e.target.value)
+        setSearchState(e.target.value)
     }
 
     const {user,setUser} = useContext(MyContext)
 
-    const logout = () => {
-
-        setUser({
-            token: "",
-            username: "",
-            isAuthenticated: false,
-        })
-    }
+    let navigate = useNavigate();
 
     useEffect(() => {
 
     }, [user]);
 
+    const location = useLocation();
+    const renderHeaderCondition =  location.pathname !== "/";
+
+
+    const search = async () => {
+       const data = await method.getProductByName(searchState)
+        setSearchState("")
+        navigate(`/product/${data.id}`)
+    }
+
+
     return (
-        <div className="header">
+        <div className={`${renderHeaderCondition ? 'header black' : 'header'}`}>
             <div className={classes.container}>
                 <div className="navbar">
                     <div className="logo-container">
@@ -48,23 +53,25 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="search-input">
-                        <input onChange={handlerSearchInput} className="input_header" type="text" placeholder="Search for products..."/>
-                        <i className="fa" aria-hidden="true"></i>
+                        <input value={searchState} onChange={handlerSearchInput} className="input_header" type="text" placeholder="Search for products..."/>
+                        <i onClick={search} className="fa" aria-hidden="true"></i>
                     </div>
+
                     <div className="bag">
                         <NavLink to="/bag">
                             <img className="shop__cart" src={cardBag} alt="cart"/>
                         </NavLink>
-                        <span className="after__cart">0</span>
                     </div>
 
 
                     {
                         user.isAuthenticated
                             ? <div className="account">
-                                <button onClick={logout} className="login-btn">
-                                       logout
+                            <NavLink to="/account/profileinfo" >
+                                <button className="login-btn">
+                                    Account
                                 </button>
+                            </NavLink>
                              </div>
                             : <div className="account">
                                 <NavLink to="/registration">

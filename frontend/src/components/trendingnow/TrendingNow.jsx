@@ -1,14 +1,67 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import './trending.css'
 
-import img4 from '../../assets/img4.png'
-import img5 from '../../assets/img5.png'
 import right from '../../assets/Right.svg'
 import left from '../../assets/Left.svg'
+import {method} from "../../api/methods";
+import TrendingNowItem from "./TrendingNowItem";
 
+import { Audio } from 'react-loader-spinner'
 
 const TrendingNow = () => {
+
+    const [products,setProducts] = useState([])
+
+    const [isFetching,setIsFetching] = useState(true);
+
+    const [actualProduct, setActualProduct] = useState([]);
+
+    const [index,setIndex ] = useState(0)
+
+    const fetchData = async () => {
+
+        try{
+            const data = await method.getPopularProducts()
+            setProducts(data)
+        }catch (e){
+            console.log("error" , e)
+        }
+    }
+
+
+
+    useEffect(() => {
+
+        setIsFetching(true)
+        fetchData()
+        setIsFetching(false)
+
+    }, [actualProduct]);
+
+
+    const changeTrending = (value) => {
+
+        setIsFetching(true)
+
+        if (value === true && index < 3) {
+            setIndex(index + 1);
+        } else if (value === false && index > 0) {
+            setIndex(index - 1);
+        }
+
+        if( index === 0 ){
+            setActualProduct(products.slice(0,3))
+        }else if( index === 1) {
+            setActualProduct(products.slice(3,6))
+        }else if( index === 2) {
+            setActualProduct(products.slice(6,9))
+        }else if( index === 3) {
+            setActualProduct(products.slice(9,12))
+        }
+        setIsFetching(false)
+    }
+
     return (
         <div className="trending-now">
             <div className="trending__container">
@@ -16,61 +69,45 @@ const TrendingNow = () => {
                     <div className="trending__title">
                         <h3>Trending Now</h3>
                         <div className="pagination">
-                            <div className="img__bg">
+                            <div onClick={() => changeTrending(false)} className="img__bg">
                                 <img src={left} alt="left"/>
                             </div>
-                          <div className="img__bg">
+                          <div onClick={() => changeTrending(true)} className="img__bg">
                               <img src={right} alt="right"/>
                           </div>
                         </div>
                     </div>
-                    <div className="trending__content__items">
-                        <div className="trending__content__item">
-                            <div className="trending__content__item-img">
-                                <img src={img4} alt="Shirt"/>
-                            </div>
-                            <div className="trending__content__item-description">
-                                <h4 className="trending__content__item-title">
-                                    Shirt with insertion lace trims
-                                </h4>
-                                <p className="trending__content__item-price">
-                                    $49.95
-                                </p>
-                            </div>
-                        </div>
-                        <div className="trending__content__item">
-                            <div className="trending__content__item-img">
-                                <img src={img5} alt="Shirt"/>
-                            </div>
-                            <div className="trending__content__item-description">
-                                <h4 className="trending__content__item-title">
-                                    Check coat with colour contrast
-                                </h4>
-                                <p className="trending__content__item-price">
-                                    $183.45
-                                </p>
-                            </div>
-                        </div>
-                        <div className="trending__content__item">
-                            <div className="trending__content__item-img">
-                                <img src={img4} alt="Shirt"/>
-                            </div>
-                            <div className="trending__content__item-description">
-                                <h4 className="trending__content__item-title">
-                                    Shirt with insertion lace trims
-                                </h4>
-                                <p className="trending__content__item-price">
-                                    $49.95
-                                </p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div className="btns__trending">
-                        <button className="btn__trending" >
-                            Explore top sales
-                        </button>
-                    </div>
+                    {
+                        isFetching ?
+                            <div style={{display:"flex" , justifyContent:"center"} }>
+                                <Audio
+                                    height = "80"
+                                    width = "80"
+                                    radius = "9"
+                                    color = 'green'
+                                    ariaLabel = 'three-dots-loading'
+
+                                />
+                            </div>
+                             :<>
+                            <div className="trending__content__items">
+                                {
+                                    actualProduct.map(el => (
+                                        <TrendingNowItem key={el.id} props={el}/>
+                                    ))
+                                }
+                            </div>
+
+                            <div className="btns__trending">
+                                <button className="btn__trending" >
+                                    Explore top sales
+                                </button>
+                            </div>
+                        </>
+                    }
+
+
                 </div>
             </div>
         </div>

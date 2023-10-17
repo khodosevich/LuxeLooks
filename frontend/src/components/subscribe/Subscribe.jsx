@@ -3,13 +3,31 @@ import React, {useState} from 'react';
 import subscribe from "../../assets/subscribe.png"
 
 import './subscribe.css'
+import { method} from "../../api/methods";
 
 const Subscribe = () => {
 
-    const [activeIndex, setActiveIndex] = useState(1);
+    const [dataToSubscribe, setDataToSubscribe] = useState({
+        Category:"",
+        Email:""
+    })
+
+    const [activeIndex, setActiveIndex] = useState(-1);
 
     const handleButtonClick = (index) => {
         setActiveIndex(index);
+
+        switch (index){
+            case 0:
+                setDataToSubscribe(prev => ({...prev, Category:"Mens"}))
+                break
+            case 1:
+                setDataToSubscribe(prev => ({...prev, Category:"Womens"}))
+                break;
+            case 2: case 3:
+                setDataToSubscribe(prev => ({...prev, Category:"Kids"}))
+                break;
+        }
     };
 
     const [isChecked, setIsChecked] = useState(false);
@@ -18,14 +36,33 @@ const Subscribe = () => {
         setIsChecked(!isChecked);
     };
 
-    const [inputData,setInputData] = useState("")
 
     const inputHandler = (e) => {
-        setInputData(e.target.value)
+        setDataToSubscribe(prev => ({
+            ...prev,
+            Email:e.target.value
+        }))
+
     }
 
     const updateInput = () => {
-        setInputData("");
+
+        if(dataToSubscribe.Email && dataToSubscribe.Category && isChecked){
+            method.subscribe(dataToSubscribe);
+            alert("all is good")
+
+            setDataToSubscribe({
+                Category:"",
+                Email:""
+            })
+
+            setActiveIndex(-1);
+            setIsChecked(false);
+
+        }else {
+            alert("check your data")
+        }
+
     }
 
     return (
@@ -69,7 +106,7 @@ const Subscribe = () => {
                                 Email
                             </p>
                             <div className="subscribe__info-email__btn">
-                                <input value={inputData} onChange={inputHandler} placeholder='Your working email' className="subscribe__info-email__input" type="text"/>
+                                <input value={dataToSubscribe.Email} onChange={inputHandler} placeholder='Your working email' className="subscribe__info-email__input" type="text"/>
                                 <button onClick={updateInput} className="subscribe__info-email__button">
                                     Subscribe
                                 </button>

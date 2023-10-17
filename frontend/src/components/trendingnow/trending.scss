@@ -43,13 +43,20 @@
   width: 48px;
   height: 48px;
 
+  transition: all .5s;
+
+  &:hover{
+    background: #0c4041;
+  }
+
 }
 
 .trending__content__items {
   display: flex;
   justify-content: space-between;
-  //gap: 30px;
+  //gap: 20px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .trending__content__item {
