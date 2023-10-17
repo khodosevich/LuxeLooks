@@ -62,18 +62,12 @@ public class AccountController : ControllerBase
         user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(_configuration.GetSection("Jwt:TokenValidityInDays").Get<int>());
         await _userService.UpdateAsync(user);
         _logger.LogInformation($"Successfuly login user: {user.UserName}");
-        HttpContext.Response.Cookies.Append("refreshToken", user.RefreshToken, new CookieOptions
-        {
-            HttpOnly = true, 
-            Secure = false, 
-            SameSite = SameSiteMode.None, 
-            Expires = DateTime.UtcNow.AddMonths(1) 
-        });
+        HttpContext.Response.Cookies.Append("refreshToken", user.RefreshToken);
         return Ok(new AuthResponse
         {
             Username = user.UserName!,
             Email = user.Email!,
-            Token = accessToken
+            Token = accessToken,
         });
     }
     
