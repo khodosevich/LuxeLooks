@@ -16,24 +16,52 @@ const SignIn = () => {
         "UserName": ""
     });
 
+    const [validationError, setValidationError] = useState({
+        UserName: "",
+        Password: ""
+    });
+
+    const validateForm = () => {
+        let isValid = true;
+        const updatedErrors = { UserName: "", Password: "" };
+
+        if (localState.UserName.length < 3) {
+            updatedErrors.UserName = "Username must be least 3 symbols";
+            isValid = false;
+        }
+
+        if (localState.Password.length <= 4) {
+            updatedErrors.Password = "Password must be at least 5 symbols";
+            isValid = false;
+        }
+
+        setValidationError(updatedErrors);
+
+        return isValid;
+    };
+
 
     const signInRequest = async () => {
 
+        const isValid = validateForm();
 
-       const person = await method.login(localState)
+        if (isValid) {
 
-         setUser({
-             token: person.token,
-             username: person.username,
-             email: person.email,
-             isAuthenticated: true,
-         });
+            const person = await method.login(localState)
+
+            setUser({
+                token: person.token,
+                username: person.username,
+                email: person.email,
+                isAuthenticated: true,
+            });
 
 
-        setLocalSate({
-            Password: "",
-            UserName: ""
-        })
+            setLocalSate({
+                Password: "",
+                UserName: ""
+            })
+        }
 
     }
 
@@ -69,8 +97,14 @@ const SignIn = () => {
                                 <h3>Sign In</h3>
 
                                 <div className="inputs__signin">
-                                    <TextField value={user.UserName} onChange={loginChange} id="outlined-basic" label="Username" variant="outlined" />
-                                    <TextField value={user.Password} type="password" onChange={passwordChange}  id="outlined-basic" label="Password" variant="outlined" />
+                                    <TextField value={user.UserName} onChange={loginChange} id="outlined-basic" label="Username" variant="outlined"
+                                               error={!!validationError.UserName}
+                                               helperText={validationError.UserName}
+                                    />
+                                    <TextField value={user.Password} type="password" onChange={passwordChange}  id="outlined-basic" label="Password" variant="outlined"
+                                               error={!!validationError.Password}
+                                               helperText={validationError.Password}
+                                    />
                                 </div>
 
                                 <Button onClick={signInRequest} variant="contained">SignIn</Button>

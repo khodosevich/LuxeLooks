@@ -1,12 +1,16 @@
 .header {
   background: transparent;
-  color: white;
+  color: black;
   position: relative;
   transition: all 0.5s;
   z-index: 100;
 }
 .header.black {
   background: #333232;
+  color: #fff;
+}
+.header.black .logo {
+  color: white;
 }
 
 .navbar {
@@ -17,7 +21,7 @@
 }
 
 .logo {
-  color: white;
+  color: black;
   font-family: Montserrat;
   font-size: 26px;
   font-style: normal;
@@ -109,6 +113,15 @@
 
 .account button {
   cursor: pointer;
+}
+
+.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=header.css.map */

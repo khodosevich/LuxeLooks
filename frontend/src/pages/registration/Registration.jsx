@@ -5,11 +5,51 @@ import {Button, TextField} from "@mui/material";
 import {Navigate, NavLink} from "react-router-dom";
 import {method} from "../../api/methods";
 import {MyContext} from "../../App";
+import OwnAlert from "../../components/alert/OwnAlert";
 
 const Registration = () => {
 
 
     const {user,setUser} = useContext(MyContext);
+
+    const [validationErrors, setValidationErrors] = useState({
+        username: '',
+        password: '',
+        email: '',
+    });
+
+    const validateForm = () => {
+        let isValid = true;
+        const errors = {};
+
+        if (!localState.UserName) {
+            errors.username = 'Username is required';
+            isValid = false;
+        }
+
+        if (!localState.Password) {
+            errors.password = 'Password is required';
+            isValid = false;
+        }
+
+        if (!localState.Email) {
+            errors.email = 'Email is required';
+            isValid = false;
+        } else if (!/\S+@\S+\.\S+/.test(localState.Email)) {
+            errors.email = 'Invalid email address';
+            isValid = false;
+        }
+
+        setValidationErrors(errors);
+        return isValid;
+    };
+
+
+    const [alertData, setAlertData] = useState({
+        isOpen:false,
+        type:"",
+        statusText:""
+    });
 
     const [localState, setLocalState] = useState({
         UserName: "",
@@ -18,26 +58,44 @@ const Registration = () => {
     });
 
     const loginRequest = async () => {
+        try {
 
+            const isValid = validateForm();
 
-        // console.log(localState)
+            if(isValid) {
+                const person = await method.register(localState);
 
-        const person = await method.register(localState)
+                setUser({
+                    token: person.token,
+                    username: person.username,
+                    email: person.email,
+                    isAuthenticated: true,
+                });
 
-        setUser({
-            token: person.token,
-            username: person.username,
-            email: person.email,
-            isAuthenticated: true,
-        });
+                setLocalState({
+                    UserName: "",
+                    Password: "",
+                    Email: ""
+                });
 
+                setAlertData({
+                    isOpen: true,
+                    type: 'success',
+                    statusText: 'Successfully logged in!'
+                });
+            }
 
-        setLocalState({
-            UserName: "",
-            Password: "",
-            Email:""
-        })
-    }
+        } catch (error) {
+            setAlertData({
+                isOpen: true,
+                type: 'error',
+                statusText: error.response.data
+            });
+
+            setTimeout(() => setAlertData({isOpen: false, type: "", statusText: ""}), 2000)
+        }
+    };
+
 
     const loginChange = (e) => {
 
@@ -74,22 +132,46 @@ const Registration = () => {
                         <div className="registration__container">
                             <div className="registration-content">
 
+                                {alertData.isOpen && <OwnAlert props={alertData} />}
+
+
                                 <h3>Sign Up</h3>
 
                                 <div className="inputs__registration">
-                                    <TextField onChange={loginChange}  label="Username" type="text"  variant="outlined" />
-                                    <TextField onChange={passwordChange}  type="password" label="Password" variant="outlined" />
-                                    <TextField onChange={emailChange}  label="Email" type="email" variant="outlined" />
+                                    <TextField
+                                        onChange={loginChange}
+                                        label="Username"
+                                        type="text"
+                                        variant="outlined"
+                                        error={Boolean(validationErrors.username)}
+                                        helperText={validationErrors.username}
+                                    />
+                                    <TextField
+                                        onChange={passwordChange}
+                                        type="password"
+                                        label="Password"
+                                        variant="outlined"
+                                        error={Boolean(validationErrors.password)}
+                                        helperText={validationErrors.password}
+                                    />
+                                    <TextField
+                                        onChange={emailChange}
+                                        label="Email"
+                                        type="email"
+                                        variant="outlined"
+                                        error={Boolean(validationErrors.email)}
+                                        helperText={validationErrors.email}
+                                    />
                                 </div>
 
                                 <Button onClick={loginRequest} variant="contained">Registration</Button>
 
                                 <NavLink className="exist-account" to="/signin">
-                                    exist account? SignIN
+                                    Exist account?
                                 </NavLink>
 
                                 <NavLink className="exist-account" to="/">
-                                    На главную
+                                    On main
                                 </NavLink>
                             </div>
                         </div>
