@@ -12,10 +12,19 @@ import {method} from "../../api/methods";
 const Header = () => {
 
     const [searchState,setSearchState] = useState("");
+    const [searchError, setSearchError] = useState("");
 
     const handlerSearchInput = (e) => {
-        setSearchState(e.target.value)
+        const value = e.target.value;
+        setSearchState(value);
+
+        if (value.length < 3) {
+            setSearchError("Please enter at least 3 characters.");
+        } else {
+            setSearchError("");
+        }
     }
+
 
     const {user,setUser} = useContext(MyContext)
 
@@ -30,9 +39,11 @@ const Header = () => {
 
 
     const search = async () => {
-       const data = await method.getProductByName(searchState)
-        setSearchState("")
-        navigate(`/product/${data.id}`)
+        if (searchState.length >= 3) {
+            const data = await method.getProductByName(searchState);
+            setSearchState("");
+            navigate(`/product/${data.id}`);
+        }
     }
 
 
@@ -53,8 +64,15 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="search-input">
-                        <input value={searchState} onChange={handlerSearchInput} className="input_header" type="text" placeholder="Search for products..."/>
+                        <input
+                            value={searchState}
+                            onChange={handlerSearchInput}
+                            className={`input_header ${searchError ? "error" : ""}`}
+                            type="text"
+                            placeholder="Search for products..."
+                        />
                         <i onClick={search} className="fa" aria-hidden="true"></i>
+                        {searchError && <div className="error-message">{searchError}</div>}
                     </div>
 
                     <div className="bag">

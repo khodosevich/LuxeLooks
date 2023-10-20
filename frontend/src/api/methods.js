@@ -72,14 +72,14 @@ export const method = {
             "Id": productId
         };
         try {
-            const response = await api.put('/Cart/AddToCart', data, {
+
+            return await api.put('/Cart/AddToCart', data, {
                 headers: {
                     'Authorization': `Bearer ${userToken}`
                 }
             });
-            return response.data;
         } catch (error) {
-            console.error(error);
+            // console.error(error);
             throw error;
         }
     },

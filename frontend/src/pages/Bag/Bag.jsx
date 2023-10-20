@@ -7,7 +7,7 @@ import './bag.css'
 import {method} from "../../api/methods";
 import { Button, TextField} from "@mui/material";
 import jwt_decode from "jwt-decode";
-import Alert from "../../components/alert/Alert";
+import OwnAlert from "../../components/alert/OwnAlert";
 
 const Bag = () => {
 
@@ -25,6 +25,10 @@ const Bag = () => {
         UserId: ""
     })
 
+    const [alertStatus, setAlertStatus] = useState(false)
+
+    const [alertConfig, setAlertConfig] = useState({})
+
     const getCart = async () => {
 
         try{
@@ -37,7 +41,29 @@ const Bag = () => {
 
     const removeProductFromCart = async (productId) => {
 
-        await method.removeFromCart(productId,user.token)
+        try{
+            await method.removeFromCart(productId,user.token).then(r => {
+
+                setAlertConfig( ({
+                    type: "success",
+                    statusText: "Remove item form cart!"
+                }));
+            })
+
+            setAlertStatus(true)
+            setTimeout(() => setAlertStatus(false), 4000);
+
+
+        }catch (error) {
+            setAlertConfig( ({
+                type: "error",
+                statusText: error.response.statusText
+            }));
+
+            setAlertStatus(true)
+            setTimeout(() => setAlertStatus(false), 4000);
+
+        }
 
         const data = await method.getCart(user.token)
 
@@ -60,8 +86,7 @@ const Bag = () => {
     },[])
 
 
-    const [isAlert, setIsAlert] = useState(false)
-    
+
     const [modalIsOpen,setModalIsOpen] = useState(false)
 
     const getId = () => {
@@ -108,13 +133,11 @@ const Bag = () => {
 
                 method.removeAllCart(user.token)
                 setProducts([])
-
                 setModalIsOpen(false);
                 setIsOrderPlaced(false);
             }
         }
     }, [isOrderPlaced, order]);
-
 
 
 
@@ -141,7 +164,6 @@ const Bag = () => {
                                     justifyContent:"center",
                                     height:"100%"
                                 }}>
-
                                     <div style={{
                                         background:"white",
                                         padding:"100px 200px",
@@ -150,9 +172,6 @@ const Bag = () => {
 
                                     }}>
 
-                                        {
-                                            isAlert && <Alert props={"hello"}/>
-                                        }
 
                                         <h3>
                                             Form for complete order:
@@ -231,6 +250,12 @@ const Bag = () => {
                             <div className="bag-content">
                                 <div className="bag-items">
                                     <h2 className="bag-content-title">My bag</h2>
+
+
+                                    {
+                                        alertStatus && <OwnAlert props={alertConfig}/>
+                                    }
+
 
                                     {
                                         products.length > 0 ? (

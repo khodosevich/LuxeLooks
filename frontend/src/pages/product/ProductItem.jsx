@@ -1,11 +1,12 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {useLocation} from "react-router-dom";
-import {method} from "../../api/methods";
+import {api, method} from "../../api/methods";
 import Subscribe from "../../components/subscribe/Subscribe";
 
 import "./productitem.css"
 import ProductNotExist from "../../components/productelement/ProductNotExist";
 import {MyContext} from "../../App";
+import OwnAlert from "../../components/alert/OwnAlert";
 
 const ProductItem = () => {
 
@@ -16,6 +17,10 @@ const ProductItem = () => {
     const productId = location.pathname.slice(9)
 
     const [product, setProduct] = useState({})
+
+    const [alertStatus, setAlertStatus] = useState(false)
+
+    const [alertConfig, setAlertConfig] = useState({})
 
     const fetchData = async () => {
 
@@ -32,21 +37,43 @@ const ProductItem = () => {
     }, []);
 
 
-    const addToCart =  async () => {
+    const addToCart = async () => {
+        try {
+            const response = await method.addToCart(product.id, user.token).then(r => {
+                setAlertConfig({
+                    type: "success",
+                    statusText: "Add element to cart"
+                })
+            })
 
-        await method.addToCart(product.id, user.token).then(r => r);
+            setAlertStatus(true)
+            setTimeout(() => setAlertStatus(false), 4000);
+
+        } catch (error) {
+
+            console.log(error)
+
+            setAlertConfig({
+                type: "error",
+                statusText: error.response.statusText
+            })
+
+            setAlertStatus(true)
+            setTimeout(() => setAlertStatus(false), 4000);
+        }
+
     }
-
 
 
     return (
         <>
-            <div style={{width:"1232px" , margin:"0 auto"}}>
+            <div style={{width:"1232px" , margin:"0 auto" , position:"relative"}}>
                 <div style={{padding:"50px 0 "}}>
 
                     {
                         product.name
                             ? <>
+
                           <div style={{display:"flex"  , justifyContent:"space-between"}}>
                                         <h3 style={{
                                             color:"#1E212C",
@@ -72,6 +99,11 @@ const ProductItem = () => {
                                     }}>Art. No.</span> {product.id}
                                         </p>
                                     </div>
+
+                          {
+                            alertStatus && <OwnAlert props={alertConfig} />
+                          }
+
 
                                     <div style={{
                                         width: "1230px",
