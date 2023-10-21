@@ -25,6 +25,12 @@ const Header = () => {
         }
     }
 
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            search();
+        }
+    }
 
     const {user,setUser} = useContext(MyContext)
 
@@ -44,6 +50,10 @@ const Header = () => {
             setSearchState("");
             navigate(`/product/${data.id}`);
         }
+    }
+
+    const handleBlur = () => {
+        setSearchError("");
     }
 
 
@@ -66,7 +76,9 @@ const Header = () => {
                     <div className="search-input">
                         <input
                             value={searchState}
+                            onKeyDown={handleKeyDown}
                             onChange={handlerSearchInput}
+                            onBlur={handleBlur}
                             className={`input_header ${searchError ? "error" : ""}`}
                             type="text"
                             placeholder="Search for products..."
