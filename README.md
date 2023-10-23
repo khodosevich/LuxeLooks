@@ -6,3 +6,6 @@
 
 [Deploy](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Deployment.md)
 
+
+[Sequence](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Sequence.md)
+
