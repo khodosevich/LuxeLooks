@@ -9,3 +9,7 @@
 
 [Sequence](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Sequence.md)
 
+
+[State](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/State.md)
+
+
