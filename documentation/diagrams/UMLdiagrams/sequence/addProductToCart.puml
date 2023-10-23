@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor User
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant Database
+
+User -> Frontend: Просмотр продуктов
+User -> Frontend: Клик по продукту
+activate Frontend
+
+User -> Frontend: Клик 'Добавить в корзину'
+Frontend -> Backend: Отправить ID продукта и количество
+activate Backend
+
+Backend -> Database: Получить информацию о продукте
+activate Database
+Database --> Backend: Информация о продукте получена
+
+Backend --> Frontend: Информация о продукте
+deactivate Backend
+
+Frontend --> Frontend: Обновить информацию в корзине
+deactivate Frontend
+
+@enduml

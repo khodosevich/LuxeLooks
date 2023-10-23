@@ -1,0 +1,34 @@
+@startuml
+
+
+
+actor User
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant Database
+
+User -> Frontend: Открыть Корзину
+User -> Frontend: Нажать 'Оформить заказ'
+activate Frontend
+
+Frontend -> Frontend: Показать форму заказа
+Frontend -> User: Заполнить данные заказа
+
+User -> Frontend: Нажать 'Подтвердить заказ'
+Frontend -> Backend: Отправить данные заказа
+activate Backend
+
+Backend -> Database: Получить информацию о продуктах
+activate Database
+Database --> Backend: Информация о продуктах получена
+
+Backend -> Database: Сохранить информацию о заказе
+Database --> Backend: Заказ успешно сохранен
+
+Backend --> Frontend: Подтверждение заказа
+deactivate Backend
+
+Frontend -> Frontend: Показать подтверждение заказа
+deactivate Frontend
+@enduml
+

@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor User
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant Database
+
+User -> Frontend: Открыть страницу входа
+
+activate Frontend
+
+User -> Frontend: Ввести учетные данные
+Frontend -> Backend: Отправить данные для входа
+activate Backend
+
+Backend -> Database: Получить информацию о пользователе
+activate Database
+Database --> Backend: Информация о пользователе получена
+
+Backend --> Frontend: Пользователь аутентифицирован
+deactivate Backend
+
+Frontend --> User: Перенаправление на главную страницу
+deactivate Frontend
+
+
+
+@enduml
