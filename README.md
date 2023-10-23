@@ -30,11 +30,11 @@ LuxeLooks - это интернет-магазин модной одежды, п
 2. Перейдите в корневую директорию проекта.
 3. Откройте терминал и выполните следующие команды для запуска фронтенда:
 
-cd frontend
-npm install
-npm start
+`cd frontend` 
+`npm install`
+`npm start`
 
 В отдельном терминале выполните следующую команду для запуска бэкенда:
 
-cd LuxeLooks
-dotnet run
+`cd LuxeLooks`
+`dotnet run`
