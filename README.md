@@ -2,3 +2,7 @@
 
 
 [Activity Diagrams](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Activity.md)
+
+
+[Deploy](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Deployment.md)
+
