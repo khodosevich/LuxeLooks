@@ -13,3 +13,4 @@
 [State](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/State.md)
 
 
+[Component](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Component.md)
