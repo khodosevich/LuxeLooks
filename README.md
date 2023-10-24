@@ -16,7 +16,7 @@
 
 ### Тестирование
 
--  [Test plan](https://github.com/khodosevich/LuxeLooks/tree/main/test)
+-  [Test plan](https://github.com/khodosevich/LuxeLooks/blob/main/test/TestPlan.md)
 
 ### О LuxeLooks
 
