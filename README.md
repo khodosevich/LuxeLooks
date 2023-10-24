@@ -14,6 +14,10 @@
 - [Диаграммы состояний](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/State.md)
 - [Диаграммы компонентов](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Component.md)
 
+### Тестирование
+
+-  [Test plan](https://github.com/khodosevich/LuxeLooks/tree/main/test)
+
 ### О LuxeLooks
 
 LuxeLooks - это интернет-магазин модной одежды, предназначенный для обеспечения безупречного опыта покупок для любителей моды. Здесь представлен широкий ассортимент продукции, включая одежду, обувь и аксессуары.
