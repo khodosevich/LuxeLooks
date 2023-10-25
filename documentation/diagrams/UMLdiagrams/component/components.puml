@@ -1,0 +1,23 @@
+@startuml Component Diagram
+
+package "Frontend" {
+  [User Interface] as UI
+  UI --> [Shopping Cart]
+  UI --> [Product Catalog]
+}
+
+package "Backend" {
+  [User Management] as UM
+  [Order Management] as OM
+  UM --> [Database]
+  OM --> [Database]
+}
+
+package "Database" {
+  [PostgreSQL] as DB
+}
+
+UI --> UM : HTTP
+UM --> DB : JDBC
+
+@enduml
