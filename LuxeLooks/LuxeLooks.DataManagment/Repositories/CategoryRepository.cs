@@ -1,9 +1,10 @@
-﻿using LuxeLooks.Domain.Entity;
+﻿using LuxeLooks.DataManagment.Repositories.Interfaces;
+using LuxeLooks.Domain.Entity;
 using Microsoft.EntityFrameworkCore;
 
 namespace LuxeLooks.DataManagment.Repositories;
 
-public class CategoryRepository
+public class CategoryRepository:IBaseRepository<Category>
 {
     public readonly ApplicationDbContext db;
 
