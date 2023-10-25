@@ -13,6 +13,8 @@
 - [Диаграммы последовательности](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Sequence.md)
 - [Диаграммы состояний](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/State.md)
 - [Диаграммы компонентов](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Component.md)
+- [Диаграммы классов](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Classes.md)
+- [Диаграмма вариантов использования](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/UseCase.md)
 
 ### Тестирование
 
