@@ -5,6 +5,7 @@ import {Button, TextField} from "@mui/material";
 import {method} from "../../api/methods";
 import {MyContext} from "../../App";
 import {Navigate, NavLink} from "react-router-dom";
+import OwnAlert from "../../components/alert/OwnAlert";
 
 
 const SignIn = () => {
@@ -12,14 +13,17 @@ const SignIn = () => {
     const {user, setUser} = useContext(MyContext)
 
     const [localState,setLocalSate] = useState({
-        "Password": "",
-        "UserName": ""
+        Password: "",
+        UserName: ""
     });
 
     const [validationError, setValidationError] = useState({
         UserName: "",
         Password: ""
     });
+
+    const [showAlert, setShowAlert] = useState(false);
+    const [infoAlert, setInfoAlert] = useState({type:"" , statusText:""})
 
     const validateForm = () => {
         let isValid = true;
@@ -37,40 +41,55 @@ const SignIn = () => {
 
         setValidationError(updatedErrors);
 
+        if (!isValid) {
+            setInfoAlert( {type:"error" ,statusText:"Validation error!"} )
+
+            setShowAlert(true);
+        }
+
         return isValid;
     };
 
-
     const signInRequest = async () => {
-
         const isValid = validateForm();
 
         if (isValid) {
+            try {
+                const person = await method.login(localState);
 
-            const person = await method.login(localState)
+                setUser({
+                    token: person.token,
+                    username: person.username,
+                    email: person.email,
+                    isAuthenticated: true,
+                });
 
-            setUser({
-                token: person.token,
-                username: person.username,
-                email: person.email,
-                isAuthenticated: true,
-            });
-
-
-            setLocalSate({
-                Password: "",
-                UserName: ""
-            })
+                setLocalSate({
+                    Password: "",
+                    UserName: ""
+                });
+            } catch (error) {
+                if (error.response && error.response.status === 400) {
+                    setInfoAlert( {type:"error" ,statusText:error.response.data} )
+                    setShowAlert(true);
+                    console.error("Ошибка: Некорректные данные", error.response.data);
+                } else {
+                    setInfoAlert( {type:"error" ,statusText: error.message} )
+                    setShowAlert(true);
+                    console.error("Произошла ошибка:", error.message);
+                }
+            }
         }
+    };
 
-    }
+
+
 
     useMemo(() => {
-        console.log(user)
     }, [user]);
 
     const loginChange = (e) => {
-
+        setShowAlert(false)
         setLocalSate(prev => ({
             ...prev,
             UserName: e.target.value
@@ -78,6 +97,7 @@ const SignIn = () => {
     }
 
     const passwordChange = (e) => {
+        setShowAlert(false)
         setLocalSate(prev => ({
             ...prev,
             Password: e.target.value
@@ -91,7 +111,14 @@ const SignIn = () => {
                     <Navigate to="/"/>
                     :
                     <div className="signin">
+
                         <div className="signin__container">
+
+                            {showAlert && (
+                                <OwnAlert props={infoAlert} />
+                            )}
+
+
                             <div className="signin-content">
 
                                 <h3>Sign In</h3>
@@ -114,7 +141,7 @@ const SignIn = () => {
                                 </NavLink>
 
                                 <NavLink className="exist-account" to="/">
-                                    На главную
+                                    On main
                                 </NavLink>
                             </div>
                         </div>

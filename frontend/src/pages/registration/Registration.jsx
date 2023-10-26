@@ -18,6 +18,21 @@ const Registration = () => {
         email: '',
     });
 
+    const [alertData, setAlertData] = useState({
+        isOpen:false,
+        type:"",
+        statusText:""
+    });
+
+    const [localState, setLocalState] = useState({
+        UserName: "",
+        Password: "",
+        Email:""
+    });
+
+    const [showAlert, setShowAlert] = useState(false);
+    const [infoAlert, setInfoAlert] = useState({type:"" , statusText:""})
+
     const validateForm = () => {
         let isValid = true;
         const errors = {};
@@ -40,27 +55,23 @@ const Registration = () => {
             isValid = false;
         }
 
+        if (!isValid) {
+            setInfoAlert( {type:"error" ,statusText:"Validation error!"} )
+
+            setShowAlert(true);
+        }
+
         setValidationErrors(errors);
         return isValid;
     };
 
 
-    const [alertData, setAlertData] = useState({
-        isOpen:false,
-        type:"",
-        statusText:""
-    });
 
-    const [localState, setLocalState] = useState({
-        UserName: "",
-        Password: "",
-        Email:""
-    });
 
     const loginRequest = async () => {
-        try {
+        const isValid = validateForm();
 
-            const isValid = validateForm();
+        try {
 
             if(isValid) {
                 const person = await method.register(localState);
@@ -86,19 +97,25 @@ const Registration = () => {
             }
 
         } catch (error) {
-            setAlertData({
-                isOpen: true,
-                type: 'error',
-                statusText: error.response.data
-            });
 
-            setTimeout(() => setAlertData({isOpen: false, type: "", statusText: ""}), 2000)
+            if (error.response && error.response.status === 400) {
+                setInfoAlert( {type:"error" ,statusText:error.response.data} )
+                setShowAlert(true);
+                console.error("Ошибка: Некорректные данные", error.response.data);
+            }
+            // setAlertData({
+            //     isOpen: true,
+            //     type: 'error',
+            //     statusText: error.response.data
+            // });
+            //
+            // setTimeout(() => setAlertData({isOpen: false, type: "", statusText: ""}), 2000)
         }
     };
 
 
     const loginChange = (e) => {
-
+        setShowAlert(false)
         setLocalState(prev => ({
             ...prev,
             UserName: e.target.value
@@ -106,6 +123,7 @@ const Registration = () => {
     }
 
     const passwordChange = (e) => {
+        setShowAlert(false)
         setLocalState(prev => ({
             ...prev,
             Password: e.target.value
@@ -113,6 +131,7 @@ const Registration = () => {
     }
 
     const emailChange = (e) => {
+        setShowAlert(false)
         setLocalState(prev => ({
             ...prev,
             Email: e.target.value
@@ -130,9 +149,17 @@ const Registration = () => {
                     ? <Navigate to="/"/>
                     : <div className="registration">
                         <div className="registration__container">
+
+
+
+                            {showAlert && (
+                                <OwnAlert props={infoAlert} />
+                            )}
+
+
                             <div className="registration-content">
 
-                                {alertData.isOpen && <OwnAlert props={alertData} />}
+                                {/*{alertData.isOpen && <OwnAlert props={alertData} />}*/}
 
 
                                 <h3>Sign Up</h3>

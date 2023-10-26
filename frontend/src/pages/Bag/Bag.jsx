@@ -73,8 +73,6 @@ const Bag = () => {
 
     const completeOrder = (data) => {
 
-        console.log(data)
-
         setModalIsOpen(true)
 
         method.createOrder(data , user.token)

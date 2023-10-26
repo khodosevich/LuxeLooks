@@ -16,6 +16,19 @@ export const method = {
 
         return value;
     },
+   async revoke(person){
+       console.log(person.name)
+       console.log(person.token)
+       await api.post(`Account/Revoke/${person.name}`, {
+            headers: {
+                'Authorization': `Bearer ${person.token}`
+            }
+        }).then(r => {
+           console.log(r)
+       })
+
+    }
+    ,
     async login(data){
 
         let value = {} ;
@@ -41,9 +54,7 @@ export const method = {
         })
     },
     async getProductById(id) {
-        console.log("1111" , id)
         return api.get(`/Product/GetById/${id}`).then(r => {
-            console.log(r.data)
             return r.data
         })
     },
@@ -64,7 +75,7 @@ export const method = {
             return response.data;
         } catch (error) {
             console.error(error);
-            throw error;
+            // throw error;
         }
     },
     async addToCart(productId,userToken) {
@@ -79,8 +90,8 @@ export const method = {
                 }
             });
         } catch (error) {
-            // console.error(error);
-            throw error;
+            console.error(error);
+            // throw error;
         }
     },
     async removeFromCart(productId, userToken) {
@@ -99,7 +110,7 @@ export const method = {
             return response.data;
         } catch (error) {
             console.error(error);
-            throw error;
+            // throw error;
         }
     },
     async getOrderById(userId, userToken) {
@@ -117,7 +128,6 @@ export const method = {
     },
     async createOrder(data ,userToken) {
 
-        console.log("create order : " , data)
 
         try{
             const response = await api.post(`/Order/CreateOrder`,
@@ -132,7 +142,6 @@ export const method = {
         }
     },
     async removeAllCart(userToken){
-        console.log(userToken)
         try{
             const response = await api.delete("/Cart/DeleteCart",{
                 headers: {

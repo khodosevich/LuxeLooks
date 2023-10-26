@@ -1,10 +1,11 @@
 import React from 'react';
+import {Typography} from "@mui/material";
 
 const ProductNotExist = () => {
     return (
-        <div>
-            такого товара нет
-        </div>
+        <Typography>
+            Данного товара не существует
+        </Typography>
     );
 };
 

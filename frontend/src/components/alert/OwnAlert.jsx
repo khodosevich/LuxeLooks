@@ -3,7 +3,6 @@ import {Alert, AlertTitle} from "@mui/material";
 
 const OwnAlert = ({props}) => {
 
-    console.log(props)
 
     const [alertType, setAlertType] = useState({})
 

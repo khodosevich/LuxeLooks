@@ -101,11 +101,11 @@ const TrendingNow = () => {
                                 }
                             </div>
 
-                            <div className="btns__trending">
-                                <button className="btn__trending" >
-                                    Explore top sales
-                                </button>
-                            </div>
+                            {/*<div className="btns__trending">*/}
+                            {/*    <button className="btn__trending" >*/}
+                            {/*        Explore top sales*/}
+                            {/*    </button>*/}
+                            {/*</div>*/}
                         </>
                     }
 

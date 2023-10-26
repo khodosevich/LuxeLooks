@@ -62,7 +62,6 @@ const OrderItem = ({props}) => {
 
     useEffect(() => {
         formattedData(props.createTime)
-        console.log(ids.length)
     }, [ids]);
 
     return (

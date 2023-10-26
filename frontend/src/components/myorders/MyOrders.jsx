@@ -3,7 +3,6 @@ import {MyContext} from "../../App";
 import {method} from "../../api/methods";
 
 import jwt_decode from "jwt-decode";
-import {logDOM} from "@testing-library/react";
 import OrderItem from "./OrderItem";
 
 const MyOrders = () => {
@@ -16,7 +15,6 @@ const MyOrders = () => {
 
 
         const token = user.token;
-        console.log(token)
         const decoded = jwt_decode(token);
 
         const userId = decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"];
@@ -27,7 +25,6 @@ const MyOrders = () => {
 
     useEffect(() => {
         getOrdersById()
-        console.log(ordersHistory)
     }, []);
 
     return (
