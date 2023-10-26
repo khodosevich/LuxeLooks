@@ -2,7 +2,8 @@ import React, {useContext, useEffect, useState} from 'react';
 
 import './sidebar.css'
 import {MyContext} from "../../App";
-import {Navigate, NavLink, Route, Routes} from "react-router-dom";
+import { NavLink} from "react-router-dom";
+import {method} from "../../api/methods";
 
 
 
@@ -19,6 +20,8 @@ const SideBar = () => {
     const {user,setUser} = useContext(MyContext)
 
     const logout = () => {
+
+        // method.revoke({name:user.username ,token: user.token})
 
         setUser({
             token: "",

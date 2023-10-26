@@ -19,7 +19,6 @@ const CategoriesItems = ({ isForMen, isForKids}) => {
 
     useEffect(()=>{
         fetchData()
-        console.log("man" , products)
     },[])
 
     return (

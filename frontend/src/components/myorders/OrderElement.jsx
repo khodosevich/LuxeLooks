@@ -4,17 +4,14 @@ import {NavLink} from "react-router-dom";
 
 const OrderElement = ({props}) => {
 
-    console.log("props" , props)
 
     const [product, setProduct] = useState({})
 
     const fetchData = async () => {
 
         try{
-            console.log("before method" , props)
             const data = await method.getProductById(props)
             setProduct(data)
-            console.log('after method',product)
         }catch (e) {
             console.log("error" , e)
         }
@@ -22,7 +19,6 @@ const OrderElement = ({props}) => {
 
     useEffect(() => {
         fetchData()
-        console.log(product)
     }, [])
 
     return (
@@ -33,7 +29,7 @@ const OrderElement = ({props}) => {
                 </div>
                 <div className="bag-element-description">
 
-                    <NavLink to={`/product/${props.id}`}>
+                    <NavLink to={`/product/${product.id}`}>
                         <h3 className="bag-element-description__title">
                             {product.name}
                         </h3>

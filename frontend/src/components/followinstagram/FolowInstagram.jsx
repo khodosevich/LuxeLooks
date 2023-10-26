@@ -20,9 +20,9 @@ const FollowInstagram = () => {
                             Follow us on Instagram
                         </p>
                         <h3 className="info__follow-title">
-                            @createx_store
+                            @luxelooks
                         </h3>
-                        <NavLink to="https://github.com/khodosevich/API-client">
+                        <NavLink to="https://github.com/khodosevich/LuxeLooks">
                             <button className="info__follow-btn">
                                 <i className="fab fa-instagram"></i>
                                 Follow instagram

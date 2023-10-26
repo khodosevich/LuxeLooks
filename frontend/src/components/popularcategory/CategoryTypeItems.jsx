@@ -22,7 +22,6 @@ const CategoryTypeItems = ({category}) => {
 
     useEffect(() => {
         fetchData()
-        console.log("popular " , products)
     }, []);
 
     return (

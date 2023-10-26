@@ -3,6 +3,8 @@ import './footer.css'
 import {NavLink} from "react-router-dom";
 
 import heart from "../../assets/outline.svg"
+import links from "../../components/header/links.json"
+
 
 const Footer = () => {
     return (
@@ -23,10 +25,11 @@ const Footer = () => {
                     <div className="footer__item">
                         <ul className="footer__menu__item">
                             <li className="footer__menu__item__link footer__menu__item__title ">Shop</li>
-                            <li className="footer__menu__item__link">New arrivals</li>
-                            <li className="footer__menu__item__link">Trending now</li>
-                            <li className="footer__menu__item__link">Sales</li>
-                            <li className="footer__menu__item__link">Brands</li>
+                            {links.map((element,index) => (
+                                <li key={index} className="footer__menu__item__link">
+                                    <NavLink to={element.to}>{element.name}</NavLink>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 

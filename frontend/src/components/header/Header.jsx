@@ -35,7 +35,6 @@ const Header = () => {
     const {user,setUser} = useContext(MyContext)
 
     let navigate = useNavigate();
-
     useEffect(() => {
 
     }, [user]);
