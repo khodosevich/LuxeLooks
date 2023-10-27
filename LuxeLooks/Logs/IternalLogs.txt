@@ -7,3 +7,30 @@
 2023-10-17 23:08:20.9261 Info Configuration initialized.
 2023-10-17 23:08:20.9261 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
 2023-10-17 23:08:23.1267 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+2023-10-27 16:11:49.5960 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-27 16:11:49.6483 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-27 16:11:49.6483 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2023-10-27 16:11:49.7015 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2023-10-27 16:11:49.7441 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-27 16:11:49.7627 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
+2023-10-27 16:11:49.7858 Info Configuration initialized.
+2023-10-27 16:11:49.7872 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
+2023-10-27 16:12:51.3351 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+2023-10-27 16:14:05.1730 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-27 16:14:05.1918 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-27 16:14:05.1918 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2023-10-27 16:14:05.2059 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2023-10-27 16:14:05.2059 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-27 16:14:05.2244 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
+2023-10-27 16:14:05.2388 Info Configuration initialized.
+2023-10-27 16:14:05.2388 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
+2023-10-27 16:14:06.5644 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+2023-10-27 16:16:39.6418 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-10-27 16:16:39.6495 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-10-27 16:16:39.6495 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2023-10-27 16:16:39.6495 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'lifetimeConsole' not found for logging rule: Microsoft.Hosting.Lifetime.
+2023-10-27 16:16:39.6618 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.4.2092. Product version: 5.2.4+5ed75b125a691ce9f01e64641f1a79f438385847. GlobalAssemblyCache: False
+2023-10-27 16:16:39.6618 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
+2023-10-27 16:16:39.6860 Info Configuration initialized.
+2023-10-27 16:16:39.6860 Info Validating config: TargetNames=allfile, console, ownFile-web, ConfigItems=69, FilePath=C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\bin\Debug\net7.0\NLog.config
+2023-10-27 16:16:40.3924 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
