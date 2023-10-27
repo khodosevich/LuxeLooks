@@ -98,7 +98,10 @@ public class UserService
         }
         
         var isPasswordValid = BCrypt.Net.BCrypt.Verify(password, findUser.PasswordHash);
-
+        if (!isPasswordValid)
+        {
+            return HandleError<bool>("Bad password", HttpStatusCode.BadRequest);
+        }
         return new BaseResponse<bool>()
         {
             Data = isPasswordValid,

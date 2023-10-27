@@ -48,7 +48,7 @@ public class AccountController : ControllerBase
         if (isPasswordValidResponse.StatusCode!=HttpStatusCode.OK)
         {
             _logger.LogError(isPasswordValidResponse.Description);
-            return BadRequest("Bad credentials");
+            return BadRequest(isPasswordValidResponse.Description);
         }
 
         var userResponse = await _userService.FindByNameAsync(request.UserName);
