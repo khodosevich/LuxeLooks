@@ -47,6 +47,7 @@ const Header = () => {
         if (searchState.length >= 3) {
             const data = await method.getProductByName(searchState);
             setSearchState("");
+            console.log("render");
             navigate(`/product/${data.id}`);
         }
     }
