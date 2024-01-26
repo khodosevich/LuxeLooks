@@ -33,8 +33,9 @@ const ProductItem = () => {
     }
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         fetchData()
-    }, []);
+    }, [productId]);
 
 
     const addToCart = async () => {
