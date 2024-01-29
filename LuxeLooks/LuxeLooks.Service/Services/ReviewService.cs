@@ -71,7 +71,7 @@ public class ReviewService
             throw new InvalidOperationException($"User with id: {userId} is not found");
         }
 
-        bool isUserCanCreateReview = await HasUserOrderedProduct(reviewRequest.UserId, reviewRequest.UserId);
+        bool isUserCanCreateReview = await HasUserOrderedProduct(reviewRequest.UserId, reviewRequest.ProductId);
         if (!isUserCanCreateReview)
         {
             throw new InvalidOperationException(
@@ -79,7 +79,7 @@ public class ReviewService
         }
         var review = new Review()
         {
-            CreateDate = DateTime.Now,
+            CreateDate = DateTime.Now.ToUniversalTime(),
             ProductId = productId,
             Title = reviewRequest.Title,
             UserId = userId
