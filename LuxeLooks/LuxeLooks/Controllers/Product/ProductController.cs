@@ -46,6 +46,19 @@ public class ProductController : ControllerBase
         return HandleResponse(response);
     }
 
+    [HttpGet("GetAllNames")]
+    public async Task<IActionResult> GetAllProductNames()
+    {
+        var response = await _productService.GetProducts(true);
+        if (response.StatusCode!=HttpStatusCode.OK)
+        {
+            return NotFound(response.Description);
+        }
+
+        var namesList = response.Data.Select(a => a.Name).ToList();
+        return Ok(namesList);
+    }
+
     [HttpGet("GetById/{id}")]
     public async Task<IActionResult> GetProductById(string id)
     {

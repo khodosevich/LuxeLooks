@@ -3,6 +3,7 @@ using LuxeLooks.DataManagment.Repositories;
 using LuxeLooks.Domain.Entity;
 using LuxeLooks.Domain.Enum;
 using LuxeLooks.Domain.Response;
+using LuxeLooks.SharedLibrary.Mappers;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 
@@ -13,12 +14,14 @@ public class OrderService
     private readonly OrderRepository _orderRepository;
     private readonly ILogger<OrderService> _logger;
     private readonly IMemoryCache _cache;
+    private readonly StringToGuidMapper _guidMapper;
 
-    public OrderService(OrderRepository orderRepository, ILogger<OrderService> logger, IMemoryCache cache)
+    public OrderService(OrderRepository orderRepository, ILogger<OrderService> logger, IMemoryCache cache, StringToGuidMapper guidMapper)
     {
         _orderRepository = orderRepository;
         _logger = logger;
         _cache = cache;
+        _guidMapper = guidMapper;
     }
 
     public async Task<BaseResponse<Order>> GetById(Guid id)
@@ -61,7 +64,7 @@ public class OrderService
         return baseResponse;
     }
 
-    public async Task<BaseResponse<IEnumerable<Order>>> GetOrders(bool useCache)
+    public async Task<BaseResponse<IEnumerable<Order>>> GetOrders(bool useCache=false)
     {
         var baseResponse = new BaseResponse<IEnumerable<Order>>();
 
@@ -104,5 +107,23 @@ public class OrderService
                 Description = $"[GetDevices] : {exception.Message}"
             };
         }
+    }
+
+    public async Task<List<Order>> GetByUserId(string userId)
+    {
+        var guidUserId = _guidMapper.MapTo(userId);
+        var orders = await _orderRepository.GetAll();
+        if (orders.Count==0)
+        {
+            throw new InvalidOperationException("Orders are not found");
+        }
+
+        var ordersByUser = orders.Where(a => a.UserId == guidUserId).ToList();
+        if (ordersByUser.Count==0)
+        {
+            throw new InvalidOperationException($"Orders by user with id: {userId} are not found");
+        }
+
+        return ordersByUser;
     }
 }
