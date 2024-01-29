@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "gWo501LaX3cwlb02jbHSFI5U9V1aCJZ6N8hWWEahCoXePG+8X4eAyE/30nxkDrUIDQfNoU8JYB7/5pAy3SoJTA==",
+  "success": true,
+  "projectFilePath": "C:\\5Sem\\LuxeLooks\\LuxeLooks\\LuxeLooks\\LuxeLooks.SharedLibrary\\LuxeLooks.SharedLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Алексей\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512"
+  ],
+  "logs": []
+}
