@@ -1,9 +1,13 @@
 ﻿using System.Text;
 using LuxeLooks.DataManagment;
 using LuxeLooks.DataManagment.Repositories;
+using LuxeLooks.DataManagment.Repositories.Implementations;
+using LuxeLooks.DataManagment.Repositories.Interfaces;
 using LuxeLooks.Domain.Entity;
 using LuxeLooks.Service;
 using LuxeLooks.Service.Services;
+using LuxeLooks.SharedLibrary;
+using LuxeLooks.SharedLibrary.Mappers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -82,6 +86,9 @@ public static class WebApplicationBuilderExtension
         builder.Services.AddScoped<SubcsribeService>();
         builder.Services.AddScoped<CategoryRepository>();
         builder.Services.AddScoped<CategoryService>();
+        builder.Services.AddScoped<IBaseRepository<Review>, ReviewRepository>();
+        builder.Services.AddScoped<StringToGuidMapper>();
+        builder.Services.AddScoped<ReviewService>();
     }
     public static void AddLogging(this WebApplicationBuilder builder)
     {

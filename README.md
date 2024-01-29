@@ -8,17 +8,18 @@
 
 ### Диаграммы
 
-- [Диаграммы активности](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Activity.md)
+- [Диаграммы активностей](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Activity.md)
 - [Диаграмма развертывания](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Deployment.md)
 - [Диаграммы последовательности](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Sequence.md)
-- [Диаграммы состояний](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/State.md)
-- [Диаграммы компонентов](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Component.md)
-- [Диаграммы классов](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Classes.md)
+- [Диаграмма состояний](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/State.md)
+- [Диаграмма компонентов](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Component.md)
+- [Диаграмма классов](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Classes.md)
 - [Диаграмма вариантов использования](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/UseCase.md)
 
 ### Тестирование
 
 -  [Test plan](https://github.com/khodosevich/LuxeLooks/blob/main/test/TestPlan.md)
+-  [Test result](https://github.com/khodosevich/LuxeLooks/blob/main/test/TestResult.md)
 
 ### О LuxeLooks
 
@@ -30,22 +31,3 @@ LuxeLooks - это интернет-магазин модной одежды, п
 - **Бэкенд**: C#
 - **База данных**: PostgreSQL
 
-### Запуск Проекта
-
-1. Клонируйте репозиторий на свой локальный компьютер.
-2. Перейдите в корневую директорию проекта.
-3. Откройте терминал и выполните следующие команды для запуска фронтенда:
-
-
-`cd frontend` 
-
-`npm install`
-
-`npm start`
-
-В отдельном терминале выполните следующую команду для запуска бэкенда:
-
-
-`cd LuxeLooks`
-
-`dotnet run`

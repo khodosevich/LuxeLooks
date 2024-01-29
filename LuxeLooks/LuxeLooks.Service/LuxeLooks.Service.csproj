@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\LuxeLooks.DataManagment\LuxeLooks.DataManagment.csproj" />
+      <ProjectReference Include="..\LuxeLooks.SharedLibrary\LuxeLooks.SharedLibrary.csproj" />
     </ItemGroup>
 
 
