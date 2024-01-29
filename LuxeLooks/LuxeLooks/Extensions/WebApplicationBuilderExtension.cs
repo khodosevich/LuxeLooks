@@ -88,6 +88,7 @@ public static class WebApplicationBuilderExtension
         builder.Services.AddScoped<CategoryService>();
         builder.Services.AddScoped<IBaseRepository<Review>, ReviewRepository>();
         builder.Services.AddScoped<StringToGuidMapper>();
+        builder.Services.AddScoped<ReviewService>();
     }
     public static void AddLogging(this WebApplicationBuilder builder)
     {
