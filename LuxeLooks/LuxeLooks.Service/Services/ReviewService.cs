@@ -13,13 +13,29 @@ public class ReviewService
     private readonly StringToGuidMapper _guidMapper;
     private readonly UserService _userService;
     private readonly ProductService _productService;
+    private readonly OrderService _orderService;
 
-    public ReviewService(IBaseRepository<Review> reviewRepository, StringToGuidMapper guidMapper, UserService userService, ProductService productService)
+    public ReviewService(IBaseRepository<Review> reviewRepository, StringToGuidMapper guidMapper, UserService userService, ProductService productService, OrderService orderService)
     {
         _reviewRepository = reviewRepository;
         _guidMapper = guidMapper;
         _userService = userService;
         _productService = productService;
+        _orderService = orderService;
+    }
+
+    private async Task<bool> HasUserOrderedProduct(string userId, string productId)
+    {
+        var guidProductId = _guidMapper.MapTo(productId);
+        var orders = await _orderService.GetByUserId(userId);
+        foreach (var order in orders)
+        {
+            if (order.ProductsIds.Contains(guidProductId))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public async Task<List<Review>> GetByProductId(string id)
@@ -38,6 +54,7 @@ public class ReviewService
 
         return reviews.Where(a => a.ProductId == productId).ToList();
     }
+    
 
     public async Task Create(ReviewRequest reviewRequest)
     {
@@ -52,6 +69,13 @@ public class ReviewService
         if (userResponse.StatusCode!=HttpStatusCode.OK)
         {
             throw new InvalidOperationException($"User with id: {userId} is not found");
+        }
+
+        bool isUserCanCreateReview = await HasUserOrderedProduct(reviewRequest.UserId, reviewRequest.UserId);
+        if (!isUserCanCreateReview)
+        {
+            throw new InvalidOperationException(
+                $"User with id: {userId} cant create review on product with id: {productId}");
         }
         var review = new Review()
         {

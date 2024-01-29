@@ -3,6 +3,7 @@ using LuxeLooks.Domain.Models;
 using LuxeLooks.Service.Services;
 using LuxeLooks.SharedLibrary.Exceptions;
 using LuxeLooks.SharedLibrary.Validators;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LuxeLooks.Controllers.Review;
@@ -25,6 +26,7 @@ public class ReviewController:ControllerBase
             throw new ValidationException(validateResult.ToString());
         }
     }
+    [Authorize]
     [HttpPost("CreateReview")]
     public async Task<IActionResult> CreateReview([FromBody]ReviewRequest request)
     {
@@ -47,7 +49,7 @@ public class ReviewController:ControllerBase
         }
         return Ok();
     }
-
+    
     [HttpGet("GetByUserId/{userId}")]
     public async Task<IActionResult> GetByUserId(string userId)
     {
