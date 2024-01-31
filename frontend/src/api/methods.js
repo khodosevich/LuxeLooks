@@ -1,4 +1,5 @@
 import axios from "axios";
+import {logDOM} from "@testing-library/react";
 
 export const api = axios.create({
     withCredentials:true,
@@ -150,6 +151,35 @@ export const method = {
         }catch (e) {
             console.log("error" , e)
         }
-    }
+    },
 
+    reviews : {
+        async getReviewsByProduct(productId) {
+                try{
+                    const reviews = await api.get(`http://localhost:5219/review/GetByProductId/${productId}`)
+                    return reviews.data;
+                }catch (e) {
+                    console.log(e)
+                }
+        },
+        async createReview(data,userToken) {
+            try{
+                const response = await api.post("http://localhost:5219/review/CreateReview",
+                    data,
+                    {
+                        headers: {
+                            'Authorization': `Bearer ${userToken}`
+                        }
+                    }
+                )
+
+                return response.data;
+            }catch (e) {
+               throw e;
+            }
+        },
+        async getReviewsByUserId() {
+
+        }
+    }
 }
