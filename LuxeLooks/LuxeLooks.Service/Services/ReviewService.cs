@@ -61,7 +61,7 @@ public class ReviewService
         var productId = _guidMapper.MapTo(reviewRequest.ProductId);
         var userId = _guidMapper.MapTo(reviewRequest.UserId);
         var productResponse = await _productService.GetById(productId);
-        var userResponse = await _userService.GetByIdAsync(userId);
+        var userResponse = await _userService.GetByIdAsync(reviewRequest.UserId);
         if (productResponse.StatusCode!=HttpStatusCode.OK)
         {
             throw new InvalidOperationException($"Product with id: {productId} is not found");
@@ -90,7 +90,7 @@ public class ReviewService
     public async Task<List<Review>> GetByUserId(string userId)
     {
         var guidUserId = _guidMapper.MapTo(userId);
-        var response = await _userService.GetByIdAsync(guidUserId);
+        var response = await _userService.GetByIdAsync(userId);
         if (response.StatusCode!=HttpStatusCode.OK)
         {
             throw new InvalidOperationException($"User with id: {userId} is not found");

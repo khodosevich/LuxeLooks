@@ -75,7 +75,7 @@ public class AccountController : ControllerBase
     public async Task<ActionResult<AuthResponse>> Register([FromBody] RegisterRequest request)
     {
         if (!ModelState.IsValid) return BadRequest(request);
-        var user = new User()
+        var user = new Domain.Entity.User()
         {
             Email = request.Email,
             UserName = request.UserName,
