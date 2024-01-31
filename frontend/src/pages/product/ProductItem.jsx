@@ -7,10 +7,13 @@ import "./productitem.css"
 import ProductNotExist from "../../components/productelement/ProductNotExist";
 import {MyContext} from "../../App";
 import OwnAlert from "../../components/alert/OwnAlert";
+import Reviews from "../../components/reviews/Reviews";
 
 const ProductItem = () => {
 
     const {user,setUser} = useContext(MyContext)
+
+    console.log("user: ", user)
 
     const location = useLocation();
 
@@ -250,10 +253,10 @@ const ProductItem = () => {
                                    </button>
                                </div>
 
-
-
                             </div>
                         </div>
+
+                            <Reviews productId={productId} userToken={user.token}/>
                             </> : <>
                               <ProductNotExist/>
                           </>
