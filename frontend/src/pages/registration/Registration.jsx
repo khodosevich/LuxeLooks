@@ -6,6 +6,7 @@ import {Navigate, NavLink} from "react-router-dom";
 import {method} from "../../api/methods";
 import {MyContext} from "../../App";
 import OwnAlert from "../../components/alert/OwnAlert";
+import jwtDecode from "jwt-decode";
 
 const Registration = () => {
 
@@ -94,6 +95,9 @@ const Registration = () => {
                     type: 'success',
                     statusText: 'Successfully logged in!'
                 });
+
+               localStorage.setItem("token",JSON.stringify(person.token));
+
             }
 
         } catch (error) {

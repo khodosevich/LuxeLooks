@@ -18,6 +18,7 @@ import SignIn from "./pages/signin/SignIn";
 import Profile from "./components/profile/Profile";
 import CategoryTypeItems from "./components/popularcategory/CategoryTypeItems";
 import ProductItem from "./pages/product/ProductItem";
+import AuthGuard from "./components/authguard/AuthGuard";
 
 
 export const MyContext = React.createContext();
@@ -29,6 +30,7 @@ function App() {
     const location = useLocation();
 
     const [user, setUser] = useState({
+        id:"",
         token: "",
         username: "",
         email:"",
@@ -42,6 +44,7 @@ function App() {
     <div className={style.App}>
         <MyContext.Provider value={{user,setUser}}>
             {renderHeaderCondition && <Header/>}
+            <AuthGuard>
                 <Routes>
                     <Route path="/" element={<Home/>} />
                     <Route path="/about" element={<About/>} />
@@ -57,6 +60,7 @@ function App() {
                     <Route path="/category/:categoryName" element={<CategoryTypeItems/>} />
                     <Route path="/product/:productName" element={<ProductItem/>} />
                 </Routes>
+            </AuthGuard>
             {renderFooterCondition && <Footer/>}
         </MyContext.Provider>
     </div>

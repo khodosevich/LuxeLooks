@@ -8,21 +8,14 @@ const NewReview = ({productId,userToken, newReview}) => {
     const [isAlert, setIsAlert] = useState(false)
     const [alertData,setAlertData] = useState("")
 
-    const getId = () => {
-        const token = userToken;
-        const decoded = jwt_decode(token);
-
-        const idUser = decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"];
-
-        return idUser;
-    }
-
     const [reviewInput, setReviewInput] = useState("")
 
     const createReview = async () => {
 
+        const decoded = jwt_decode(JSON.parse(localStorage.getItem("token")));
+
         const data = {
-            "UserId": getId(),
+            "UserId": decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"],
             "Title": reviewInput,
             "ProductId": productId
         }
