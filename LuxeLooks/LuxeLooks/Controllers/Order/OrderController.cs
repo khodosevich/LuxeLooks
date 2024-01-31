@@ -53,7 +53,7 @@ public class OrderController : Controller
             }
         }
         List<Guid> productsIds = request.ProductsIds.Select(Guid.Parse).ToList();
-        var userResponse = await _userService.GetByIdAsync(userId);
+        var userResponse = await _userService.GetByIdAsync(request.UserId);
         if (userResponse.StatusCode!=HttpStatusCode.OK)
         {
             return HandleResponse(userResponse);

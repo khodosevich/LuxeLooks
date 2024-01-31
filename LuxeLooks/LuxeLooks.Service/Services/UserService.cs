@@ -2,6 +2,7 @@
 using LuxeLooks.DataManagment.Repositories;
 using LuxeLooks.Domain.Entity;
 using LuxeLooks.Domain.Response;
+using LuxeLooks.SharedLibrary.Mappers;
 using Microsoft.Extensions.Logging;
 
 namespace LuxeLooks.Service.Services;
@@ -11,12 +12,14 @@ public class UserService
     private readonly UserRepository _userRepository;
     private readonly ILogger<UserService> _logger;
     private readonly RoleService _roleService;
+    private readonly StringToGuidMapper _guidMapper;
 
-    public UserService(UserRepository userRepository, ILogger<UserService> logger, RoleService roleService)
+    public UserService(UserRepository userRepository, ILogger<UserService> logger, RoleService roleService, StringToGuidMapper guidMapper)
     {
         _userRepository = userRepository;
         _logger = logger;
         _roleService = roleService;
+        _guidMapper = guidMapper;
     }
 
     private BaseResponse<T> HandleError<T>(string description, HttpStatusCode error)
@@ -52,9 +55,10 @@ public class UserService
     }
 
 
-    public async Task<BaseResponse<User>> GetByIdAsync(Guid id)
+    public async Task<BaseResponse<User>> GetByIdAsync(string id)
     {
-        var user = (await _userRepository.GetAll()).FirstOrDefault(a=>a.Id==id);
+        var userId = _guidMapper.MapTo(id);
+        var user = (await _userRepository.GetAll()).FirstOrDefault(a=>a.Id==userId);
         if (user == null)
         {
             return HandleError<User>($"User with id: {id} not found", HttpStatusCode.NoContent);
