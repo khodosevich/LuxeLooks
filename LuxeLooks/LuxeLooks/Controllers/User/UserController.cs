@@ -13,7 +13,7 @@ public class UserController : ControllerBase
         _userService = userService;
     }
 
-    [HttpGet("GetByid")]
+    [HttpGet("GetByid/{id}")]
     public async Task<IActionResult> GetUserById(string id)
     {
         var userResponse = await _userService.GetByIdAsync(id);
