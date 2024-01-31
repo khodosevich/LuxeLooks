@@ -68,6 +68,9 @@ const SignIn = () => {
                     Password: "",
                     UserName: ""
                 });
+
+                localStorage.setItem("token",JSON.stringify(person.token));
+
             } catch (error) {
                 if (error.response && error.response.status === 400) {
                     setInfoAlert( {type:"error" ,statusText:error.response.data} )

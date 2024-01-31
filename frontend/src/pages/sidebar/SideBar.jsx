@@ -29,6 +29,9 @@ const SideBar = () => {
             email:"",
             isAuthenticated: false,
         })
+
+        localStorage.removeItem("token")
+
     }
 
     useEffect(() => {
