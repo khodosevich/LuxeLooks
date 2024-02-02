@@ -181,5 +181,16 @@ export const method = {
         async getReviewsByUserId() {
 
         }
+    },
+
+    async getUserById(id) {
+        try{
+
+            return await api.get(`http://localhost:5219/User/GetByid/${id}`)
+
+        }catch (e) {
+            throw e;
+        }
     }
+
 }

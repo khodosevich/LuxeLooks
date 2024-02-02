@@ -12,7 +12,20 @@ const NewReview = ({productId,userToken, newReview}) => {
 
     const createReview = async () => {
 
-        const decoded = jwt_decode(JSON.parse(localStorage.getItem("token")));
+        const token = JSON.parse(localStorage.getItem("token"));
+
+        if( !token ){
+            setAlertData("Need authorization")
+            setIsAlert(true)
+
+            setTimeout(() =>{
+                setIsAlert(false)
+                setAlertData("")
+            },3000)
+            return
+        }
+
+        const decoded = jwt_decode(token)
 
         const data = {
             "UserId": decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"],

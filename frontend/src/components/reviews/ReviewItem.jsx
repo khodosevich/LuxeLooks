@@ -17,7 +17,7 @@ const ReviewItem = ({title,createDate, userId}) => {
                 <Box>
                     <Typography variant="body1">
                         {
-                            createDate
+                            createDate.split("T")[0].split("-").reverse().join(".")
                         }
                     </Typography>
                 </Box>

@@ -24,11 +24,13 @@ const AuthGuard = (props) => {
                 }
             })
         } else {
-
-
             try{
                 const token = JSON.parse(localStorage.getItem("token"))
                 const decoded = jwt_decode(token);
+
+                console.log(decoded)
+
+                if(decoded.exp)
 
                 setChecked(true)
                 setUser(prev => {
