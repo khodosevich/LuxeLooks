@@ -61,7 +61,10 @@
   border: 1px solid #D7DADD;
 
   padding: 5.5px 16px;
-
+  &:hover {
+    transform: scale(1.1);
+    background: #e8e8e8;
+  }
 }
 
 .subscribe__info-email {
