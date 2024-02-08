@@ -15,6 +15,8 @@
 - [Диаграмма компонентов](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Component.md)
 - [Диаграмма классов](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Classes.md)
 - [Диаграмма вариантов использования](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/UseCase.md)
+- [Диаграммы As is и To be](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Architecture.md)
+
 
 ### Тестирование
 
