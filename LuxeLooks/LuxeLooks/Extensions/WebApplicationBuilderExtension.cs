@@ -67,6 +67,14 @@ public static class WebApplicationBuilderExtension
                     (JwtBearerDefaults.AuthenticationScheme)
                 .RequireAuthenticatedUser()
                 .Build());
+        builder.Services.AddAuthorization(options =>
+        {
+            options.AddPolicy("AdminArea", policy =>
+            {
+                policy.RequireAuthenticatedUser();
+                policy.RequireRole("Admin");
+            });
+        });
     }
 
     public static void AddServices(this WebApplicationBuilder builder)

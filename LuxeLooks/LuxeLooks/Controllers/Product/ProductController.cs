@@ -13,16 +13,13 @@ public class ProductController : ControllerBase
 {
     private readonly ILogger<ProductController> _logger;
     private readonly ProductService _productService;
-    private readonly NotificationService _notificationService;
     private readonly OrderService _orderService;
     private readonly CategoryService _categoryService;
 
-    public ProductController(ILogger<ProductController> logger, ProductService productService,
-        NotificationService notificationService, OrderService orderService, CategoryService categoryService)
+    public ProductController(ILogger<ProductController> logger, ProductService productService, OrderService orderService, CategoryService categoryService)
     {
         _logger = logger;
         _productService = productService;
-        _notificationService = notificationService;
         _orderService = orderService;
         _categoryService = categoryService;
     }
@@ -76,50 +73,6 @@ public class ProductController : ControllerBase
     {
         var response = await _productService.GetByName(name);
         return HandleResponse(response);
-    }
-
-    [HttpGet("GetMany/{productsIds}")]
-    public async Task<IActionResult> GetManyProductsByIds(List<string> productsIds)
-    {
-        foreach (var productId in productsIds)
-        {
-            if (!Guid.TryParse(productId, out var guidProductId))
-            {
-                return BadRequest("Invalid products ID format");
-            }
-        }
-
-        List<Guid> guidProductsIds = productsIds.Select(Guid.Parse).ToList();
-        var response = await _productService.GetManyProducts(guidProductsIds);
-        return HandleResponse(response);
-    }
-
-    [HttpPut("CreateProduct")]
-    public async Task<IActionResult> CreateProduct([FromBody]CreateProductRequest request)
-    {
-        if (!Enum.IsDefined(typeof(ProductType), request.Type))
-        {
-            return BadRequest("Invalid type of product");
-        }
-
-        var product = new Domain.Entity.Product()
-        {
-            Description = request.Description,
-            Type = (ProductType)Enum.Parse(typeof(ProductType), request.Type),
-            ImageUrl = request.ImageUrl,
-            IsForKids = request.IsForKids,
-            IsForMen = request.IsForMen,
-            Name = request.Name,
-            Price = request.Price
-        };
-        var response = await _productService.CreateProduct(product);
-        if (response.StatusCode!=HttpStatusCode.OK)
-        {
-            return HandleResponse(response);
-        }
-
-        //await _notificationService.SendNotificationsForNewProductAsync(product);
-        return Ok();
     }
 
     [HttpGet("GetPopularProducts")]
