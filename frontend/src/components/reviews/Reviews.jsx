@@ -29,7 +29,7 @@ const Reviews = ({productId,userToken}) => {
             </Typography>
             <Box sx={{display:"flex",gap:"20px" , flexDirection:"column"}}>
                 {
-                    reviewsProduct.length > 0 && reviewsProduct.map(item => (
+                    reviewsProduct > 0 && reviewsProduct.map(item => (
                         <ReviewItem key={item.id} title={item.title} createDate={item.createDate} userId={item.userId}/>
                     ))
                 }

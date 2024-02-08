@@ -54,6 +54,10 @@
   border: 1px solid #D7DADD;
   padding: 5.5px 16px;
 }
+.subscribe__info-choice__btn:hover {
+  transform: scale(1.1);
+  background: #e8e8e8;
+}
 
 .subscribe__info-email {
   margin-top: 32px;

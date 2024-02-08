@@ -82,6 +82,7 @@
 
   &:hover {
     background: #ccf0f1;
+
   }
 }
 
@@ -106,6 +107,13 @@
   transition: all 0.5s;
 
   &:hover {
-    background: #4b4848;
+    background: #5b5959;
+  }
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #3a3737;
+  &:hover {
+    color: #5b5959;
   }
 }
