@@ -6,6 +6,7 @@ using LuxeLooks.Domain.Models.Requests;
 using LuxeLooks.Domain.Response;
 using LuxeLooks.Service.Services;
 using LuxeLooks.SharedLibrary.Exceptions;
+using LuxeLooks.SharedLibrary.Mappers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,10 +19,12 @@ public class ProductController:ControllerBase
 {
     private readonly ProductService _productService;
     private readonly ILogger<ProductController> _logger;
-    public ProductController(ProductService productService, ILogger<ProductController> logger)
+    private readonly StringToGuidMapper _guidMapper;
+    public ProductController(ProductService productService, ILogger<ProductController> logger, StringToGuidMapper guidMapper)
     {
         _productService = productService;
         _logger = logger;
+        _guidMapper = guidMapper;
     }
     private IActionResult HandleResponse<T>(BaseResponse<T> response)
     {
@@ -51,6 +54,7 @@ public class ProductController:ControllerBase
         {
             var product = new Domain.Entity.Product()
             {
+                Id = _guidMapper.MapTo(request.Id),
                 Description = request.Description,
                 Type = GetEnumValueFromString(request.Type),
                 ImageUrl = request.ImageUrl,
@@ -61,7 +65,7 @@ public class ProductController:ControllerBase
             };
             await _productService.UpdateProduct(product);
         }
-        catch (SerializationException e)
+        catch (Exception e)
         {
             return BadRequest(e.Message);
         }
