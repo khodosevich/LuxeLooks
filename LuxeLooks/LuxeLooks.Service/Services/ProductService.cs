@@ -4,7 +4,9 @@ using LuxeLooks.Domain.Entity;
 using LuxeLooks.Domain.Enum;
 using LuxeLooks.Domain.Extensions;
 using LuxeLooks.Domain.Models;
+using LuxeLooks.Domain.Models.Requests;
 using LuxeLooks.Domain.Response;
+using LuxeLooks.SharedLibrary.Mappers;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 
@@ -15,12 +17,14 @@ public class ProductService
     private readonly ProductRepository _productRepository;
     private readonly ILogger<ProductService> _logger;
     private readonly IMemoryCache _cache;
+    private readonly StringToGuidMapper _guidMapper;
 
-    public ProductService(ProductRepository productRepository, ILogger<ProductService> logger, IMemoryCache cache)
+    public ProductService(ProductRepository productRepository, ILogger<ProductService> logger, IMemoryCache cache, StringToGuidMapper guidMapper)
     {
         _productRepository = productRepository;
         _logger = logger;
         _cache = cache;
+        _guidMapper = guidMapper;
     }
 
     public List<ProductResponse> GetProductResponsesFromProducts(IEnumerable<Product> products)
@@ -154,5 +158,26 @@ public class ProductService
         response.Data = GetProductResponsesFromProducts(products);
         response.StatusCode = HttpStatusCode.OK;
         return response;
+    }
+
+    public async Task UpdateProduct(Product product)
+    {
+        var productFromRepository = (await _productRepository.GetAll()).FirstOrDefault(a => a.Id == product.Id);
+        if (productFromRepository==null)
+        {
+            throw new InvalidOperationException("Product not found");
+        }
+        await _productRepository.Update(product);
+    }
+
+    public async Task DeleteProduct(string id)
+    {
+        var guidId = _guidMapper.MapTo(id);
+        var productFromRepository = (await _productRepository.GetAll()).FirstOrDefault(a => a.Id == guidId);
+        if (productFromRepository==null)
+        {
+            throw new InvalidOperationException("Product not found");
+        }
+        await _productRepository.Delete(productFromRepository);
     }
 }
