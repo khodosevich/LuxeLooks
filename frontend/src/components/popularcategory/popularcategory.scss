@@ -52,9 +52,12 @@
 }
 
 .popular-category__item-img {
-  width: 250px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
+  border: 2px solid #b6b2b2;
 
-
+  &:hover {
+    border: 2px solid #3a3737;
+  }
 }

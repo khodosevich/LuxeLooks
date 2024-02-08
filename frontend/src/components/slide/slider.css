@@ -92,7 +92,16 @@
   transition: all 0.5s;
 }
 .btn__slider__second:hover {
-  background: #4b4848;
+  background: #5b5959;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #3a3737;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #5b5959;
 }
 
 /*# sourceMappingURL=slider.css.map */

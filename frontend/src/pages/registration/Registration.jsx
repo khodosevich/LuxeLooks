@@ -154,8 +154,6 @@ const Registration = () => {
                     : <div className="registration">
                         <div className="registration__container">
 
-
-
                             {showAlert && (
                                 <OwnAlert props={infoAlert} />
                             )}
@@ -164,7 +162,6 @@ const Registration = () => {
                             <div className="registration-content">
 
                                 {/*{alertData.isOpen && <OwnAlert props={alertData} />}*/}
-
 
                                 <h3>Sign Up</h3>
 

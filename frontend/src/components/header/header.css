@@ -47,7 +47,7 @@
 }
 .menu__item:hover {
   transform: scale(1.2);
-  color: #cccccc;
+  color: #888888;
 }
 
 .sale {
