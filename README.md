@@ -16,7 +16,7 @@
 - [Диаграмма классов](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Classes.md)
 - [Диаграмма вариантов использования](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/UseCase.md)
 - [Диаграммы As is и To be](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Architecture.md)
-
+- [Парное программирование](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Programming.md)
 
 ### Тестирование
 
