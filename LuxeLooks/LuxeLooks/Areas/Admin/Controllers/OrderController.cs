@@ -44,7 +44,7 @@ public class OrderController : ControllerBase
     [SwaggerResponse(statusCode: 404, description: "Invalid operation")]
     [SwaggerResponse(statusCode: 400, description: "Invalid request")]
     [SwaggerResponse(statusCode: 200)]
-    [HttpPost("UpdateStatus")]
+    [HttpPut("UpdateStatus")]
     public async Task<IActionResult> UpdateOrderStatus([FromBody] string newStatus,string id)
     {
         try
