@@ -6,6 +6,7 @@ import Man from "../../pages/menu-categories/Man";
 import MyOrders from "../myorders/MyOrders";
 import ProfileInfo from "./ProfileInfo";
 import Bag from "../../pages/Bag/Bag";
+import UserBag from "./UserBag";
 
 
 const Profile = () => {
@@ -22,6 +23,7 @@ const Profile = () => {
 
                         <Routes>
                             <Route path="/profileinfo" element={<ProfileInfo />} />
+                            <Route path="/bag" element={<UserBag />} />
                             <Route path="/myorders" element={<MyOrders />} />
                         </Routes>
                     </div>

@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 
 import clock from "../../assets/Clock.svg"
-import plus from "../../assets/Plus.svg"
 import OrderElement from "./OrderElement";
+import AddIcon from '@mui/icons-material/Add';
+import CloseIcon from '@mui/icons-material/Close';
 
 const OrderItem = ({props}) => {
 
@@ -113,7 +114,7 @@ const OrderItem = ({props}) => {
                 </div>
 
                 <div>
-                    <img onClick={openOrdersItems} style={{cursor:"pointer"}} src={plus} alt=""/>
+                    {isOpen ? <CloseIcon onClick={openOrdersItems}/> : <AddIcon onClick={openOrdersItems}/>}
                 </div>
             </div>
 

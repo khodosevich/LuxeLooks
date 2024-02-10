@@ -14,7 +14,6 @@ const Reviews = ({productId,userToken}) => {
 
     const fetchReviews = async () => {
         const data = await method.reviews.getReviewsByProduct(productId)
-        console.log(data)
         setReviewsProduct(data)
     }
 
@@ -29,7 +28,7 @@ const Reviews = ({productId,userToken}) => {
             </Typography>
             <Box sx={{display:"flex",gap:"20px" , flexDirection:"column"}}>
                 {
-                    reviewsProduct > 0 && reviewsProduct.map(item => (
+                    reviewsProduct && reviewsProduct.map(item => (
                         <ReviewItem key={item.id} title={item.title} createDate={item.createDate} userId={item.userId}/>
                     ))
                 }

@@ -8,6 +8,8 @@ import ProductNotExist from "../../components/productelement/ProductNotExist";
 import {MyContext} from "../../App";
 import OwnAlert from "../../components/alert/OwnAlert";
 import Reviews from "../../components/reviews/Reviews";
+import jwt_decode from "jwt-decode";
+import {Alert, AlertTitle} from "@mui/material";
 
 const ProductItem = () => {
 
@@ -41,7 +43,24 @@ const ProductItem = () => {
     }, [productId]);
 
 
+    const [isAlert, setIsAlert] = useState(false)
+    const [alertData,setAlertData] = useState("")
     const addToCart = async () => {
+
+        const token = JSON.parse(localStorage.getItem("token"));
+
+        if( !token ){
+            setAlertData("Need authorization")
+            setIsAlert(true)
+
+            setTimeout(() =>{
+                setIsAlert(false)
+                setAlertData("")
+            },3000)
+            return
+        }
+
+
         try {
             const response = await method.addToCart(product.id, user.token).then(r => {
                 setAlertConfig({
@@ -108,6 +127,12 @@ const ProductItem = () => {
                             alertStatus && <OwnAlert props={alertConfig} />
                           }
 
+                            {
+                                isAlert &&
+                                <Alert sx={{position:"absolute", width:"100%"}} severity="error">
+                                    <AlertTitle>{alertData}</AlertTitle>
+                                </Alert>
+                            }
 
                                     <div style={{
                                         width: "1230px",
