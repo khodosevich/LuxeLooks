@@ -45,11 +45,11 @@ public class OrderController : ControllerBase
     [SwaggerResponse(statusCode: 400, description: "Invalid request")]
     [SwaggerResponse(statusCode: 200)]
     [HttpPut("UpdateStatus")]
-    public async Task<IActionResult> UpdateOrderStatus([FromBody] string newStatus,string id)
+    public async Task<IActionResult> UpdateOrderStatus([FromBody] UpdateOrderStatusRequest request)
     {
         try
         {
-            await _orderService.UpdateStatus(newStatus, id);
+            await _orderService.UpdateStatus(request.NewStatus,request.Id);
         }
         catch (SerializationException e)
         {

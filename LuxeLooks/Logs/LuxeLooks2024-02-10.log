@@ -2624,3 +2624,798 @@ FROM "Orders" AS o
 2024-02-10 17:29:25.3057|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 PUT http://localhost:5219/Admin/Order/UpdateStatus application/json 78 - 405 0 - 6.6825ms 
 2024-02-10 17:29:25.3057|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8G07684G", Request id "0HN1A8G07684G:00000007": started reading request body. 
 2024-02-10 17:29:25.3057|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8G07684G", Request id "0HN1A8G07684G:00000007": done reading request body. 
+2024-02-10 17:30:44.4340|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 PUT http://localhost:5219/Admin/Order/UpdateStatus application/json 78 
+2024-02-10 17:30:44.4340|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-02-10 17:30:44.4340|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2024-02-10 17:30:44.4340|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was successfully authenticated. 
+2024-02-10 17:30:44.4340|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2024-02-10 17:30:44.4340|0|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {2d9e62db-d7bf-4181-92ca-c331696ba564} with purposes ('C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\', 'SessionMiddleware'). 
+2024-02-10 17:30:44.4340|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2024-02-10 17:30:44.4340|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/Admin/Order/UpdateStatus' 
+2024-02-10 17:30:44.4340|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' with route pattern '{area}/Order/UpdateStatus' is valid for the request path '/Admin/Order/UpdateStatus' 
+2024-02-10 17:30:44.4340|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:30:44.4340|0|DEBUG|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2024-02-10 17:30:44.4340|0|DEBUG|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2024-02-10 17:30:44.4340|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2024-02-10 17:30:44.4340|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:30:44.4564|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {area = "Admin", action = "UpdateOrderStatus", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateOrderStatus(System.String, System.String) on controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks). 
+2024-02-10 17:30:44.4564|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2024-02-10 17:30:44.4564|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2024-02-10 17:30:44.4564|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-02-10 17:30:44.4564|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-02-10 17:30:44.4564|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-02-10 17:30:44.4564|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks) 
+2024-02-10 17:30:44.4629|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks) 
+2024-02-10 17:30:44.4629|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'newStatus' of type 'System.String' ... 
+2024-02-10 17:30:44.4629|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'newStatus' of type 'System.String' using the name '' in request data ... 
+2024-02-10 17:30:44.4629|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2024-02-10 17:30:44.4629|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8G07684G", Request id "0HN1A8G07684G:00000008": started reading request body. 
+2024-02-10 17:30:44.4629|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8G07684G", Request id "0HN1A8G07684G:00000008": done reading request body. 
+2024-02-10 17:30:44.4779|0|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter threw an exception: The JSON value could not be converted to System.String. Path: $ | LineNumber: 0 | BytePositionInLine: 1. 
+2024-02-10 17:30:44.4779|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'newStatus' of type 'System.String'. 
+2024-02-10 17:30:44.4779|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'newStatus' of type 'System.String'. 
+2024-02-10 17:30:44.4779|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'newStatus' of type 'System.String' ... 
+2024-02-10 17:30:44.4779|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'newStatus' of type 'System.String'. 
+2024-02-10 17:30:44.4779|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.String' ... 
+2024-02-10 17:30:44.4779|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.String' using the name '' in request data ... 
+2024-02-10 17:30:44.4779|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Could not find a value in the request with name '' for binding parameter 'id' of type 'System.String'. 
+2024-02-10 17:30:44.4779|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.String'. 
+2024-02-10 17:30:44.4779|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.String'. 
+2024-02-10 17:30:44.4779|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.String' ... 
+2024-02-10 17:30:44.4779|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.String'. 
+2024-02-10 17:30:44.4779|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:30:44.4779|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:30:44.4779|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:30:44.4940|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter|The request has model state errors, returning an error response. 
+2024-02-10 17:30:44.4940|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:30:44.4940|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'. 
+2024-02-10 17:30:44.4940|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:30:44.4940|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:30:44.4940|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:30:44.4940|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:30:44.4940|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2024-02-10 17:30:44.4940|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2024-02-10 17:30:44.4940|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-02-10 17:30:44.4940|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types 'application/problem+json, application/problem+xml, application/problem+json, application/problem+xml'. 
+2024-02-10 17:30:44.4940|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response. 
+2024-02-10 17:30:44.4940|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+2024-02-10 17:30:44.5125|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2024-02-10 17:30:44.5125|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:30:44.5125|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:30:44.5125|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks) in 53.8348ms 
+2024-02-10 17:30:44.5125|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:30:44.5125|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8G07684G" completed keep alive response. 
+2024-02-10 17:30:44.5125|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 PUT http://localhost:5219/Admin/Order/UpdateStatus application/json 78 - 400 - application/problem+json;+charset=utf-8 81.5828ms 
+2024-02-10 17:32:08.3179|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 PUT http://localhost:5219/Admin/Order/UpdateStatus application/json 78 
+2024-02-10 17:32:08.3179|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-02-10 17:32:08.3179|0|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Failed to validate the token. Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '10.02.2024 14:25:52', Current time: '10.02.2024 14:32:08'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-02-10 17:32:08.3218|0|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '10.02.2024 14:25:52', Current time: '10.02.2024 14:32:08'. 
+2024-02-10 17:32:08.3218|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2024-02-10 17:32:08.3218|0|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {2d9e62db-d7bf-4181-92ca-c331696ba564} with purposes ('C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\', 'SessionMiddleware'). 
+2024-02-10 17:32:08.3218|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2024-02-10 17:32:08.3218|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/Admin/Order/UpdateStatus' 
+2024-02-10 17:32:08.3218|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' with route pattern '{area}/Order/UpdateStatus' is valid for the request path '/Admin/Order/UpdateStatus' 
+2024-02-10 17:32:08.3218|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:32:08.3218|0|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin) 
+2024-02-10 17:32:08.3218|0|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was challenged. 
+2024-02-10 17:32:08.3218|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8G07684G" completed keep alive response. 
+2024-02-10 17:32:08.3218|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 PUT http://localhost:5219/Admin/Order/UpdateStatus application/json 78 - 401 0 - 16.7569ms 
+2024-02-10 17:32:08.3218|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8G07684G", Request id "0HN1A8G07684G:00000009": started reading request body. 
+2024-02-10 17:32:08.3218|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8G07684G", Request id "0HN1A8G07684G:00000009": done reading request body. 
+2024-02-10 17:32:21.2761|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 PUT http://localhost:5219/Admin/Order/UpdateStatus application/json 78 
+2024-02-10 17:32:21.2761|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-02-10 17:32:21.2761|0|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Failed to validate the token. Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '10.02.2024 14:25:52', Current time: '10.02.2024 14:32:21'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-02-10 17:32:21.2761|0|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '10.02.2024 14:25:52', Current time: '10.02.2024 14:32:21'. 
+2024-02-10 17:32:21.2761|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2024-02-10 17:32:21.2761|0|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {2d9e62db-d7bf-4181-92ca-c331696ba564} with purposes ('C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\', 'SessionMiddleware'). 
+2024-02-10 17:32:21.2761|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2024-02-10 17:32:21.2761|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/Admin/Order/UpdateStatus' 
+2024-02-10 17:32:21.2761|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' with route pattern '{area}/Order/UpdateStatus' is valid for the request path '/Admin/Order/UpdateStatus' 
+2024-02-10 17:32:21.2761|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:32:21.2761|0|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin) 
+2024-02-10 17:32:21.2761|0|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was challenged. 
+2024-02-10 17:32:21.2761|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8G07684G" completed keep alive response. 
+2024-02-10 17:32:21.2761|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 PUT http://localhost:5219/Admin/Order/UpdateStatus application/json 78 - 401 0 - 8.0273ms 
+2024-02-10 17:32:21.2761|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8G07684G", Request id "0HN1A8G07684G:0000000A": started reading request body. 
+2024-02-10 17:32:21.2761|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8G07684G", Request id "0HN1A8G07684G:0000000A": done reading request body. 
+2024-02-10 17:32:29.4843|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5219/Account/Login application/json 70 
+2024-02-10 17:32:29.4843|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-02-10 17:32:29.4843|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2024-02-10 17:32:29.4843|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2024-02-10 17:32:29.4843|0|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {2d9e62db-d7bf-4181-92ca-c331696ba564} with purposes ('C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\', 'SessionMiddleware'). 
+2024-02-10 17:32:29.4843|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|POST requests are not supported 
+2024-02-10 17:32:29.4843|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/Account/Login' 
+2024-02-10 17:32:29.4843|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'LuxeLooks.Controllers.Account.AccountController.Authenticate (LuxeLooks)' with route pattern 'Account/Login' is valid for the request path '/Account/Login' 
+2024-02-10 17:32:29.4843|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'LuxeLooks.Controllers.Account.AccountController.Authenticate (LuxeLooks)' 
+2024-02-10 17:32:29.4843|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2024-02-10 17:32:29.4843|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'LuxeLooks.Controllers.Account.AccountController.Authenticate (LuxeLooks)' 
+2024-02-10 17:32:29.4982|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Authenticate", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[LuxeLooks.Domain.Models.Identity.AuthResponse]] Authenticate(LuxeLooks.Domain.Models.Identity.AuthRequest) on controller LuxeLooks.Controllers.Account.AccountController (LuxeLooks). 
+2024-02-10 17:32:29.4982|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2024-02-10 17:32:29.4982|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2024-02-10 17:32:29.4982|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-02-10 17:32:29.4982|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-02-10 17:32:29.4982|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-02-10 17:32:29.4982|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller LuxeLooks.Controllers.Account.AccountController (LuxeLooks) 
+2024-02-10 17:32:29.4982|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller LuxeLooks.Controllers.Account.AccountController (LuxeLooks) 
+2024-02-10 17:32:29.4982|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.AuthRequest' ... 
+2024-02-10 17:32:29.4982|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.AuthRequest' using the name '' in request data ... 
+2024-02-10 17:32:29.4982|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2024-02-10 17:32:29.4982|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8G07684G", Request id "0HN1A8G07684G:0000000B": started reading request body. 
+2024-02-10 17:32:29.4982|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8G07684G", Request id "0HN1A8G07684G:0000000B": done reading request body. 
+2024-02-10 17:32:29.4982|0|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'LuxeLooks.Domain.Models.Identity.AuthRequest' 
+2024-02-10 17:32:29.4982|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.AuthRequest'. 
+2024-02-10 17:32:29.4982|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.AuthRequest'. 
+2024-02-10 17:32:29.4982|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.AuthRequest' ... 
+2024-02-10 17:32:29.5113|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'request' of type 'LuxeLooks.Domain.Models.Identity.AuthRequest'. 
+2024-02-10 17:32:29.5113|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:32:29.5113|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:32:29.5113|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:32:29.5113|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:32:29.5113|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method LuxeLooks.Controllers.Account.AccountController.Authenticate (LuxeLooks) - Validation state: Valid 
+2024-02-10 17:32:29.5113|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method LuxeLooks.Controllers.Account.AccountController.Authenticate (LuxeLooks) with arguments (LuxeLooks.Domain.Models.Identity.AuthRequest) 
+2024-02-10 17:32:29.5113|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.11 initialized 'ApplicationDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.11+c25a0d7b68d66c6ab3849a3b4333964faea6adc9' with options: None 
+2024-02-10 17:32:29.5113|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2024-02-10 17:32:29.5113|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2024-02-10 17:32:29.5113|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (0ms). 
+2024-02-10 17:32:29.5113|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2024-02-10 17:32:29.5113|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (1ms). 
+2024-02-10 17:32:29.5113|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2024-02-10 17:32:29.5693|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:29.5693|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2024-02-10 17:32:29.5742|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2024-02-10 17:32:29.5742|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:32:29.5742|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:32:29.5742|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:29.5742|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 1ms reading results. 
+2024-02-10 17:32:29.5742|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:29.5742|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2024-02-10 17:32:29.5742|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2024-02-10 17:32:29.5742|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2024-02-10 17:32:29.5742|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2024-02-10 17:32:29.5742|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2024-02-10 17:32:29.5742|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:29.5742|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2024-02-10 17:32:29.5742|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2024-02-10 17:32:29.5742|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:29.5742|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results. 
+2024-02-10 17:32:29.5742|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:29.5742|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2024-02-10 17:32:30.6094|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2024-02-10 17:32:30.6094|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (1ms). 
+2024-02-10 17:32:30.6094|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (1ms). 
+2024-02-10 17:32:30.6094|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2024-02-10 17:32:30.6094|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:30.6094|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2024-02-10 17:32:30.6094|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2024-02-10 17:32:30.6094|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:30.6094|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results. 
+2024-02-10 17:32:30.6094|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:30.6094|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2024-02-10 17:32:30.6187|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2024-02-10 17:32:30.6187|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2024-02-10 17:32:30.6187|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2024-02-10 17:32:30.6187|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2024-02-10 17:32:30.6187|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:30.6187|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT r."Id", r."NormalizedRoleName", r."RoleName"
+FROM "Roles" AS r 
+2024-02-10 17:32:30.6187|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT r."Id", r."NormalizedRoleName", r."RoleName"
+FROM "Roles" AS r 
+2024-02-10 17:32:30.6187|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Role' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:32:30.6187|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Role' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:32:30.6187|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:30.6187|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 2ms reading results. 
+2024-02-10 17:32:30.6187|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:30.6187|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2024-02-10 17:32:30.6187|0|INFO|LuxeLooks.Service.Services.RoleService|Successfully get role with id: 44546e06-8719-4ad8-b88a-f271ae9d6eab 
+2024-02-10 17:32:30.6187|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2024-02-10 17:32:30.6187|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2024-02-10 17:32:30.6187|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2024-02-10 17:32:30.6187|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2024-02-10 17:32:30.6187|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:30.6348|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2024-02-10 17:32:30.6348|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Email", u."NormalizedUserName", u."PasswordHash", u."PasswordSalt", u."RefreshToken", u."RefreshTokenExpiryTime", u."RoleId", u."UserName"
+FROM "Users" AS u 
+2024-02-10 17:32:30.6348|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:30.6348|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results. 
+2024-02-10 17:32:30.6348|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:30.6348|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2024-02-10 17:32:30.6348|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'User' tracked by 'ApplicationDbContext' changed state from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:32:30.6348|0|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'ApplicationDbContext'. 
+2024-02-10 17:32:30.6348|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'ApplicationDbContext'. 
+2024-02-10 17:32:30.6348|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'ApplicationDbContext'. 
+2024-02-10 17:32:30.6348|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2024-02-10 17:32:30.6348|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:30.6348|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2024-02-10 17:32:30.6348|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2024-02-10 17:32:30.6348|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2024-02-10 17:32:30.6494|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p8='?' (DbType = Guid), @p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?' (DbType = DateTime), @p6='?' (DbType = Guid), @p7='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Users" SET "Email" = @p0, "NormalizedUserName" = @p1, "PasswordHash" = @p2, "PasswordSalt" = @p3, "RefreshToken" = @p4, "RefreshTokenExpiryTime" = @p5, "RoleId" = @p6, "UserName" = @p7
+WHERE "Id" = @p8; 
+2024-02-10 17:32:30.6494|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?' (DbType = DateTime), @p6='?' (DbType = Guid), @p7='?'], CommandType='Text', CommandTimeout='30']
+UPDATE "Users" SET "Email" = @p0, "NormalizedUserName" = @p1, "PasswordHash" = @p2, "PasswordSalt" = @p3, "RefreshToken" = @p4, "RefreshTokenExpiryTime" = @p5, "RoleId" = @p6, "UserName" = @p7
+WHERE "Id" = @p8; 
+2024-02-10 17:32:30.6494|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:30.6494|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results. 
+2024-02-10 17:32:30.6494|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:32:30.6494|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2024-02-10 17:32:30.6494|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'User' tracked by 'ApplicationDbContext' changed state from 'Modified' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:32:30.6494|0|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database. 
+2024-02-10 17:32:30.6494|0|INFO|LuxeLooks.Controllers.Account.AccountController|Successfuly login user: Admin 
+2024-02-10 17:32:30.6494|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method LuxeLooks.Controllers.Account.AccountController.Authenticate (LuxeLooks), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1150.3114ms. 
+2024-02-10 17:32:30.6649|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:32:30.6649|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:32:30.6649|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:32:30.6649|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:32:30.6649|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:32:30.6649|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:32:30.6649|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-02-10 17:32:30.6649|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2024-02-10 17:32:30.6649|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-02-10 17:32:30.6649|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2024-02-10 17:32:30.6649|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2024-02-10 17:32:30.6649|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2024-02-10 17:32:30.6649|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'LuxeLooks.Domain.Models.Identity.AuthResponse'. 
+2024-02-10 17:32:30.6649|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2024-02-10 17:32:30.6649|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:32:30.6649|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:32:30.6649|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action LuxeLooks.Controllers.Account.AccountController.Authenticate (LuxeLooks) in 1175.4451ms 
+2024-02-10 17:32:30.6649|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'LuxeLooks.Controllers.Account.AccountController.Authenticate (LuxeLooks)' 
+2024-02-10 17:32:30.6649|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8G07684G" completed keep alive response. 
+2024-02-10 17:32:30.6649|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed. 
+2024-02-10 17:32:30.6649|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'LuxeLooks' on server ''. 
+2024-02-10 17:32:30.6649|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database 'LuxeLooks' on server '' (0ms). 
+2024-02-10 17:32:30.6649|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5219/Account/Login application/json 70 - 200 - application/json;+charset=utf-8 1194.3220ms 
+2024-02-10 17:32:40.2466|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 PUT http://localhost:5219/Admin/Order/UpdateStatus application/json 78 
+2024-02-10 17:32:40.2466|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-02-10 17:32:40.2466|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2024-02-10 17:32:40.2466|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was successfully authenticated. 
+2024-02-10 17:32:40.2466|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2024-02-10 17:32:40.2466|0|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {2d9e62db-d7bf-4181-92ca-c331696ba564} with purposes ('C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\', 'SessionMiddleware'). 
+2024-02-10 17:32:40.2466|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2024-02-10 17:32:40.2466|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/Admin/Order/UpdateStatus' 
+2024-02-10 17:32:40.2466|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' with route pattern '{area}/Order/UpdateStatus' is valid for the request path '/Admin/Order/UpdateStatus' 
+2024-02-10 17:32:40.2466|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:32:40.2466|0|DEBUG|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2024-02-10 17:32:40.2466|0|DEBUG|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2024-02-10 17:32:40.2466|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2024-02-10 17:32:40.2466|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:32:40.2466|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {area = "Admin", action = "UpdateOrderStatus", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateOrderStatus(System.String, System.String) on controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks). 
+2024-02-10 17:32:40.2466|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2024-02-10 17:32:40.2466|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2024-02-10 17:32:40.2466|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-02-10 17:32:40.2466|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-02-10 17:32:40.2466|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-02-10 17:32:40.2466|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks) 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks) 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'newStatus' of type 'System.String' ... 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'newStatus' of type 'System.String' using the name '' in request data ... 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8G07684G", Request id "0HN1A8G07684G:0000000C": started reading request body. 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8G07684G", Request id "0HN1A8G07684G:0000000C": done reading request body. 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter threw an exception: The JSON value could not be converted to System.String. Path: $ | LineNumber: 0 | BytePositionInLine: 1. 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'newStatus' of type 'System.String'. 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'newStatus' of type 'System.String'. 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'newStatus' of type 'System.String' ... 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'newStatus' of type 'System.String'. 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.String' ... 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.String' using the name '' in request data ... 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Could not find a value in the request with name '' for binding parameter 'id' of type 'System.String'. 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.String'. 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.String'. 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.String' ... 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.String'. 
+2024-02-10 17:32:40.2620|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:32:40.2620|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:32:40.2620|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter|The request has model state errors, returning an error response. 
+2024-02-10 17:32:40.2620|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'. 
+2024-02-10 17:32:40.2620|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:32:40.2620|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:32:40.2620|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:32:40.2620|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:32:40.2620|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types 'application/problem+json, application/problem+xml, application/problem+json, application/problem+xml'. 
+2024-02-10 17:32:40.2620|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response. 
+2024-02-10 17:32:40.2620|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+2024-02-10 17:32:40.2620|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2024-02-10 17:32:40.2747|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:32:40.2747|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:32:40.2747|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks) in 21.1274ms 
+2024-02-10 17:32:40.2747|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:32:40.2747|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8G07684G" completed keep alive response. 
+2024-02-10 17:32:40.2747|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 PUT http://localhost:5219/Admin/Order/UpdateStatus application/json 78 - 400 - application/problem+json;+charset=utf-8 29.4635ms 
+2024-02-10 17:33:06.5981|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 PUT http://localhost:5219/Admin/Order/UpdateStatus application/json 78 
+2024-02-10 17:33:06.5981|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-02-10 17:33:06.5981|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2024-02-10 17:33:06.5981|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was successfully authenticated. 
+2024-02-10 17:33:06.5981|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2024-02-10 17:33:06.5981|0|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {2d9e62db-d7bf-4181-92ca-c331696ba564} with purposes ('C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\', 'SessionMiddleware'). 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/Admin/Order/UpdateStatus' 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' with route pattern '{area}/Order/UpdateStatus' is valid for the request path '/Admin/Order/UpdateStatus' 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2024-02-10 17:33:06.6027|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:33:06.6027|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {area = "Admin", action = "UpdateOrderStatus", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateOrderStatus(System.String, System.String) on controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks). 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks) 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks) 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'newStatus' of type 'System.String' ... 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'newStatus' of type 'System.String' using the name '' in request data ... 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8G07684G", Request id "0HN1A8G07684G:0000000D": started reading request body. 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8G07684G", Request id "0HN1A8G07684G:0000000D": done reading request body. 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter threw an exception: The JSON value could not be converted to System.String. Path: $ | LineNumber: 0 | BytePositionInLine: 1. 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'newStatus' of type 'System.String'. 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'newStatus' of type 'System.String'. 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'newStatus' of type 'System.String' ... 
+2024-02-10 17:33:06.6027|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'newStatus' of type 'System.String'. 
+2024-02-10 17:33:06.6183|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.String' ... 
+2024-02-10 17:33:06.6183|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.String' using the name '' in request data ... 
+2024-02-10 17:33:06.6183|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Could not find a value in the request with name '' for binding parameter 'id' of type 'System.String'. 
+2024-02-10 17:33:06.6183|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.String'. 
+2024-02-10 17:33:06.6183|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.String'. 
+2024-02-10 17:33:06.6183|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.String' ... 
+2024-02-10 17:33:06.6183|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.String'. 
+2024-02-10 17:33:06.6183|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:33:06.6183|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:33:06.6183|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:33:06.6183|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter|The request has model state errors, returning an error response. 
+2024-02-10 17:33:06.6183|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:33:06.6183|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'. 
+2024-02-10 17:33:06.6183|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:33:06.6183|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:33:06.6183|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:33:06.6183|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:33:06.6183|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2024-02-10 17:33:06.6183|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2024-02-10 17:33:06.6183|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2024-02-10 17:33:06.6183|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types 'application/problem+json, application/problem+xml, application/problem+json, application/problem+xml'. 
+2024-02-10 17:33:06.6183|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response. 
+2024-02-10 17:33:06.6183|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+2024-02-10 17:33:06.6183|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2024-02-10 17:33:06.6183|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:33:06.6183|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:33:06.6183|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks) in 20.6541ms 
+2024-02-10 17:33:06.6183|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:33:06.6183|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8G07684G" completed keep alive response. 
+2024-02-10 17:33:06.6183|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 PUT http://localhost:5219/Admin/Order/UpdateStatus application/json 78 - 400 - application/problem+json;+charset=utf-8 34.4480ms 
+2024-02-10 17:33:17.3192|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2024-02-10 17:33:17.3235|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2024-02-10 17:33:17.3421|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8G07684G" disconnecting. 
+2024-02-10 17:33:17.3421|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8G07684G" stopped. 
+2024-02-10 17:33:17.3421|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN1A8G07684G" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-02-10 17:33:17.3546|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2024-02-10 17:35:07.7929|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2024-02-10 17:35:07.9291|0|INFO|Program|Program initial 
+2024-02-10 17:35:07.9416|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2024-02-10 17:35:07.9567|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\Алексей\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2024-02-10 17:35:07.9567|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Алексей\AppData\Local\ASP.NET\DataProtection-Keys\key-201f091d-1492-40cf-8448-2970d8f8302a.xml'. 
+2024-02-10 17:35:07.9567|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Алексей\AppData\Local\ASP.NET\DataProtection-Keys\key-2d9e62db-d7bf-4181-92ca-c331696ba564.xml'. 
+2024-02-10 17:35:07.9625|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Алексей\AppData\Local\ASP.NET\DataProtection-Keys\key-36f42311-3483-4917-8846-1f1bdd7768ee.xml'. 
+2024-02-10 17:35:07.9625|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Алексей\AppData\Local\ASP.NET\DataProtection-Keys\key-8c2d20ac-a7d5-4fe4-b7a0-731f36d4f54e.xml'. 
+2024-02-10 17:35:07.9625|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\Алексей\AppData\Local\ASP.NET\DataProtection-Keys\key-fe0fd9ec-cbd2-45ba-94c2-4c4db8302271.xml'. 
+2024-02-10 17:35:07.9625|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {201f091d-1492-40cf-8448-2970d8f8302a}. 
+2024-02-10 17:35:07.9625|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {2d9e62db-d7bf-4181-92ca-c331696ba564}. 
+2024-02-10 17:35:07.9625|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {36f42311-3483-4917-8846-1f1bdd7768ee}. 
+2024-02-10 17:35:07.9625|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {8c2d20ac-a7d5-4fe4-b7a0-731f36d4f54e}. 
+2024-02-10 17:35:07.9625|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {fe0fd9ec-cbd2-45ba-94c2-4c4db8302271}. 
+2024-02-10 17:35:07.9775|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {2d9e62db-d7bf-4181-92ca-c331696ba564} with expiration date 2024-04-10 12:47:38Z as default key. 
+2024-02-10 17:35:07.9775|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2024-02-10 17:35:07.9775|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2024-02-10 17:35:07.9775|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2024-02-10 17:35:07.9775|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2024-02-10 17:35:07.9775|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2024-02-10 17:35:07.9975|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {2d9e62db-d7bf-4181-92ca-c331696ba564} as the default key. 
+2024-02-10 17:35:07.9975|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {2d9e62db-d7bf-4181-92ca-c331696ba564} was loaded during application startup. 
+2024-02-10 17:35:08.0546|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5219 
+2024-02-10 17:35:08.0546|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly LuxeLooks 
+2024-02-10 17:35:08.0546|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2024-02-10 17:35:08.0564|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2024-02-10 17:35:08.0564|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks 
+2024-02-10 17:35:08.0564|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2024-02-10 17:35:08.5480|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN1A8LTGUGH0" received FIN. 
+2024-02-10 17:35:08.5596|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH0" accepted. 
+2024-02-10 17:35:08.5596|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH0" started. 
+2024-02-10 17:35:08.5809|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN1A8LTGUGH0" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-02-10 17:35:08.5809|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH0" disconnecting. 
+2024-02-10 17:35:08.5902|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH0" stopped. 
+2024-02-10 17:35:08.7127|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH1" accepted. 
+2024-02-10 17:35:08.7127|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH2" accepted. 
+2024-02-10 17:35:08.7127|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH1" started. 
+2024-02-10 17:35:08.7127|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH2" started. 
+2024-02-10 17:35:08.7501|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5219/swagger/index.html - - 
+2024-02-10 17:35:08.7501|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2024-02-10 17:35:08.7501|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-02-10 17:35:08.7970|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2024-02-10 17:35:08.9650|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH1" completed keep alive response. 
+2024-02-10 17:35:08.9650|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5219/swagger/index.html - - - 200 - text/html;charset=utf-8 219.4313ms 
+2024-02-10 17:35:09.7487|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH3" accepted. 
+2024-02-10 17:35:09.7487|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH3" started. 
+2024-02-10 17:35:09.7487|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5219/swagger/index.html - - 
+2024-02-10 17:35:09.7487|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-02-10 17:35:09.7487|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2024-02-10 17:35:09.7487|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH3" completed keep alive response. 
+2024-02-10 17:35:09.7487|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5219/swagger/index.html - - - 200 - text/html;charset=utf-8 4.6928ms 
+2024-02-10 17:35:09.7954|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5219/swagger/v1/swagger.json - - 
+2024-02-10 17:35:09.7954|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-02-10 17:35:09.7954|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2024-02-10 17:35:10.0798|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH1" completed keep alive response. 
+2024-02-10 17:35:10.0798|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5219/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 284.9129ms 
+2024-02-10 17:35:10.3369|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH4" accepted. 
+2024-02-10 17:35:10.3374|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH4" started. 
+2024-02-10 17:35:10.3374|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH5" accepted. 
+2024-02-10 17:35:10.3374|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN1A8LTGUGH4" received FIN. 
+2024-02-10 17:35:10.3374|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH5" started. 
+2024-02-10 17:35:10.3374|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN1A8LTGUGH4" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-02-10 17:35:10.3374|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH4" disconnecting. 
+2024-02-10 17:35:10.3374|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 PUT http://localhost:5219/Admin/Order/UpdateStatus application/json 78 
+2024-02-10 17:35:10.3374|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-02-10 17:35:10.3374|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH4" stopped. 
+2024-02-10 17:35:10.5273|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2024-02-10 17:35:10.5273|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was successfully authenticated. 
+2024-02-10 17:35:10.5273|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2024-02-10 17:35:10.5401|0|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {2d9e62db-d7bf-4181-92ca-c331696ba564} with purposes ('C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\', 'SessionMiddleware'). 
+2024-02-10 17:35:10.5401|0|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2024-02-10 17:35:10.5401|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2024-02-10 17:35:10.5786|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/Admin/Order/UpdateStatus' 
+2024-02-10 17:35:10.5786|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' with route pattern '{area}/Order/UpdateStatus' is valid for the request path '/Admin/Order/UpdateStatus' 
+2024-02-10 17:35:10.5786|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:35:10.5908|0|DEBUG|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2024-02-10 17:35:10.5908|0|DEBUG|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2024-02-10 17:35:10.5908|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2024-02-10 17:35:10.5908|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:35:10.6222|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {area = "Admin", action = "UpdateOrderStatus", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateOrderStatus(LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest) on controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks). 
+2024-02-10 17:35:10.6222|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2024-02-10 17:35:10.6222|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2024-02-10 17:35:10.6222|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-02-10 17:35:10.6222|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-02-10 17:35:10.6222|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-02-10 17:35:10.6222|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks) 
+2024-02-10 17:35:10.7956|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2024-02-10 17:35:10.8720|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks) 
+2024-02-10 17:35:10.8847|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest' ... 
+2024-02-10 17:35:10.8847|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest' using the name '' in request data ... 
+2024-02-10 17:35:10.8847|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2024-02-10 17:35:10.9080|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8LTGUGH5", Request id "0HN1A8LTGUGH5:00000001": started reading request body. 
+2024-02-10 17:35:10.9080|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8LTGUGH5", Request id "0HN1A8LTGUGH5:00000001": done reading request body. 
+2024-02-10 17:35:10.9259|0|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest' 
+2024-02-10 17:35:10.9259|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest'. 
+2024-02-10 17:35:10.9259|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest'. 
+2024-02-10 17:35:10.9259|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest' ... 
+2024-02-10 17:35:10.9421|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest'. 
+2024-02-10 17:35:10.9478|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:35:10.9478|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:35:10.9478|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:35:10.9478|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:35:10.9668|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks) - Validation state: Valid 
+2024-02-10 17:35:10.9668|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks) with arguments (LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest) 
+2024-02-10 17:35:13.5614|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.11 initialized 'ApplicationDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.11+c25a0d7b68d66c6ab3849a3b4333964faea6adc9' with options: None 
+2024-02-10 17:35:13.6375|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Order>()' 
+2024-02-10 17:35:13.9746|0|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Order>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Order.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Order.Address (string), 1], [Property: Order.CreateTime (DateTime) Required, 2], [Property: Order.Email (string) Required, 3], [Property: Order.Name (string), 4], [Property: Order.Price (decimal) Required, 5], [Property: Order.ProductsIds (List<Guid>) Required, 6], [Property: Order.Status (OrderStatus) Required, 7], [Property: Order.UserId (Guid) Required, 8] }
+        SELECT o.Id, o.Address, o.CreateTime, o.Email, o.Name, o.Price, o.ProductsIds, o.Status, o.UserId
+        FROM Orders AS o), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Order>, 
+    LuxeLooks.DataManagment.ApplicationDbContext, 
+    False, 
+    False, 
+    True
+)' 
+2024-02-10 17:35:14.0592|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2024-02-10 17:35:14.0592|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2024-02-10 17:35:14.1533|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (79ms). 
+2024-02-10 17:35:14.1706|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (106ms). 
+2024-02-10 17:35:14.1706|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (118ms). 
+2024-02-10 17:35:14.1834|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2024-02-10 17:35:14.5470|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:35:14.5841|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreateTime", o."Email", o."Name", o."Price", o."ProductsIds", o."Status", o."UserId"
+FROM "Orders" AS o 
+2024-02-10 17:35:14.6577|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (89ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreateTime", o."Email", o."Name", o."Price", o."ProductsIds", o."Status", o."UserId"
+FROM "Orders" AS o 
+2024-02-10 17:35:14.7406|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Order' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:35:14.8241|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Order' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:35:14.8241|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:35:14.8585|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 182ms reading results. 
+2024-02-10 17:35:14.8733|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:35:14.8890|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (14ms). 
+2024-02-10 17:35:14.9285|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Order' tracked by 'ApplicationDbContext' changed state from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:35:14.9397|0|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'ApplicationDbContext'. 
+2024-02-10 17:35:14.9503|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'ApplicationDbContext'. 
+2024-02-10 17:35:15.0326|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'ApplicationDbContext'. 
+2024-02-10 17:35:15.2666|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2024-02-10 17:35:15.2666|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:35:15.2767|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2024-02-10 17:35:15.2767|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2024-02-10 17:35:15.3057|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (28ms). 
+2024-02-10 17:35:15.3208|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p8='?' (DbType = Guid), @p0='?', @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = Object), @p6='?' (DbType = Int32), @p7='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+UPDATE "Orders" SET "Address" = @p0, "CreateTime" = @p1, "Email" = @p2, "Name" = @p3, "Price" = @p4, "ProductsIds" = @p5, "Status" = @p6, "UserId" = @p7
+WHERE "Id" = @p8; 
+2024-02-10 17:35:15.4600|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (153ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?', @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = Object), @p6='?' (DbType = Int32), @p7='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+UPDATE "Orders" SET "Address" = @p0, "CreateTime" = @p1, "Email" = @p2, "Name" = @p3, "Price" = @p4, "ProductsIds" = @p5, "Status" = @p6, "UserId" = @p7
+WHERE "Id" = @p8; 
+2024-02-10 17:35:15.4735|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:35:15.4735|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 12ms reading results. 
+2024-02-10 17:35:15.4804|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:35:15.4804|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2024-02-10 17:35:15.5019|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Order' tracked by 'ApplicationDbContext' changed state from 'Modified' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:35:15.5105|0|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database. 
+2024-02-10 17:35:15.5298|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks), returned result Microsoft.AspNetCore.Mvc.OkResult in 4549.3297ms. 
+2024-02-10 17:35:15.5298|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:35:15.5298|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:35:15.5425|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:35:15.5425|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:35:15.5425|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:35:15.5425|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:35:15.5425|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkResult. 
+2024-02-10 17:35:15.5425|0|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing StatusCodeResult, setting HTTP status code 200 
+2024-02-10 17:35:15.5425|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkResult. 
+2024-02-10 17:35:15.5425|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:35:15.5425|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:35:15.5710|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks) in 4932.1372ms 
+2024-02-10 17:35:15.5710|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:35:15.6038|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH5" completed keep alive response. 
+2024-02-10 17:35:15.6038|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed. 
+2024-02-10 17:35:15.6302|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'LuxeLooks' on server ''. 
+2024-02-10 17:35:15.6398|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database 'LuxeLooks' on server '' (7ms). 
+2024-02-10 17:35:15.6398|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 PUT http://localhost:5219/Admin/Order/UpdateStatus application/json 78 - 200 0 - 5301.5566ms 
+2024-02-10 17:35:52.9356|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 PUT http://localhost:5219/Admin/Order/UpdateStatus application/json 83 
+2024-02-10 17:35:52.9356|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-02-10 17:35:52.9356|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2024-02-10 17:35:52.9356|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was successfully authenticated. 
+2024-02-10 17:35:52.9356|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2024-02-10 17:35:52.9356|0|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {2d9e62db-d7bf-4181-92ca-c331696ba564} with purposes ('C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\', 'SessionMiddleware'). 
+2024-02-10 17:35:52.9356|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2024-02-10 17:35:52.9485|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/Admin/Order/UpdateStatus' 
+2024-02-10 17:35:52.9485|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' with route pattern '{area}/Order/UpdateStatus' is valid for the request path '/Admin/Order/UpdateStatus' 
+2024-02-10 17:35:52.9485|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:35:52.9485|0|DEBUG|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2024-02-10 17:35:52.9485|0|DEBUG|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2024-02-10 17:35:52.9485|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2024-02-10 17:35:52.9485|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:35:52.9485|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {area = "Admin", action = "UpdateOrderStatus", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateOrderStatus(LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest) on controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks). 
+2024-02-10 17:35:52.9485|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2024-02-10 17:35:52.9485|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2024-02-10 17:35:52.9485|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-02-10 17:35:52.9485|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-02-10 17:35:52.9485|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-02-10 17:35:52.9485|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks) 
+2024-02-10 17:35:52.9645|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks) 
+2024-02-10 17:35:52.9645|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest' ... 
+2024-02-10 17:35:52.9645|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest' using the name '' in request data ... 
+2024-02-10 17:35:52.9645|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2024-02-10 17:35:52.9645|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8LTGUGH5", Request id "0HN1A8LTGUGH5:00000002": started reading request body. 
+2024-02-10 17:35:52.9645|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8LTGUGH5", Request id "0HN1A8LTGUGH5:00000002": done reading request body. 
+2024-02-10 17:35:52.9645|0|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest' 
+2024-02-10 17:35:52.9645|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest'. 
+2024-02-10 17:35:52.9645|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest'. 
+2024-02-10 17:35:52.9645|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest' ... 
+2024-02-10 17:35:52.9645|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest'. 
+2024-02-10 17:35:52.9645|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:35:52.9645|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:35:52.9645|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:35:52.9645|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:35:52.9645|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks) - Validation state: Valid 
+2024-02-10 17:35:52.9645|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks) with arguments (LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest) 
+2024-02-10 17:35:53.0238|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.11 initialized 'ApplicationDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.11+c25a0d7b68d66c6ab3849a3b4333964faea6adc9' with options: None 
+2024-02-10 17:35:53.0283|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2024-02-10 17:35:53.0283|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2024-02-10 17:35:53.0283|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (0ms). 
+2024-02-10 17:35:53.0283|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (1ms). 
+2024-02-10 17:35:53.0283|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (2ms). 
+2024-02-10 17:35:53.0283|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2024-02-10 17:35:53.0283|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:35:53.0283|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreateTime", o."Email", o."Name", o."Price", o."ProductsIds", o."Status", o."UserId"
+FROM "Orders" AS o 
+2024-02-10 17:35:53.0283|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreateTime", o."Email", o."Name", o."Price", o."ProductsIds", o."Status", o."UserId"
+FROM "Orders" AS o 
+2024-02-10 17:35:53.0283|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Order' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:35:53.0283|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Order' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:35:53.0283|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:35:53.0405|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 2ms reading results. 
+2024-02-10 17:35:53.0405|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:35:53.0405|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2024-02-10 17:35:53.0405|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Order' tracked by 'ApplicationDbContext' changed state from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:35:53.0405|0|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'ApplicationDbContext'. 
+2024-02-10 17:35:53.0405|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'ApplicationDbContext'. 
+2024-02-10 17:35:53.0405|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'ApplicationDbContext'. 
+2024-02-10 17:35:53.0405|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2024-02-10 17:35:53.0405|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:35:53.0405|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2024-02-10 17:35:53.0405|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2024-02-10 17:35:53.0405|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (1ms). 
+2024-02-10 17:35:53.0405|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p8='?' (DbType = Guid), @p0='?', @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = Object), @p6='?' (DbType = Int32), @p7='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+UPDATE "Orders" SET "Address" = @p0, "CreateTime" = @p1, "Email" = @p2, "Name" = @p3, "Price" = @p4, "ProductsIds" = @p5, "Status" = @p6, "UserId" = @p7
+WHERE "Id" = @p8; 
+2024-02-10 17:35:53.0571|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?', @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = Object), @p6='?' (DbType = Int32), @p7='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+UPDATE "Orders" SET "Address" = @p0, "CreateTime" = @p1, "Email" = @p2, "Name" = @p3, "Price" = @p4, "ProductsIds" = @p5, "Status" = @p6, "UserId" = @p7
+WHERE "Id" = @p8; 
+2024-02-10 17:35:53.0571|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:35:53.0571|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 1ms reading results. 
+2024-02-10 17:35:53.0571|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:35:53.0571|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2024-02-10 17:35:53.0571|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Order' tracked by 'ApplicationDbContext' changed state from 'Modified' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:35:53.0571|0|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database. 
+2024-02-10 17:35:53.0571|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks), returned result Microsoft.AspNetCore.Mvc.OkResult in 84.0244ms. 
+2024-02-10 17:35:53.0571|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:35:53.0571|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:35:53.0571|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:35:53.0571|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:35:53.0571|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:35:53.0571|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:35:53.0571|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkResult. 
+2024-02-10 17:35:53.0571|0|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing StatusCodeResult, setting HTTP status code 200 
+2024-02-10 17:35:53.0571|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkResult. 
+2024-02-10 17:35:53.0571|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:35:53.0571|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:35:53.0571|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks) in 109.5693ms 
+2024-02-10 17:35:53.0571|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:35:53.0716|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH5" completed keep alive response. 
+2024-02-10 17:35:53.0716|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed. 
+2024-02-10 17:35:53.0716|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'LuxeLooks' on server ''. 
+2024-02-10 17:35:53.0716|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database 'LuxeLooks' on server '' (0ms). 
+2024-02-10 17:35:53.0716|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 PUT http://localhost:5219/Admin/Order/UpdateStatus application/json 83 - 200 0 - 138.6183ms 
+2024-02-10 17:36:09.4468|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 PUT http://localhost:5219/Admin/Order/UpdateStatus application/json 78 
+2024-02-10 17:36:09.4468|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2024-02-10 17:36:09.4468|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2024-02-10 17:36:09.4468|0|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was successfully authenticated. 
+2024-02-10 17:36:09.4468|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2024-02-10 17:36:09.4468|0|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing protect operation to key {2d9e62db-d7bf-4181-92ca-c331696ba564} with purposes ('C:\5Sem\LuxeLooks\LuxeLooks\LuxeLooks\LuxeLooks\', 'SessionMiddleware'). 
+2024-02-10 17:36:09.4468|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|PUT requests are not supported 
+2024-02-10 17:36:09.4468|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/Admin/Order/UpdateStatus' 
+2024-02-10 17:36:09.4468|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' with route pattern '{area}/Order/UpdateStatus' is valid for the request path '/Admin/Order/UpdateStatus' 
+2024-02-10 17:36:09.4468|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:36:09.4468|0|DEBUG|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2024-02-10 17:36:09.4468|0|DEBUG|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2024-02-10 17:36:09.4468|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2024-02-10 17:36:09.4468|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:36:09.4468|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {area = "Admin", action = "UpdateOrderStatus", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateOrderStatus(LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest) on controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks). 
+2024-02-10 17:36:09.4468|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2024-02-10 17:36:09.4468|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2024-02-10 17:36:09.4468|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2024-02-10 17:36:09.4468|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2024-02-10 17:36:09.4468|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2024-02-10 17:36:09.4468|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks) 
+2024-02-10 17:36:09.4682|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller LuxeLooks.Areas.Admin.Controllers.OrderController (LuxeLooks) 
+2024-02-10 17:36:09.4682|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest' ... 
+2024-02-10 17:36:09.4682|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest' using the name '' in request data ... 
+2024-02-10 17:36:09.4682|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2024-02-10 17:36:09.4682|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8LTGUGH5", Request id "0HN1A8LTGUGH5:00000003": started reading request body. 
+2024-02-10 17:36:09.4682|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1A8LTGUGH5", Request id "0HN1A8LTGUGH5:00000003": done reading request body. 
+2024-02-10 17:36:09.4682|0|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest' 
+2024-02-10 17:36:09.4682|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest'. 
+2024-02-10 17:36:09.4682|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest'. 
+2024-02-10 17:36:09.4682|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest' ... 
+2024-02-10 17:36:09.4682|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'request' of type 'LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest'. 
+2024-02-10 17:36:09.4682|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:36:09.4682|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:36:09.4682|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:36:09.4682|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:36:09.4682|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks) - Validation state: Valid 
+2024-02-10 17:36:09.4682|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks) with arguments (LuxeLooks.Domain.Models.Requests.UpdateOrderStatusRequest) 
+2024-02-10 17:36:09.6715|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.11 initialized 'ApplicationDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.11+c25a0d7b68d66c6ab3849a3b4333964faea6adc9' with options: None 
+2024-02-10 17:36:09.6715|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2024-02-10 17:36:09.6715|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2024-02-10 17:36:09.6715|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (0ms). 
+2024-02-10 17:36:09.6715|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (1ms). 
+2024-02-10 17:36:09.6715|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (1ms). 
+2024-02-10 17:36:09.6715|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2024-02-10 17:36:09.6715|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:36:09.6715|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreateTime", o."Email", o."Name", o."Price", o."ProductsIds", o."Status", o."UserId"
+FROM "Orders" AS o 
+2024-02-10 17:36:09.6715|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT o."Id", o."Address", o."CreateTime", o."Email", o."Name", o."Price", o."ProductsIds", o."Status", o."UserId"
+FROM "Orders" AS o 
+2024-02-10 17:36:09.6715|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Order' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:36:09.6715|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'ApplicationDbContext' started tracking 'Order' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:36:09.6833|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:36:09.7536|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 74ms reading results. 
+2024-02-10 17:36:09.8088|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:36:09.8558|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (46ms). 
+2024-02-10 17:36:09.8558|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Order' tracked by 'ApplicationDbContext' changed state from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:36:09.8558|0|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'ApplicationDbContext'. 
+2024-02-10 17:36:09.8558|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'ApplicationDbContext'. 
+2024-02-10 17:36:09.8722|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'ApplicationDbContext'. 
+2024-02-10 17:36:09.8722|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'LuxeLooks' on server ''. 
+2024-02-10 17:36:09.8722|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:36:09.8722|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2024-02-10 17:36:09.8722|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2024-02-10 17:36:09.8722|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2024-02-10 17:36:09.8722|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p8='?' (DbType = Guid), @p0='?', @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = Object), @p6='?' (DbType = Int32), @p7='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+UPDATE "Orders" SET "Address" = @p0, "CreateTime" = @p1, "Email" = @p2, "Name" = @p3, "Price" = @p4, "ProductsIds" = @p5, "Status" = @p6, "UserId" = @p7
+WHERE "Id" = @p8; 
+2024-02-10 17:36:09.8862|0|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?', @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Decimal), @p5='?' (DbType = Object), @p6='?' (DbType = Int32), @p7='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+UPDATE "Orders" SET "Address" = @p0, "CreateTime" = @p1, "Email" = @p2, "Name" = @p3, "Price" = @p4, "ProductsIds" = @p5, "Status" = @p6, "UserId" = @p7
+WHERE "Id" = @p8; 
+2024-02-10 17:36:09.8862|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:36:09.8862|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'LuxeLooks' on server 'tcp://localhost:5432' is being disposed after spending 1ms reading results. 
+2024-02-10 17:36:09.8862|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'LuxeLooks' on server 'tcp://localhost:5432'. 
+2024-02-10 17:36:09.8862|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'LuxeLooks' on server '' (0ms). 
+2024-02-10 17:36:09.8862|0|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Order' tracked by 'ApplicationDbContext' changed state from 'Modified' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2024-02-10 17:36:09.8862|0|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database. 
+2024-02-10 17:36:09.8862|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks), returned result Microsoft.AspNetCore.Mvc.OkResult in 419.7564ms. 
+2024-02-10 17:36:09.8862|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:36:09.8862|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2024-02-10 17:36:09.8862|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:36:09.8862|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2024-02-10 17:36:09.8862|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:36:09.8862|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:36:09.8862|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkResult. 
+2024-02-10 17:36:09.8862|0|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing StatusCodeResult, setting HTTP status code 200 
+2024-02-10 17:36:09.8862|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkResult. 
+2024-02-10 17:36:09.8862|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:36:09.8862|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2024-02-10 17:36:09.8862|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks) in 440.3034ms 
+2024-02-10 17:36:09.8995|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'LuxeLooks.Areas.Admin.Controllers.OrderController.UpdateOrderStatus (LuxeLooks)' 
+2024-02-10 17:36:09.8995|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH5" completed keep alive response. 
+2024-02-10 17:36:09.8995|0|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'ApplicationDbContext' disposed. 
+2024-02-10 17:36:09.8995|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'LuxeLooks' on server ''. 
+2024-02-10 17:36:09.8995|0|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database 'LuxeLooks' on server '' (0ms). 
+2024-02-10 17:36:09.8995|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 PUT http://localhost:5219/Admin/Order/UpdateStatus application/json 78 - 200 0 - 460.8275ms 
+2024-02-10 17:36:12.8181|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN1A8LTGUGH2" received FIN. 
+2024-02-10 17:36:12.8181|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH2" disconnecting. 
+2024-02-10 17:36:12.8181|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN1A8LTGUGH2" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-02-10 17:36:12.8241|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH2" stopped. 
+2024-02-10 17:36:16.5128|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2024-02-10 17:36:16.5128|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2024-02-10 17:36:16.5361|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH1" disconnecting. 
+2024-02-10 17:36:16.5361|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH3" disconnecting. 
+2024-02-10 17:36:16.5361|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH1" stopped. 
+2024-02-10 17:36:16.5361|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH5" disconnecting. 
+2024-02-10 17:36:16.5361|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH3" stopped. 
+2024-02-10 17:36:16.5361|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HN1A8LTGUGH5" stopped. 
+2024-02-10 17:36:16.5361|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN1A8LTGUGH3" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-02-10 17:36:16.5361|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN1A8LTGUGH1" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-02-10 17:36:16.5361|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HN1A8LTGUGH5" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2024-02-10 17:36:16.5510|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
