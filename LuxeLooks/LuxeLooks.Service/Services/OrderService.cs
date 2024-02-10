@@ -1,7 +1,9 @@
 ﻿using System.Net;
+using System.Runtime.Serialization;
 using LuxeLooks.DataManagment.Repositories;
 using LuxeLooks.Domain.Entity;
 using LuxeLooks.Domain.Enum;
+using LuxeLooks.Domain.Models.Requests;
 using LuxeLooks.Domain.Response;
 using LuxeLooks.SharedLibrary.Mappers;
 using Microsoft.Extensions.Caching.Memory;
@@ -24,6 +26,15 @@ public class OrderService
         _guidMapper = guidMapper;
     }
 
+    private OrderStatus GetEnumValueFromString(string type)
+    {
+        if (!Enum.IsDefined(typeof(OrderStatus), type))
+        {
+            throw new SerializationException("Invalid type");
+        }
+
+        return (OrderStatus)Enum.Parse(typeof(OrderStatus), type);
+    }
     public async Task<BaseResponse<Order>> GetById(Guid id)
     {
         var baseResponse = new BaseResponse<Order>();
@@ -125,5 +136,40 @@ public class OrderService
         }
 
         return ordersByUser;
+    }
+
+    public async Task Update(UpdateOrderRequest request)
+    {
+        var orderGuidId = _guidMapper.MapTo(request.Id);
+        var order = (await _orderRepository.GetAll()).FirstOrDefault(a => a.Id == orderGuidId);
+        if (order==null)
+        {
+            throw new InvalidOperationException("Order not found");
+        }
+
+        var productsIdsGuid = new List<Guid>();
+        foreach (var id in request.ProductsIds)
+        {
+            productsIdsGuid.Add(_guidMapper.MapTo(id));
+        }
+        order.ProductsIds =productsIdsGuid;
+        order.Address = request.Address;
+        order.Email = request.Email;
+        order.Status = GetEnumValueFromString(request.Status);
+        order.Price = request.Price;
+        order.Name = request.Name;
+        await _orderRepository.Update(order);
+    }
+
+    public async Task Delete(string id)
+    {
+        var guidId =_guidMapper.MapTo(id);
+        var order = (await _orderRepository.GetAll()).FirstOrDefault(a => a.Id == guidId);
+        if (order==null)
+        {
+            throw new InvalidOperationException("Order not found");
+        }
+
+        await _orderRepository.Delete(order);
     }
 }

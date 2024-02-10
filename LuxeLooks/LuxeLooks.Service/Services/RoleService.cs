@@ -39,7 +39,8 @@ public class RoleService
 
     public async Task<BaseResponse<Role>> GetByIdAsync(Guid id)
     {
-        var role =(await _roleRepository.GetAll()).FirstOrDefault(a=>a.Id==id);
+        var roles = await _roleRepository.GetAll();
+        var role =roles.FirstOrDefault(a=>a.Id==id);
         if (role==null)
         {
            return HandleError<Role>($"Role with id: {id} not found", HttpStatusCode.NoContent);

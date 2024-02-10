@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using System.Runtime.Serialization;
+using FluentValidation;
 using LuxeLooks.Domain.Enum;
 using LuxeLooks.Domain.Models;
 using LuxeLooks.Domain.Models.Requests;
@@ -7,6 +8,7 @@ using LuxeLooks.Domain.Response;
 using LuxeLooks.Service.Services;
 using LuxeLooks.SharedLibrary.Exceptions;
 using LuxeLooks.SharedLibrary.Mappers;
+using LuxeLooks.SharedLibrary.Validators;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,6 +28,7 @@ public class ProductController:ControllerBase
         _logger = logger;
         _guidMapper = guidMapper;
     }
+    
     private IActionResult HandleResponse<T>(BaseResponse<T> response)
     {
         if (response.StatusCode != HttpStatusCode.OK)
@@ -47,11 +50,16 @@ public class ProductController:ControllerBase
         return (ProductType)Enum.Parse(typeof(ProductType), type);
     }
 
-    [HttpPost("Update")]
+    [HttpPut("Update")]
     public async Task<IActionResult> UpdateProduct([FromBody] UpdateProductRequest request)
     {
         try
         {
+            var validateResult = GeneralValidator.Validate(new UpdateProductRequestValidator(), request);
+            if (validateResult.Length != 0)
+            {
+                return BadRequest(validateResult.ToString());
+            }
             var product = new Domain.Entity.Product()
             {
                 Id = _guidMapper.MapTo(request.Id),
@@ -73,32 +81,37 @@ public class ProductController:ControllerBase
     }
 
     [HttpPost("Create")]
-    public async Task<IActionResult> CreateProduct([FromBody]CreateProductRequest request)
+    public async Task<IActionResult> CreateProduct([FromBody] CreateProductRequest request)
     {
         try
         {
-            GetEnumValueFromString(request.Type);
+            var validateResult = GeneralValidator.Validate(new CreateProductRequestValidator(), request);
+            if (validateResult.Length != 0)
+            {
+                return BadRequest(validateResult.ToString());
+            }
 
-        var product = new Domain.Entity.Product()
-        {
-            Description = request.Description,
-            Type =GetEnumValueFromString(request.Type),
-            ImageUrl = request.ImageUrl,
-            IsForKids = request.IsForKids,
-            IsForMen = request.IsForMen,
-            Name = request.Name,
-            Price = request.Price
-        };
-        var response = await _productService.CreateProduct(product);
-        if (response.StatusCode!=HttpStatusCode.OK)
-        {
-            return HandleResponse(response);
-        }
+            var product = new Domain.Entity.Product()
+            {
+                Description = request.Description,
+                Type = GetEnumValueFromString(request.Type),
+                ImageUrl = request.ImageUrl,
+                IsForKids = request.IsForKids,
+                IsForMen = request.IsForMen,
+                Name = request.Name,
+                Price = request.Price
+            };
+            var response = await _productService.CreateProduct(product);
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+                return HandleResponse(response);
+            }
         }
         catch (SerializationException e)
         {
             return BadRequest(e.Message);
         }
+
         return Ok();
     }
 
