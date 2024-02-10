@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using System.Runtime.Serialization;
 using LuxeLooks.Domain.Models.Requests;
 using LuxeLooks.Service.Services;
 using LuxeLooks.SharedLibrary.Exceptions;
@@ -34,6 +35,28 @@ public class OrderController:ControllerBase
         return Ok(ordersResponse.Data);
     }
 
+    [HttpPost("UpdateStatus")]
+    public async Task<IActionResult> UpdateOrderStatus([FromBody] string newStatus,[FromBody] string id)
+    {
+        try
+        {
+            await _orderService.UpdateStatus(newStatus, id);
+        }
+        catch (SerializationException e)
+        {
+            return BadRequest(e.Message);
+        }
+        catch (MappingException e)
+        {
+            return BadRequest(e.Message);
+        }
+        catch (InvalidOperationException e)
+        {
+            return NotFound(e.Message);
+        }
+
+        return Ok();
+    }
     [HttpPut("Update")]
     public async Task<IActionResult> UpdateOrder(UpdateOrderRequest request)
     {
@@ -50,6 +73,10 @@ public class OrderController:ControllerBase
         catch (InvalidOperationException e)
         {
             return NotFound(e.Message);
+        }
+        catch (SerializationException e)
+        {
+            return BadRequest(e.Message);
         }
         catch (MappingException e)
         {

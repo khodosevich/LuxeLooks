@@ -172,4 +172,17 @@ public class OrderService
 
         await _orderRepository.Delete(order);
     }
+
+    public async Task UpdateStatus(string newStatus, string id)
+    {
+        var orderId = _guidMapper.MapTo(id);
+        var order = (await _orderRepository.GetAll()).FirstOrDefault(a => a.Id == orderId);
+        if (order==null)
+        {
+            throw new InvalidOperationException("Order not found");
+        }
+
+        order.Status = GetEnumValueFromString(newStatus);
+        await _orderRepository.Update(order);
+    }
 }
