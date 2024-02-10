@@ -12,9 +12,11 @@ builder.AddSession();
 builder.AddServices();
 builder.AddLogging();
 builder.AddCache();
-
+builder.AddSwaggerDocumentation();
 
 var app = builder.Build();
+app.UseSwagger();
+app.UseSwaggerUI();
 app.UseSession();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -28,7 +30,9 @@ app.UseCors(builder =>
 app.UseRouting();
 app.UseAuthorization();
 app.UseAuthorization();
-app.MapControllers();
+app.MapControllers(); 
+app.UseSwagger();
+app.UseSwaggerUI();
 var logger = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
 logger.Log(LogLevel.Info,"Program initial");
 app.Run();
