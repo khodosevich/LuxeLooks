@@ -101,4 +101,9 @@ public static class WebApplicationBuilderExtension
     {
         builder.Services.AddMemoryCache();
     }
+    public static void AddSwaggerDocumentation(this WebApplicationBuilder builder)
+    {
+        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen();
+    }
 }
