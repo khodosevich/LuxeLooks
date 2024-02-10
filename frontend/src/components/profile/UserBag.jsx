@@ -42,7 +42,7 @@ const UserBag = () => {
 
     return (
         <Box sx={{margin:"0 0 100px 0", display:"flex" , flexDirection:"column" , gap:"20px"}}>
-            {product.length > 0
+            {product && product.length > 0
                 ? product.map((el,index) => (<BagElement key={index} props={el} removeProductFromCart={removeProductFromCart} />))
                 : <Typography sx={{fontWeight:"700"}} variant={"h5"}>Корзина пуста!</Typography>
             }

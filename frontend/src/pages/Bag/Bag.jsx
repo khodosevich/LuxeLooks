@@ -71,7 +71,7 @@ const Bag = () => {
                                         alertStatus && <OwnAlert props={alertConfig}/>
                                     }
                                     {
-                                        products.length > 0 ? (
+                                        products && products.length > 0 ? (
                                                 <div className="bag__elements">
                                                     {products.map((el,index) => (
                                                         <BagElement key={index} props={el} removeProductFromCart={removeProductFromCart} />

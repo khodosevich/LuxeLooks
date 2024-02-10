@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {Button, TextField} from "@mui/material";
+import {Box, Button, TextField} from "@mui/material";
 import jwt_decode from "jwt-decode";
 import {method} from "../../api/methods";
 import {useNavigate} from "react-router-dom";
+import OrderItem from "./OrderItem";
 
 const OrderForm = () => {
 
@@ -59,6 +60,7 @@ const OrderForm = () => {
 
     useEffect(() => {
         getCart()
+        window.scrollTo(0, 0);
     },[])
 
     useEffect(() => {
@@ -82,32 +84,27 @@ const OrderForm = () => {
         }
     }, [isOrderPlaced, order]);
 
-    return (<div style={{
-            position:"absolute",
-            top:"0",
-            height:"100vh",
-            width:"100vw",
-            zIndex:"1000",
-
-            background:"#1E212C"
+    return (<Box style={{
+            background:"#b0b0b0",
+            padding:"30px 0 50px 0",
         }}>
-            <div style={{
+            <Box style={{
                 display:"flex",
                 alignItems:"center",
                 justifyContent:"center",
-                height:"100%"
+                flexDirection:"column",
             }}>
-                <div style={{
+                <Box style={{
                     background:"white",
-                    padding:"100px 200px",
+                    padding:"50px 100px",
                     display:"flex",
                     flexDirection:"column",
-
+                    marginBottom:"100px"
                 }}>
                     <h3>
                         Form for complete order:
                     </h3>
-                    <div style={{
+                    <Box style={{
                         display:"flex",
                         flexDirection:"column",
                         gap:"20px",
@@ -134,7 +131,7 @@ const OrderForm = () => {
                             variant="outlined"
                             onChange={(e) => setOrder({ ...order, Email: e.target.value })}
                         />
-                    </div>
+                    </Box>
                     <Button
                         style={{
                             margin:"20px 0"
@@ -143,7 +140,7 @@ const OrderForm = () => {
                         variant="contained">
                         Place an order
                     </Button>
-                    <div>
+                    <Box>
                         <button
                             style={{
                                 color: "#ffffff",
@@ -163,10 +160,19 @@ const OrderForm = () => {
                         >
                             cancel
                         </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </Box>
+                    <Box sx={{marginTop:"20px", marginBottom:"50px"}}>
+                        <Box sx={{display:"flex", flexDirection:"column", gap:"10px"}}>
+                            {
+                                products && products.map((el,index) => (
+                                     <OrderItem key={index} props={el} />
+                                ))
+                            }
+                        </Box>
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
     );
 };
 
