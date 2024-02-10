@@ -7,6 +7,7 @@ import CloseIcon from '@mui/icons-material/Close';
 
 const OrderItem = ({props}) => {
 
+    console.log(props)
     const [formattedOrderTime, setFormattedOrderTime] = useState("")
 
     const formattedData = (dateString) => {

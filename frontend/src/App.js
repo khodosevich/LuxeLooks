@@ -19,6 +19,7 @@ import Profile from "./components/profile/Profile";
 import CategoryTypeItems from "./components/popularcategory/CategoryTypeItems";
 import ProductItem from "./pages/product/ProductItem";
 import AuthGuard from "./components/authguard/AuthGuard";
+import OrderForm from "./pages/order-form/OrderForm";
 
 
 export const MyContext = React.createContext();
@@ -53,7 +54,8 @@ function App() {
                     <Route path="/boys" element={<Boys/>} />
                     <Route path="/girls" element={<Girls/>} />
                     <Route path="/sale" element={<Sale/>} />
-                    <Route path="/bag" element={<Bag/>} />
+                    <Route path="/bag/*" element={<Bag/>} />
+                    <Route path="/bag/order" element={<OrderForm/>} />
                     <Route path="/registration" element={<Registration/>} />
                     <Route path="/signin" element={<SignIn/>} />
                     <Route path="/account/*" element={<Profile/>} />

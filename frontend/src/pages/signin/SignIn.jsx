@@ -57,6 +57,8 @@ const SignIn = () => {
             try {
                 const person = await method.login(localState);
 
+                console.log(person)
+
                 setUser({
                     token: person.token,
                     username: person.username,

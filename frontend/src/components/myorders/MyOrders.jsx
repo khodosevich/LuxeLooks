@@ -1,9 +1,9 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {MyContext} from "../../App";
 import {method} from "../../api/methods";
-
 import jwt_decode from "jwt-decode";
 import OrderItem from "./OrderItem";
+import {Typography} from "@mui/material";
 
 const MyOrders = () => {
 
@@ -29,7 +29,6 @@ const MyOrders = () => {
 
     return (
         <div style={{width:"100%"}}>
-
             <h3 style={{
                 color: "#1E212C",
                 fontFamily: "Lato",
@@ -40,13 +39,10 @@ const MyOrders = () => {
             }}>
                 My orders
             </h3>
-
             <div>
-
                 {
-                    ordersHistory.map((el, index) => (
-                        <OrderItem key={index} props={el} />
-                    ))
+                    ordersHistory && ordersHistory.length > 0 ? ordersHistory.map((el, index) => (<OrderItem key={index} props={el} />))
+                        : <Typography sx={{marginTop:"20px"}} variant={"h6"}>У вас пока нет заказов! </Typography>
                 }
 
             </div>

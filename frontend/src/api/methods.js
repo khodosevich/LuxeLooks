@@ -31,7 +31,7 @@ export const method = {
     }
     ,
     async login(data){
-
+        console.log(data)
         let value = {} ;
         await api.post("Account/Login", data).then(r => {
             value = r.data

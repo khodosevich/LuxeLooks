@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {method} from "../../api/methods";
-import {Box} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 import BagElement from "../../pages/Bag/bagelement/BagElement";
 
 const UserBag = () => {
@@ -42,9 +42,11 @@ const UserBag = () => {
 
     return (
         <Box sx={{margin:"0 0 100px 0", display:"flex" , flexDirection:"column" , gap:"20px"}}>
-            {product.map((el,index) => (
-                <BagElement key={index} props={el} removeProductFromCart={removeProductFromCart} />
-            ))}
+            {product && product.length > 0
+                ? product.map((el,index) => (<BagElement key={index} props={el} removeProductFromCart={removeProductFromCart} />))
+                : <Typography sx={{fontWeight:"700"}} variant={"h5"}>Корзина пуста!</Typography>
+            }
+
         </Box>
     );
 };

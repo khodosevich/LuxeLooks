@@ -28,7 +28,6 @@ const OrderElement = ({props}) => {
                     <img style={{width:"80px" , height:"80px", objectFit:"cover" }} src={product.imageUrl} alt=""/>
                 </div>
                 <div className="bag-element-description">
-
                     <NavLink to={`/product/${product.id}`}>
                         <h3 className="bag-element-description__title">
                             {product.name}
@@ -39,13 +38,9 @@ const OrderElement = ({props}) => {
                     </p>
                 </div>
             </div>
-
-
             <h3 className="bag-element-price">
                 {product.price}$
             </h3>
-
-
         </div>
     );
 };
