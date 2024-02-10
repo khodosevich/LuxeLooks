@@ -49,6 +49,7 @@ namespace LuxeLooks.DataManagment
                 PasswordHash = hashedPassword,
                 RefreshToken = null,
                 RefreshTokenExpiryTime = DateTime.UtcNow, 
+                RoleId = new Guid("44546e06-8719-4ad8-b88a-f271ae9d6eab")
             });
 
             modelBuilder.Entity<Product>().HasData(new Product()
