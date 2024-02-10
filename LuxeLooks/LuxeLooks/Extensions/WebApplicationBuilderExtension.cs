@@ -4,13 +4,10 @@ using LuxeLooks.DataManagment.Repositories;
 using LuxeLooks.DataManagment.Repositories.Implementations;
 using LuxeLooks.DataManagment.Repositories.Interfaces;
 using LuxeLooks.Domain.Entity;
-using LuxeLooks.Service;
 using LuxeLooks.Service.Services;
-using LuxeLooks.SharedLibrary;
 using LuxeLooks.SharedLibrary.Mappers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using NLog.Web;
@@ -19,14 +16,10 @@ namespace LuxeLooks.Extensions;
 
 public static class WebApplicationBuilderExtension
 {
-
     public static void AddDataBase(this WebApplicationBuilder builder)
     {
         string? deviceConnection = builder.Configuration.GetConnectionString("ConnectionString");
-        builder.Services.AddDbContext<ApplicationDbContext>(options =>
-        {
-            options.UseNpgsql(deviceConnection);
-        });
+        builder.Services.AddDbContext<ApplicationDbContext>(options => { options.UseNpgsql(deviceConnection); });
     }
 
     public static void AddSession(this WebApplicationBuilder builder)
@@ -38,7 +31,6 @@ public static class WebApplicationBuilderExtension
             options.IdleTimeout = TimeSpan.FromMinutes(30);
             options.Cookie.HttpOnly = true;
         });
-
     }
 
     public static void AddAuthentication(this WebApplicationBuilder builder)
@@ -98,6 +90,7 @@ public static class WebApplicationBuilderExtension
         builder.Services.AddScoped<StringToGuidMapper>();
         builder.Services.AddScoped<ReviewService>();
     }
+
     public static void AddLogging(this WebApplicationBuilder builder)
     {
         builder.Logging.ClearProviders();
@@ -107,5 +100,10 @@ public static class WebApplicationBuilderExtension
     public static void AddCache(this WebApplicationBuilder builder)
     {
         builder.Services.AddMemoryCache();
+    }
+    public static void AddSwaggerDocumentation(this WebApplicationBuilder builder)
+    {
+        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen();
     }
 }
