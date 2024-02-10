@@ -2,9 +2,7 @@
   position: relative;
   left: 0;
   background: #000;
-  width: 100vw;
   height: 100vh;
-  padding-top: 100px;
 }
 
 .signin__container {
@@ -13,6 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .signin-content {

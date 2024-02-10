@@ -107,13 +107,6 @@ const Registration = () => {
                 setShowAlert(true);
                 console.error("Ошибка: Некорректные данные", error.response.data);
             }
-            // setAlertData({
-            //     isOpen: true,
-            //     type: 'error',
-            //     statusText: error.response.data
-            // });
-            //
-            // setTimeout(() => setAlertData({isOpen: false, type: "", statusText: ""}), 2000)
         }
     };
 
@@ -145,26 +138,17 @@ const Registration = () => {
 
 
     return (
-
         <>
-
             {
                 user.isAuthenticated
                     ? <Navigate to="/"/>
                     : <div className="registration">
                         <div className="registration__container">
-
                             {showAlert && (
                                 <OwnAlert props={infoAlert} />
                             )}
-
-
                             <div className="registration-content">
-
-                                {/*{alertData.isOpen && <OwnAlert props={alertData} />}*/}
-
                                 <h3>Sign Up</h3>
-
                                 <div className="inputs__registration">
                                     <TextField
                                         onChange={loginChange}
@@ -191,13 +175,10 @@ const Registration = () => {
                                         helperText={validationErrors.email}
                                     />
                                 </div>
-
                                 <Button onClick={loginRequest} variant="contained">Registration</Button>
-
                                 <NavLink className="exist-account" to="/signin">
                                     Exist account?
                                 </NavLink>
-
                                 <NavLink className="exist-account" to="/">
                                     On main
                                 </NavLink>
@@ -205,7 +186,6 @@ const Registration = () => {
                         </div>
                     </div>
             }
-
         </>
     );
 };

@@ -114,35 +114,20 @@ const SignIn = () => {
                     <Navigate to="/"/>
                     :
                     <div className="signin">
-
                         <div className="signin__container">
-
                             {showAlert && (
                                 <OwnAlert props={infoAlert} />
                             )}
-
-
                             <div className="signin-content">
-
                                 <h3>Sign In</h3>
-
                                 <div className="inputs__signin">
-                                    <TextField value={user.UserName} onChange={loginChange} id="outlined-basic" label="Username" variant="outlined"
-                                               error={!!validationError.UserName}
-                                               helperText={validationError.UserName}
-                                    />
-                                    <TextField value={user.Password} type="password" onChange={passwordChange}  id="outlined-basic" label="Password" variant="outlined"
-                                               error={!!validationError.Password}
-                                               helperText={validationError.Password}
-                                    />
+                                    <TextField value={user.UserName} onChange={loginChange} id="outlined-basic" label="Username" variant="outlined"/>
+                                    <TextField value={user.Password} type="password" onChange={passwordChange}  id="outlined-basic" label="Password" variant="outlined"/>
                                 </div>
-
                                 <Button onClick={signInRequest} variant="contained">SignIn</Button>
-
                                 <NavLink className="exist-account" to="/registration">
                                     Registration
                                 </NavLink>
-
                                 <NavLink className="exist-account" to="/">
                                     On main
                                 </NavLink>
