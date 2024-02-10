@@ -1,7 +1,8 @@
 import axios from "axios";
+import {logDOM} from "@testing-library/react";
 
 export const api = axios.create({
-    // withCredentials:true,
+    withCredentials:true,
     baseURL: "http://localhost:5219/",
 });
 
@@ -16,6 +17,19 @@ export const method = {
 
         return value;
     },
+   async revoke(person){
+       console.log(person.name)
+       console.log(person.token)
+       await api.post(`Account/Revoke/${person.name}`, {
+            headers: {
+                'Authorization': `Bearer ${person.token}`
+            }
+        }).then(r => {
+           console.log(r)
+       })
+
+    }
+    ,
     async login(data){
 
         let value = {} ;
@@ -59,29 +73,124 @@ export const method = {
                     'Content-Type': 'application/json'
                 }
             });
-            console.log(response); // Обработка успешного ответа
-            return response;
+            return response.data;
         } catch (error) {
             console.error(error);
-            throw error;
+            // throw error;
         }
     },
-    async addToCart(userToken) {
+    async addToCart(productId,userToken) {
         const data = {
-            "Id": "b3ee6ca1-af23-41a9-b567-4d765550c885"
+            "Id": productId
         };
         try {
-            const response = await api.put('/Cart/AddToCart', data, {
+
+            return await api.put('/Cart/AddToCart', data, {
                 headers: {
                     'Authorization': `Bearer ${userToken}`
                 }
             });
-            console.log(response);
-            return response;
         } catch (error) {
             console.error(error);
-            throw error;
+            // throw error;
         }
     },
+    async removeFromCart(productId, userToken) {
+
+        try {
+            const response = await api.delete(`/Cart/RemoveFromCart`, {
+                data: {
+                    "Id": productId
+                },
+                headers: {
+                    'Authorization': `Bearer ${userToken}`,
+                    'Content-Type': 'application/json'
+                },
+            });
+
+            return response.data;
+        } catch (error) {
+            console.error(error);
+            // throw error;
+        }
+    },
+    async getOrderById(userId, userToken) {
+
+        try{
+            const response = await api.get(`/Order/GetOrderByUserId/${userId}`, {
+                headers: {
+                    'Authorization': `Bearer ${userToken}`
+                }
+            });
+            return response.data;
+        }catch (error){
+            console.log("Error: " , error)
+        }
+    },
+    async createOrder(data ,userToken) {
+
+
+        try{
+            const response = await api.post(`/Order/CreateOrder`,
+                data
+            ,{
+                headers: {
+                    'Authorization': `Bearer ${userToken}`
+                }});
+            return response.data;
+        }catch (error){
+            console.log("Error: " , error)
+        }
+    },
+    async removeAllCart(userToken){
+        try{
+            const response = await api.delete("/Cart/DeleteCart",{
+                headers: {
+                    'Authorization': `Bearer ${userToken}`
+                }});
+        }catch (e) {
+            console.log("error" , e)
+        }
+    },
+
+    reviews : {
+        async getReviewsByProduct(productId) {
+                try{
+                    const reviews = await api.get(`http://localhost:5219/review/GetByProductId/${productId}`)
+                    return reviews.data;
+                }catch (e) {
+                    console.log(e)
+                }
+        },
+        async createReview(data,userToken) {
+            try{
+                const response = await api.post("http://localhost:5219/review/CreateReview",
+                    data,
+                    {
+                        headers: {
+                            'Authorization': `Bearer ${userToken}`
+                        }
+                    }
+                )
+
+                return response.data;
+            }catch (e) {
+               throw e;
+            }
+        },
+        async getReviewsByUserId() {
+
+        }
+    },
+
+    async getUserById(id) {
+        try{
+
+            return await api.get(`http://localhost:5219/User/GetByid/${id}`)
+
+        }catch (e) {
+            throw e;
+        }
+    }
 
 }

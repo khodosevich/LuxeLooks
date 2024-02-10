@@ -1,18 +1,31 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {useLocation} from "react-router-dom";
-import {method} from "../../api/methods";
+import {api, method} from "../../api/methods";
 import Subscribe from "../../components/subscribe/Subscribe";
 
 import "./productitem.css"
 import ProductNotExist from "../../components/productelement/ProductNotExist";
+import {MyContext} from "../../App";
+import OwnAlert from "../../components/alert/OwnAlert";
+import Reviews from "../../components/reviews/Reviews";
+import jwt_decode from "jwt-decode";
+import {Alert, AlertTitle} from "@mui/material";
 
 const ProductItem = () => {
+
+    const {user,setUser} = useContext(MyContext)
+
+    console.log("user: ", user)
 
     const location = useLocation();
 
     const productId = location.pathname.slice(9)
 
     const [product, setProduct] = useState({})
+
+    const [alertStatus, setAlertStatus] = useState(false)
+
+    const [alertConfig, setAlertConfig] = useState({})
 
     const fetchData = async () => {
 
@@ -25,21 +38,65 @@ const ProductItem = () => {
     }
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         fetchData()
-    }, []);
+    }, [productId]);
 
 
+    const [isAlert, setIsAlert] = useState(false)
+    const [alertData,setAlertData] = useState("")
+    const addToCart = async () => {
 
+        const token = JSON.parse(localStorage.getItem("token"));
+
+        if( !token ){
+            setAlertData("Need authorization")
+            setIsAlert(true)
+
+            setTimeout(() =>{
+                setIsAlert(false)
+                setAlertData("")
+            },3000)
+            return
+        }
+
+
+        try {
+            const response = await method.addToCart(product.id, user.token).then(r => {
+                setAlertConfig({
+                    type: "success",
+                    statusText: "Add element to cart"
+                })
+            })
+
+            setAlertStatus(true)
+            setTimeout(() => setAlertStatus(false), 4000);
+
+        } catch (error) {
+
+            console.log(error)
+
+            setAlertConfig({
+                type: "error",
+                statusText: error.response.statusText
+            })
+
+            setAlertStatus(true)
+            setTimeout(() => setAlertStatus(false), 4000);
+        }
+
+    }
 
 
     return (
         <>
-            <div style={{width:"1232px" , margin:"0 auto"}}>
+            <div style={{width:"1232px" , margin:"0 auto" , position:"relative"}}>
                 <div style={{padding:"50px 0 "}}>
 
                     {
                         product.name
                             ? <>
+
                           <div style={{display:"flex"  , justifyContent:"space-between"}}>
                                         <h3 style={{
                                             color:"#1E212C",
@@ -65,6 +122,17 @@ const ProductItem = () => {
                                     }}>Art. No.</span> {product.id}
                                         </p>
                                     </div>
+
+                          {
+                            alertStatus && <OwnAlert props={alertConfig} />
+                          }
+
+                            {
+                                isAlert &&
+                                <Alert sx={{position:"absolute", width:"100%"}} severity="error">
+                                    <AlertTitle>{alertData}</AlertTitle>
+                                </Alert>
+                            }
 
                                     <div style={{
                                         width: "1230px",
@@ -185,15 +253,39 @@ const ProductItem = () => {
                                 </div>
                             </div>
                             <div>
-                                <img style={{width:"390px" , height:"500px"}} src={product.imageUrl} alt=""/>
+
+                                <div>
+                                    <img style={{width:"390px" , height:"500px"}} src={product.imageUrl} alt=""/>
+                                </div>
+                               <div>
+                                   <button onClick={addToCart} style={{
+                                       color: "#FFF",
+                                       textAlign: "center",
+                                       fontFamily: "Lato",
+                                       fontSize: "14px",
+                                       fontStyle: "normal",
+                                       fontWeight: "700",
+                                       lineHeight: "44px",
+                                       letterSpacing: "0.5px",
+                                       borderRadius: "4px",
+                                       background: "#17696A",
+                                       minWidth:"100%",
+                                       border:"0",
+                                       marginTop:"20px",
+                                       cursor:"pointer"
+                                   }}>
+                                       add to cart
+                                   </button>
+                               </div>
+
                             </div>
                         </div>
+
+                            <Reviews productId={productId} userToken={user.token}/>
                             </> : <>
                               <ProductNotExist/>
                           </>
                     }
-
-
 
                 </div>
             </div>

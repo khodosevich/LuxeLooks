@@ -1,13 +1,8 @@
 .registration {
-
   position: relative;
   left: 0;
   background: #000;
-
-  width: 100vw;
   height: 100vh;
-
-  padding-top: 100px ;
 }
 
 .registration__container {
@@ -16,6 +11,7 @@
   display: flex;
   justify-content:center;
   align-items: center;
+  height: 100%;
 }
 
 .registration-content {
@@ -30,8 +26,11 @@
   border-radius: 10px;
 
   background: #ffffff;
-  padding: 100px 150px;
+  padding: 60px 110px;
+}
 
+h3 {
+  font-size: 30px
 }
 
 .inputs__registration {
@@ -42,11 +41,12 @@
 
 .exist-account {
   color: cornflowerblue;
-  text-decoration: underline;
+  text-decoration: none;
 
   transition: all .5s;
 
   &:hover{
+    text-decoration: underline;
     color: #94add7;
   }
 

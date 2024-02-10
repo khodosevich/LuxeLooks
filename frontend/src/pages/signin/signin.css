@@ -2,9 +2,7 @@
   position: relative;
   left: 0;
   background: #000;
-  width: 100vw;
   height: 100vh;
-  padding-top: 100px;
 }
 
 .signin__container {
@@ -13,6 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .signin-content {
@@ -23,13 +22,27 @@
   gap: 30px;
   border-radius: 10px;
   background: #ffffff;
-  padding: 100px 150px;
+  padding: 60px 110px;
+}
+
+h3 {
+  font-size: 30px;
 }
 
 .inputs__signin {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.exist-account {
+  color: cornflowerblue;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.exist-account:hover {
+  color: #94add7;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=signin.css.map */

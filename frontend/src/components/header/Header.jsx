@@ -12,15 +12,29 @@ import {method} from "../../api/methods";
 const Header = () => {
 
     const [searchState,setSearchState] = useState("");
+    const [searchError, setSearchError] = useState("");
 
     const handlerSearchInput = (e) => {
-        setSearchState(e.target.value)
+        const value = e.target.value;
+        setSearchState(value);
+
+        if (value.length < 3) {
+            setSearchError("Please enter at least 3 characters.");
+        } else {
+            setSearchError("");
+        }
+    }
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            search();
+        }
     }
 
     const {user,setUser} = useContext(MyContext)
 
     let navigate = useNavigate();
-
     useEffect(() => {
 
     }, [user]);
@@ -30,9 +44,16 @@ const Header = () => {
 
 
     const search = async () => {
-       const data = await method.getProductByName(searchState)
-        setSearchState("")
-        navigate(`/product/${data.id}`)
+        if (searchState.length >= 3) {
+            const data = await method.getProductByName(searchState);
+            setSearchState("");
+            console.log("render");
+            navigate(`/product/${data.id}`);
+        }
+    }
+
+    const handleBlur = () => {
+        setSearchError("");
     }
 
 
@@ -53,8 +74,17 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="search-input">
-                        <input value={searchState} onChange={handlerSearchInput} className="input_header" type="text" placeholder="Search for products..."/>
+                        <input
+                            value={searchState}
+                            onKeyDown={handleKeyDown}
+                            onChange={handlerSearchInput}
+                            onBlur={handleBlur}
+                            className={`input_header ${searchError ? "error" : ""}`}
+                            type="text"
+                            placeholder="Search for products..."
+                        />
                         <i onClick={search} className="fa" aria-hidden="true"></i>
+                        {searchError && <div className="error-message">{searchError}</div>}
                     </div>
 
                     <div className="bag">
@@ -74,7 +104,7 @@ const Header = () => {
                             </NavLink>
                              </div>
                             : <div className="account">
-                                <NavLink to="/registration">
+                                <NavLink to="/signin">
                                     <button  className="login-btn">
                                              login
                                     </button>

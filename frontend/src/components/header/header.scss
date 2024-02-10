@@ -1,7 +1,7 @@
 .header {
 
   background: transparent;
-  color: white;
+  color: black;
 
   position: relative;
 
@@ -14,7 +14,13 @@
 
   &.black{
     background: #333232;
+    color: #fff;
+
+    .logo {
+      color: white;
+    }
   }
+
 
 
   //&:hover .logo {
@@ -40,7 +46,7 @@
 
 .logo {
 
-  color: white;
+  color: black;
 
   //&:hover{
   //  color: var(--gray-800, #424551);
@@ -72,7 +78,7 @@
   transition: all 0.4s;
   &:hover {
     transform: scale(1.2);
-    color: #cccccc;
+    color: #888888;
   }
 
 }
@@ -160,4 +166,14 @@
 
 .account button {
   cursor: pointer;
+}
+
+
+.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
 }
