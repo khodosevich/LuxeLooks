@@ -42,10 +42,10 @@ const SideBar = () => {
                         <NavLink to="/account/admin-orders" className={`account-menu__item  item5 ${activeItem === 'admin-orders' ? 'active__account-menu' : ''}`}>
                             Admin Orders
                         </NavLink>
-                        <NavLink to="/account/admin-new-product" className={`account-menu__item  item5 ${activeItem === 'admin-new-product' ? 'active__account-menu' : ''}`}>
+                        <NavLink to="/account/admin-new-product" className={`account-menu__item  item6 ${activeItem === 'admin-new-product' ? 'active__account-menu' : ''}`}>
                             New Product
                         </NavLink>
-                        <NavLink to="/account/admin-update-product" className={`account-menu__item  item5 ${activeItem === 'admin-update-product' ? 'active__account-menu' : ''}`}>
+                        <NavLink to="/account/admin-update-product" className={`account-menu__item  item7 ${activeItem === 'admin-update-product' ? 'active__account-menu' : ''}`}>
                             Update Product
                         </NavLink>
                     </>

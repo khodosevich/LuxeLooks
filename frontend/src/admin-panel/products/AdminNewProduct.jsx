@@ -89,11 +89,21 @@ const AdminNewProduct = () => {
                             Type
                         </MenuItem>
                         <MenuItem value="Shoes">Shoes</MenuItem>
-                        <MenuItem value="Pants">Pants</MenuItem>
-                        <MenuItem value="Shirt">Shirt</MenuItem>
-                        <MenuItem value="Trouser">Trouser</MenuItem>
+                        <MenuItem value="Trousers">Trousers</MenuItem>
                         <MenuItem value="Jacket">Jacket</MenuItem>
                         <MenuItem value="Shirt">Shirt</MenuItem>
+                        <MenuItem value="Dress">Dress</MenuItem>
+                        <MenuItem value="Flipflops">Flipflops</MenuItem>
+                        <MenuItem value="Hoodie">Hoodie</MenuItem>
+                        <MenuItem value="Sneakers">Sneakers</MenuItem>
+                        <MenuItem value="Cap">Cap</MenuItem>
+                        <MenuItem value="Longsleeve">Longsleeve</MenuItem>
+                        <MenuItem value="Shorts">Shorts</MenuItem>
+                        <MenuItem value="Socks">Socks</MenuItem>
+                        <MenuItem value="Underpants">Underpants</MenuItem>
+                        <MenuItem value="Hat">Hat</MenuItem>
+                        <MenuItem value="Skirt">Skirt</MenuItem>
+                        <MenuItem value="TShirt">TShirt</MenuItem>
                     </Select>
                 </FormControl>
             </Box>

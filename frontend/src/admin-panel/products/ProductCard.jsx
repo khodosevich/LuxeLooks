@@ -46,8 +46,8 @@ const ProductCard = ({ product , setUpdateState}) => {
                     sx={{height:"300px", width:"100%", objectFit:"contain"}}
                 />
                 <CardContent>
-                    <Typography sx={{minHeight:"32px"}} gutterBottom variant="h5" component="div">
-                        {name}
+                    <Typography sx={{minHeight:"32px", fontSize:"20px"}} gutterBottom variant="h5" component="div">
+                        { name.charAt(0).toUpperCase() + name.toString().toLowerCase().slice(1)}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                         Price: ${price}

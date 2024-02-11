@@ -32,8 +32,8 @@ const AdminOrder = () => {
             <Box sx={{margin:"20px 0", display:"flex" , flexDirection:"column" , gap:"20px"}}>
                 {
                     allOrders && allOrders.length > 0 &&
-                    allOrders.map((el,index) => (
-                        <OrderItem key={index} order={el} onUpdateStatus={setUpdateStatus}/>
+                    allOrders.map((el) => (
+                        <OrderItem key={el.id} order={el} onUpdateStatus={setUpdateStatus}/>
                     ))
                 }
             </Box>
