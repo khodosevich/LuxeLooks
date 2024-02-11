@@ -185,11 +185,97 @@ export const method = {
 
     async getUserById(id) {
         try{
-
             return await api.get(`http://localhost:5219/User/GetByid/${id}`)
 
         }catch (e) {
             throw e;
+        }
+    },
+    admin: {
+        async getAllOrder(adminToken) {
+            try{
+                const response = await api.get(`/Admin/Order/GetAll`, {
+                    headers: {
+                        'Authorization': `Bearer ${adminToken}`
+                    }
+                });
+                return response
+            }catch (e) {
+                console.log(e)
+            }
+        },
+        async updateOrderStatus(adminToken, orderId, statusType) {
+            let status = "";
+
+            if (statusType === 1) {
+                status = "Sent";
+            } else if (statusType === 2) {
+                status = "Completed";
+            } else if (statusType === 0) {
+                status = "Processing";
+            }
+
+            try {
+                const response = await api.put(`/Admin/Order/UpdateStatus`, {
+                    "NewStatus": status,
+                    "Id": orderId
+                }, {
+                    headers: {
+                        'Authorization': `Bearer ${adminToken}`
+                    }
+                });
+                return response;
+            } catch (e) {
+                console.log(e);
+                throw e;
+            }
+        },
+        async deleteOrder(adminToken, orderId) {
+            try {
+                const response = await api.delete(`/Admin/Order/Delete/${orderId}`, {
+                    headers: {
+                        'Authorization': `Bearer ${adminToken}`
+                    }
+                });
+                return response;
+            } catch (e) {
+                console.log(e);
+                throw e;
+            }
+        },
+        async createProduct (adminToken,product) {
+            try{
+                const response = await api.post(`/Admin/Product/Create`, product ,{
+                    headers: {
+                        'Authorization': `Bearer ${adminToken}`
+                    }
+                });
+                return response;
+            }catch (e) {
+                console.log(e)
+            }
+        },
+        async getAllProducts(adminToken) {
+            return await api.get("/Admin/Product/GetAll", {
+                headers:{
+                    'Authorization': `Bearer ${adminToken}`
+                }
+            })
+        },
+        async deleteProduct (adminToken , productId ) {
+            return await api.delete(`/Admin/Product/Delete/${productId}`, {
+                headers:{
+                    'Authorization': `Bearer ${adminToken}`
+                }
+            })
+        },
+        async updateProduct (adminToken,newProduct) {
+            console.log(newProduct)
+            return await api.put(`/Admin/Product/Update`, newProduct ,{
+                headers: {
+                    'Authorization': `Bearer ${adminToken}`
+                }
+            });
         }
     }
 
