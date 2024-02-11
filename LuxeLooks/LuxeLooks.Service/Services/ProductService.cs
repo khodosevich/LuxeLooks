@@ -167,7 +167,15 @@ public class ProductService
         {
             throw new InvalidOperationException("Product not found");
         }
-        await _productRepository.Update(product);
+
+        productFromRepository.Description = product.Description;
+        productFromRepository.IsForKids = product.IsForKids;
+        productFromRepository.IsForMen = product.IsForMen;
+        productFromRepository.ImageUrl = product.ImageUrl;
+        productFromRepository.Name = product.Name;
+        productFromRepository.Price = product.Price;
+        productFromRepository.Type = product.Type;
+        await _productRepository.Update(productFromRepository);
     }
 
     public async Task DeleteProduct(string id)
