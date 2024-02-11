@@ -1,15 +1,13 @@
 .product__element {
-
     width: 285px;
     height: 410px;
-
-    border-radius: 4px;
-
-    background: #fcfcfc;
+    background: #efefef;
+    border-radius: 10px;
 }
 
 .product__element__img{
     width: 285px;
     height: 320px;
     contain: content;
+    border-radius: 10px 10px 0 0;
 }

@@ -76,4 +76,26 @@
   top: -5px;
 }
 
+.item6::before {
+  content: url("../../assets/new.svg");
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 5px;
+  max-width: 20px;
+  max-height: 20px;
+  position: relative;
+  top: -5px;
+}
+
+.item7::before {
+  content: url("../../assets/update.svg");
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 5px;
+  max-width: 20px;
+  max-height: 20px;
+  position: relative;
+  top: -5px;
+}
+
 /*# sourceMappingURL=sidebar.css.map */

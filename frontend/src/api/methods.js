@@ -270,7 +270,7 @@ export const method = {
             })
         },
         async updateProduct (adminToken,newProduct) {
-            console.log(newProduct)
+            console.log("new",  newProduct)
             return await api.put(`/Admin/Product/Update`, newProduct ,{
                 headers: {
                     'Authorization': `Bearer ${adminToken}`
