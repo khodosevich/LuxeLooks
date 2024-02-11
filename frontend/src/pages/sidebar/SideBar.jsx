@@ -32,16 +32,33 @@ const SideBar = () => {
 
     return (
         <div className="account-component__menu">
-            <NavLink to="/account/profileinfo" className={`account-menu__item item1 ${activeItem === 'profileinfo' ? 'active__account-menu' : ''}`} onClick={() => handleItemClick('item1')}>
+            <NavLink to="/account/profileinfo" className={`account-menu__item item1 ${activeItem === 'profileinfo' ? 'active__account-menu' : ''}`}>
                 My Profile
             </NavLink>
-            <NavLink to="/account/bag" className={`account-menu__item  item2 ${activeItem === 'bag' ? 'active__account-menu' : ''}`} onClick={() => handleItemClick('item2')}>
-                My bag
-            </NavLink>
-            <NavLink to="/account/myorders" className={`account-menu__item  item4 ${activeItem === 'myorders' ? 'active__account-menu' : ''}`} onClick={() => handleItemClick('item4')}>
-                My order
-            </NavLink>
-            <NavLink to="#" onClickCapture={logout} className={`account-menu__item  item3 ${activeItem === 'item3' ? 'active__account-menu' : ''}`} onClick={() => handleItemClick('item3')}>
+
+            {
+                user.username === "Admin"
+                ? <>
+                        <NavLink to="/account/admin-orders" className={`account-menu__item  item5 ${activeItem === 'admin-orders' ? 'active__account-menu' : ''}`}>
+                            Admin Orders
+                        </NavLink>
+                        <NavLink to="/account/admin-new-product" className={`account-menu__item  item5 ${activeItem === 'admin-new-product' ? 'active__account-menu' : ''}`}>
+                            New Product
+                        </NavLink>
+                        <NavLink to="/account/admin-update-product" className={`account-menu__item  item5 ${activeItem === 'admin-update-product' ? 'active__account-menu' : ''}`}>
+                            Update Product
+                        </NavLink>
+                    </>
+                    : <>
+                        <NavLink to="/account/bag" className={`account-menu__item  item2 ${activeItem === 'bag' ? 'active__account-menu' : ''}`}>
+                            My bag
+                        </NavLink>
+                        <NavLink to="/account/myorders" className={`account-menu__item  item4 ${activeItem === 'myorders' ? 'active__account-menu' : ''}`}>
+                            My order
+                        </NavLink>
+                    </>
+            }
+            <NavLink to="#" onClickCapture={logout} className={`account-menu__item  item3 ${activeItem === 'item3' ? 'active__account-menu' : ''}`}>
                 Sign up
             </NavLink>
         </div>

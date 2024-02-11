@@ -20,6 +20,8 @@ import CategoryTypeItems from "./components/popularcategory/CategoryTypeItems";
 import ProductItem from "./pages/product/ProductItem";
 import AuthGuard from "./components/authguard/AuthGuard";
 import OrderForm from "./pages/order-form/OrderForm";
+import Admin from "./admin-panel/Admin";
+import {CssBaseline} from "@mui/material";
 
 
 export const MyContext = React.createContext();
@@ -43,6 +45,7 @@ function App() {
 
   return (
     <div className={style.App}>
+        <CssBaseline/>
         <MyContext.Provider value={{user,setUser}}>
             {renderHeaderCondition && <Header/>}
             <AuthGuard>
@@ -61,6 +64,9 @@ function App() {
                     <Route path="/account/*" element={<Profile/>} />
                     <Route path="/category/:categoryName" element={<CategoryTypeItems/>} />
                     <Route path="/product/:productName" element={<ProductItem/>} />
+                    {
+                        user.username === "Admin" && <Route path="/admin-panel" element={<Admin/>} />
+                    }
                 </Routes>
             </AuthGuard>
             {renderFooterCondition && <Footer/>}

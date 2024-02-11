@@ -1,10 +1,14 @@
 import React from 'react';
-import {Box} from "@mui/material";
+import {Box, Container} from "@mui/material";
+import AdminOrder from "./order/AdminOrder";
 
 const Admin = () => {
-    return (
-        <Box>
 
+    return (
+        <Box sx={{minHeight:"600px"}}>
+            <Container>
+               <AdminOrder/>
+            </Container>
         </Box>
     );
 };
