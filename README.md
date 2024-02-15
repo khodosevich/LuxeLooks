@@ -17,6 +17,8 @@
 - [Диаграмма вариантов использования](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/UseCase.md)
 - [Диаграммы As is и To be](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Architecture.md)
 - [Парное программирование](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Programming.md)
+- [Технический долг](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Debt.md)
+- [Улучшение UX](https://github.com/khodosevich/LuxeLooks/blob/main/documentation/diagrams/Lab6.md)
 
 ### Тестирование
 
