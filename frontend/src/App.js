@@ -22,6 +22,7 @@ import AuthGuard from "./components/authguard/AuthGuard";
 import OrderForm from "./pages/order-form/OrderForm";
 import Admin from "./admin-panel/Admin";
 import {CssBaseline} from "@mui/material";
+import FilteredProducts from "./pages/menu-categories/FilteredProducts";
 
 
 export const MyContext = React.createContext();
@@ -64,6 +65,7 @@ function App() {
                     <Route path="/account/*" element={<Profile/>} />
                     <Route path="/category/:categoryName" element={<CategoryTypeItems/>} />
                     <Route path="/product/:productName" element={<ProductItem/>} />
+                    <Route path="search/:title" element={<FilteredProducts/>}/>
                     {
                         user.username === "Admin" && <Route path="/admin-panel" element={<Admin/>} />
                     }
