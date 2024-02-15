@@ -18,7 +18,7 @@ const ProductElement = (props) => {
                     minHeight:"32px"
                 }}>
                     {
-                        props.props.name.charAt(0).toUpperCase() + props.props.name.toString().toLowerCase().slice(1)
+                        props.props.name?.charAt(0).toUpperCase() + props.props.name?.toString().toLowerCase().slice(1)
                     }
                 </h4>
                 <Typography variant={"body1"}  sx={{

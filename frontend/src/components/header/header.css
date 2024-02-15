@@ -65,9 +65,6 @@
   font-family: Montserrat;
   transition: all 0.5s;
 }
-.input_header:hover {
-  transform: scale(1.03);
-}
 
 .fa {
   cursor: pointer;

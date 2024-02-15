@@ -277,6 +277,8 @@ export const method = {
                 }
             });
         }
+    },
+    async getAllProductsName () {
+        return await api.get("/Product/GetAllNames")
     }
-
 }
